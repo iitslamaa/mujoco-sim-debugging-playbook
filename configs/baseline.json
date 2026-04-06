@@ -1,0 +1,30 @@
+{
+  "name": "baseline",
+  "episodes": 10,
+  "episode_horizon_s": 3.5,
+  "seed": 7,
+  "output_dir": "outputs/baseline",
+  "task": {
+    "target_radius": 0.045,
+    "target_range": {
+      "x": [0.12, 0.30],
+      "y": [0.04, 0.28]
+    },
+    "link_lengths": [0.18, 0.16]
+  },
+  "sim": {
+    "physics_timestep": 0.002,
+    "control_dt": 0.02,
+    "joint_damping": 1.8,
+    "friction_loss": 0.02,
+    "actuator_gain": 38.0,
+    "sensor_noise_std": 0.0,
+    "control_delay_steps": 0
+  },
+  "controller": {
+    "kp": 22.0,
+    "kd": 4.0,
+    "max_torque": 6.0
+  }
+}
+

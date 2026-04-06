@@ -1,0 +1,306 @@
+{
+  "config": {
+    "name": "control_delay_steps_6",
+    "episodes": 12,
+    "episode_horizon_s": 3.5,
+    "seed": 11,
+    "output_dir": "outputs/interesting_sweeps/control_delay_steps_6",
+    "task": {
+      "target_radius": 0.045,
+      "target_range": {
+        "x": [
+          0.12,
+          0.3
+        ],
+        "y": [
+          0.04,
+          0.28
+        ]
+      },
+      "link_lengths": [
+        0.18,
+        0.16
+      ]
+    },
+    "sim": {
+      "physics_timestep": 0.002,
+      "control_dt": 0.02,
+      "joint_damping": 1.8,
+      "friction_loss": 0.02,
+      "actuator_gain": 38.0,
+      "sensor_noise_std": 0.0,
+      "control_delay_steps": 6
+    },
+    "controller": {
+      "kp": 22.0,
+      "kd": 4.0,
+      "max_torque": 6.0
+    }
+  },
+  "summary": {
+    "success_rate": 0.25,
+    "final_error_mean": 0.07507007166448508,
+    "min_error_mean": 0.07158795275226346,
+    "mean_error_mean": 0.08652108492985404,
+    "max_overshoot_mean": 0.0002133719520025478,
+    "oscillation_index_mean": 0.8864942528735632,
+    "control_energy_mean": 160.66092472372753,
+    "settling_time_mean": 1.0266666666666666
+  },
+  "episodes": [
+    {
+      "episode": 0,
+      "target_x": 0.14314263649845593,
+      "target_y": 0.1598266869856276,
+      "success": 0,
+      "final_error": 0.0911032337220181,
+      "min_error": 0.0911032337220181,
+      "mean_error": 0.10245443071604192,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9425287356321839,
+      "control_energy": 138.7688769462988
+    },
+    {
+      "episode": 1,
+      "target_x": 0.22826970437220434,
+      "target_y": 0.04688536200926669,
+      "success": 1,
+      "final_error": 0.005756625756914591,
+      "min_error": 0.005745157103604644,
+      "mean_error": 0.04772164916155068,
+      "max_overshoot": 0.0025604634240305735,
+      "settling_time_s": 1.54,
+      "oscillation_index": 0.05747126436781609,
+      "control_energy": 186.56520133382818
+    },
+    {
+      "episode": 2,
+      "target_x": 0.14662669522394206,
+      "target_y": 0.2627706455104887,
+      "success": 0,
+      "final_error": 0.13628960694345693,
+      "min_error": 0.1323031642197476,
+      "mean_error": 0.1644937527070787,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9827586206896551,
+      "control_energy": 169.47953928581853
+    },
+    {
+      "episode": 3,
+      "target_x": 0.13267570370775542,
+      "target_y": 0.07114574785583153,
+      "success": 0,
+      "final_error": 0.052944321806688975,
+      "min_error": 0.04844133630955405,
+      "mean_error": 0.07530345718934948,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9022988505747126,
+      "control_energy": 174.11207418624988
+    },
+    {
+      "episode": 4,
+      "target_x": 0.2906991215925195,
+      "target_y": 0.1892520622711319,
+      "success": 0,
+      "final_error": 0.08217231910396747,
+      "min_error": 0.07740150322074268,
+      "mean_error": 0.08135436412026505,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 168.20380696780714
+    },
+    {
+      "episode": 5,
+      "target_x": 0.18641876227136236,
+      "target_y": 0.16273360523278305,
+      "success": 0,
+      "final_error": 0.0937012382004924,
+      "min_error": 0.08929053116590943,
+      "mean_error": 0.09784600248516807,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9597701149425287,
+      "control_energy": 147.04718419599223
+    },
+    {
+      "episode": 6,
+      "target_x": 0.23931173145302387,
+      "target_y": 0.10607411578267104,
+      "success": 1,
+      "final_error": 0.03896770467776118,
+      "min_error": 0.03446008952618601,
+      "mean_error": 0.046868006248255045,
+      "max_overshoot": 0.0,
+      "settling_time_s": 1.54,
+      "oscillation_index": 0.9712643678160919,
+      "control_energy": 162.69844670486012
+    },
+    {
+      "episode": 7,
+      "target_x": 0.14483425311605194,
+      "target_y": 0.22912950268095805,
+      "success": 0,
+      "final_error": 0.12935756282724073,
+      "min_error": 0.12515860848707627,
+      "mean_error": 0.14273198934233775,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9597701149425287,
+      "control_energy": 154.8375935616534
+    },
+    {
+      "episode": 8,
+      "target_x": 0.24066490513844707,
+      "target_y": 0.16297175523595853,
+      "success": 0,
+      "final_error": 0.0954805979470362,
+      "min_error": 0.0911565568776336,
+      "mean_error": 0.0954022374543946,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 155.8862514207117
+    },
+    {
+      "episode": 9,
+      "target_x": 0.2670125584745384,
+      "target_y": 0.17177806452880634,
+      "success": 0,
+      "final_error": 0.08376423751088097,
+      "min_error": 0.07946230378607261,
+      "mean_error": 0.08267561289421901,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 156.28674264213157
+    },
+    {
+      "episode": 10,
+      "target_x": 0.296564455073515,
+      "target_y": 0.08908227071921078,
+      "success": 1,
+      "final_error": 0.0034595576412864326,
+      "min_error": 0.0010867579571211382,
+      "mean_error": 0.011386362451450308,
+      "max_overshoot": 0.0,
+      "settling_time_s": 0.0,
+      "oscillation_index": 0.896551724137931,
+      "control_energy": 160.78196275931387
+    },
+    {
+      "episode": 11,
+      "target_x": 0.219671465315741,
+      "target_y": 0.15606992726161306,
+      "success": 0,
+      "final_error": 0.0878438538360769,
+      "min_error": 0.08344619065149543,
+      "mean_error": 0.09001515438813773,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9827586206896551,
+      "control_energy": 153.26341668006467
+    }
+  ],
+  "trace_manifest": [
+    {
+      "episode": 0,
+      "target_xy": [
+        0.14314263649845593,
+        0.1598266869856276
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_000.json"
+    },
+    {
+      "episode": 1,
+      "target_xy": [
+        0.22826970437220434,
+        0.04688536200926669
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_001.json"
+    },
+    {
+      "episode": 2,
+      "target_xy": [
+        0.14662669522394206,
+        0.2627706455104887
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_002.json"
+    },
+    {
+      "episode": 3,
+      "target_xy": [
+        0.13267570370775542,
+        0.07114574785583153
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_003.json"
+    },
+    {
+      "episode": 4,
+      "target_xy": [
+        0.2906991215925195,
+        0.1892520622711319
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_004.json"
+    },
+    {
+      "episode": 5,
+      "target_xy": [
+        0.18641876227136236,
+        0.16273360523278305
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_005.json"
+    },
+    {
+      "episode": 6,
+      "target_xy": [
+        0.23931173145302387,
+        0.10607411578267104
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_006.json"
+    },
+    {
+      "episode": 7,
+      "target_xy": [
+        0.14483425311605194,
+        0.22912950268095805
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_007.json"
+    },
+    {
+      "episode": 8,
+      "target_xy": [
+        0.24066490513844707,
+        0.16297175523595853
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_008.json"
+    },
+    {
+      "episode": 9,
+      "target_xy": [
+        0.2670125584745384,
+        0.17177806452880634
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_009.json"
+    },
+    {
+      "episode": 10,
+      "target_xy": [
+        0.296564455073515,
+        0.08908227071921078
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_010.json"
+    },
+    {
+      "episode": 11,
+      "target_xy": [
+        0.219671465315741,
+        0.15606992726161306
+      ],
+      "trace_path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_011.json"
+    }
+  ]
+}

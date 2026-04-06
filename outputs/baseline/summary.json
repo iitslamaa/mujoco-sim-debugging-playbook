@@ -1,0 +1,138 @@
+{
+  "config": {
+    "name": "baseline",
+    "episodes": 4,
+    "episode_horizon_s": 3.5,
+    "seed": 7,
+    "output_dir": "outputs/baseline",
+    "task": {
+      "target_radius": 0.045,
+      "target_range": {
+        "x": [
+          0.12,
+          0.3
+        ],
+        "y": [
+          0.04,
+          0.28
+        ]
+      },
+      "link_lengths": [
+        0.18,
+        0.16
+      ]
+    },
+    "sim": {
+      "physics_timestep": 0.002,
+      "control_dt": 0.02,
+      "joint_damping": 1.8,
+      "friction_loss": 0.02,
+      "actuator_gain": 38.0,
+      "sensor_noise_std": 0.0,
+      "control_delay_steps": 0
+    },
+    "controller": {
+      "kp": 22.0,
+      "kd": 4.0,
+      "max_torque": 6.0
+    }
+  },
+  "summary": {
+    "success_rate": 0.25,
+    "final_error_mean": 0.10037159904174653,
+    "min_error_mean": 0.09940533848460638,
+    "mean_error_mean": 0.11877635994849006,
+    "max_overshoot_mean": 0.0008990511732832763,
+    "oscillation_index_mean": 0.9813218390804598,
+    "control_energy_mean": 165.35847864244272,
+    "settling_time_mean": 0.68
+  },
+  "episodes": [
+    {
+      "episode": 0,
+      "target_x": 0.23251718398884005,
+      "target_y": 0.2553313122326981,
+      "success": 0,
+      "final_error": 0.12759550658082913,
+      "min_error": 0.12373046435226857,
+      "mean_error": 0.14910836407140204,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 177.0789344677809
+    },
+    {
+      "episode": 1,
+      "target_x": 0.2596234242441348,
+      "target_y": 0.09404972559774205,
+      "success": 1,
+      "final_error": 0.0189719320110068,
+      "min_error": 0.0189719320110068,
+      "mean_error": 0.03215645505647371,
+      "max_overshoot": 0.00031279921681093975,
+      "settling_time_s": 0.68,
+      "oscillation_index": 0.9827586206896551,
+      "control_energy": 166.04313984991308
+    },
+    {
+      "episode": 2,
+      "target_x": 0.17402993128402058,
+      "target_y": 0.24965282689510288,
+      "success": 0,
+      "final_error": 0.13076944787784525,
+      "min_error": 0.13076944787784525,
+      "mean_error": 0.15160878382548854,
+      "max_overshoot": 0.0032834054763221654,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 163.04757183359357
+    },
+    {
+      "episode": 3,
+      "target_x": 0.12094775482180345,
+      "target_y": 0.23709482041186392,
+      "success": 0,
+      "final_error": 0.12414950969730491,
+      "min_error": 0.12414950969730491,
+      "mean_error": 0.14223183684059593,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9540229885057471,
+      "control_energy": 155.26426841848334
+    }
+  ],
+  "trace_manifest": [
+    {
+      "episode": 0,
+      "target_xy": [
+        0.23251718398884005,
+        0.2553313122326981
+      ],
+      "trace_path": "outputs/baseline/traces/episode_000.json"
+    },
+    {
+      "episode": 1,
+      "target_xy": [
+        0.2596234242441348,
+        0.09404972559774205
+      ],
+      "trace_path": "outputs/baseline/traces/episode_001.json"
+    },
+    {
+      "episode": 2,
+      "target_xy": [
+        0.17402993128402058,
+        0.24965282689510288
+      ],
+      "trace_path": "outputs/baseline/traces/episode_002.json"
+    },
+    {
+      "episode": 3,
+      "target_xy": [
+        0.12094775482180345,
+        0.23709482041186392
+      ],
+      "trace_path": "outputs/baseline/traces/episode_003.json"
+    }
+  ]
+}

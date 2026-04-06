@@ -1,0 +1,52 @@
+{
+  "name": "stress_sweeps",
+  "output_dir": "outputs/stress_sweeps",
+  "episodes": 14,
+  "episode_horizon_s": 4.0,
+  "seed": 23,
+  "task": {
+    "target_radius": 0.04,
+    "target_range": {
+      "x": [0.10, 0.31],
+      "y": [0.03, 0.29]
+    },
+    "link_lengths": [0.18, 0.16]
+  },
+  "controller": {
+    "kp": 24.0,
+    "kd": 3.2,
+    "max_torque": 6.5
+  },
+  "baseline_sim": {
+    "physics_timestep": 0.002,
+    "control_dt": 0.02,
+    "joint_damping": 1.4,
+    "friction_loss": 0.01,
+    "actuator_gain": 42.0,
+    "sensor_noise_std": 0.0,
+    "control_delay_steps": 0
+  },
+  "sweeps": [
+    {
+      "parameter": "joint_damping",
+      "label": "Low damping stress test",
+      "values": [0.1, 0.25, 0.5, 1.0]
+    },
+    {
+      "parameter": "actuator_gain",
+      "label": "Aggressive gain stress test",
+      "values": [42.0, 58.0, 74.0, 90.0]
+    },
+    {
+      "parameter": "control_delay_steps",
+      "label": "Latency stress test",
+      "values": [0, 2, 4, 8]
+    },
+    {
+      "parameter": "sensor_noise_std",
+      "label": "Noisy observation stress test",
+      "values": [0.0, 0.01, 0.02, 0.03]
+    }
+  ]
+}
+
