@@ -23,6 +23,7 @@ __all__ = [
     "dashboard_snapshot_review",
     "dashboard_snapshot_handoff",
     "dashboard_snapshot_closeout",
+    "dashboard_snapshot_scorecard",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

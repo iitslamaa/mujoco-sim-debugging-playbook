@@ -1035,6 +1035,26 @@ async function main() {
   } else {
     dashboardSnapshotCloseoutSummary.textContent = "Dashboard snapshot closeout has not been generated yet.";
   }
+
+  const dashboardSnapshotScorecardSummary = document.getElementById("dashboard-snapshot-scorecard-summary");
+  if (data.dashboard_snapshot_scorecard?.summary) {
+    const summary = data.dashboard_snapshot_scorecard.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Closeout status:</strong> ${summary.closeout_status}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Headlines:</strong> ${summary.headline_count}</p>`,
+      `<p><strong>Alerts:</strong> ${summary.alert_count}</p>`,
+      `<p><strong>Critical alerts:</strong> ${summary.critical_count}</p>`,
+      `<p><strong>Blockers:</strong> ${summary.blocker_count}</p>`,
+      `<p><strong>Remaining items:</strong> ${summary.remaining_item_count}</p>`,
+      `<p><strong>Dominant transition:</strong> ${summary.dominant_transition}</p>`,
+    ];
+    dashboardSnapshotScorecardSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotScorecardSummary.textContent = "Dashboard snapshot scorecard has not been generated yet.";
+  }
 }
 
 main();

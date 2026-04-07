@@ -202,6 +202,7 @@ make dashboard-snapshot-monitor
 make dashboard-snapshot-review
 make dashboard-snapshot-handoff
 make dashboard-snapshot-closeout
+make dashboard-snapshot-scorecard
 make case-studies
 make snapshot
 make regression-diff
@@ -781,6 +782,14 @@ python scripts/generate_dashboard_snapshot_closeout.py
 
 This makes an explicit closeout decision for the current dashboard snapshot state.
 
+## Build dashboard snapshot scorecard
+
+```bash
+python scripts/generate_dashboard_snapshot_scorecard.py
+```
+
+This condenses the current dashboard snapshot stack into a KPI-style scorecard.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -831,6 +840,7 @@ This writes:
 - [dashboard-snapshot-review-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-review-guide.md)
 - [dashboard-snapshot-handoff-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-handoff-guide.md)
 - [dashboard-snapshot-closeout-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-closeout-guide.md)
+- [dashboard-snapshot-scorecard-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-scorecard-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "current_status": "fail",
+    "projected_terminal_status": "pass",
+    "closeout_status": "not_ready_to_close",
+    "handoff_owner": "dashboard-stabilization",
+    "headline_count": 4,
+    "alert_count": 4,
+    "critical_count": 1,
+    "blocker_count": 2,
+    "remaining_item_count": 3,
+    "dominant_transition": "current_state -> support_sprint_projection"
+  }
+}

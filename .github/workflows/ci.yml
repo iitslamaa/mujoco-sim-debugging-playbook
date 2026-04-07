@@ -136,5 +136,7 @@ jobs:
         run: python scripts/generate_dashboard_snapshot_handoff.py
       - name: Build dashboard snapshot closeout
         run: python scripts/generate_dashboard_snapshot_closeout.py
+      - name: Build dashboard snapshot scorecard
+        run: python scripts/generate_dashboard_snapshot_scorecard.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py
