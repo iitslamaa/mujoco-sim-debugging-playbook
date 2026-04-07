@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "count": 6,
+    "high_priority_count": 1
+  },
+  "actions": [
+    {
+      "artifact": "dashboard/data.json",
+      "status": "stale",
+      "priority": "high",
+      "command": "python scripts/generate_dashboard.py",
+      "age_delta_seconds": 776.883
+    },
+    {
+      "artifact": "outputs/ops_review/ops_review.json",
+      "status": "stale",
+      "priority": "medium",
+      "command": "python scripts/generate_ops_review.py",
+      "age_delta_seconds": 943.285
+    },
+    {
+      "artifact": "outputs/support_readiness/support_readiness.json",
+      "status": "stale",
+      "priority": "medium",
+      "command": "python scripts/generate_support_readiness.py",
+      "age_delta_seconds": 867.916
+    },
+    {
+      "artifact": "outputs/scenario_plan/scenario_plan.json",
+      "status": "stale",
+      "priority": "medium",
+      "command": "python scripts/generate_scenario_plan.py",
+      "age_delta_seconds": 776.886
+    },
+    {
+      "artifact": "outputs/scorecard/scorecard.json",
+      "status": "stale",
+      "priority": "medium",
+      "command": "python scripts/generate_scorecard.py",
+      "age_delta_seconds": 198.101
+    },
+    {
+      "artifact": "outputs/briefing_note/briefing_note.json",
+      "status": "stale",
+      "priority": "medium",
+      "command": "python scripts/generate_briefing_note.py",
+      "age_delta_seconds": 125.618
+    }
+  ]
+}

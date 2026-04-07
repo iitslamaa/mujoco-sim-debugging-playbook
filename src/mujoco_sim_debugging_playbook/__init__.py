@@ -27,6 +27,7 @@ __all__ = [
     "plot",
     "provenance",
     "recommendations",
+    "regeneration_plan",
     "readiness",
     "responder_load",
     "risk_register",

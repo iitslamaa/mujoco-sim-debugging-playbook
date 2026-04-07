@@ -151,6 +151,7 @@ make action-register
 make scorecard
 make briefing-note
 make artifact-freshness
+make regeneration-plan
 make case-studies
 make snapshot
 make regression-diff
@@ -504,6 +505,12 @@ python scripts/generate_briefing_note.py
 
 ```bash
 python scripts/generate_artifact_freshness.py
+```
+
+## Generate the regeneration plan
+
+```bash
+python scripts/generate_regeneration_plan.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.

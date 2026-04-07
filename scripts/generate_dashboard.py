@@ -44,6 +44,7 @@ def main() -> None:
     support_readiness = _read_json(ROOT / "outputs" / "support_readiness" / "support_readiness.json")
     scenario_plan = _read_json(ROOT / "outputs" / "scenario_plan" / "scenario_plan.json")
     artifact_freshness = _read_json(ROOT / "outputs" / "artifact_freshness" / "artifact_freshness.json")
+    regeneration_plan = _read_json(ROOT / "outputs" / "regeneration_plan" / "regeneration_plan.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -117,6 +118,7 @@ def main() -> None:
         "support_readiness": support_readiness,
         "scenario_plan": scenario_plan,
         "artifact_freshness": artifact_freshness,
+        "regeneration_plan": regeneration_plan,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -154,6 +156,7 @@ def main() -> None:
             "support_readiness_markdown": "outputs/support_readiness/support_readiness.md",
             "scenario_plan_markdown": "outputs/scenario_plan/scenario_plan.md",
             "artifact_freshness_markdown": "outputs/artifact_freshness/artifact_freshness.md",
+            "regeneration_plan_markdown": "outputs/regeneration_plan/regeneration_plan.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

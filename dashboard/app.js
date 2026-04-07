@@ -481,6 +481,21 @@ async function main() {
   } else {
     artifactFreshnessSummary.textContent = "Artifact freshness artifacts have not been generated yet.";
   }
+
+  const regenerationPlanSummary = document.getElementById("regeneration-plan-summary");
+  if (data.regeneration_plan?.summary) {
+    const summary = data.regeneration_plan.summary;
+    const items = [
+      `<p><strong>Actions:</strong> ${summary.count}</p>`,
+      `<p><strong>High priority:</strong> ${summary.high_priority_count}</p>`,
+    ];
+    (data.regeneration_plan.actions || []).slice(0, 6).forEach((action) => {
+      items.push(`<p><strong>${action.artifact}</strong>: ${action.priority} | ${action.command}</p>`);
+    });
+    regenerationPlanSummary.innerHTML = items.join("");
+  } else {
+    regenerationPlanSummary.textContent = "Regeneration plan artifacts have not been generated yet.";
+  }
 }
 
 main();

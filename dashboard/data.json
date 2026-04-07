@@ -4072,6 +4072,7 @@
       }
     ]
   },
+  "regeneration_plan": null,
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4117,6 +4118,7 @@
     "ops_review_markdown": "outputs/ops_review/ops_review.md",
     "support_readiness_markdown": "outputs/support_readiness/support_readiness.md",
     "scenario_plan_markdown": "outputs/scenario_plan/scenario_plan.md",
-    "artifact_freshness_markdown": "outputs/artifact_freshness/artifact_freshness.md"
+    "artifact_freshness_markdown": "outputs/artifact_freshness/artifact_freshness.md",
+    "regeneration_plan_markdown": "outputs/regeneration_plan/regeneration_plan.md"
   }
 }
