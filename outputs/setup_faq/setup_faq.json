@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "entry_count": 3
+  },
+  "entries": [
+    {
+      "question": "How do I know whether my environment is ready?",
+      "answer": "Current doctor status is warn with 1 warnings."
+    },
+    {
+      "question": "What should I install first if setup is incomplete?",
+      "answer": "Install Docker Desktop or a compatible Docker engine to run the container workflow."
+    },
+    {
+      "question": "What compatibility risk is currently visible?",
+      "answer": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    }
+  ]
+}
