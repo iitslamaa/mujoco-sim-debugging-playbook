@@ -12,6 +12,7 @@ __all__ = [
     "experiment",
     "environment",
     "diagnostics",
+    "evidence_inventory",
     "escalation",
     "generalization",
     "incidents",
