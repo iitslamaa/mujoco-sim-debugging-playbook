@@ -1,0 +1,9 @@
+{
+  "summary": {
+    "status": "warn",
+    "blocker_count": 3,
+    "machine_warning_count": 2,
+    "missing_tool_count": 1
+  },
+  "recommendation": "Clear environment and release blockers before shipping."
+}
