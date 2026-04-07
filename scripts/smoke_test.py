@@ -79,6 +79,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_workstream_plan.py"], env=env)
     run([sys.executable, "scripts/generate_sla_report.py"], env=env)
     run([sys.executable, "scripts/generate_capacity_plan.py"], env=env)
+    run([sys.executable, "scripts/generate_ops_review.py"], env=env)
     run(
         [
             sys.executable,
@@ -148,6 +149,9 @@ def main() -> None:
     capacity = ROOT / "outputs" / "capacity" / "capacity_plan.json"
     if not capacity.exists():
         raise SystemExit(f"Expected capacity plan at {capacity}")
+    ops_review = ROOT / "outputs" / "ops_review" / "ops_review.json"
+    if not ops_review.exists():
+        raise SystemExit(f"Expected ops review at {ops_review}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

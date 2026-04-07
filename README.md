@@ -57,6 +57,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Workstream planning that turns support gaps into concrete remediation lanes with effort estimates
 - Delivery forecasting that flags at-risk or breaching support work before it slips
 - Capacity planning that suggests owner rebalancing when forecasted work overloads the queue
+- Ops-review generation that synthesizes wins, risks, and next actions from the live support artifacts
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -123,6 +124,7 @@ make support-gaps
 make workstreams
 make sla
 make capacity
+make ops-review
 make case-studies
 make snapshot
 make regression-diff
@@ -392,6 +394,12 @@ python scripts/generate_sla_report.py
 
 ```bash
 python scripts/generate_capacity_plan.py
+```
+
+## Generate the ops review
+
+```bash
+python scripts/generate_ops_review.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.

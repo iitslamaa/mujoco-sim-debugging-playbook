@@ -410,6 +410,29 @@ async function main() {
   } else {
     capacitySummary.textContent = "Capacity planning artifacts have not been generated yet.";
   }
+
+  const opsReviewSummary = document.getElementById("ops-review-summary");
+  if (data.ops_review?.summary) {
+    const summary = data.ops_review.summary;
+    const items = [
+      `<p><strong>Queue count:</strong> ${summary.queue_count}</p>`,
+      `<p><strong>Breaches / at risk:</strong> ${summary.breach_count} / ${summary.at_risk_count}</p>`,
+      `<p><strong>Highest-pressure lane:</strong> ${summary.highest_pressure_lane}</p>`,
+      `<p><strong>Top gap:</strong> ${summary.top_gap_target}</p>`,
+    ];
+    (data.ops_review.wins || []).slice(0, 2).forEach((entry) => {
+      items.push(`<p><strong>Win:</strong> ${entry}</p>`);
+    });
+    (data.ops_review.risks || []).slice(0, 2).forEach((entry) => {
+      items.push(`<p><strong>Risk:</strong> ${entry}</p>`);
+    });
+    (data.ops_review.next_actions || []).slice(0, 2).forEach((item) => {
+      items.push(`<p><strong>${item.target}</strong>: ${item.owner} -> ${item.action}</p>`);
+    });
+    opsReviewSummary.innerHTML = items.join("");
+  } else {
+    opsReviewSummary.textContent = "Ops review artifacts have not been generated yet.";
+  }
 }
 
 main();

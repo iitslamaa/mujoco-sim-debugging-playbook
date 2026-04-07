@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "queue_count": 11,
+    "incident_coverage": 0.45454545454545453,
+    "knowledge_base_coverage": 0.45454545454545453,
+    "breach_count": 2,
+    "at_risk_count": 3,
+    "highest_pressure_lane": "incident_backfill",
+    "overloaded_owner": "controls-and-policy",
+    "top_gap_target": "low_damping_high_gain / expert_pd",
+    "release_commit_count": 1
+  },
+  "wins": [
+    "Knowledge base coverage is 45.5% of the open queue.",
+    "The triage system has 5 incident bundles and 5 knowledge-base entries ready for reuse.",
+    "Regression gate status remains `pass` across the latest release range."
+  ],
+  "risks": [
+    "2 items are already in breach and 3 more are at risk.",
+    "The highest-pressure lane is `incident_backfill` and the most overloaded owner is `controls-and-policy`.",
+    "The top uncovered support gap is `low_damping_high_gain / expert_pd`.",
+    "The riskiest benchmark scenario remains `low_damping_high_gain / expert_pd` with risk score `0.366`."
+  ],
+  "next_actions": [
+    {
+      "target": "low_damping_high_gain / expert_pd",
+      "owner": "simulation-debugging",
+      "action": "Increase joint damping and reduce actuator gain before changing controller structure.",
+      "reason": "Current owner has a breaching item and should offload work to keep the queue moving."
+    },
+    {
+      "target": "low_damping_high_gain / hybrid_guardrail",
+      "owner": "simulation-debugging",
+      "action": "Increase joint damping and reduce actuator gain before changing controller structure.",
+      "reason": "Current owner has a breaching item and should offload work to keep the queue moving."
+    },
+    {
+      "target": "delay_heavy / expert_pd",
+      "owner": "simulation-debugging",
+      "action": "Increase control frequency or use a more delay-tolerant guarded policy blend.",
+      "reason": "This item is at risk and benefits from parallel evidence gathering."
+    }
+  ]
+}

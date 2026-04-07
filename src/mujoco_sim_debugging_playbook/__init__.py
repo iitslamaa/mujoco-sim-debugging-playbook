@@ -16,6 +16,7 @@ __all__ = [
     "learning",
     "knowledge_base",
     "metrics",
+    "ops_review",
     "plot",
     "provenance",
     "recommendations",

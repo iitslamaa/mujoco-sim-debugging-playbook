@@ -70,5 +70,7 @@ jobs:
         run: python scripts/generate_sla_report.py
       - name: Build capacity plan
         run: python scripts/generate_capacity_plan.py
+      - name: Build ops review
+        run: python scripts/generate_ops_review.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py
