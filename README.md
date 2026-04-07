@@ -108,6 +108,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Support case catalog for scanning documented repro narratives
 - Setup FAQ generator for self-serve environment troubleshooting
 - Response rubric for support-case answer quality
+- Local paths report for orienting new contributors and repro work
 - Repro inventory that enumerates documented support cases and evidence paths
 - GitHub issue templates and CI for public-repo readiness
 
@@ -220,6 +221,7 @@ make toolchain-inventory
 make support-case-catalog
 make setup-faq
 make response-rubric
+make local-paths-report
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -388,6 +390,14 @@ python scripts/generate_response_rubric.py
 ```
 
 This records the criteria used to keep support-case responses consistent and actionable.
+
+## Generate a local paths report
+
+```bash
+python scripts/generate_local_paths_report.py
+```
+
+This records the main workspace paths used during debugging and support work.
 
 ## Generate a repro inventory
 
@@ -1129,6 +1139,7 @@ This writes:
 - [support-case-catalog-guide.md](/Users/lamayassine/mujoco/docs/support-case-catalog-guide.md)
 - [setup-faq-guide.md](/Users/lamayassine/mujoco/docs/setup-faq-guide.md)
 - [response-rubric-guide.md](/Users/lamayassine/mujoco/docs/response-rubric-guide.md)
+- [local-paths-guide.md](/Users/lamayassine/mujoco/docs/local-paths-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [support-workflow-index.md](/Users/lamayassine/mujoco/docs/support-workflow-index.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
