@@ -602,6 +602,22 @@ async function main() {
   } else {
     artifactReadinessSummary.textContent = "Artifact readiness artifacts have not been generated yet.";
   }
+
+  const artifactScenariosSummary = document.getElementById("artifact-scenarios-summary");
+  if (data.artifact_scenarios?.baseline) {
+    const baseline = data.artifact_scenarios.baseline;
+    const items = [
+      `<p><strong>Baseline:</strong> ${baseline.status} (${baseline.failure_count} failures, ${baseline.warning_count} warnings)</p>`,
+    ];
+    (data.artifact_scenarios.scenarios || []).forEach((scenario) => {
+      items.push(
+        `<p><strong>${scenario.name}</strong>: ${scenario.status}, ${scenario.stale_count} stale, ${scenario.refresh_step_count} steps</p>`
+      );
+    });
+    artifactScenariosSummary.innerHTML = items.join("");
+  } else {
+    artifactScenariosSummary.textContent = "Artifact scenario artifacts have not been generated yet.";
+  }
 }
 
 main();

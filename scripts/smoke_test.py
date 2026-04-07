@@ -90,6 +90,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_refresh_checklist.py"], env=env)
     run([sys.executable, "scripts/generate_maintenance_risk.py"], env=env)
     run([sys.executable, "scripts/generate_artifact_readiness.py"], env=env)
+    run([sys.executable, "scripts/generate_artifact_scenarios.py"], env=env)
     run(
         [
             sys.executable,
@@ -192,6 +193,9 @@ def main() -> None:
     artifact_readiness = ROOT / "outputs" / "artifact_readiness" / "artifact_readiness.json"
     if not artifact_readiness.exists():
         raise SystemExit(f"Expected artifact readiness report at {artifact_readiness}")
+    artifact_scenarios = ROOT / "outputs" / "artifact_scenarios" / "artifact_scenarios.json"
+    if not artifact_scenarios.exists():
+        raise SystemExit(f"Expected artifact scenarios report at {artifact_scenarios}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

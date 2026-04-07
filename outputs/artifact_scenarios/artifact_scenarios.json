@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "status": "fail",
+    "failure_count": 5,
+    "warning_count": 0,
+    "top_risk_artifact": "outputs/support_readiness/support_readiness.json",
+    "stale_count": 6,
+    "refresh_step_count": 6
+  },
+  "scenarios": [
+    {
+      "name": "Dashboard refresh only",
+      "description": "Refresh the public dashboard artifact while leaving the support-report bundle untouched.",
+      "status": "fail",
+      "failure_count": 4,
+      "warning_count": 0,
+      "top_risk_artifact": "outputs/support_readiness/support_readiness.json",
+      "stale_count": 5,
+      "refresh_step_count": 5
+    },
+    {
+      "name": "Support report sprint",
+      "description": "Refresh the support-report bundle but leave the dashboard artifact stale.",
+      "status": "fail",
+      "failure_count": 1,
+      "warning_count": 1,
+      "top_risk_artifact": "dashboard/data.json",
+      "stale_count": 1,
+      "refresh_step_count": 1
+    },
+    {
+      "name": "Top-risk stabilization",
+      "description": "Refresh the highest-risk support outputs first, but leave lower-risk artifacts pending.",
+      "status": "fail",
+      "failure_count": 3,
+      "warning_count": 1,
+      "top_risk_artifact": "outputs/ops_review/ops_review.json",
+      "stale_count": 4,
+      "refresh_step_count": 4
+    },
+    {
+      "name": "Full artifact refresh",
+      "description": "Refresh every stale artifact so the published surface is fully current.",
+      "status": "pass",
+      "failure_count": 0,
+      "warning_count": 0,
+      "top_risk_artifact": "outputs/scenario_plan/scenario_plan.json",
+      "stale_count": 0,
+      "refresh_step_count": 0
+    }
+  ]
+}

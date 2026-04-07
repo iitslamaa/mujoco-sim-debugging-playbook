@@ -92,5 +92,7 @@ jobs:
         run: python scripts/generate_maintenance_risk.py
       - name: Build artifact readiness gate
         run: python scripts/generate_artifact_readiness.py
+      - name: Build artifact scenarios
+        run: python scripts/generate_artifact_scenarios.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

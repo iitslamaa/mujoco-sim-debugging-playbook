@@ -77,6 +77,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Refresh checklists that turn each bundle into an ordered runbook with validation targets
 - Maintenance risk scoring that ranks stale artifacts by downstream blast radius and refresh urgency
 - Artifact-readiness gating that turns artifact debt into a pass/warn/fail publishing verdict
+- Artifact scenarios that show which targeted refresh strategies are enough to recover published-output trust
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -164,6 +165,7 @@ make refresh-bundle
 make refresh-checklist
 make maintenance-risk
 make artifact-readiness
+make artifact-scenarios
 make case-studies
 make snapshot
 make regression-diff
@@ -567,6 +569,14 @@ python scripts/generate_artifact_readiness.py
 
 This turns artifact freshness, maintenance risk, and refresh effort into an explicit pass, warn, or fail decision for the published output surface.
 
+## Model artifact scenarios
+
+```bash
+python scripts/generate_artifact_scenarios.py
+```
+
+This shows how artifact readiness changes under targeted refresh strategies like dashboard-only refreshes, top-risk stabilization, or a full artifact refresh.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -595,6 +605,7 @@ This writes:
 - [provenance-guide.md](/Users/lamayassine/mujoco/docs/provenance-guide.md)
 - [maintenance-risk-guide.md](/Users/lamayassine/mujoco/docs/maintenance-risk-guide.md)
 - [artifact-readiness-guide.md](/Users/lamayassine/mujoco/docs/artifact-readiness-guide.md)
+- [artifact-scenarios-guide.md](/Users/lamayassine/mujoco/docs/artifact-scenarios-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

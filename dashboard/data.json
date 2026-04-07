@@ -4610,6 +4610,7 @@
       }
     ]
   },
+  "artifact_scenarios": null,
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4662,6 +4663,7 @@
     "refresh_bundle_markdown": "outputs/refresh_bundle/refresh_bundle.md",
     "refresh_checklist_markdown": "outputs/refresh_checklist/refresh_checklist.md",
     "maintenance_risk_markdown": "outputs/maintenance_risk/maintenance_risk.md",
-    "artifact_readiness_markdown": "outputs/artifact_readiness/artifact_readiness.md"
+    "artifact_readiness_markdown": "outputs/artifact_readiness/artifact_readiness.md",
+    "artifact_scenarios_markdown": "outputs/artifact_scenarios/artifact_scenarios.md"
   }
 }

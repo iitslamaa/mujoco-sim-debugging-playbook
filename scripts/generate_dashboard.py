@@ -51,6 +51,7 @@ def main() -> None:
     refresh_checklist = _read_json(ROOT / "outputs" / "refresh_checklist" / "refresh_checklist.json")
     maintenance_risk = _read_json(ROOT / "outputs" / "maintenance_risk" / "maintenance_risk.json")
     artifact_readiness = _read_json(ROOT / "outputs" / "artifact_readiness" / "artifact_readiness.json")
+    artifact_scenarios = _read_json(ROOT / "outputs" / "artifact_scenarios" / "artifact_scenarios.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -131,6 +132,7 @@ def main() -> None:
         "refresh_checklist": refresh_checklist,
         "maintenance_risk": maintenance_risk,
         "artifact_readiness": artifact_readiness,
+        "artifact_scenarios": artifact_scenarios,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -175,6 +177,7 @@ def main() -> None:
             "refresh_checklist_markdown": "outputs/refresh_checklist/refresh_checklist.md",
             "maintenance_risk_markdown": "outputs/maintenance_risk/maintenance_risk.md",
             "artifact_readiness_markdown": "outputs/artifact_readiness/artifact_readiness.md",
+            "artifact_scenarios_markdown": "outputs/artifact_scenarios/artifact_scenarios.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))
