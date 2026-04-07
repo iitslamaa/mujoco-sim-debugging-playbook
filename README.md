@@ -52,6 +52,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - A synthesized support triage queue that prioritizes what an engineer should inspect first
 - Incident bundles that package top-priority issues into handoff-ready case files
 - A generated knowledge base that turns incidents into reusable FAQ-style support guidance
+- Support-ops metrics that summarize queue load, coverage, and escalation burden
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -113,6 +114,7 @@ make triage
 make incidents
 make knowledge-base
 make escalation
+make support-ops
 make case-studies
 make snapshot
 make regression-diff
@@ -348,6 +350,19 @@ python scripts/generate_escalation_matrix.py \
 ```
 
 This classifies current triage items by severity, owner, and escalation path.
+
+## Generate the support ops report
+
+```bash
+python scripts/generate_support_ops_report.py \
+  --triage outputs/triage/triage_queue.json \
+  --incidents outputs/incidents/index.json \
+  --knowledge-base outputs/knowledge_base/index.json \
+  --escalation outputs/escalation/escalation_matrix.json \
+  --output-dir outputs/support_ops
+```
+
+This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.
 
 ## Generate a diagnostics bundle
 

@@ -74,6 +74,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_incident_bundles.py"], env=env)
     run([sys.executable, "scripts/generate_knowledge_base.py"], env=env)
     run([sys.executable, "scripts/generate_escalation_matrix.py"], env=env)
+    run([sys.executable, "scripts/generate_support_ops_report.py"], env=env)
     run(
         [
             sys.executable,
@@ -128,6 +129,9 @@ def main() -> None:
     escalation = ROOT / "outputs" / "escalation" / "escalation_matrix.json"
     if not escalation.exists():
         raise SystemExit(f"Expected escalation matrix at {escalation}")
+    support_ops = ROOT / "outputs" / "support_ops" / "support_ops.json"
+    if not support_ops.exists():
+        raise SystemExit(f"Expected support ops report at {support_ops}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

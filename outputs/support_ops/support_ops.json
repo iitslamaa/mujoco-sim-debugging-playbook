@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "queue_count": 11,
+    "incident_count": 5,
+    "knowledge_base_count": 5,
+    "escalated_count": 7,
+    "self_serve_count": 4,
+    "incident_coverage": 0.45454545454545453,
+    "knowledge_base_coverage": 0.45454545454545453
+  },
+  "severity_counts": {
+    "critical": 5,
+    "high": 2,
+    "medium": 3,
+    "low": 1
+  },
+  "owner_counts": {
+    "simulation-debugging": 5,
+    "controls-and-policy": 5,
+    "maintainer-review": 1
+  }
+}

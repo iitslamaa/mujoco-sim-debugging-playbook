@@ -313,6 +313,21 @@ async function main() {
   } else {
     escalationSummary.textContent = "Escalation artifacts have not been generated yet.";
   }
+
+  const supportOpsSummary = document.getElementById("support-ops-summary");
+  if (data.support_ops?.summary) {
+    const summary = data.support_ops.summary;
+    const items = [
+      `<p><strong>Queue count:</strong> ${summary.queue_count}</p>`,
+      `<p><strong>Incident coverage:</strong> ${(summary.incident_coverage * 100).toFixed(1)}%</p>`,
+      `<p><strong>Knowledge base coverage:</strong> ${(summary.knowledge_base_coverage * 100).toFixed(1)}%</p>`,
+      `<p><strong>Escalated items:</strong> ${summary.escalated_count}</p>`,
+      `<p><strong>Self-serve items:</strong> ${summary.self_serve_count}</p>`,
+    ];
+    supportOpsSummary.innerHTML = items.join("");
+  } else {
+    supportOpsSummary.textContent = "Support ops artifacts have not been generated yet.";
+  }
 }
 
 main();
