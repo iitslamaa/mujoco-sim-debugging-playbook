@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "owner_count": 1,
+    "top_owner": "controls-and-policy"
+  },
+  "rows": [
+    {
+      "owner": "controls-and-policy",
+      "effort_points": 22,
+      "breach_count": 2,
+      "at_risk_count": 3,
+      "on_track_count": 0,
+      "targets": [
+        "low_damping_high_gain / expert_pd",
+        "low_damping_high_gain / hybrid_guardrail",
+        "noise_heavy / expert_pd",
+        "noise_heavy / hybrid_guardrail",
+        "delay_heavy / expert_pd"
+      ],
+      "status": "overloaded",
+      "pressure_index": 31.0
+    }
+  ]
+}
