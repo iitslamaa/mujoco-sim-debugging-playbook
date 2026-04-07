@@ -5694,6 +5694,27 @@
       "Critical snapshot alerts are still active."
     ]
   },
+  "dashboard_snapshot_handoff": {
+    "summary": {
+      "handoff_owner": "dashboard-stabilization",
+      "current_status": "fail",
+      "projected_terminal_status": "pass",
+      "blocker_count": 2,
+      "top_item_count": 3,
+      "dominant_transition": "current_state -> support_sprint_projection"
+    },
+    "top_items": [
+      "Status transition to pass",
+      "Current dashboard status is not yet pass.",
+      "Critical snapshot alerts are still active."
+    ],
+    "headlines": [
+      "Current dashboard status is fail.",
+      "Projected terminal status is pass.",
+      "Largest recovery step is current_state -> support_sprint_projection.",
+      "First preserved pass state appears at full_refresh_projection."
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5766,6 +5787,7 @@
     "dashboard_snapshot_drift_markdown": "outputs/dashboard_snapshots/drift.md",
     "dashboard_snapshot_alerts_markdown": "outputs/dashboard_snapshots/alerts.md",
     "dashboard_snapshot_monitor_markdown": "outputs/dashboard_snapshots/monitor.md",
-    "dashboard_snapshot_review_markdown": "outputs/dashboard_snapshots/review.md"
+    "dashboard_snapshot_review_markdown": "outputs/dashboard_snapshots/review.md",
+    "dashboard_snapshot_handoff_markdown": "outputs/dashboard_snapshots/handoff.md"
   }
 }

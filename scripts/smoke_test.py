@@ -110,6 +110,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_dashboard_snapshot_alerts.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot_monitor.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot_review.py"], env=env)
+    run([sys.executable, "scripts/generate_dashboard_snapshot_handoff.py"], env=env)
     run(
         [
             sys.executable,
@@ -272,6 +273,9 @@ def main() -> None:
     dashboard_snapshot_review = ROOT / "outputs" / "dashboard_snapshots" / "review.json"
     if not dashboard_snapshot_review.exists():
         raise SystemExit(f"Expected dashboard snapshot review at {dashboard_snapshot_review}")
+    dashboard_snapshot_handoff = ROOT / "outputs" / "dashboard_snapshots" / "handoff.json"
+    if not dashboard_snapshot_handoff.exists():
+        raise SystemExit(f"Expected dashboard snapshot handoff at {dashboard_snapshot_handoff}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

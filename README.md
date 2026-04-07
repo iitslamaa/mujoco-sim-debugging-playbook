@@ -200,6 +200,7 @@ make dashboard-snapshot-drift
 make dashboard-snapshot-alerts
 make dashboard-snapshot-monitor
 make dashboard-snapshot-review
+make dashboard-snapshot-handoff
 make case-studies
 make snapshot
 make regression-diff
@@ -763,6 +764,14 @@ python scripts/generate_dashboard_snapshot_review.py
 
 This turns the dashboard monitor into a concise reviewer-facing note with blockers and next focus.
 
+## Build dashboard snapshot handoff
+
+```bash
+python scripts/generate_dashboard_snapshot_handoff.py
+```
+
+This packages the current dashboard snapshot review into a lightweight transfer packet.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -811,6 +820,7 @@ This writes:
 - [dashboard-snapshot-alerts-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-alerts-guide.md)
 - [dashboard-snapshot-monitor-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-monitor-guide.md)
 - [dashboard-snapshot-review-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-review-guide.md)
+- [dashboard-snapshot-handoff-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-handoff-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

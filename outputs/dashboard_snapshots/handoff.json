@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "handoff_owner": "dashboard-stabilization",
+    "current_status": "fail",
+    "projected_terminal_status": "pass",
+    "blocker_count": 2,
+    "top_item_count": 3,
+    "dominant_transition": "current_state -> support_sprint_projection"
+  },
+  "top_items": [
+    "Status transition to pass",
+    "Current dashboard status is not yet pass.",
+    "Critical snapshot alerts are still active."
+  ],
+  "headlines": [
+    "Current dashboard status is fail.",
+    "Projected terminal status is pass.",
+    "Largest recovery step is current_state -> support_sprint_projection.",
+    "First preserved pass state appears at full_refresh_projection."
+  ]
+}
