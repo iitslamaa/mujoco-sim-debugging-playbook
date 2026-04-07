@@ -67,6 +67,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Owner alerts that condense overloaded ownership into short, actionable notifications
 - Release-packet generation that combines commit range, support status, wins, and top risks
 - Evidence inventory generation that catalogs generated artifacts across the entire outputs tree
+- Action-register generation that turns recommended follow-up work into a flat execution list
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -143,6 +144,7 @@ make risk-register
 make owner-alerts
 make release-packet
 make evidence-inventory
+make action-register
 make case-studies
 make snapshot
 make regression-diff
@@ -472,6 +474,12 @@ python scripts/generate_release_packet.py
 
 ```bash
 python scripts/generate_evidence_inventory.py
+```
+
+## Generate the action register
+
+```bash
+python scripts/generate_action_register.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.
