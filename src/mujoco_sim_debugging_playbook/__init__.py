@@ -84,6 +84,7 @@ __all__ = [
     "response_rubric",
     "risk_register",
     "release_notes",
+    "release_checklist",
     "release_packet",
     "regression",
     "report",
