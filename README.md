@@ -212,6 +212,7 @@ make dashboard-snapshot-owner-load
 make dashboard-snapshot-readiness-gate
 make dashboard-snapshot-recovery-forecast
 make dashboard-snapshot-milestones
+make dashboard-snapshot-watchlist
 make case-studies
 make snapshot
 make regression-diff
@@ -871,6 +872,14 @@ python scripts/generate_dashboard_snapshot_milestones.py
 
 This expresses the current, next, and terminal states as a compact milestone progression.
 
+## Build dashboard snapshot watchlist
+
+```bash
+python scripts/generate_dashboard_snapshot_watchlist.py
+```
+
+This combines the highest-priority alerts and actions into one compact operator queue.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -931,6 +940,7 @@ This writes:
 - [dashboard-snapshot-readiness-gate-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-readiness-gate-guide.md)
 - [dashboard-snapshot-recovery-forecast-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-recovery-forecast-guide.md)
 - [dashboard-snapshot-milestones-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-milestones-guide.md)
+- [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

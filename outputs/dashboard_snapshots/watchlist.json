@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "watch_item_count": 4,
+    "critical_alerts": 1,
+    "active_items": 1,
+    "planned_items": 2,
+    "handoff_owner": "dashboard-stabilization"
+  },
+  "watch_items": [
+    {
+      "kind": "alert",
+      "label": "Status transition to pass",
+      "severity": "critical",
+      "owner": "dashboard-stabilization"
+    },
+    {
+      "kind": "alert",
+      "label": "Current dashboard status is not yet pass.",
+      "severity": "warning",
+      "owner": "dashboard-stabilization"
+    },
+    {
+      "kind": "action",
+      "label": "Status transition to pass",
+      "severity": "p0",
+      "owner": "dashboard-stabilization"
+    },
+    {
+      "kind": "action",
+      "label": "Current dashboard status is not yet pass.",
+      "severity": "p1",
+      "owner": "dashboard-stabilization"
+    }
+  ]
+}

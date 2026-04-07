@@ -33,6 +33,7 @@ __all__ = [
     "dashboard_snapshot_readiness_gate",
     "dashboard_snapshot_recovery_forecast",
     "dashboard_snapshot_milestones",
+    "dashboard_snapshot_watchlist",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

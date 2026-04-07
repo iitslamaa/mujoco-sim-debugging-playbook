@@ -1231,6 +1231,24 @@ async function main() {
   } else {
     dashboardSnapshotMilestonesSummary.textContent = "Dashboard snapshot milestones have not been generated yet.";
   }
+
+  const dashboardSnapshotWatchlistSummary = document.getElementById("dashboard-snapshot-watchlist-summary");
+  if (data.dashboard_snapshot_watchlist?.summary) {
+    const summary = data.dashboard_snapshot_watchlist.summary;
+    const items = [
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Watch items:</strong> ${summary.watch_item_count}</p>`,
+      `<p><strong>Critical alerts:</strong> ${summary.critical_alerts}</p>`,
+      `<p><strong>Active items:</strong> ${summary.active_items}</p>`,
+      `<p><strong>Planned items:</strong> ${summary.planned_items}</p>`,
+    ];
+    (data.dashboard_snapshot_watchlist.watch_items || []).forEach((item) => {
+      items.push(`<p><strong>[${item.kind}]</strong> ${item.label} | ${item.severity} | ${item.owner}</p>`);
+    });
+    dashboardSnapshotWatchlistSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotWatchlistSummary.textContent = "Dashboard snapshot watchlist has not been generated yet.";
+  }
 }
 
 main();
