@@ -98,5 +98,7 @@ jobs:
         run: python scripts/generate_artifact_recovery.py
       - name: Build artifact delivery forecast
         run: python scripts/generate_artifact_delivery.py
+      - name: Build artifact capacity plan
+        run: python scripts/generate_artifact_capacity.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

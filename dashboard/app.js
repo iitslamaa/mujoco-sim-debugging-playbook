@@ -658,6 +658,26 @@ async function main() {
   } else {
     artifactDeliverySummary.textContent = "Artifact delivery artifacts have not been generated yet.";
   }
+
+  const artifactCapacitySummary = document.getElementById("artifact-capacity-summary");
+  if (data.artifact_capacity?.summary) {
+    const summary = data.artifact_capacity.summary;
+    const items = [
+      `<p><strong>Owners tracked:</strong> ${summary.owner_count}</p>`,
+      `<p><strong>Overloaded owners:</strong> ${summary.overloaded_owner_count}</p>`,
+      `<p><strong>Phases tracked:</strong> ${summary.phase_count}</p>`,
+      `<p><strong>Rebalance items:</strong> ${summary.rebalance_item_count}</p>`,
+      `<p><strong>Highest-pressure phase:</strong> ${summary.highest_pressure_phase || "n/a"}</p>`,
+    ];
+    (data.artifact_capacity.phases || []).forEach((phase) => {
+      items.push(
+        `<p><strong>${phase.name}</strong>: ${phase.status}, owner ${phase.owner}, shift ${phase.suggested_capacity_shift}</p>`
+      );
+    });
+    artifactCapacitySummary.innerHTML = items.join("");
+  } else {
+    artifactCapacitySummary.textContent = "Artifact capacity artifacts have not been generated yet.";
+  }
 }
 
 main();
