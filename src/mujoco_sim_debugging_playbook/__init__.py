@@ -34,6 +34,7 @@ __all__ = [
     "report",
     "rl",
     "scenario_planner",
+    "scorecard",
     "simulation",
     "sla",
     "support",
