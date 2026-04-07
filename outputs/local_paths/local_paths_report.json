@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "path_count": 5
+  },
+  "paths": [
+    {
+      "name": "repo_root",
+      "path": "/Users/lamayassine/mujoco"
+    },
+    {
+      "name": "outputs",
+      "path": "/Users/lamayassine/mujoco/outputs"
+    },
+    {
+      "name": "support_cases",
+      "path": "/Users/lamayassine/mujoco/outputs/support_cases"
+    },
+    {
+      "name": "dashboard",
+      "path": "/Users/lamayassine/mujoco/dashboard"
+    },
+    {
+      "name": "scripts",
+      "path": "/Users/lamayassine/mujoco/scripts"
+    }
+  ]
+}
