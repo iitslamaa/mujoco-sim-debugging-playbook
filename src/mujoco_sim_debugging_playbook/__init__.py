@@ -39,6 +39,7 @@ __all__ = [
     "dashboard_snapshot_status_brief",
     "dashboard_snapshot_lead",
     "artifact_capacity",
+    "debug_bundle_manifest",
     "artifact_readiness",
     "artifact_recovery",
     "artifact_scenarios",
