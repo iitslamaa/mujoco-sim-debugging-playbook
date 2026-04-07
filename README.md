@@ -227,6 +227,7 @@ make response-rubric
 make support-response-template
 make local-paths-report
 make release-checklist
+make release-dry-run
 make environment-diff
 make support-intake-checklist
 make machine-profile
@@ -1183,6 +1184,7 @@ This writes:
 - [support-response-template-guide.md](/Users/lamayassine/mujoco/docs/support-response-template-guide.md)
 - [local-paths-guide.md](/Users/lamayassine/mujoco/docs/local-paths-guide.md)
 - [release-checklist-guide.md](/Users/lamayassine/mujoco/docs/release-checklist-guide.md)
+- [release-dry-run-guide.md](/Users/lamayassine/mujoco/docs/release-dry-run-guide.md)
 - [environment-diff-guide.md](/Users/lamayassine/mujoco/docs/environment-diff-guide.md)
 - [support-intake-checklist-guide.md](/Users/lamayassine/mujoco/docs/support-intake-checklist-guide.md)
 - [machine-profile-guide.md](/Users/lamayassine/mujoco/docs/machine-profile-guide.md)
