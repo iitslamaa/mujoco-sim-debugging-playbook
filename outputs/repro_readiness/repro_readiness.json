@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "status": "ready",
+    "entry_count": 2,
+    "intake_items_ready": 3
+  },
+  "covered_cases": [
+    "actuator_gain_overshoot",
+    "delay_instability"
+  ]
+}
