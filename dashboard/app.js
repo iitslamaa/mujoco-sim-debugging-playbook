@@ -449,6 +449,22 @@ async function main() {
   } else {
     supportReadinessSummary.textContent = "Support readiness artifacts have not been generated yet.";
   }
+
+  const scenarioPlanSummary = document.getElementById("scenario-plan-summary");
+  if (data.scenario_plan?.baseline) {
+    const baseline = data.scenario_plan.baseline;
+    const items = [
+      `<p><strong>Baseline:</strong> ${baseline.status} (${baseline.failure_count} failures, ${baseline.warning_count} warnings)</p>`,
+    ];
+    (data.scenario_plan.scenarios || []).forEach((scenario) => {
+      items.push(
+        `<p><strong>${scenario.name}</strong>: ${scenario.status} (${scenario.failure_count} failures, ${scenario.warning_count} warnings)</p>`
+      );
+    });
+    scenarioPlanSummary.innerHTML = items.join("");
+  } else {
+    scenarioPlanSummary.textContent = "Scenario planning artifacts have not been generated yet.";
+  }
 }
 
 main();

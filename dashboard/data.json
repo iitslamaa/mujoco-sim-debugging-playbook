@@ -3975,6 +3975,57 @@
       }
     ]
   },
+  "scenario_plan": {
+    "baseline": {
+      "status": "fail",
+      "failure_count": 1,
+      "warning_count": 5
+    },
+    "scenarios": [
+      {
+        "name": "Clear breaches",
+        "description": "Resolve the currently breaching support items without changing coverage levels.",
+        "status": "warn",
+        "failure_count": 0,
+        "warning_count": 3,
+        "check_count": 7,
+        "notable_changes": [
+          "Incident coverage is 45.5% of the queue.",
+          "Knowledge-base coverage is 45.5% of the queue.",
+          "0 forecasted support items are in breach.",
+          "2 support items are forecasted as at risk."
+        ]
+      },
+      {
+        "name": "Coverage sprint",
+        "description": "Add support assets for the highest-priority gaps and increase self-serve coverage.",
+        "status": "fail",
+        "failure_count": 1,
+        "warning_count": 2,
+        "check_count": 7,
+        "notable_changes": [
+          "Incident coverage is 65.5% of the queue.",
+          "Knowledge-base coverage is 65.5% of the queue.",
+          "3 support items are forecasted as at risk.",
+          "1 owners are currently overloaded."
+        ]
+      },
+      {
+        "name": "Full stabilization",
+        "description": "Resolve breaches, rebalance owners, and close the top coverage gaps in one coordinated pass.",
+        "status": "pass",
+        "failure_count": 0,
+        "warning_count": 0,
+        "check_count": 7,
+        "notable_changes": [
+          "Incident coverage is 70.5% of the queue.",
+          "Knowledge-base coverage is 70.5% of the queue.",
+          "0 forecasted support items are in breach.",
+          "1 support items are forecasted as at risk."
+        ]
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4018,6 +4069,7 @@
     "sla_markdown": "outputs/sla/sla_report.md",
     "capacity_markdown": "outputs/capacity/capacity_plan.md",
     "ops_review_markdown": "outputs/ops_review/ops_review.md",
-    "support_readiness_markdown": "outputs/support_readiness/support_readiness.md"
+    "support_readiness_markdown": "outputs/support_readiness/support_readiness.md",
+    "scenario_plan_markdown": "outputs/scenario_plan/scenario_plan.md"
   }
 }

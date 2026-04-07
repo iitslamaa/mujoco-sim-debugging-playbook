@@ -74,5 +74,7 @@ jobs:
         run: python scripts/generate_ops_review.py
       - name: Build support readiness gate
         run: python scripts/generate_support_readiness.py
+      - name: Build scenario plan
+        run: python scripts/generate_scenario_plan.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

@@ -25,6 +25,7 @@ __all__ = [
     "regression",
     "report",
     "rl",
+    "scenario_planner",
     "simulation",
     "sla",
     "support",

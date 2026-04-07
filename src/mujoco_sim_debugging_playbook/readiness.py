@@ -24,6 +24,30 @@ def build_support_readiness_report(
     capacity = _read_json(capacity_plan_path)
     release_notes = _read_json(release_notes_path)
 
+    payload = evaluate_support_readiness(
+        support_ops=support_ops,
+        support_gaps=support_gaps,
+        sla=sla,
+        capacity=capacity,
+        release_notes=release_notes,
+    )
+
+    output = Path(output_dir)
+    output.mkdir(parents=True, exist_ok=True)
+    (output / "support_readiness.json").write_text(json.dumps(payload, indent=2))
+    (output / "support_readiness.md").write_text(_render_markdown(payload))
+    return payload
+
+
+def evaluate_support_readiness(
+    *,
+    support_ops: dict[str, Any],
+    support_gaps: dict[str, Any],
+    sla: dict[str, Any],
+    capacity: dict[str, Any],
+    release_notes: dict[str, Any],
+) -> dict[str, Any]:
+
     checks = [
         _check_incident_coverage(support_ops),
         _check_kb_coverage(support_ops),
@@ -46,11 +70,6 @@ def build_support_readiness_report(
         },
         "checks": checks,
     }
-
-    output = Path(output_dir)
-    output.mkdir(parents=True, exist_ok=True)
-    (output / "support_readiness.json").write_text(json.dumps(payload, indent=2))
-    (output / "support_readiness.md").write_text(_render_markdown(payload))
     return payload
 
 

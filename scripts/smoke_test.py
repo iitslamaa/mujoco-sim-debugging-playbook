@@ -81,6 +81,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_capacity_plan.py"], env=env)
     run([sys.executable, "scripts/generate_ops_review.py"], env=env)
     run([sys.executable, "scripts/generate_support_readiness.py"], env=env)
+    run([sys.executable, "scripts/generate_scenario_plan.py"], env=env)
     run(
         [
             sys.executable,
@@ -156,6 +157,9 @@ def main() -> None:
     support_readiness = ROOT / "outputs" / "support_readiness" / "support_readiness.json"
     if not support_readiness.exists():
         raise SystemExit(f"Expected support readiness report at {support_readiness}")
+    scenario_plan = ROOT / "outputs" / "scenario_plan" / "scenario_plan.json"
+    if not scenario_plan.exists():
+        raise SystemExit(f"Expected scenario plan at {scenario_plan}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])
