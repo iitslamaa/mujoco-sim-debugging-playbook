@@ -70,6 +70,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Action-register generation that turns recommended follow-up work into a flat execution list
 - Scorecard generation that condenses the most important support-health KPIs into one tiny artifact
 - Briefing-note generation that turns the support state into a concise narrative update
+- Artifact-freshness audits that flag generated reports or dashboard data that may need regeneration
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -149,6 +150,7 @@ make evidence-inventory
 make action-register
 make scorecard
 make briefing-note
+make artifact-freshness
 make case-studies
 make snapshot
 make regression-diff
@@ -496,6 +498,12 @@ python scripts/generate_scorecard.py
 
 ```bash
 python scripts/generate_briefing_note.py
+```
+
+## Generate the artifact-freshness audit
+
+```bash
+python scripts/generate_artifact_freshness.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.

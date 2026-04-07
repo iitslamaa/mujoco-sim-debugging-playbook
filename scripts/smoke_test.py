@@ -82,6 +82,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_ops_review.py"], env=env)
     run([sys.executable, "scripts/generate_support_readiness.py"], env=env)
     run([sys.executable, "scripts/generate_scenario_plan.py"], env=env)
+    run([sys.executable, "scripts/generate_artifact_freshness.py"], env=env)
     run(
         [
             sys.executable,
@@ -160,6 +161,9 @@ def main() -> None:
     scenario_plan = ROOT / "outputs" / "scenario_plan" / "scenario_plan.json"
     if not scenario_plan.exists():
         raise SystemExit(f"Expected scenario plan at {scenario_plan}")
+    artifact_freshness = ROOT / "outputs" / "artifact_freshness" / "artifact_freshness.json"
+    if not artifact_freshness.exists():
+        raise SystemExit(f"Expected artifact freshness report at {artifact_freshness}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

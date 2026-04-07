@@ -465,6 +465,22 @@ async function main() {
   } else {
     scenarioPlanSummary.textContent = "Scenario planning artifacts have not been generated yet.";
   }
+
+  const artifactFreshnessSummary = document.getElementById("artifact-freshness-summary");
+  if (data.artifact_freshness?.summary) {
+    const summary = data.artifact_freshness.summary;
+    const items = [
+      `<p><strong>Fresh:</strong> ${summary.fresh_count}</p>`,
+      `<p><strong>Stale:</strong> ${summary.stale_count}</p>`,
+      `<p><strong>Missing:</strong> ${summary.missing_count}</p>`,
+    ];
+    (data.artifact_freshness.rows || []).slice(0, 6).forEach((row) => {
+      items.push(`<p><strong>${row.artifact}</strong>: ${row.status}</p>`);
+    });
+    artifactFreshnessSummary.innerHTML = items.join("");
+  } else {
+    artifactFreshnessSummary.textContent = "Artifact freshness artifacts have not been generated yet.";
+  }
 }
 
 main();

@@ -3,6 +3,7 @@
 __all__ = [
     "action_register",
     "anomaly",
+    "artifact_freshness",
     "backlog_aging",
     "benchmark",
     "briefing_note",

@@ -4026,6 +4026,52 @@
       }
     ]
   },
+  "artifact_freshness": {
+    "summary": {
+      "artifact_count": 6,
+      "fresh_count": 0,
+      "stale_count": 6,
+      "missing_count": 0
+    },
+    "rows": [
+      {
+        "artifact": "dashboard/data.json",
+        "exists": true,
+        "status": "stale",
+        "age_delta_seconds": 776.883
+      },
+      {
+        "artifact": "outputs/support_readiness/support_readiness.json",
+        "exists": true,
+        "status": "stale",
+        "age_delta_seconds": 867.916
+      },
+      {
+        "artifact": "outputs/scenario_plan/scenario_plan.json",
+        "exists": true,
+        "status": "stale",
+        "age_delta_seconds": 776.886
+      },
+      {
+        "artifact": "outputs/ops_review/ops_review.json",
+        "exists": true,
+        "status": "stale",
+        "age_delta_seconds": 943.285
+      },
+      {
+        "artifact": "outputs/scorecard/scorecard.json",
+        "exists": true,
+        "status": "stale",
+        "age_delta_seconds": 198.101
+      },
+      {
+        "artifact": "outputs/briefing_note/briefing_note.json",
+        "exists": true,
+        "status": "stale",
+        "age_delta_seconds": 125.618
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4070,6 +4116,7 @@
     "capacity_markdown": "outputs/capacity/capacity_plan.md",
     "ops_review_markdown": "outputs/ops_review/ops_review.md",
     "support_readiness_markdown": "outputs/support_readiness/support_readiness.md",
-    "scenario_plan_markdown": "outputs/scenario_plan/scenario_plan.md"
+    "scenario_plan_markdown": "outputs/scenario_plan/scenario_plan.md",
+    "artifact_freshness_markdown": "outputs/artifact_freshness/artifact_freshness.md"
   }
 }
