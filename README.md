@@ -1,6 +1,6 @@
 # mujoco-sim-debugging-playbook
 
-> A support-first MuJoCo project for reproducing simulation failures, running parameter sweeps, drafting user-facing guidance, and demonstrating the exact debugging and documentation habits needed for robotics platform enablement roles like Isaac Lab technical solutions engineering.
+> A support-first MuJoCo project for reproducing simulation failures, running parameter sweeps, training a PyTorch policy, and packaging diagnostics, docs, and artifacts around robot control behavior.
 
 ## Why this exists
 
@@ -25,17 +25,6 @@ It demonstrates:
 - Linux-style tooling with bash, Docker, CI, and GitHub workflows
 
 The core task is a planar 2-DoF robotic arm reaching for sampled workspace targets. A baseline inverse-kinematics-plus-PD controller is evaluated while varying important simulation and control parameters such as damping, actuator gain, noise, delay, and control frequency.
-
-## Why this is relevant to Isaac Lab-style work
-
-This is not presented as fake Isaac Lab experience. It is presented as a credible adjacent project that mirrors the same operating model:
-
-- reproduce a user-reported behavior
-- isolate the root cause with controlled experiments
-- explain the result clearly with artifacts and docs
-- improve self-service with templates, guides, and examples
-
-That is exactly the kind of muscle a technical solutions engineer needs when supporting a robotics simulation platform.
 
 ## Project highlights
 
@@ -261,19 +250,6 @@ The debugging guide lives in [troubleshooting.md](/Users/lamayassine/mujoco/docs
 - success in one configuration but failure in another
 - timestep and delay sensitivity
 - how to inspect traces instead of guessing
-
-## Role alignment
-
-This repo is built to signal fit for:
-
-- simulation troubleshooting
-- Python-based tooling and experimentation
-- PyTorch-centered model training and evaluation workflows
-- user enablement and documentation
-- Linux developer workflows with Docker, bash-friendly scripts, and virtualenvs
-- reproducibility and release validation via diagnostics bundles and environment capture
-- GitHub contribution patterns with CI, issue templates, and contributor guidance
-- support-minded engineering rather than only algorithm implementation
 
 ## Resume framing
 
