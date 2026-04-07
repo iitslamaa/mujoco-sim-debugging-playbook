@@ -124,6 +124,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_dashboard_snapshot_milestones.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot_watchlist.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot_focus.py"], env=env)
+    run([sys.executable, "scripts/generate_dashboard_snapshot_priorities.py"], env=env)
     run(
         [
             sys.executable,
@@ -328,6 +329,9 @@ def main() -> None:
     dashboard_snapshot_focus = ROOT / "outputs" / "dashboard_snapshots" / "focus.json"
     if not dashboard_snapshot_focus.exists():
         raise SystemExit(f"Expected dashboard snapshot focus at {dashboard_snapshot_focus}")
+    dashboard_snapshot_priorities = ROOT / "outputs" / "dashboard_snapshots" / "priorities.json"
+    if not dashboard_snapshot_priorities.exists():
+        raise SystemExit(f"Expected dashboard snapshot priorities at {dashboard_snapshot_priorities}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

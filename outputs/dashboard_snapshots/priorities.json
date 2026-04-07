@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "current_status": "fail",
+    "next_status": "warn",
+    "priority_count": 2,
+    "handoff_owner": "dashboard-stabilization",
+    "next_objective": "Status transition to pass"
+  },
+  "priorities": [
+    {
+      "priority": "P0",
+      "phase": "Immediate stabilization",
+      "objective": "Status transition to pass"
+    },
+    {
+      "priority": "P1",
+      "phase": "Follow-up cleanup",
+      "objective": "Current dashboard status is not yet pass."
+    }
+  ],
+  "blockers": [
+    "Closeout has not reached ready_to_close.",
+    "Critical alert pressure remains active."
+  ]
+}

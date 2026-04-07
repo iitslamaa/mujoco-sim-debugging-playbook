@@ -1272,6 +1272,27 @@ async function main() {
   } else {
     dashboardSnapshotFocusSummary.textContent = "Dashboard snapshot focus has not been generated yet.";
   }
+
+  const dashboardSnapshotPrioritiesSummary = document.getElementById("dashboard-snapshot-priorities-summary");
+  if (data.dashboard_snapshot_priorities?.summary) {
+    const summary = data.dashboard_snapshot_priorities.summary;
+    const items = [
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Next status:</strong> ${summary.next_status}</p>`,
+      `<p><strong>Priorities:</strong> ${summary.priority_count}</p>`,
+      `<p><strong>Next objective:</strong> ${summary.next_objective}</p>`,
+    ];
+    (data.dashboard_snapshot_priorities.blockers || []).forEach((blocker) => {
+      items.push(`<p><strong>Blocker:</strong> ${blocker}</p>`);
+    });
+    (data.dashboard_snapshot_priorities.priorities || []).forEach((item) => {
+      items.push(`<p><strong>${item.priority}</strong> ${item.phase} | ${item.objective}</p>`);
+    });
+    dashboardSnapshotPrioritiesSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotPrioritiesSummary.textContent = "Dashboard snapshot priorities have not been generated yet.";
+  }
 }
 
 main();

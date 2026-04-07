@@ -6011,6 +6011,31 @@
     ],
     "next_objective": "Status transition to pass"
   },
+  "dashboard_snapshot_priorities": {
+    "summary": {
+      "current_status": "fail",
+      "next_status": "warn",
+      "priority_count": 2,
+      "handoff_owner": "dashboard-stabilization",
+      "next_objective": "Status transition to pass"
+    },
+    "priorities": [
+      {
+        "priority": "P0",
+        "phase": "Immediate stabilization",
+        "objective": "Status transition to pass"
+      },
+      {
+        "priority": "P1",
+        "phase": "Follow-up cleanup",
+        "objective": "Current dashboard status is not yet pass."
+      }
+    ],
+    "blockers": [
+      "Closeout has not reached ready_to_close.",
+      "Critical alert pressure remains active."
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -6097,6 +6122,7 @@
     "dashboard_snapshot_recovery_forecast_markdown": "outputs/dashboard_snapshots/recovery_forecast.md",
     "dashboard_snapshot_milestones_markdown": "outputs/dashboard_snapshots/milestones.md",
     "dashboard_snapshot_watchlist_markdown": "outputs/dashboard_snapshots/watchlist.md",
-    "dashboard_snapshot_focus_markdown": "outputs/dashboard_snapshots/focus.md"
+    "dashboard_snapshot_focus_markdown": "outputs/dashboard_snapshots/focus.md",
+    "dashboard_snapshot_priorities_markdown": "outputs/dashboard_snapshots/priorities.md"
   }
 }

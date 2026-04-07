@@ -162,5 +162,7 @@ jobs:
         run: python scripts/generate_dashboard_snapshot_watchlist.py
       - name: Build dashboard snapshot focus
         run: python scripts/generate_dashboard_snapshot_focus.py
+      - name: Build dashboard snapshot priorities
+        run: python scripts/generate_dashboard_snapshot_priorities.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

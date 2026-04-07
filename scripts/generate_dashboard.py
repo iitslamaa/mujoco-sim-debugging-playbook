@@ -85,6 +85,7 @@ def main() -> None:
     dashboard_snapshot_milestones = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "milestones.json")
     dashboard_snapshot_watchlist = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "watchlist.json")
     dashboard_snapshot_focus = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "focus.json")
+    dashboard_snapshot_priorities = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "priorities.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -199,6 +200,7 @@ def main() -> None:
         "dashboard_snapshot_milestones": dashboard_snapshot_milestones,
         "dashboard_snapshot_watchlist": dashboard_snapshot_watchlist,
         "dashboard_snapshot_focus": dashboard_snapshot_focus,
+        "dashboard_snapshot_priorities": dashboard_snapshot_priorities,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -277,6 +279,7 @@ def main() -> None:
             "dashboard_snapshot_milestones_markdown": "outputs/dashboard_snapshots/milestones.md",
             "dashboard_snapshot_watchlist_markdown": "outputs/dashboard_snapshots/watchlist.md",
             "dashboard_snapshot_focus_markdown": "outputs/dashboard_snapshots/focus.md",
+            "dashboard_snapshot_priorities_markdown": "outputs/dashboard_snapshots/priorities.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))
