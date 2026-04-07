@@ -8,6 +8,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from mujoco_sim_debugging_playbook.regression import compare_snapshots
+from mujoco_sim_debugging_playbook.regression import build_regression_history
 from mujoco_sim_debugging_playbook.regression import evaluate_regression_diff
 
 
@@ -81,3 +82,53 @@ def test_evaluate_regression_diff_flags_threshold_violation() -> None:
     assert report["violation_count"] == 2
     assert report["scalar_results"]["baseline_success_rate"]["passed"] is False
     assert report["controller_results"]["benchmark_success_rate_by_controller"]["torch_policy"]["passed"] is False
+
+
+def test_build_regression_history_generates_outputs(tmp_path: Path) -> None:
+    left = tmp_path / "baseline_reference.json"
+    right = tmp_path / "current.json"
+    left.write_text(json.dumps({
+        "name": "baseline_reference",
+        "created_at": "2026-04-01T12:00:00+00:00",
+        "metrics": {
+            "baseline_success_rate": 0.1,
+            "baseline_final_error_mean": 0.2,
+            "imitation_success_rate": 0.2,
+            "imitation_final_error_mean": 0.15,
+            "rl_success_rate": 0.3,
+            "rl_final_error_mean": 0.12,
+            "benchmark_success_rate_by_controller": {"expert_pd": 0.5},
+            "randomization_success_rate_by_controller": {"expert_pd": 0.2},
+            "randomization_final_error_by_controller": {"expert_pd": 0.1}
+        }
+    }))
+    right.write_text(json.dumps({
+        "name": "current",
+        "created_at": "2026-04-02T12:00:00+00:00",
+        "metrics": {
+            "baseline_success_rate": 0.2,
+            "baseline_final_error_mean": 0.18,
+            "imitation_success_rate": 0.25,
+            "imitation_final_error_mean": 0.14,
+            "rl_success_rate": 0.35,
+            "rl_final_error_mean": 0.1,
+            "benchmark_success_rate_by_controller": {"expert_pd": 0.55},
+            "randomization_success_rate_by_controller": {"expert_pd": 0.25},
+            "randomization_final_error_by_controller": {"expert_pd": 0.08}
+        }
+    }))
+    gate_reports = {
+        "current": {
+            "right": "current",
+            "status": "pass",
+            "violation_count": 0,
+        }
+    }
+
+    output_dir = tmp_path / "history"
+    payload = build_regression_history([left, right], gate_reports, output_dir)
+    assert payload["trend_summary"]["baseline_success_rate"]["direction"] == "up"
+    assert payload["trend_summary"]["baseline_final_error_mean"]["direction"] == "down"
+    assert (output_dir / "history.json").exists()
+    assert (output_dir / "history.md").exists()
+    assert (output_dir / "history.png").exists()

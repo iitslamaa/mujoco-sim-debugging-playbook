@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization case-studies snapshot regression-diff regression-check demo-gif dashboard format-help
+.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization case-studies snapshot regression-diff regression-check regression-history demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -71,6 +71,12 @@ regression-check:
 		--right outputs/regression/snapshots/current.json \
 		--thresholds configs/regression_thresholds.json \
 		--output-dir outputs/regression/gate
+
+regression-history:
+	$(PYTHON) scripts/build_regression_history.py \
+		--snapshot-dir outputs/regression/snapshots \
+		--output-dir outputs/regression/history \
+		--gate-report outputs/regression/gate/regression_gate.json
 
 demo-gif:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_demo_gif.py \

@@ -1,0 +1,138 @@
+{
+  "snapshots": [
+    {
+      "name": "baseline_reference",
+      "created_at": "2026-04-07T00:49:54.851207+00:00"
+    },
+    {
+      "name": "current",
+      "created_at": "2026-04-07T00:49:54.851224+00:00"
+    }
+  ],
+  "series": {
+    "baseline_success_rate": [
+      {
+        "name": "baseline_reference",
+        "created_at": "2026-04-07T00:49:54.851207+00:00",
+        "value": 0.1
+      },
+      {
+        "name": "current",
+        "created_at": "2026-04-07T00:49:54.851224+00:00",
+        "value": 0.1
+      }
+    ],
+    "baseline_final_error_mean": [
+      {
+        "name": "baseline_reference",
+        "created_at": "2026-04-07T00:49:54.851207+00:00",
+        "value": 0.09427099044986048
+      },
+      {
+        "name": "current",
+        "created_at": "2026-04-07T00:49:54.851224+00:00",
+        "value": 0.09427099044986048
+      }
+    ],
+    "imitation_success_rate": [
+      {
+        "name": "baseline_reference",
+        "created_at": "2026-04-07T00:49:54.851207+00:00",
+        "value": 0.375
+      },
+      {
+        "name": "current",
+        "created_at": "2026-04-07T00:49:54.851224+00:00",
+        "value": 0.375
+      }
+    ],
+    "imitation_final_error_mean": [
+      {
+        "name": "baseline_reference",
+        "created_at": "2026-04-07T00:49:54.851207+00:00",
+        "value": 0.07278485667434885
+      },
+      {
+        "name": "current",
+        "created_at": "2026-04-07T00:49:54.851224+00:00",
+        "value": 0.07278485667434885
+      }
+    ],
+    "rl_success_rate": [
+      {
+        "name": "baseline_reference",
+        "created_at": "2026-04-07T00:49:54.851207+00:00",
+        "value": 0.25
+      },
+      {
+        "name": "current",
+        "created_at": "2026-04-07T00:49:54.851224+00:00",
+        "value": 0.25
+      }
+    ],
+    "rl_final_error_mean": [
+      {
+        "name": "baseline_reference",
+        "created_at": "2026-04-07T00:49:54.851207+00:00",
+        "value": 0.08691420946544057
+      },
+      {
+        "name": "current",
+        "created_at": "2026-04-07T00:49:54.851224+00:00",
+        "value": 0.08691420946544057
+      }
+    ]
+  },
+  "trend_summary": {
+    "baseline_success_rate": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.1,
+      "count": 2
+    },
+    "baseline_final_error_mean": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.09427099044986048,
+      "count": 2
+    },
+    "imitation_success_rate": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.375,
+      "count": 2
+    },
+    "imitation_final_error_mean": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.07278485667434885,
+      "count": 2
+    },
+    "rl_success_rate": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.25,
+      "count": 2
+    },
+    "rl_final_error_mean": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.08691420946544057,
+      "count": 2
+    }
+  },
+  "gate_status": [
+    {
+      "name": "baseline_reference",
+      "created_at": "2026-04-07T00:49:54.851207+00:00",
+      "status": "unknown",
+      "violation_count": null
+    },
+    {
+      "name": "current",
+      "created_at": "2026-04-07T00:49:54.851224+00:00",
+      "status": "pass",
+      "violation_count": 0
+    }
+  ]
+}

@@ -183,6 +183,25 @@ async function main() {
   } else {
     regressionGate.textContent = "Regression gate artifacts have not been generated yet.";
   }
+
+  const regressionHistory = document.getElementById("regression-history-summary");
+  if (data.regression_history?.trend_summary) {
+    const snapshots = data.regression_history.snapshots || [];
+    const items = [
+      `<p><strong>Snapshots tracked:</strong> ${snapshots.length}</p>`,
+    ];
+    Object.entries(data.regression_history.trend_summary).forEach(([metric, summary]) => {
+      items.push(
+        `<p><strong>${metric}</strong>: ${summary.direction}, delta ${Number(summary.delta).toFixed(4)}, latest ${Number(summary.latest).toFixed(4)}</p>`
+      );
+    });
+    regressionHistory.innerHTML = items.join("");
+  } else {
+    regressionHistory.textContent = "Regression history artifacts have not been generated yet.";
+  }
+  if (data.artifacts?.regression_history_image) {
+    document.getElementById("regression-history-image").src = `../${data.artifacts.regression_history_image}`;
+  }
 }
 
 main();

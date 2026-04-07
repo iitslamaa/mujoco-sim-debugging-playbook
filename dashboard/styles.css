@@ -111,6 +111,11 @@ ul {
   background: white;
 }
 
+#regression-gate p,
+#regression-history-summary p {
+  margin: 0 0 10px;
+}
+
 @media (max-width: 860px) {
   .hero,
   .grid {

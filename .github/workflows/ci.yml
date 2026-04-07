@@ -32,5 +32,11 @@ jobs:
             --right outputs/regression/snapshots/ci_candidate.json \
             --thresholds configs/regression_thresholds.json \
             --output-dir outputs/regression/ci_gate
+      - name: Build regression history
+        run: |
+          MPLCONFIGDIR=/tmp/mpl python scripts/build_regression_history.py \
+            --snapshot-dir outputs/regression/snapshots \
+            --output-dir outputs/regression/ci_history \
+            --gate-report outputs/regression/ci_gate/regression_gate.json
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

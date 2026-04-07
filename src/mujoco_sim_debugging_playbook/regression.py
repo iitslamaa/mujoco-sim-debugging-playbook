@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -40,6 +41,7 @@ def create_regression_snapshot(repo_root: str | Path, name: str) -> Path:
 
     payload = {
         "name": name,
+        "created_at": datetime.now(timezone.utc).isoformat(),
         "environment": capture_environment_report(root),
         "metrics": {
             "baseline_success_rate": baseline["success_rate"],
@@ -161,6 +163,72 @@ def write_regression_gate_report(report: dict[str, Any], output_dir: str | Path)
     _write_gate_markdown(report, output / "regression_gate.md")
 
 
+def build_regression_history(
+    snapshot_paths: list[str | Path],
+    gate_reports: dict[str, dict[str, Any]] | None,
+    output_dir: str | Path,
+) -> dict[str, Any]:
+    snapshots = [_read_json(path) for path in snapshot_paths]
+    snapshots.sort(key=lambda item: item.get("created_at", item["name"]))
+
+    scalar_metric_names = [
+        "baseline_success_rate",
+        "baseline_final_error_mean",
+        "imitation_success_rate",
+        "imitation_final_error_mean",
+        "rl_success_rate",
+        "rl_final_error_mean",
+    ]
+    series = {
+        metric: [
+            {
+                "name": snapshot["name"],
+                "created_at": snapshot.get("created_at"),
+                "value": float(snapshot["metrics"][metric]),
+            }
+            for snapshot in snapshots
+        ]
+        for metric in scalar_metric_names
+    }
+
+    trend_summary = {
+        metric: _summarize_trend(points)
+        for metric, points in series.items()
+    }
+
+    gate_status = []
+    for snapshot in snapshots:
+        report = (gate_reports or {}).get(snapshot["name"])
+        gate_status.append(
+            {
+                "name": snapshot["name"],
+                "created_at": snapshot.get("created_at"),
+                "status": report["status"] if report else "unknown",
+                "violation_count": int(report["violation_count"]) if report else None,
+            }
+        )
+
+    payload = {
+        "snapshots": [
+            {
+                "name": snapshot["name"],
+                "created_at": snapshot.get("created_at"),
+            }
+            for snapshot in snapshots
+        ],
+        "series": series,
+        "trend_summary": trend_summary,
+        "gate_status": gate_status,
+    }
+
+    output = Path(output_dir)
+    output.mkdir(parents=True, exist_ok=True)
+    (output / "history.json").write_text(json.dumps(payload, indent=2))
+    _write_history_markdown(payload, output / "history.md")
+    _plot_history(payload, output / "history.png")
+    return payload
+
+
 def _evaluate_delta(delta: float, threshold: dict[str, Any]) -> dict[str, Any]:
     min_delta = threshold.get("min_delta")
     max_delta = threshold.get("max_delta")
@@ -258,6 +326,88 @@ def _write_gate_markdown(report: dict[str, Any], path: str | Path) -> None:
 
 def _fmt_limit(value: float | None) -> str:
     return "--" if value is None else f"{value:.4f}"
+
+
+def _summarize_trend(points: list[dict[str, Any]]) -> dict[str, Any]:
+    if not points:
+        return {"direction": "unknown", "delta": 0.0, "latest": None}
+
+    first_value = float(points[0]["value"])
+    latest_value = float(points[-1]["value"])
+    delta = latest_value - first_value
+    if abs(delta) < 1e-9:
+        direction = "flat"
+    elif delta > 0:
+        direction = "up"
+    else:
+        direction = "down"
+    return {
+        "direction": direction,
+        "delta": float(delta),
+        "latest": latest_value,
+        "count": len(points),
+    }
+
+
+def _write_history_markdown(payload: dict[str, Any], path: str | Path) -> None:
+    lines = [
+        "# Regression History",
+        "",
+        "Tracked snapshots over time with scalar metric trends and gate outcomes.",
+        "",
+        "## Snapshots",
+        "",
+        "| name | created_at | gate status | violations |",
+        "| --- | --- | --- | ---: |",
+    ]
+    gate_lookup = {entry["name"]: entry for entry in payload["gate_status"]}
+    for snapshot in payload["snapshots"]:
+        gate = gate_lookup.get(snapshot["name"], {})
+        lines.append(
+            f"| {snapshot['name']} | {snapshot.get('created_at', '--')} | {gate.get('status', 'unknown')} | {gate.get('violation_count', '--')} |"
+        )
+
+    lines.extend(["", "## Trend summary", "", "| metric | direction | delta | latest | count |", "| --- | --- | ---: | ---: | ---: |"])
+    for metric, summary in payload["trend_summary"].items():
+        latest = "--" if summary["latest"] is None else f"{summary['latest']:.4f}"
+        lines.append(
+            f"| {metric} | {summary['direction']} | {summary['delta']:.4f} | {latest} | {summary.get('count', 0)} |"
+        )
+
+    Path(path).write_text("\n".join(lines))
+
+
+def _plot_history(payload: dict[str, Any], path: str | Path) -> None:
+    metric_names = [
+        "baseline_success_rate",
+        "imitation_success_rate",
+        "rl_success_rate",
+        "baseline_final_error_mean",
+        "imitation_final_error_mean",
+        "rl_final_error_mean",
+    ]
+    fig, axes = plt.subplots(2, 1, figsize=(11, 7), sharex=True)
+    groups = [
+        ("Success rate history", metric_names[:3], axes[0]),
+        ("Final error history", metric_names[3:], axes[1]),
+    ]
+    x_labels = [snapshot["name"] for snapshot in payload["snapshots"]]
+    x = np.arange(len(x_labels))
+    palette = ["#0F9D58", "#3367D6", "#C85C2C"]
+
+    for title, metrics, axis in groups:
+        for index, metric in enumerate(metrics):
+            values = [point["value"] for point in payload["series"][metric]]
+            axis.plot(x, values, marker="o", linewidth=2.2, color=palette[index], label=metric)
+        axis.set_title(title)
+        axis.grid(True, alpha=0.25)
+        axis.legend(frameon=False, fontsize=8)
+
+    axes[-1].set_xticks(x, x_labels, rotation=20)
+    fig.tight_layout()
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
 
 
 def _plot_regression(payload: dict[str, Any], path: str | Path) -> None:
