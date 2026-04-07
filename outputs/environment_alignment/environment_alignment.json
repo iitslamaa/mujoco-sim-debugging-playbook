@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "status": "warn",
+    "warning_delta": 0,
+    "missing_tool_count": 1,
+    "dependency_count": 34
+  },
+  "missing_tools": [
+    "docker"
+  ]
+}
