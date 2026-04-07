@@ -111,6 +111,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Local paths report for orienting new contributors and repro work
 - Release checklist for quick pre-handoff validation
 - Environment diff for comparing setup warning surfaces
+- Support intake checklist for issue-template and response readiness
 - Repro inventory that enumerates documented support cases and evidence paths
 - GitHub issue templates and CI for public-repo readiness
 
@@ -226,6 +227,7 @@ make response-rubric
 make local-paths-report
 make release-checklist
 make environment-diff
+make support-intake-checklist
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -418,6 +420,14 @@ python scripts/generate_environment_diff.py
 ```
 
 This compares the environment doctor and compatibility warning surfaces.
+
+## Generate a support intake checklist
+
+```bash
+python scripts/generate_support_intake_checklist.py
+```
+
+This summarizes whether the repo has the minimum assets needed for strong support intake.
 
 ## Generate a repro inventory
 
@@ -1162,6 +1172,7 @@ This writes:
 - [local-paths-guide.md](/Users/lamayassine/mujoco/docs/local-paths-guide.md)
 - [release-checklist-guide.md](/Users/lamayassine/mujoco/docs/release-checklist-guide.md)
 - [environment-diff-guide.md](/Users/lamayassine/mujoco/docs/environment-diff-guide.md)
+- [support-intake-checklist-guide.md](/Users/lamayassine/mujoco/docs/support-intake-checklist-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [support-workflow-index.md](/Users/lamayassine/mujoco/docs/support-workflow-index.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
