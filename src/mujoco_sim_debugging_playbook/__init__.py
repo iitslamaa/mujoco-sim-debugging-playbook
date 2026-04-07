@@ -8,6 +8,7 @@ __all__ = [
     "case_studies",
     "config",
     "controller",
+    "documentation_audit",
     "experiment",
     "environment",
     "diagnostics",
