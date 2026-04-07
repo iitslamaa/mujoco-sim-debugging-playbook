@@ -221,6 +221,22 @@ async function main() {
   } else {
     provenance.textContent = "Provenance index artifacts have not been generated yet.";
   }
+
+  const releaseNotes = document.getElementById("release-notes-summary");
+  if (data.release_notes) {
+    const items = [
+      `<p><strong>Comparison:</strong> ${data.release_notes.base_ref} -> ${data.release_notes.head_ref}</p>`,
+      `<p><strong>Commits:</strong> ${data.release_notes.commit_count}</p>`,
+      `<p><strong>Diffstat:</strong> ${data.release_notes.diffstat || "n/a"}</p>`,
+      `<p><strong>Regression gate:</strong> ${data.release_notes.regression_gate.status} (${data.release_notes.regression_gate.violation_count} violations)</p>`,
+    ];
+    Object.entries(data.release_notes.changed_areas || {}).forEach(([area, count]) => {
+      items.push(`<p><strong>${area}</strong>: ${count} files</p>`);
+    });
+    releaseNotes.innerHTML = items.join("");
+  } else {
+    releaseNotes.textContent = "Release note artifacts have not been generated yet.";
+  }
 }
 
 main();

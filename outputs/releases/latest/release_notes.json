@@ -1,0 +1,112 @@
+{
+  "base_ref": "9947b32",
+  "head_ref": "HEAD",
+  "commit_count": 1,
+  "commits": [
+    {
+      "sha": "e5ed38acd8d97981ba76771bbf346f1f9ac24792",
+      "subject": "Add artifact provenance manifests and index"
+    }
+  ],
+  "changed_files": [
+    ".github/workflows/ci.yml",
+    "Makefile",
+    "README.md",
+    "dashboard/app.js",
+    "dashboard/data.json",
+    "dashboard/index.html",
+    "docs/provenance-guide.md",
+    "outputs/baseline/manifest.json",
+    "outputs/controller_benchmark/manifest.json",
+    "outputs/domain_randomization/manifest.json",
+    "outputs/interesting_sweeps/manifest.json",
+    "outputs/learning/dataset/manifest.json",
+    "outputs/learning/evaluation/manifest.json",
+    "outputs/learning/training/manifest.json",
+    "outputs/provenance/index.json",
+    "outputs/provenance/index.md",
+    "outputs/rl/evaluation/manifest.json",
+    "outputs/rl/training/manifest.json",
+    "scripts/backfill_provenance_manifests.py",
+    "scripts/build_provenance_index.py",
+    "scripts/generate_dashboard.py",
+    "scripts/smoke_test.py",
+    "src/mujoco_sim_debugging_playbook/__init__.py",
+    "src/mujoco_sim_debugging_playbook/benchmark.py",
+    "src/mujoco_sim_debugging_playbook/environment.py",
+    "src/mujoco_sim_debugging_playbook/experiment.py",
+    "src/mujoco_sim_debugging_playbook/generalization.py",
+    "src/mujoco_sim_debugging_playbook/learning.py",
+    "src/mujoco_sim_debugging_playbook/provenance.py",
+    "src/mujoco_sim_debugging_playbook/rl.py",
+    "tests/test_provenance.py"
+  ],
+  "changed_areas": {
+    "docs": 2,
+    "dashboard": 3,
+    "scripts": 4,
+    "core_python": 8,
+    "tests": 1,
+    "outputs": 11,
+    "ci": 2
+  },
+  "diffstat": "31 files changed, 4413 insertions(+), 20 deletions(-)",
+  "regression_gate": {
+    "status": "pass",
+    "violation_count": 0
+  },
+  "regression_trends": {
+    "baseline_success_rate": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.1,
+      "count": 2
+    },
+    "baseline_final_error_mean": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.09427099044986048,
+      "count": 2
+    },
+    "imitation_success_rate": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.375,
+      "count": 2
+    },
+    "imitation_final_error_mean": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.07278485667434885,
+      "count": 2
+    },
+    "rl_success_rate": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.25,
+      "count": 2
+    },
+    "rl_final_error_mean": {
+      "direction": "flat",
+      "delta": 0.0,
+      "latest": 0.08691420946544057,
+      "count": 2
+    }
+  },
+  "provenance_summary": {
+    "manifest_count": 9,
+    "run_types": [
+      "controller_benchmark",
+      "domain_randomization",
+      "experiment",
+      "imitation_dataset",
+      "imitation_evaluation",
+      "imitation_training",
+      "rl_evaluation",
+      "rl_training",
+      "sweep_suite"
+    ],
+    "latest_git_head": "9947b323eef041fdf26a802bee3ff945811ccd89",
+    "latest_created_at": "2026-04-07T00:52:46.311122+00:00"
+  }
+}

@@ -42,5 +42,11 @@ jobs:
         run: |
           MPLCONFIGDIR=/tmp/mpl python scripts/backfill_provenance_manifests.py
           MPLCONFIGDIR=/tmp/mpl python scripts/build_provenance_index.py
+      - name: Build release notes
+        run: |
+          MPLCONFIGDIR=/tmp/mpl python scripts/generate_release_notes.py \
+            --base 9947b32 \
+            --head HEAD \
+            --output-dir outputs/releases/ci
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

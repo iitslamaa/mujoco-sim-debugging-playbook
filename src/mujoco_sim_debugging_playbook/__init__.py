@@ -13,6 +13,7 @@ __all__ = [
     "metrics",
     "plot",
     "provenance",
+    "release_notes",
     "regression",
     "report",
     "rl",

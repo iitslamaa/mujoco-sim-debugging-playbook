@@ -28,6 +28,7 @@ def main() -> None:
     regression_gate = _read_json(ROOT / "outputs" / "regression" / "gate" / "regression_gate.json")
     regression_history = _read_json(ROOT / "outputs" / "regression" / "history" / "history.json")
     provenance_index = _read_json(ROOT / "outputs" / "provenance" / "index.json")
+    release_notes = _read_json(ROOT / "outputs" / "releases" / "latest" / "release_notes.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -85,6 +86,7 @@ def main() -> None:
         "regression_gate": regression_gate,
         "regression_history": regression_history,
         "provenance_index": provenance_summary,
+        "release_notes": release_notes,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -104,6 +106,7 @@ def main() -> None:
             "regression_history_markdown": "outputs/regression/history/history.md",
             "regression_history_image": "outputs/regression/history/history.png",
             "provenance_index_markdown": "outputs/provenance/index.md",
+            "release_notes_markdown": "outputs/releases/latest/release_notes.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

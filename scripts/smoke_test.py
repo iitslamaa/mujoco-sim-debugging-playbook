@@ -68,6 +68,19 @@ def main() -> None:
     )
     run([sys.executable, "scripts/backfill_provenance_manifests.py"], env=env)
     run([sys.executable, "scripts/build_provenance_index.py"], env=env)
+    run(
+        [
+            sys.executable,
+            "scripts/generate_release_notes.py",
+            "--base",
+            "9947b32",
+            "--head",
+            "HEAD",
+            "--output-dir",
+            "outputs/releases/latest",
+        ],
+        env=env,
+    )
     run([sys.executable, "scripts/generate_dashboard.py"], env=env)
 
     summary_path = ROOT / "outputs" / "support_cases" / "actuator_gain_overshoot.md"
@@ -88,6 +101,9 @@ def main() -> None:
     provenance_index = ROOT / "outputs" / "provenance" / "index.json"
     if not provenance_index.exists():
         raise SystemExit(f"Expected provenance index at {provenance_index}")
+    release_notes = ROOT / "outputs" / "releases" / "latest" / "release_notes.json"
+    if not release_notes.exists():
+        raise SystemExit(f"Expected release notes at {release_notes}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

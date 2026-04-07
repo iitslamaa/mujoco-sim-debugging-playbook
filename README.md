@@ -46,6 +46,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Threshold-based regression gates for catching unacceptable drift in CI
 - Historical trend reporting for tracking metric drift across snapshots
 - Artifact manifests and a provenance index for tying outputs back to code, inputs, and Git state
+- Commit-linked release notes for summarizing code, metric, and artifact changes between Git SHAs
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -107,6 +108,7 @@ make regression-diff
 make regression-check
 make regression-history
 make provenance
+make release-notes
 make demo-gif
 make dashboard
 ```
@@ -254,6 +256,17 @@ python scripts/build_provenance_index.py
 
 This writes per-run `manifest.json` files plus a repo-level provenance index for browsing generated outputs.
 
+## Generate release notes
+
+```bash
+python scripts/generate_release_notes.py \
+  --base 9947b32 \
+  --head HEAD \
+  --output-dir outputs/releases/latest
+```
+
+This produces a compact release summary that ties together Git commits, changed files, regression status, and provenance coverage.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -281,6 +294,7 @@ This writes:
 - [regression-guide.md](/Users/lamayassine/mujoco/docs/regression-guide.md)
 - [provenance-guide.md](/Users/lamayassine/mujoco/docs/provenance-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
+- [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
 - [support_request.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/support_request.yml)
 - [ci.yml](/Users/lamayassine/mujoco/.github/workflows/ci.yml)

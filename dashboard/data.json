@@ -2360,6 +2360,7 @@
       }
     ]
   },
+  "release_notes": null,
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -2387,6 +2388,7 @@
     "regression_gate_markdown": "outputs/regression/gate/regression_gate.md",
     "regression_history_markdown": "outputs/regression/history/history.md",
     "regression_history_image": "outputs/regression/history/history.png",
-    "provenance_index_markdown": "outputs/provenance/index.md"
+    "provenance_index_markdown": "outputs/provenance/index.md",
+    "release_notes_markdown": "outputs/releases/latest/release_notes.md"
   }
 }
