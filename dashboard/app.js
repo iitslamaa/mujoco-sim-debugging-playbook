@@ -583,6 +583,25 @@ async function main() {
   } else {
     maintenanceRiskSummary.textContent = "Maintenance risk artifacts have not been generated yet.";
   }
+
+  const artifactReadinessSummary = document.getElementById("artifact-readiness-summary");
+  if (data.artifact_readiness?.summary) {
+    const summary = data.artifact_readiness.summary;
+    const items = [
+      `<p><strong>Status:</strong> ${summary.status}</p>`,
+      `<p><strong>Failures:</strong> ${summary.failure_count}</p>`,
+      `<p><strong>Warnings:</strong> ${summary.warning_count}</p>`,
+      `<p><strong>Top risk artifact:</strong> ${summary.top_risk_artifact || "n/a"}</p>`,
+      `<p><strong>Stale artifacts:</strong> ${summary.stale_count}</p>`,
+      `<p><strong>Refresh steps:</strong> ${summary.refresh_step_count}</p>`,
+    ];
+    (data.artifact_readiness.checks || []).forEach((check) => {
+      items.push(`<p><strong>${check.name}</strong>: ${check.status} | ${check.message}</p>`);
+    });
+    artifactReadinessSummary.innerHTML = items.join("");
+  } else {
+    artifactReadinessSummary.textContent = "Artifact readiness artifacts have not been generated yet.";
+  }
 }
 
 main();

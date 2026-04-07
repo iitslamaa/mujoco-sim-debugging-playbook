@@ -4568,6 +4568,48 @@
       }
     ]
   },
+  "artifact_readiness": {
+    "summary": {
+      "status": "fail",
+      "failure_count": 5,
+      "warning_count": 0,
+      "top_risk_artifact": "outputs/support_readiness/support_readiness.json",
+      "stale_count": 6,
+      "refresh_step_count": 6
+    },
+    "checks": [
+      {
+        "name": "missing_artifacts",
+        "status": "pass",
+        "message": "0 missing artifacts"
+      },
+      {
+        "name": "high_risk_artifacts",
+        "status": "fail",
+        "message": "2 high-risk artifacts"
+      },
+      {
+        "name": "top_risk_score",
+        "status": "fail",
+        "message": "top risk outputs/support_readiness/support_readiness.json at 1.551"
+      },
+      {
+        "name": "stale_backlog",
+        "status": "fail",
+        "message": "6 stale artifacts"
+      },
+      {
+        "name": "refresh_effort",
+        "status": "fail",
+        "message": "6 refresh steps across 2 bundles"
+      },
+      {
+        "name": "high_priority_refreshes",
+        "status": "fail",
+        "message": "1 high-priority refresh actions"
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4619,6 +4661,7 @@
     "impact_analysis_markdown": "outputs/impact_analysis/impact_analysis.md",
     "refresh_bundle_markdown": "outputs/refresh_bundle/refresh_bundle.md",
     "refresh_checklist_markdown": "outputs/refresh_checklist/refresh_checklist.md",
-    "maintenance_risk_markdown": "outputs/maintenance_risk/maintenance_risk.md"
+    "maintenance_risk_markdown": "outputs/maintenance_risk/maintenance_risk.md",
+    "artifact_readiness_markdown": "outputs/artifact_readiness/artifact_readiness.md"
   }
 }

@@ -76,6 +76,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Refresh bundles that group stale outputs into a few coordinated rerun packages
 - Refresh checklists that turn each bundle into an ordered runbook with validation targets
 - Maintenance risk scoring that ranks stale artifacts by downstream blast radius and refresh urgency
+- Artifact-readiness gating that turns artifact debt into a pass/warn/fail publishing verdict
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -162,6 +163,7 @@ make impact-analysis
 make refresh-bundle
 make refresh-checklist
 make maintenance-risk
+make artifact-readiness
 make case-studies
 make snapshot
 make regression-diff
@@ -557,6 +559,14 @@ python scripts/generate_maintenance_risk.py
 
 This ranks stale or missing artifacts by urgency using freshness state, regeneration priority, dependency impact, and bundle participation.
 
+## Evaluate artifact readiness
+
+```bash
+python scripts/generate_artifact_readiness.py
+```
+
+This turns artifact freshness, maintenance risk, and refresh effort into an explicit pass, warn, or fail decision for the published output surface.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -584,6 +594,7 @@ This writes:
 - [regression-guide.md](/Users/lamayassine/mujoco/docs/regression-guide.md)
 - [provenance-guide.md](/Users/lamayassine/mujoco/docs/provenance-guide.md)
 - [maintenance-risk-guide.md](/Users/lamayassine/mujoco/docs/maintenance-risk-guide.md)
+- [artifact-readiness-guide.md](/Users/lamayassine/mujoco/docs/artifact-readiness-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
