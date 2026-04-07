@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "case_count": 2
+  },
+  "cases": [
+    {
+      "case_id": "actuator_gain_overshoot",
+      "title": "Support Case: Higher actuator gain improves speed but destabilizes final approach",
+      "path": "/Users/lamayassine/mujoco/outputs/support_cases/actuator_gain_overshoot.md"
+    },
+    {
+      "case_id": "delay_instability",
+      "title": "Support Case: Delay-induced oscillation at moderate actuator gain",
+      "path": "/Users/lamayassine/mujoco/outputs/support_cases/delay_instability.md"
+    }
+  ]
+}
