@@ -85,6 +85,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_artifact_freshness.py"], env=env)
     run([sys.executable, "scripts/generate_regeneration_plan.py"], env=env)
     run([sys.executable, "scripts/generate_dependency_map.py"], env=env)
+    run([sys.executable, "scripts/generate_impact_analysis.py"], env=env)
     run(
         [
             sys.executable,
@@ -172,6 +173,9 @@ def main() -> None:
     dependency_map = ROOT / "outputs" / "dependency_map" / "dependency_map.json"
     if not dependency_map.exists():
         raise SystemExit(f"Expected dependency map at {dependency_map}")
+    impact_analysis = ROOT / "outputs" / "impact_analysis" / "impact_analysis.json"
+    if not impact_analysis.exists():
+        raise SystemExit(f"Expected impact analysis at {impact_analysis}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

@@ -19,6 +19,7 @@ __all__ = [
     "evidence_inventory",
     "escalation",
     "generalization",
+    "impact_analysis",
     "incidents",
     "learning",
     "knowledge_base",

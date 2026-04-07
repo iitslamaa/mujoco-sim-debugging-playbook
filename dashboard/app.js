@@ -513,6 +513,22 @@ async function main() {
   } else {
     dependencyMapSummary.textContent = "Dependency map artifacts have not been generated yet.";
   }
+
+  const impactAnalysisSummary = document.getElementById("impact-analysis-summary");
+  if (data.impact_analysis?.summary) {
+    const summary = data.impact_analysis.summary;
+    const items = [
+      `<p><strong>Dependencies tracked:</strong> ${summary.dependency_count}</p>`,
+      `<p><strong>Most impactful dependency:</strong> ${summary.most_impactful_dependency || "n/a"}</p>`,
+      `<p><strong>Max impact count:</strong> ${summary.max_impact_count}</p>`,
+    ];
+    (data.impact_analysis.rows || []).slice(0, 6).forEach((row) => {
+      items.push(`<p><strong>${row.dependency}</strong>: ${row.impact_count} downstream artifacts</p>`);
+    });
+    impactAnalysisSummary.innerHTML = items.join("");
+  } else {
+    impactAnalysisSummary.textContent = "Impact analysis artifacts have not been generated yet.";
+  }
 }
 
 main();

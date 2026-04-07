@@ -82,5 +82,7 @@ jobs:
         run: python scripts/generate_regeneration_plan.py
       - name: Build dependency map
         run: python scripts/generate_dependency_map.py
+      - name: Build impact analysis
+        run: python scripts/generate_impact_analysis.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

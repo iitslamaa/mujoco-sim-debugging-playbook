@@ -72,6 +72,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Briefing-note generation that turns the support state into a concise narrative update
 - Artifact-freshness audits that flag generated reports or dashboard data that may need regeneration
 - Dependency maps that show which high-level artifacts feed each public-facing report
+- Impact analysis that shows which downstream artifacts are affected when an upstream dependency changes
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -154,6 +155,7 @@ make briefing-note
 make artifact-freshness
 make regeneration-plan
 make dependency-map
+make impact-analysis
 make case-studies
 make snapshot
 make regression-diff
@@ -519,6 +521,12 @@ python scripts/generate_regeneration_plan.py
 
 ```bash
 python scripts/generate_dependency_map.py
+```
+
+## Generate the impact analysis
+
+```bash
+python scripts/generate_impact_analysis.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.

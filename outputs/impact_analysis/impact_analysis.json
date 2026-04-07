@@ -1,0 +1,137 @@
+{
+  "summary": {
+    "dependency_count": 17,
+    "most_impactful_dependency": "outputs/scenario_plan/scenario_plan.json",
+    "max_impact_count": 3
+  },
+  "rows": [
+    {
+      "dependency": "outputs/scenario_plan/scenario_plan.json",
+      "impact_count": 3,
+      "impacted_artifacts": [
+        "dashboard/data.json",
+        "outputs/briefing_note/briefing_note.json",
+        "outputs/scorecard/scorecard.json"
+      ]
+    },
+    {
+      "dependency": "outputs/support_ops/support_ops.json",
+      "impact_count": 3,
+      "impacted_artifacts": [
+        "outputs/ops_review/ops_review.json",
+        "outputs/scorecard/scorecard.json",
+        "outputs/support_readiness/support_readiness.json"
+      ]
+    },
+    {
+      "dependency": "outputs/support_readiness/support_readiness.json",
+      "impact_count": 3,
+      "impacted_artifacts": [
+        "dashboard/data.json",
+        "outputs/scenario_plan/scenario_plan.json",
+        "outputs/scorecard/scorecard.json"
+      ]
+    },
+    {
+      "dependency": "outputs/capacity/capacity_plan.json",
+      "impact_count": 2,
+      "impacted_artifacts": [
+        "outputs/ops_review/ops_review.json",
+        "outputs/support_readiness/support_readiness.json"
+      ]
+    },
+    {
+      "dependency": "outputs/ops_review/ops_review.json",
+      "impact_count": 2,
+      "impacted_artifacts": [
+        "dashboard/data.json",
+        "outputs/briefing_note/briefing_note.json"
+      ]
+    },
+    {
+      "dependency": "outputs/scorecard/scorecard.json",
+      "impact_count": 2,
+      "impacted_artifacts": [
+        "dashboard/data.json",
+        "outputs/briefing_note/briefing_note.json"
+      ]
+    },
+    {
+      "dependency": "outputs/anomalies/anomaly_report.json",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "outputs/ops_review/ops_review.json"
+      ]
+    },
+    {
+      "dependency": "outputs/briefing_note/briefing_note.json",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "dashboard/data.json"
+      ]
+    },
+    {
+      "dependency": "outputs/releases/latest/release_notes.json",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "outputs/support_readiness/support_readiness.json"
+      ]
+    },
+    {
+      "dependency": "outputs/sla/sla_report.json",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "outputs/support_readiness/support_readiness.json"
+      ]
+    },
+    {
+      "dependency": "outputs/support_gaps/support_gaps.json",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "outputs/support_readiness/support_readiness.json"
+      ]
+    },
+    {
+      "dependency": "scripts/generate_briefing_note.py",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "outputs/briefing_note/briefing_note.json"
+      ]
+    },
+    {
+      "dependency": "scripts/generate_dashboard.py",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "dashboard/data.json"
+      ]
+    },
+    {
+      "dependency": "scripts/generate_ops_review.py",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "outputs/ops_review/ops_review.json"
+      ]
+    },
+    {
+      "dependency": "scripts/generate_scenario_plan.py",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "outputs/scenario_plan/scenario_plan.json"
+      ]
+    },
+    {
+      "dependency": "scripts/generate_scorecard.py",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "outputs/scorecard/scorecard.json"
+      ]
+    },
+    {
+      "dependency": "scripts/generate_support_readiness.py",
+      "impact_count": 1,
+      "impacted_artifacts": [
+        "outputs/support_readiness/support_readiness.json"
+      ]
+    }
+  ]
+}
