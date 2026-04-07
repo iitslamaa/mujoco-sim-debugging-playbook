@@ -208,6 +208,7 @@ make dashboard-snapshot-actions
 make dashboard-snapshot-alert-packet
 make dashboard-snapshot-resolution-plan
 make dashboard-snapshot-execution-board
+make dashboard-snapshot-owner-load
 make case-studies
 make snapshot
 make regression-diff
@@ -835,6 +836,14 @@ python scripts/generate_dashboard_snapshot_execution_board.py
 
 This turns the current resolution plan into a lightweight lane-style execution board.
 
+## Build dashboard snapshot owner load
+
+```bash
+python scripts/generate_dashboard_snapshot_owner_load.py
+```
+
+This summarizes the current execution and alert pressure carried by the active owner.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -891,6 +900,7 @@ This writes:
 - [dashboard-snapshot-alert-packet-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-alert-packet-guide.md)
 - [dashboard-snapshot-resolution-plan-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-resolution-plan-guide.md)
 - [dashboard-snapshot-execution-board-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-execution-board-guide.md)
+- [dashboard-snapshot-owner-load-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-owner-load-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

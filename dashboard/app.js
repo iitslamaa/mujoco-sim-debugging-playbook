@@ -1156,6 +1156,24 @@ async function main() {
   } else {
     dashboardSnapshotExecutionBoardSummary.textContent = "Dashboard snapshot execution board has not been generated yet.";
   }
+
+  const dashboardSnapshotOwnerLoadSummary = document.getElementById("dashboard-snapshot-owner-load-summary");
+  if (data.dashboard_snapshot_owner_load?.summary) {
+    const summary = data.dashboard_snapshot_owner_load.summary;
+    const items = [
+      `<p><strong>Owner:</strong> ${summary.owner}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Active lanes:</strong> ${summary.active_lane_count}</p>`,
+      `<p><strong>Planned lanes:</strong> ${summary.planned_lane_count}</p>`,
+      `<p><strong>Active items:</strong> ${summary.active_item_count}</p>`,
+      `<p><strong>Planned items:</strong> ${summary.planned_item_count}</p>`,
+      `<p><strong>Critical alerts:</strong> ${summary.critical_alert_count}</p>`,
+      `<p><strong>Warning alerts:</strong> ${summary.warning_alert_count}</p>`,
+    ];
+    dashboardSnapshotOwnerLoadSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotOwnerLoadSummary.textContent = "Dashboard snapshot owner load has not been generated yet.";
+  }
 }
 
 main();

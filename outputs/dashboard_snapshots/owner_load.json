@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "owner": "dashboard-stabilization",
+    "current_status": "fail",
+    "active_lane_count": 1,
+    "planned_lane_count": 1,
+    "active_item_count": 1,
+    "planned_item_count": 2,
+    "critical_alert_count": 1,
+    "warning_alert_count": 2
+  }
+}

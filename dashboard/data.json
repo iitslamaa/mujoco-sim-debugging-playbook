@@ -5879,6 +5879,18 @@
       }
     ]
   },
+  "dashboard_snapshot_owner_load": {
+    "summary": {
+      "owner": "dashboard-stabilization",
+      "current_status": "fail",
+      "active_lane_count": 1,
+      "planned_lane_count": 1,
+      "active_item_count": 1,
+      "planned_item_count": 2,
+      "critical_alert_count": 1,
+      "warning_alert_count": 2
+    }
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5959,6 +5971,7 @@
     "dashboard_snapshot_actions_markdown": "outputs/dashboard_snapshots/actions.md",
     "dashboard_snapshot_alert_packet_markdown": "outputs/dashboard_snapshots/alert_packet.md",
     "dashboard_snapshot_resolution_plan_markdown": "outputs/dashboard_snapshots/resolution_plan.md",
-    "dashboard_snapshot_execution_board_markdown": "outputs/dashboard_snapshots/execution_board.md"
+    "dashboard_snapshot_execution_board_markdown": "outputs/dashboard_snapshots/execution_board.md",
+    "dashboard_snapshot_owner_load_markdown": "outputs/dashboard_snapshots/owner_load.md"
   }
 }
