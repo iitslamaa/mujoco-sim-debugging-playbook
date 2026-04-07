@@ -226,6 +226,7 @@ make setup-faq
 make response-rubric
 make support-response-template
 make support-triage-reply
+make support-escalation-brief
 make local-paths-report
 make release-checklist
 make release-dry-run
@@ -1186,6 +1187,7 @@ This writes:
 - [response-rubric-guide.md](/Users/lamayassine/mujoco/docs/response-rubric-guide.md)
 - [support-response-template-guide.md](/Users/lamayassine/mujoco/docs/support-response-template-guide.md)
 - [support-triage-reply-guide.md](/Users/lamayassine/mujoco/docs/support-triage-reply-guide.md)
+- [support-escalation-brief-guide.md](/Users/lamayassine/mujoco/docs/support-escalation-brief-guide.md)
 - [local-paths-guide.md](/Users/lamayassine/mujoco/docs/local-paths-guide.md)
 - [release-checklist-guide.md](/Users/lamayassine/mujoco/docs/release-checklist-guide.md)
 - [release-dry-run-guide.md](/Users/lamayassine/mujoco/docs/release-dry-run-guide.md)
