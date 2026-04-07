@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "criterion_count": 4,
+    "catalog_case_count": 2
+  },
+  "criteria": [
+    {
+      "criterion": "Clear reproduction command",
+      "status": "required"
+    },
+    {
+      "criterion": "Observed behavior summary",
+      "status": "required"
+    },
+    {
+      "criterion": "Suggested next action",
+      "status": "required"
+    },
+    {
+      "criterion": "Evidence attachment",
+      "status": "recommended"
+    }
+  ]
+}
