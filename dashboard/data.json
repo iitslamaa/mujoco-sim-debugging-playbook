@@ -5797,6 +5797,32 @@
       }
     ]
   },
+  "dashboard_snapshot_alert_packet": {
+    "summary": {
+      "alert_count": 3,
+      "critical_count": 1,
+      "warning_count": 2,
+      "handoff_owner": "dashboard-stabilization",
+      "current_status": "fail"
+    },
+    "alerts": [
+      {
+        "severity": "critical",
+        "title": "Status transition to pass",
+        "owner": "dashboard-stabilization"
+      },
+      {
+        "severity": "warning",
+        "title": "Current dashboard status is not yet pass.",
+        "owner": "dashboard-stabilization"
+      },
+      {
+        "severity": "warning",
+        "title": "Critical snapshot alerts are still active.",
+        "owner": "dashboard-stabilization"
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5874,6 +5900,7 @@
     "dashboard_snapshot_closeout_markdown": "outputs/dashboard_snapshots/closeout.md",
     "dashboard_snapshot_scorecard_markdown": "outputs/dashboard_snapshots/scorecard.md",
     "dashboard_snapshot_digest_markdown": "outputs/dashboard_snapshots/digest.md",
-    "dashboard_snapshot_actions_markdown": "outputs/dashboard_snapshots/actions.md"
+    "dashboard_snapshot_actions_markdown": "outputs/dashboard_snapshots/actions.md",
+    "dashboard_snapshot_alert_packet_markdown": "outputs/dashboard_snapshots/alert_packet.md"
   }
 }

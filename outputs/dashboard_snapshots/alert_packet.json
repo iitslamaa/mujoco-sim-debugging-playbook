@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "alert_count": 3,
+    "critical_count": 1,
+    "warning_count": 2,
+    "handoff_owner": "dashboard-stabilization",
+    "current_status": "fail"
+  },
+  "alerts": [
+    {
+      "severity": "critical",
+      "title": "Status transition to pass",
+      "owner": "dashboard-stabilization"
+    },
+    {
+      "severity": "warning",
+      "title": "Current dashboard status is not yet pass.",
+      "owner": "dashboard-stabilization"
+    },
+    {
+      "severity": "warning",
+      "title": "Critical snapshot alerts are still active.",
+      "owner": "dashboard-stabilization"
+    }
+  ]
+}

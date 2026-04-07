@@ -205,6 +205,7 @@ make dashboard-snapshot-closeout
 make dashboard-snapshot-scorecard
 make dashboard-snapshot-digest
 make dashboard-snapshot-actions
+make dashboard-snapshot-alert-packet
 make case-studies
 make snapshot
 make regression-diff
@@ -808,6 +809,14 @@ python scripts/generate_dashboard_snapshot_actions.py
 
 This turns the current dashboard snapshot digest into a short prioritized action register.
 
+## Build dashboard snapshot alert packet
+
+```bash
+python scripts/generate_dashboard_snapshot_alert_packet.py
+```
+
+This turns the current dashboard snapshot action register into a severity-tagged alert feed.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -861,6 +870,7 @@ This writes:
 - [dashboard-snapshot-scorecard-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-scorecard-guide.md)
 - [dashboard-snapshot-digest-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-digest-guide.md)
 - [dashboard-snapshot-actions-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-actions-guide.md)
+- [dashboard-snapshot-alert-packet-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-alert-packet-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

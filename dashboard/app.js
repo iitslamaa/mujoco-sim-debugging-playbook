@@ -1096,6 +1096,24 @@ async function main() {
   } else {
     dashboardSnapshotActionsSummary.textContent = "Dashboard snapshot actions have not been generated yet.";
   }
+
+  const dashboardSnapshotAlertPacketSummary = document.getElementById("dashboard-snapshot-alert-packet-summary");
+  if (data.dashboard_snapshot_alert_packet?.summary) {
+    const summary = data.dashboard_snapshot_alert_packet.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Alerts:</strong> ${summary.alert_count}</p>`,
+      `<p><strong>Critical:</strong> ${summary.critical_count}</p>`,
+      `<p><strong>Warning:</strong> ${summary.warning_count}</p>`,
+    ];
+    (data.dashboard_snapshot_alert_packet.alerts || []).forEach((alert) => {
+      items.push(`<p><strong>[${alert.severity}]</strong> ${alert.title} (${alert.owner})</p>`);
+    });
+    dashboardSnapshotAlertPacketSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotAlertPacketSummary.textContent = "Dashboard snapshot alert packet has not been generated yet.";
+  }
 }
 
 main();
