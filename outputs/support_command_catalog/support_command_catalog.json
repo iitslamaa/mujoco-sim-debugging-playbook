@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "command_count": 6
+  },
+  "entries": [
+    {
+      "command": "bash scripts/bootstrap_env.sh",
+      "category": "setup"
+    },
+    {
+      "command": "python scripts/run_environment_doctor.py",
+      "category": "setup"
+    },
+    {
+      "command": "python scripts/generate_compatibility_report.py",
+      "category": "validation"
+    },
+    {
+      "command": "python scripts/generate_dependency_snapshot.py",
+      "category": "validation"
+    },
+    {
+      "command": "python scripts/generate_toolchain_inventory.py",
+      "category": "validation"
+    },
+    {
+      "command": "python scripts/generate_local_paths_report.py",
+      "category": "validation"
+    }
+  ]
+}
