@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "case_count": 2,
+    "documented_case_count": 2
+  },
+  "cases": [
+    {
+      "case_id": "actuator_gain_overshoot",
+      "title": "actuator gain overshoot",
+      "path": "/Users/lamayassine/mujoco/outputs/support_cases/actuator_gain_overshoot.md"
+    },
+    {
+      "case_id": "delay_instability",
+      "title": "delay instability",
+      "path": "/Users/lamayassine/mujoco/outputs/support_cases/delay_instability.md"
+    }
+  ]
+}

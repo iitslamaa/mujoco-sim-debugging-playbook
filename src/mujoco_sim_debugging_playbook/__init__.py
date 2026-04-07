@@ -70,6 +70,7 @@ __all__ = [
     "plot",
     "provenance",
     "recommendations",
+    "repro_inventory",
     "regeneration_plan",
     "readiness",
     "responder_load",
