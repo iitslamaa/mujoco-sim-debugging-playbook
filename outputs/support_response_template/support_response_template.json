@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "status": "pass",
+    "required_section_count": 3
+  },
+  "sections": [
+    {
+      "title": "Reproduction",
+      "prompt": "List the exact command or config used to reproduce the issue."
+    },
+    {
+      "title": "Observed behavior",
+      "prompt": "Describe what happened and what was expected instead."
+    },
+    {
+      "title": "Evidence",
+      "prompt": "Attach the most relevant plots, logs, or bundle files."
+    },
+    {
+      "title": "Next action",
+      "prompt": "Start from the highest-signal repro case and attach a clear reproduction command."
+    }
+  ],
+  "required_criteria": [
+    "Clear reproduction command",
+    "Observed behavior summary",
+    "Suggested next action"
+  ]
+}
