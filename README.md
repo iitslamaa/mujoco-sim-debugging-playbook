@@ -234,6 +234,7 @@ make release-matrix
 make machine-readiness
 make bundle-quality
 make release-blockers
+make support-session-note
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -1185,6 +1186,7 @@ This writes:
 - [machine-readiness-guide.md](/Users/lamayassine/mujoco/docs/machine-readiness-guide.md)
 - [bundle-quality-guide.md](/Users/lamayassine/mujoco/docs/bundle-quality-guide.md)
 - [release-blockers-guide.md](/Users/lamayassine/mujoco/docs/release-blockers-guide.md)
+- [support-session-note-guide.md](/Users/lamayassine/mujoco/docs/support-session-note-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [support-workflow-index.md](/Users/lamayassine/mujoco/docs/support-workflow-index.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
