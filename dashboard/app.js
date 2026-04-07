@@ -638,6 +638,26 @@ async function main() {
   } else {
     artifactRecoverySummary.textContent = "Artifact recovery artifacts have not been generated yet.";
   }
+
+  const artifactDeliverySummary = document.getElementById("artifact-delivery-summary");
+  if (data.artifact_delivery?.summary) {
+    const summary = data.artifact_delivery.summary;
+    const items = [
+      `<p><strong>Phases:</strong> ${summary.phase_count}</p>`,
+      `<p><strong>At risk:</strong> ${summary.at_risk_count}</p>`,
+      `<p><strong>Breaches:</strong> ${summary.breach_count}</p>`,
+      `<p><strong>Next due phase:</strong> ${summary.next_due_phase || "n/a"}</p>`,
+      `<p><strong>Slowest phase:</strong> ${summary.slowest_phase || "n/a"}</p>`,
+    ];
+    (data.artifact_delivery.phases || []).forEach((phase) => {
+      items.push(
+        `<p><strong>Phase ${phase.phase}: ${phase.name}</strong> -> ${phase.status}, due ${phase.due_date}, max risk ${Number(phase.max_risk_score).toFixed(3)}</p>`
+      );
+    });
+    artifactDeliverySummary.innerHTML = items.join("");
+  } else {
+    artifactDeliverySummary.textContent = "Artifact delivery artifacts have not been generated yet.";
+  }
 }
 
 main();

@@ -4,6 +4,7 @@ __all__ = [
     "action_register",
     "anomaly",
     "artifact_freshness",
+    "artifact_delivery",
     "artifact_readiness",
     "artifact_recovery",
     "artifact_scenarios",

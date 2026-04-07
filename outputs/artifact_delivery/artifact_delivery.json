@@ -1,0 +1,59 @@
+{
+  "summary": {
+    "phase_count": 3,
+    "breach_count": 1,
+    "at_risk_count": 2,
+    "next_due_phase": "Stabilize top risks",
+    "slowest_phase": "Clear support report bundle"
+  },
+  "phases": [
+    {
+      "phase": 2,
+      "name": "Clear support report bundle",
+      "expected_status": "fail",
+      "expected_failure_count": 1,
+      "estimated_days": 6,
+      "due_in_days": 9,
+      "due_date": "2026-04-15",
+      "status": "breach",
+      "focus_artifact_count": 5,
+      "max_risk_score": 1.551,
+      "avg_risk_score": 1.403,
+      "bundle_mix": [
+        "support_report_refresh"
+      ]
+    },
+    {
+      "phase": 1,
+      "name": "Stabilize top risks",
+      "expected_status": "fail",
+      "expected_failure_count": 3,
+      "estimated_days": 3,
+      "due_in_days": 3,
+      "due_date": "2026-04-09",
+      "status": "at_risk",
+      "focus_artifact_count": 2,
+      "max_risk_score": 1.551,
+      "avg_risk_score": 1.55,
+      "bundle_mix": [
+        "support_report_refresh"
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Clear dashboard lag",
+      "expected_status": "pass",
+      "expected_failure_count": 0,
+      "estimated_days": 1,
+      "due_in_days": 10,
+      "due_date": "2026-04-16",
+      "status": "at_risk",
+      "focus_artifact_count": 1,
+      "max_risk_score": 1.358,
+      "avg_risk_score": 1.358,
+      "bundle_mix": [
+        "dashboard_refresh"
+      ]
+    }
+  ]
+}

@@ -79,6 +79,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact-readiness gating that turns artifact debt into a pass/warn/fail publishing verdict
 - Artifact scenarios that show which targeted refresh strategies are enough to recover published-output trust
 - Artifact recovery roadmaps that turn those scenarios into a phased execution plan
+- Artifact delivery forecasts that flag which recovery phases are most likely to slip
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -168,6 +169,7 @@ make maintenance-risk
 make artifact-readiness
 make artifact-scenarios
 make artifact-recovery
+make artifact-delivery
 make case-studies
 make snapshot
 make regression-diff
@@ -587,6 +589,14 @@ python scripts/generate_artifact_recovery.py
 
 This converts artifact scenarios and refresh bundles into an ordered multi-phase recovery plan with expected status improvements.
 
+## Forecast artifact delivery
+
+```bash
+python scripts/generate_artifact_delivery.py
+```
+
+This estimates which artifact-recovery phases are on track, at risk, or in breach based on risk concentration and phase size.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -617,6 +627,7 @@ This writes:
 - [artifact-readiness-guide.md](/Users/lamayassine/mujoco/docs/artifact-readiness-guide.md)
 - [artifact-scenarios-guide.md](/Users/lamayassine/mujoco/docs/artifact-scenarios-guide.md)
 - [artifact-recovery-guide.md](/Users/lamayassine/mujoco/docs/artifact-recovery-guide.md)
+- [artifact-delivery-guide.md](/Users/lamayassine/mujoco/docs/artifact-delivery-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

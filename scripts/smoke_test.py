@@ -92,6 +92,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_artifact_readiness.py"], env=env)
     run([sys.executable, "scripts/generate_artifact_scenarios.py"], env=env)
     run([sys.executable, "scripts/generate_artifact_recovery.py"], env=env)
+    run([sys.executable, "scripts/generate_artifact_delivery.py"], env=env)
     run(
         [
             sys.executable,
@@ -200,6 +201,9 @@ def main() -> None:
     artifact_recovery = ROOT / "outputs" / "artifact_recovery" / "artifact_recovery.json"
     if not artifact_recovery.exists():
         raise SystemExit(f"Expected artifact recovery report at {artifact_recovery}")
+    artifact_delivery = ROOT / "outputs" / "artifact_delivery" / "artifact_delivery.json"
+    if not artifact_delivery.exists():
+        raise SystemExit(f"Expected artifact delivery report at {artifact_delivery}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])
