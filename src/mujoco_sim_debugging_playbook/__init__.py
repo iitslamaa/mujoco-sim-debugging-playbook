@@ -97,6 +97,7 @@ __all__ = [
     "setup_faq",
     "support",
     "support_case_catalog",
+    "support_intake_checklist",
     "support_gaps",
     "support_ops",
     "triage",
