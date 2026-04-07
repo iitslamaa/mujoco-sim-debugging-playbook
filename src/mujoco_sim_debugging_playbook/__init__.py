@@ -98,6 +98,7 @@ __all__ = [
     "release_checklist",
     "release_blockers",
     "release_evidence_packet",
+    "release_handoff_note",
     "release_matrix",
     "release_packet",
     "regression",
