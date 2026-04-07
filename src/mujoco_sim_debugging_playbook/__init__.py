@@ -11,6 +11,7 @@ __all__ = [
     "metrics",
     "plot",
     "report",
+    "rl",
     "simulation",
     "support",
     "trace_plot",

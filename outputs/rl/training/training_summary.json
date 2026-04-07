@@ -1,0 +1,42 @@
+{
+  "iterations": 4,
+  "episodes_per_iteration": 4,
+  "learning_rate": 0.0003,
+  "gamma": 0.98,
+  "entropy_coef": 0.001,
+  "checkpoint_path": "/Users/lamayassine/mujoco/outputs/rl/training/reinforce_policy.pt",
+  "history": [
+    {
+      "iteration": 1,
+      "loss": -0.015058591030538082,
+      "mean_episode_return": -19.21940192413549,
+      "mean_final_error": 0.06556586417748339,
+      "success_rate": 0.25,
+      "policy_std": 0.17382611334323883
+    },
+    {
+      "iteration": 2,
+      "loss": -0.07560288161039352,
+      "mean_episode_return": -22.87249430772419,
+      "mean_final_error": 0.08273930059039213,
+      "success_rate": 0.0,
+      "policy_std": 0.17387829720973969
+    },
+    {
+      "iteration": 3,
+      "loss": 0.050653327256441116,
+      "mean_episode_return": -22.70371963584742,
+      "mean_final_error": 0.06929198434052808,
+      "success_rate": 0.25,
+      "policy_std": 0.17393049597740173
+    },
+    {
+      "iteration": 4,
+      "loss": -0.04111578315496445,
+      "mean_episode_return": -19.785142062069085,
+      "mean_final_error": 0.06291919595421562,
+      "success_rate": 0.25,
+      "policy_std": 0.17398270964622498
+    }
+  ]
+}

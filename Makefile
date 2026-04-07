@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy benchmark demo-gif dashboard format-help
+.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -41,6 +41,12 @@ train-policy:
 
 eval-policy:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/evaluate_torch_policy.py --episodes 8
+
+train-rl:
+	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/train_rl_policy.py --iterations 12 --episodes-per-iteration 6
+
+eval-rl:
+	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/evaluate_rl_policy.py --episodes 8
 
 benchmark:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/run_controller_benchmark.py

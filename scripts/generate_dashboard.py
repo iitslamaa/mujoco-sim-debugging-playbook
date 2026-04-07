@@ -20,6 +20,8 @@ def main() -> None:
     diagnostics = _read_json(ROOT / "outputs" / "diagnostics" / "environment.json")
     learning_training = _read_json(ROOT / "outputs" / "learning" / "training" / "training_summary.json")
     learning_eval = _read_json(ROOT / "outputs" / "learning" / "evaluation" / "summary.json")
+    rl_training = _read_json(ROOT / "outputs" / "rl" / "training" / "training_summary.json")
+    rl_evaluation = _read_json(ROOT / "outputs" / "rl" / "evaluation" / "summary.json")
     benchmark_summary = _read_json(ROOT / "outputs" / "controller_benchmark" / "benchmark_summary.json")
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -47,11 +49,20 @@ def main() -> None:
             "final_val_loss": learning_training["history"][-1]["val_loss"],
         } if learning_training else None,
         "learning_evaluation": learning_eval,
+        "rl_training": {
+            "iterations": rl_training["iterations"],
+            "episodes_per_iteration": rl_training["episodes_per_iteration"],
+            "final_return": rl_training["history"][-1]["mean_episode_return"],
+            "final_success_rate": rl_training["history"][-1]["success_rate"],
+            "policy_std": rl_training["history"][-1]["policy_std"],
+        } if rl_training else None,
+        "rl_evaluation": rl_evaluation,
         "benchmark_summary": benchmark_summary,
         "support_cases": support_cases,
         "artifacts": {
             "demo_gif": "outputs/media/reacher_demo.gif",
             "training_curve": "outputs/learning/training/training_curve.png",
+            "rl_training_curve": "outputs/rl/training/training_curve.png",
             "diagnostics_markdown": "outputs/diagnostics/diagnostics.md",
             "support_case_markdown": "outputs/support_cases/actuator_gain_overshoot.md",
             "benchmark_report": "outputs/controller_benchmark/report.md",

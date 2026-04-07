@@ -43,6 +43,29 @@ async function main() {
     evalBox.textContent = "Evaluation artifacts have not been generated yet.";
   }
 
+  const rlSummary = document.getElementById("rl-summary");
+  if (data.rl_training) {
+    rlSummary.innerHTML = `
+      <p><strong>Iterations:</strong> ${data.rl_training.iterations}</p>
+      <p><strong>Final return:</strong> ${data.rl_training.final_return.toFixed(3)}</p>
+      <p><strong>Final success:</strong> ${(data.rl_training.final_success_rate * 100).toFixed(1)}%</p>
+      <p><strong>Policy std:</strong> ${data.rl_training.policy_std.toFixed(3)}</p>
+    `;
+  } else {
+    rlSummary.textContent = "RL adaptation artifacts have not been generated yet.";
+  }
+
+  const rlEval = document.getElementById("rl-eval");
+  if (data.rl_evaluation?.summary) {
+    rlEval.innerHTML = `
+      <p><strong>Success rate:</strong> ${(data.rl_evaluation.summary.success_rate * 100).toFixed(1)}%</p>
+      <p><strong>Final error:</strong> ${data.rl_evaluation.summary.final_error_mean.toFixed(4)}</p>
+      <p><strong>Control energy:</strong> ${data.rl_evaluation.summary.control_energy_mean.toFixed(2)}</p>
+    `;
+  } else {
+    rlEval.textContent = "RL evaluation artifacts have not been generated yet.";
+  }
+
   const artifactLinks = document.getElementById("artifact-links");
   Object.entries(data.artifacts || {}).forEach(([name, path]) => {
     const a = document.createElement("a");
@@ -57,6 +80,9 @@ async function main() {
   }
   if (data.artifacts?.training_curve) {
     document.getElementById("training-curve").src = `../${data.artifacts.training_curve}`;
+  }
+  if (data.artifacts?.rl_training_curve) {
+    document.getElementById("rl-training-curve").src = `../${data.artifacts.rl_training_curve}`;
   }
 
   const supportCases = document.getElementById("support-cases");

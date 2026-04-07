@@ -37,6 +37,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Support-case library with response-draft generation
 - Diagnostics bundles with environment capture and scenario comparisons
 - PyTorch imitation-learning pipeline with dataset generation, training, and policy evaluation
+- Online RL fine-tuning stage that adapts the imitation policy inside MuJoCo
 - Static dashboard for browsing artifacts, environment details, and support cases
 - Multi-controller benchmark comparing expert, learned, and guarded hybrid control
 - Demo GIF generation for a stronger GitHub landing page
@@ -90,6 +91,8 @@ make support-case
 make diagnostics
 make train-policy
 make eval-policy
+make train-rl
+make eval-rl
 make benchmark
 make demo-gif
 make dashboard
@@ -138,6 +141,15 @@ This pipeline:
 - trains a multilayer PyTorch policy network
 - saves checkpoints and a training curve
 - evaluates the learned policy back in MuJoCo
+
+## Fine-tune with RL
+
+```bash
+python scripts/train_rl_policy.py --iterations 12 --episodes-per-iteration 6
+python scripts/evaluate_rl_policy.py --episodes 8
+```
+
+This stage starts from the imitation policy and performs online policy-gradient adaptation directly in MuJoCo.
 
 ## Dashboard and demo media
 
@@ -245,6 +257,7 @@ The repo now includes a learned baseline rather than only a hand-written control
 - a PyTorch MLP policy is trained to imitate expert torques
 - checkpoints, loss curves, and evaluation summaries are saved as reproducible artifacts
 - the learned policy can be compared directly against the expert controller
+- the imitation policy can be fine-tuned online with RL and re-evaluated in the same simulator
 
 ## Controller benchmark
 
