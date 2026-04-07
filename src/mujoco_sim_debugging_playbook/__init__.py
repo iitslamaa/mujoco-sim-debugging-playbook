@@ -21,6 +21,7 @@ __all__ = [
     "provenance",
     "recommendations",
     "readiness",
+    "responder_load",
     "release_notes",
     "regression",
     "report",
