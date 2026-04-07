@@ -775,6 +775,26 @@ async function main() {
   } else {
     artifactDigestSummary.textContent = "Artifact digest has not been generated yet.";
   }
+
+  const artifactHandoffSummary = document.getElementById("artifact-handoff-summary");
+  if (data.artifact_handoff?.summary) {
+    const summary = data.artifact_handoff.summary;
+    const items = [
+      `<p><strong>Status:</strong> ${summary.status}</p>`,
+      `<p><strong>Top risk artifact:</strong> ${summary.top_risk_artifact || "n/a"}</p>`,
+      `<p><strong>Breach phase:</strong> ${summary.breach_phase || "n/a"}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner || "n/a"}</p>`,
+      `<p><strong>Critical alerts:</strong> ${summary.critical_alert_count}</p>`,
+    ];
+    (data.artifact_handoff.actions || []).forEach((action) => {
+      items.push(
+        `<p><strong>${action.priority}</strong> ${action.target} -> ${action.owner}: ${action.expected_impact}</p>`
+      );
+    });
+    artifactHandoffSummary.innerHTML = items.join("");
+  } else {
+    artifactHandoffSummary.textContent = "Artifact handoff has not been generated yet.";
+  }
 }
 
 main();

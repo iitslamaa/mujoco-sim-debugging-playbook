@@ -5092,6 +5092,7 @@
       }
     ]
   },
+  "artifact_handoff": null,
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5153,6 +5154,7 @@
     "artifact_history_markdown": "outputs/artifact_history/artifact_history.md",
     "artifact_actions_markdown": "outputs/artifact_actions/artifact_actions.md",
     "artifact_alerts_markdown": "outputs/artifact_alerts/artifact_alerts.md",
-    "artifact_digest_markdown": "outputs/artifact_digest/artifact_digest.md"
+    "artifact_digest_markdown": "outputs/artifact_digest/artifact_digest.md",
+    "artifact_handoff_markdown": "outputs/artifact_handoff/artifact_handoff.md"
   }
 }

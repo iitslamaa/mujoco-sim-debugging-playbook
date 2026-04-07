@@ -86,6 +86,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact action registers that turn the maintenance stack into a prioritized next-step queue
 - Artifact alerts that emit short operator-style notifications from the artifact-health stack
 - Artifact digests that roll alerts, actions, and trend signals into a compact briefing
+- Artifact handoff packets that package the current state for the next recovery owner
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -182,6 +183,7 @@ make artifact-history
 make artifact-actions
 make artifact-alerts
 make artifact-digest
+make artifact-handoff
 make case-studies
 make snapshot
 make regression-diff
@@ -657,6 +659,14 @@ python scripts/generate_artifact_digest.py
 
 This rolls alerts, actions, and history into a compact daily-style artifact briefing.
 
+## Build an artifact handoff
+
+```bash
+python scripts/generate_artifact_handoff.py
+```
+
+This packages the current artifact-health state into a concise handoff for the next owner or recovery cycle.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -694,6 +704,7 @@ This writes:
 - [artifact-actions-guide.md](/Users/lamayassine/mujoco/docs/artifact-actions-guide.md)
 - [artifact-alerts-guide.md](/Users/lamayassine/mujoco/docs/artifact-alerts-guide.md)
 - [artifact-digest-guide.md](/Users/lamayassine/mujoco/docs/artifact-digest-guide.md)
+- [artifact-handoff-guide.md](/Users/lamayassine/mujoco/docs/artifact-handoff-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
