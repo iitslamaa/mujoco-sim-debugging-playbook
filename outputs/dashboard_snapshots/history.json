@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "snapshot_count": 4,
+    "current_status": "fail",
+    "status_direction": "improving",
+    "projected_terminal_status": "pass"
+  },
+  "snapshots": [
+    {
+      "name": "baseline_backlog",
+      "date": "2026-03-30",
+      "status": "fail",
+      "failure_count": 6,
+      "top_risk_score": 1.7,
+      "baseline_success_rate": 0.1
+    },
+    {
+      "name": "current_state",
+      "date": "2026-04-06",
+      "status": "fail",
+      "failure_count": 5,
+      "top_risk_score": 1.551,
+      "baseline_success_rate": 0.1
+    },
+    {
+      "name": "support_sprint_projection",
+      "date": "2026-04-09",
+      "status": "fail",
+      "failure_count": 1,
+      "top_risk_score": 1.358,
+      "baseline_success_rate": 0.1
+    },
+    {
+      "name": "full_refresh_projection",
+      "date": "2026-04-13",
+      "status": "pass",
+      "failure_count": 0,
+      "top_risk_score": 0.0,
+      "baseline_success_rate": 0.1
+    }
+  ]
+}

@@ -66,6 +66,7 @@ def main() -> None:
     artifact_scorecard = _read_json(ROOT / "outputs" / "artifact_scorecard" / "artifact_scorecard.json")
     artifact_packet = _read_json(ROOT / "outputs" / "artifact_packet" / "artifact_packet.json")
     dashboard_snapshot = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "latest.json")
+    dashboard_snapshot_history = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "history.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -161,6 +162,7 @@ def main() -> None:
         "artifact_scorecard": artifact_scorecard,
         "artifact_packet": artifact_packet,
         "dashboard_snapshot": dashboard_snapshot,
+        "dashboard_snapshot_history": dashboard_snapshot_history,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -220,6 +222,7 @@ def main() -> None:
             "artifact_scorecard_markdown": "outputs/artifact_scorecard/artifact_scorecard.md",
             "artifact_packet_markdown": "outputs/artifact_packet/artifact_packet.md",
             "dashboard_snapshot_markdown": "outputs/dashboard_snapshots/latest.md",
+            "dashboard_snapshot_history_markdown": "outputs/dashboard_snapshots/history.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

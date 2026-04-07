@@ -16,6 +16,7 @@ __all__ = [
     "artifact_scorecard",
     "artifact_packet",
     "dashboard_snapshots",
+    "dashboard_snapshot_history",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

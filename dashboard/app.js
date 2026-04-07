@@ -887,6 +887,25 @@ async function main() {
   } else {
     dashboardSnapshotSummary.textContent = "Dashboard snapshot has not been generated yet.";
   }
+
+  const dashboardSnapshotHistorySummary = document.getElementById("dashboard-snapshot-history-summary");
+  if (data.dashboard_snapshot_history?.summary) {
+    const summary = data.dashboard_snapshot_history.summary;
+    const items = [
+      `<p><strong>Snapshots:</strong> ${summary.snapshot_count}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Status direction:</strong> ${summary.status_direction}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+    ];
+    (data.dashboard_snapshot_history.snapshots || []).forEach((snapshot) => {
+      items.push(
+        `<p><strong>${snapshot.name}</strong>: ${snapshot.status}, ${snapshot.failure_count} failures, risk ${Number(snapshot.top_risk_score).toFixed(3)}</p>`
+      );
+    });
+    dashboardSnapshotHistorySummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotHistorySummary.textContent = "Dashboard snapshot history has not been generated yet.";
+  }
 }
 
 main();

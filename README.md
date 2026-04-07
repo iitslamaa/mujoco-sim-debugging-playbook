@@ -92,6 +92,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact scorecards that give a one-screen KPI view of the maintenance stack
 - Artifact packets that bundle the scorecard, digest, handoff, and closeout into one shareable package
 - Dashboard snapshots that preserve lightweight static summaries of the live dashboard state
+- Dashboard snapshot history that tracks how preserved dashboard summaries change over time
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -194,6 +195,7 @@ make artifact-closeout
 make artifact-scorecard
 make artifact-packet
 make dashboard-snapshot
+make dashboard-snapshot-history
 make case-studies
 make snapshot
 make regression-diff
@@ -717,6 +719,14 @@ python scripts/generate_dashboard_snapshot.py
 
 This captures a lightweight static snapshot of the current dashboard and artifact packet state.
 
+## Build dashboard snapshot history
+
+```bash
+python scripts/generate_dashboard_snapshot_history.py
+```
+
+This tracks how preserved dashboard snapshots evolve over time using the artifact history signal.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -760,6 +770,7 @@ This writes:
 - [artifact-scorecard-guide.md](/Users/lamayassine/mujoco/docs/artifact-scorecard-guide.md)
 - [artifact-packet-guide.md](/Users/lamayassine/mujoco/docs/artifact-packet-guide.md)
 - [dashboard-snapshot-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-guide.md)
+- [dashboard-snapshot-history-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-history-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
