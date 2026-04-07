@@ -1,0 +1,10 @@
+services:
+  sim-debug:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./outputs:/app/outputs
+    environment:
+      MPLCONFIGDIR: /tmp/matplotlib
+    command: ["python", "scripts/smoke_test.py"]

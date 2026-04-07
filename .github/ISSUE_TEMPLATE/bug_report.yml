@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible simulation or control problem.
+title: "[bug] "
+labels: ["bug", "triage"]
+body:
+  - type: textarea
+    attributes:
+      label: Summary
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction steps
+      description: Include exact commands and config paths.
+      placeholder: |
+        1. python scripts/run_sweep.py --config configs/interesting_sweeps.json
+        2. Open outputs/interesting_sweeps/report.md
+        3. Observe unstable actuator_gain behavior
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment
+      description: OS, Python version, MuJoCo version, install method, and whether Docker was used.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Logs and artifacts
+      description: Paste relevant errors and attach plots or summary files when possible.
+

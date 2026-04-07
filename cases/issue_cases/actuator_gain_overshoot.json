@@ -1,0 +1,19 @@
+{
+  "slug": "actuator_gain_overshoot",
+  "title": "Higher actuator gain improves speed but destabilizes final approach",
+  "summary": "A user increases actuator gain to reduce settling time and instead gets more overshoot, higher control energy, and worse overall success.",
+  "user_report": "I raised actuator_gain because the arm looked too sluggish. It moves faster now, but success rate actually dropped and I see a lot more wobble near the goal. Why would more authority make performance worse?",
+  "reproduction_command": "python scripts/run_sweep.py --config configs/interesting_sweeps.json",
+  "parameter_of_interest": "actuator_gain",
+  "recommended_checks": [
+    "Compare success rate, overshoot, and control energy together",
+    "Explain the interaction between gain, damping, and delay",
+    "Confirm that the user did not retune controller gains when changing actuator strength"
+  ],
+  "recommended_response_points": [
+    "Explain why more aggressive actuation can amplify oscillation",
+    "Recommend retuning the controller after changing actuator authority",
+    "Point the user to the actuator gain sweep report and plot"
+  ]
+}
+

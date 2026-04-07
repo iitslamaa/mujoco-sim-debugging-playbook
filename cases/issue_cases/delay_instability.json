@@ -1,0 +1,19 @@
+{
+  "slug": "delay_instability",
+  "title": "Delay-induced oscillation at moderate actuator gain",
+  "summary": "A user reports that the reacher is stable in the baseline config but becomes visibly oscillatory after introducing a small control delay.",
+  "user_report": "My arm reaches the target with the default config, but when I add control_delay_steps=4 the controller keeps wobbling near the target and sometimes times out. I expected slightly worse tracking, not repeated oscillation.",
+  "reproduction_command": "python scripts/run_sweep.py --config configs/interesting_sweeps.json",
+  "parameter_of_interest": "control_delay_steps",
+  "recommended_checks": [
+    "Compare control_delay_steps rows in outputs/interesting_sweeps/combined_summary.json",
+    "Inspect overshoot and oscillation instead of only final error",
+    "Confirm whether aggressive kp/kd tuning is interacting with sample-and-hold delay"
+  ],
+  "recommended_response_points": [
+    "Acknowledge that delay sensitivity is expected in a PD-controlled system",
+    "Point the user to the control-delay sweep plot and report",
+    "Recommend reducing gain or retuning derivative damping under delayed control"
+  ]
+}
+

@@ -1,0 +1,19 @@
+{
+  "slug": "noisy_observation_regression",
+  "title": "Observation noise degrades success rate before average error looks catastrophic",
+  "summary": "A user sees a large drop in task success when small sensor noise is enabled and wants to understand why the mean error still looks only moderately worse.",
+  "user_report": "When I set sensor_noise_std to 0.012 the arm misses often, but the average error metric still looks kind of close to baseline. Is the controller actually broken or is my success threshold just too strict?",
+  "reproduction_command": "python scripts/run_sweep.py --config configs/interesting_sweeps.json",
+  "parameter_of_interest": "sensor_noise_std",
+  "recommended_checks": [
+    "Compare success rate and final error side by side",
+    "Check whether the user is relying on one aggregate metric",
+    "Explain why threshold-based success can collapse before averages do"
+  ],
+  "recommended_response_points": [
+    "Clarify the difference between continuous metrics and thresholded success",
+    "Recommend inspecting per-episode traces for brittle targets",
+    "Suggest filtering, retuning kd, or widening the success radius for diagnosis"
+  ]
+}
+

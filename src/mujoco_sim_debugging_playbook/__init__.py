@@ -8,5 +8,5 @@ __all__ = [
     "plot",
     "report",
     "simulation",
+    "support",
 ]
-

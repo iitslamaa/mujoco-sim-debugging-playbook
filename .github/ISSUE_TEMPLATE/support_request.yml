@@ -1,0 +1,28 @@
+name: Support request
+description: Ask for help reproducing, understanding, or tuning a simulation result.
+title: "[support] "
+labels: ["support", "needs-triage"]
+body:
+  - type: textarea
+    attributes:
+      label: What are you trying to do?
+      description: Describe the task and the outcome you want.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What is blocking you?
+      description: Describe the exact failure mode or confusing behavior.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Commands and config
+      description: Share the command you ran and the relevant config file.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What have you already tried?
+      description: Include parameter changes, docs you checked, and any plots or metrics.
+

@@ -1,7 +1,7 @@
 {
   "config": {
     "name": "baseline",
-    "episodes": 4,
+    "episodes": 10,
     "episode_horizon_s": 3.5,
     "seed": 7,
     "output_dir": "outputs/baseline",
@@ -38,13 +38,13 @@
     }
   },
   "summary": {
-    "success_rate": 0.25,
-    "final_error_mean": 0.10037159904174653,
-    "min_error_mean": 0.09940533848460638,
-    "mean_error_mean": 0.11877635994849006,
-    "max_overshoot_mean": 0.0008990511732832763,
-    "oscillation_index_mean": 0.9813218390804598,
-    "control_energy_mean": 165.35847864244272,
+    "success_rate": 0.1,
+    "final_error_mean": 0.09427099044986048,
+    "min_error_mean": 0.09246723438882257,
+    "mean_error_mean": 0.10713942105722465,
+    "max_overshoot_mean": 0.0006764868345528703,
+    "oscillation_index_mean": 0.9798850574712642,
+    "control_energy_mean": 162.0204255530985,
     "settling_time_mean": 0.68
   },
   "episodes": [
@@ -99,6 +99,84 @@
       "settling_time_s": null,
       "oscillation_index": 0.9540229885057471,
       "control_energy": 155.26426841848334
+    },
+    {
+      "episode": 4,
+      "target_x": 0.2634724971753683,
+      "target_y": 0.152304388682493,
+      "success": 0,
+      "final_error": 0.05925618336629805,
+      "min_error": 0.05925618336629805,
+      "mean_error": 0.0635233101829657,
+      "max_overshoot": 0.003168663652395598,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 154.5483872915152
+    },
+    {
+      "episode": 5,
+      "target_x": 0.17454583682747643,
+      "target_y": 0.10682214690418561,
+      "success": 0,
+      "final_error": 0.05233155743910397,
+      "min_error": 0.047808702785157,
+      "mean_error": 0.06318919255026131,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9482758620689655,
+      "control_energy": 160.49409043906164
+    },
+    {
+      "episode": 6,
+      "target_x": 0.16587652577774242,
+      "target_y": 0.14681831341183518,
+      "success": 0,
+      "final_error": 0.07708109154984505,
+      "min_error": 0.07708109154984505,
+      "mean_error": 0.0863980506003188,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9540229885057471,
+      "control_energy": 145.42388484299164
+    },
+    {
+      "episode": 7,
+      "target_x": 0.21081868661243158,
+      "target_y": 0.1728393644978782,
+      "success": 0,
+      "final_error": 0.09580493561690218,
+      "min_error": 0.09580493561690218,
+      "mean_error": 0.10120996040886207,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9885057471264368,
+      "control_energy": 150.8285887636692
+    },
+    {
+      "episode": 8,
+      "target_x": 0.2991900510181907,
+      "target_y": 0.23023886061130075,
+      "success": 0,
+      "final_error": 0.12074637979423736,
+      "min_error": 0.1152155540382593,
+      "mean_error": 0.11864962972230977,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 167.41355033474076
+    },
+    {
+      "episode": 9,
+      "target_x": 0.23199226129940928,
+      "target_y": 0.2773504354436524,
+      "success": 0,
+      "final_error": 0.13600336056523213,
+      "min_error": 0.13188452259333847,
+      "mean_error": 0.16331862731356872,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 180.06183928923588
     }
   ],
   "trace_manifest": [
@@ -133,6 +211,54 @@
         0.23709482041186392
       ],
       "trace_path": "outputs/baseline/traces/episode_003.json"
+    },
+    {
+      "episode": 4,
+      "target_xy": [
+        0.2634724971753683,
+        0.152304388682493
+      ],
+      "trace_path": "outputs/baseline/traces/episode_004.json"
+    },
+    {
+      "episode": 5,
+      "target_xy": [
+        0.17454583682747643,
+        0.10682214690418561
+      ],
+      "trace_path": "outputs/baseline/traces/episode_005.json"
+    },
+    {
+      "episode": 6,
+      "target_xy": [
+        0.16587652577774242,
+        0.14681831341183518
+      ],
+      "trace_path": "outputs/baseline/traces/episode_006.json"
+    },
+    {
+      "episode": 7,
+      "target_xy": [
+        0.21081868661243158,
+        0.1728393644978782
+      ],
+      "trace_path": "outputs/baseline/traces/episode_007.json"
+    },
+    {
+      "episode": 8,
+      "target_xy": [
+        0.2991900510181907,
+        0.23023886061130075
+      ],
+      "trace_path": "outputs/baseline/traces/episode_008.json"
+    },
+    {
+      "episode": 9,
+      "target_xy": [
+        0.23199226129940928,
+        0.2773504354436524
+      ],
+      "trace_path": "outputs/baseline/traces/episode_009.json"
     }
   ]
 }
