@@ -2,6 +2,7 @@
 
 __all__ = [
     "anomaly",
+    "backlog_aging",
     "benchmark",
     "capacity",
     "case_studies",
