@@ -58,6 +58,7 @@ __all__ = [
     "documentation_audit",
     "experiment",
     "environment",
+    "environment_diff",
     "diagnostics",
     "evidence_inventory",
     "escalation",
