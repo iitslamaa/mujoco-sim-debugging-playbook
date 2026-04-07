@@ -1,0 +1,20 @@
+{
+  "cards": [
+    {
+      "label": "Queue",
+      "value": 11
+    },
+    {
+      "label": "KB coverage",
+      "value": 45.5
+    },
+    {
+      "label": "Status",
+      "value": "fail"
+    },
+    {
+      "label": "Best scenario",
+      "value": "Full stabilization"
+    }
+  ]
+}
