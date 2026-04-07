@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "action_count": 3,
+    "current_status": "fail",
+    "closeout_status": "not_ready_to_close",
+    "handoff_owner": "dashboard-stabilization"
+  },
+  "actions": [
+    {
+      "priority": "P0",
+      "title": "Status transition to pass",
+      "owner": "dashboard-stabilization"
+    },
+    {
+      "priority": "P1",
+      "title": "Current dashboard status is not yet pass.",
+      "owner": "dashboard-stabilization"
+    },
+    {
+      "priority": "P1",
+      "title": "Critical snapshot alerts are still active.",
+      "owner": "dashboard-stabilization"
+    }
+  ]
+}

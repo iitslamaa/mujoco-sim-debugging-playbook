@@ -5772,6 +5772,31 @@
       "Critical snapshot alerts are still active."
     ]
   },
+  "dashboard_snapshot_actions": {
+    "summary": {
+      "action_count": 3,
+      "current_status": "fail",
+      "closeout_status": "not_ready_to_close",
+      "handoff_owner": "dashboard-stabilization"
+    },
+    "actions": [
+      {
+        "priority": "P0",
+        "title": "Status transition to pass",
+        "owner": "dashboard-stabilization"
+      },
+      {
+        "priority": "P1",
+        "title": "Current dashboard status is not yet pass.",
+        "owner": "dashboard-stabilization"
+      },
+      {
+        "priority": "P1",
+        "title": "Critical snapshot alerts are still active.",
+        "owner": "dashboard-stabilization"
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5848,6 +5873,7 @@
     "dashboard_snapshot_handoff_markdown": "outputs/dashboard_snapshots/handoff.md",
     "dashboard_snapshot_closeout_markdown": "outputs/dashboard_snapshots/closeout.md",
     "dashboard_snapshot_scorecard_markdown": "outputs/dashboard_snapshots/scorecard.md",
-    "dashboard_snapshot_digest_markdown": "outputs/dashboard_snapshots/digest.md"
+    "dashboard_snapshot_digest_markdown": "outputs/dashboard_snapshots/digest.md",
+    "dashboard_snapshot_actions_markdown": "outputs/dashboard_snapshots/actions.md"
   }
 }

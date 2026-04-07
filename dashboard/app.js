@@ -1079,6 +1079,23 @@ async function main() {
   } else {
     dashboardSnapshotDigestSummary.textContent = "Dashboard snapshot digest has not been generated yet.";
   }
+
+  const dashboardSnapshotActionsSummary = document.getElementById("dashboard-snapshot-actions-summary");
+  if (data.dashboard_snapshot_actions?.summary) {
+    const summary = data.dashboard_snapshot_actions.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Closeout status:</strong> ${summary.closeout_status}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Actions:</strong> ${summary.action_count}</p>`,
+    ];
+    (data.dashboard_snapshot_actions.actions || []).forEach((action) => {
+      items.push(`<p><strong>[${action.priority}]</strong> ${action.title} (${action.owner})</p>`);
+    });
+    dashboardSnapshotActionsSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotActionsSummary.textContent = "Dashboard snapshot actions have not been generated yet.";
+  }
 }
 
 main();
