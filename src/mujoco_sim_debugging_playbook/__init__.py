@@ -66,6 +66,7 @@ __all__ = [
     "incidents",
     "issue_template_audit",
     "learning",
+    "local_paths_report",
     "maintenance_risk",
     "knowledge_base",
     "metrics",
