@@ -34,6 +34,7 @@ __all__ = [
     "dashboard_snapshot_recovery_forecast",
     "dashboard_snapshot_milestones",
     "dashboard_snapshot_watchlist",
+    "dashboard_snapshot_focus",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

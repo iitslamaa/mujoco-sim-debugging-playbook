@@ -1249,6 +1249,29 @@ async function main() {
   } else {
     dashboardSnapshotWatchlistSummary.textContent = "Dashboard snapshot watchlist has not been generated yet.";
   }
+
+  const dashboardSnapshotFocusSummary = document.getElementById("dashboard-snapshot-focus-summary");
+  if (data.dashboard_snapshot_focus?.summary) {
+    const summary = data.dashboard_snapshot_focus.summary;
+    const items = [
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Readiness status:</strong> ${summary.readiness_status}</p>`,
+      `<p><strong>Next status:</strong> ${summary.next_status}</p>`,
+      `<p><strong>Terminal status:</strong> ${summary.terminal_status}</p>`,
+      `<p><strong>Focus items:</strong> ${summary.focus_item_count}</p>`,
+      `<p><strong>Next objective:</strong> ${data.dashboard_snapshot_focus.next_objective}</p>`,
+    ];
+    (data.dashboard_snapshot_focus.blocking_reasons || []).forEach((reason) => {
+      items.push(`<p><strong>Blocker:</strong> ${reason}</p>`);
+    });
+    (data.dashboard_snapshot_focus.focus_items || []).forEach((item) => {
+      items.push(`<p><strong>[${item.kind}]</strong> ${item.label} | ${item.severity}</p>`);
+    });
+    dashboardSnapshotFocusSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotFocusSummary.textContent = "Dashboard snapshot focus has not been generated yet.";
+  }
 }
 
 main();
