@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "status": "warn",
+    "blocker_count": 3
+  },
+  "blockers": [
+    "compatibility",
+    "environment_doctor",
+    "release_checklist"
+  ]
+}
