@@ -89,6 +89,7 @@ __all__ = [
     "scorecard",
     "simulation",
     "sla",
+    "setup_faq",
     "support",
     "support_case_catalog",
     "support_gaps",
