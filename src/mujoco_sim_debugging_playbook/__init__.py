@@ -84,6 +84,7 @@ __all__ = [
     "recommendations",
     "repro_inventory",
     "repro_bundle_index",
+    "repro_readiness",
     "regeneration_plan",
     "readiness",
     "responder_load",
