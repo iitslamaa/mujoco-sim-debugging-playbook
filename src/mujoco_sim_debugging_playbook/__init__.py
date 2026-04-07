@@ -70,6 +70,7 @@ __all__ = [
     "learning",
     "local_paths_report",
     "machine_profile",
+    "machine_readiness",
     "maintenance_risk",
     "knowledge_base",
     "metrics",
