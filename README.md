@@ -240,6 +240,7 @@ make bundle-quality
 make bundle-coverage
 make release-blockers
 make release-evidence-packet
+make release-handoff-note
 make support-session-note
 make environment-alignment
 make support-command-catalog
@@ -1202,6 +1203,7 @@ This writes:
 - [bundle-coverage-guide.md](/Users/lamayassine/mujoco/docs/bundle-coverage-guide.md)
 - [release-blockers-guide.md](/Users/lamayassine/mujoco/docs/release-blockers-guide.md)
 - [release-evidence-packet-guide.md](/Users/lamayassine/mujoco/docs/release-evidence-packet-guide.md)
+- [release-handoff-note-guide.md](/Users/lamayassine/mujoco/docs/release-handoff-note-guide.md)
 - [support-session-note-guide.md](/Users/lamayassine/mujoco/docs/support-session-note-guide.md)
 - [environment-alignment-guide.md](/Users/lamayassine/mujoco/docs/environment-alignment-guide.md)
 - [support-command-catalog-guide.md](/Users/lamayassine/mujoco/docs/support-command-catalog-guide.md)
