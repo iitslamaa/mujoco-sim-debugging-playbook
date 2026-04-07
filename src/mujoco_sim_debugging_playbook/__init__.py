@@ -94,5 +94,6 @@ __all__ = [
     "support_ops",
     "triage",
     "trace_plot",
+    "toolchain_inventory",
     "workstream",
 ]
