@@ -48,6 +48,7 @@ def main() -> None:
     dependency_map = _read_json(ROOT / "outputs" / "dependency_map" / "dependency_map.json")
     impact_analysis = _read_json(ROOT / "outputs" / "impact_analysis" / "impact_analysis.json")
     refresh_bundle = _read_json(ROOT / "outputs" / "refresh_bundle" / "refresh_bundle.json")
+    refresh_checklist = _read_json(ROOT / "outputs" / "refresh_checklist" / "refresh_checklist.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -125,6 +126,7 @@ def main() -> None:
         "dependency_map": dependency_map,
         "impact_analysis": impact_analysis,
         "refresh_bundle": refresh_bundle,
+        "refresh_checklist": refresh_checklist,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -166,6 +168,7 @@ def main() -> None:
             "dependency_map_markdown": "outputs/dependency_map/dependency_map.md",
             "impact_analysis_markdown": "outputs/impact_analysis/impact_analysis.md",
             "refresh_bundle_markdown": "outputs/refresh_bundle/refresh_bundle.md",
+            "refresh_checklist_markdown": "outputs/refresh_checklist/refresh_checklist.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

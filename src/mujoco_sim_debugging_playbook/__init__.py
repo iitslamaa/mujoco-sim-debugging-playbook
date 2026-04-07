@@ -33,6 +33,7 @@ __all__ = [
     "readiness",
     "responder_load",
     "refresh_bundle",
+    "refresh_checklist",
     "risk_register",
     "release_notes",
     "release_packet",

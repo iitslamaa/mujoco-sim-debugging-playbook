@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "bundle_count": 2,
+    "total_steps": 6
+  },
+  "bundles": [
+    {
+      "bundle": "dashboard_refresh",
+      "step_count": 1,
+      "validation_target": "dashboard/data.json",
+      "steps": [
+        {
+          "step": 1,
+          "artifact": "dashboard/data.json",
+          "command": "python scripts/generate_dashboard.py",
+          "follow_on_count": 0
+        }
+      ]
+    },
+    {
+      "bundle": "support_report_refresh",
+      "step_count": 5,
+      "validation_target": "outputs/briefing_note/briefing_note.json",
+      "steps": [
+        {
+          "step": 1,
+          "artifact": "outputs/scenario_plan/scenario_plan.json",
+          "command": "python scripts/generate_scenario_plan.py",
+          "follow_on_count": 3
+        },
+        {
+          "step": 2,
+          "artifact": "outputs/support_readiness/support_readiness.json",
+          "command": "python scripts/generate_support_readiness.py",
+          "follow_on_count": 3
+        },
+        {
+          "step": 3,
+          "artifact": "outputs/ops_review/ops_review.json",
+          "command": "python scripts/generate_ops_review.py",
+          "follow_on_count": 2
+        },
+        {
+          "step": 4,
+          "artifact": "outputs/scorecard/scorecard.json",
+          "command": "python scripts/generate_scorecard.py",
+          "follow_on_count": 2
+        },
+        {
+          "step": 5,
+          "artifact": "outputs/briefing_note/briefing_note.json",
+          "command": "python scripts/generate_briefing_note.py",
+          "follow_on_count": 1
+        }
+      ]
+    }
+  ]
+}

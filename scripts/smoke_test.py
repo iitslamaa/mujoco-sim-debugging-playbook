@@ -87,6 +87,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_dependency_map.py"], env=env)
     run([sys.executable, "scripts/generate_impact_analysis.py"], env=env)
     run([sys.executable, "scripts/generate_refresh_bundle.py"], env=env)
+    run([sys.executable, "scripts/generate_refresh_checklist.py"], env=env)
     run(
         [
             sys.executable,
@@ -180,6 +181,9 @@ def main() -> None:
     refresh_bundle = ROOT / "outputs" / "refresh_bundle" / "refresh_bundle.json"
     if not refresh_bundle.exists():
         raise SystemExit(f"Expected refresh bundle at {refresh_bundle}")
+    refresh_checklist = ROOT / "outputs" / "refresh_checklist" / "refresh_checklist.json"
+    if not refresh_checklist.exists():
+        raise SystemExit(f"Expected refresh checklist at {refresh_checklist}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

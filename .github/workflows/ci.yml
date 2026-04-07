@@ -86,5 +86,7 @@ jobs:
         run: python scripts/generate_impact_analysis.py
       - name: Build refresh bundle
         run: python scripts/generate_refresh_bundle.py
+      - name: Build refresh checklist
+        run: python scripts/generate_refresh_checklist.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

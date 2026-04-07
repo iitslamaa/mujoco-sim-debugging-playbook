@@ -546,6 +546,23 @@ async function main() {
   } else {
     refreshBundleSummary.textContent = "Refresh bundle artifacts have not been generated yet.";
   }
+
+  const refreshChecklistSummary = document.getElementById("refresh-checklist-summary");
+  if (data.refresh_checklist?.summary) {
+    const summary = data.refresh_checklist.summary;
+    const items = [
+      `<p><strong>Bundles:</strong> ${summary.bundle_count}</p>`,
+      `<p><strong>Total steps:</strong> ${summary.total_steps}</p>`,
+    ];
+    (data.refresh_checklist.bundles || []).forEach((bundle) => {
+      items.push(
+        `<p><strong>${bundle.bundle}</strong>: ${bundle.step_count} steps, validate ${bundle.validation_target}</p>`
+      );
+    });
+    refreshChecklistSummary.innerHTML = items.join("");
+  } else {
+    refreshChecklistSummary.textContent = "Refresh checklist artifacts have not been generated yet.";
+  }
 }
 
 main();
