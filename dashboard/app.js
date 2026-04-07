@@ -1135,6 +1135,27 @@ async function main() {
   } else {
     dashboardSnapshotResolutionPlanSummary.textContent = "Dashboard snapshot resolution plan has not been generated yet.";
   }
+
+  const dashboardSnapshotExecutionBoardSummary = document.getElementById("dashboard-snapshot-execution-board-summary");
+  if (data.dashboard_snapshot_execution_board?.summary) {
+    const summary = data.dashboard_snapshot_execution_board.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Lanes:</strong> ${summary.lane_count}</p>`,
+      `<p><strong>Active lanes:</strong> ${summary.active_lane_count}</p>`,
+      `<p><strong>Planned lanes:</strong> ${summary.planned_lane_count}</p>`,
+    ];
+    (data.dashboard_snapshot_execution_board.lanes || []).forEach((lane) => {
+      items.push(`<p><strong>${lane.lane}</strong>: ${lane.status}, ${lane.item_count} items</p>`);
+      (lane.items || []).forEach((item) => {
+        items.push(`<p>[${lane.priority}] ${item}</p>`);
+      });
+    });
+    dashboardSnapshotExecutionBoardSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotExecutionBoardSummary.textContent = "Dashboard snapshot execution board has not been generated yet.";
+  }
 }
 
 main();

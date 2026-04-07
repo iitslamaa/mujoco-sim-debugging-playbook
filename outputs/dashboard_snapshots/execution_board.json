@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "current_status": "fail",
+    "handoff_owner": "dashboard-stabilization",
+    "lane_count": 2,
+    "active_lane_count": 1,
+    "planned_lane_count": 1
+  },
+  "lanes": [
+    {
+      "lane": "Immediate stabilization",
+      "status": "active",
+      "priority": "P0",
+      "item_count": 1,
+      "items": [
+        "Status transition to pass"
+      ]
+    },
+    {
+      "lane": "Follow-up cleanup",
+      "status": "planned",
+      "priority": "P1",
+      "item_count": 2,
+      "items": [
+        "Current dashboard status is not yet pass.",
+        "Critical snapshot alerts are still active."
+      ]
+    }
+  ]
+}

@@ -207,6 +207,7 @@ make dashboard-snapshot-digest
 make dashboard-snapshot-actions
 make dashboard-snapshot-alert-packet
 make dashboard-snapshot-resolution-plan
+make dashboard-snapshot-execution-board
 make case-studies
 make snapshot
 make regression-diff
@@ -826,6 +827,14 @@ python scripts/generate_dashboard_snapshot_resolution_plan.py
 
 This turns the current alert packet and action register into phased resolution work.
 
+## Build dashboard snapshot execution board
+
+```bash
+python scripts/generate_dashboard_snapshot_execution_board.py
+```
+
+This turns the current resolution plan into a lightweight lane-style execution board.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -881,6 +890,7 @@ This writes:
 - [dashboard-snapshot-actions-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-actions-guide.md)
 - [dashboard-snapshot-alert-packet-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-alert-packet-guide.md)
 - [dashboard-snapshot-resolution-plan-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-resolution-plan-guide.md)
+- [dashboard-snapshot-execution-board-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-execution-board-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

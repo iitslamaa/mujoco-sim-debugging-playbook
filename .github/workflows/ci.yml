@@ -148,5 +148,7 @@ jobs:
         run: python scripts/generate_dashboard_snapshot_alert_packet.py
       - name: Build dashboard snapshot resolution plan
         run: python scripts/generate_dashboard_snapshot_resolution_plan.py
+      - name: Build dashboard snapshot execution board
+        run: python scripts/generate_dashboard_snapshot_execution_board.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py
