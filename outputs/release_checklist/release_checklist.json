@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "item_count": 3,
+    "pass_count": 1,
+    "warn_count": 2
+  },
+  "items": [
+    {
+      "name": "environment_doctor",
+      "status": "warn"
+    },
+    {
+      "name": "compatibility",
+      "status": "warn"
+    },
+    {
+      "name": "warnings_reviewed",
+      "status": "pass"
+    }
+  ]
+}
