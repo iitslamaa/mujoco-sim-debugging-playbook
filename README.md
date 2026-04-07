@@ -103,6 +103,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Dependency snapshot for concrete package-level environment capture
 - Docker context report for base image and CLI visibility
 - Issue template audit for support-request and bug-report completeness
+- Toolchain inventory for quick local runtime and CLI inspection
 - Repro inventory that enumerates documented support cases and evidence paths
 - GitHub issue templates and CI for public-repo readiness
 
@@ -210,6 +211,7 @@ make compatibility
 make dependency-snapshot
 make docker-context
 make issue-template-audit
+make toolchain-inventory
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -338,6 +340,14 @@ python scripts/generate_issue_template_audit.py
 ```
 
 This summarizes the current issue templates and whether they include the basic descriptive fields needed for support triage.
+
+## Generate a toolchain inventory
+
+```bash
+python scripts/generate_toolchain_inventory.py
+```
+
+This records the main runtime and CLI versions captured in the current environment report.
 
 ## Generate a repro inventory
 
@@ -1074,6 +1084,7 @@ This writes:
 - [dependency-snapshot-guide.md](/Users/lamayassine/mujoco/docs/dependency-snapshot-guide.md)
 - [docker-context-guide.md](/Users/lamayassine/mujoco/docs/docker-context-guide.md)
 - [issue-template-audit-guide.md](/Users/lamayassine/mujoco/docs/issue-template-audit-guide.md)
+- [toolchain-inventory-guide.md](/Users/lamayassine/mujoco/docs/toolchain-inventory-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
