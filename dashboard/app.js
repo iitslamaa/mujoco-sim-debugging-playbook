@@ -291,6 +291,17 @@ async function main() {
   } else {
     incidentSummary.textContent = "Incident bundle artifacts have not been generated yet.";
   }
+
+  const knowledgeBaseSummary = document.getElementById("knowledge-base-summary");
+  if (data.knowledge_base?.entries) {
+    const items = [];
+    data.knowledge_base.entries.slice(0, 5).forEach((entry) => {
+      items.push(`<p><strong>${entry.id}</strong>: ${entry.question}</p>`);
+    });
+    knowledgeBaseSummary.innerHTML = items.join("");
+  } else {
+    knowledgeBaseSummary.textContent = "Knowledge base artifacts have not been generated yet.";
+  }
 }
 
 main();

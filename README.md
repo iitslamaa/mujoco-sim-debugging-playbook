@@ -51,6 +51,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Automated mitigation recommendations that turn anomalies into actionable tuning guidance
 - A synthesized support triage queue that prioritizes what an engineer should inspect first
 - Incident bundles that package top-priority issues into handoff-ready case files
+- A generated knowledge base that turns incidents into reusable FAQ-style support guidance
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -110,6 +111,7 @@ make anomalies
 make recommendations
 make triage
 make incidents
+make knowledge-base
 make case-studies
 make snapshot
 make regression-diff
@@ -322,6 +324,17 @@ python scripts/generate_incident_bundles.py \
 ```
 
 This creates handoff-ready case files for the highest-priority support items.
+
+## Generate the knowledge base
+
+```bash
+python scripts/generate_knowledge_base.py \
+  --incidents outputs/incidents/index.json \
+  --recommendations outputs/recommendations/recommendations.json \
+  --output-dir outputs/knowledge_base
+```
+
+This converts the incident bundles into reusable, self-service support entries.
 
 ## Generate a diagnostics bundle
 

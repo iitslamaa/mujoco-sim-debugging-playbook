@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "count": 5
+  },
+  "entries": [
+    {
+      "id": "INC-001",
+      "target": "episode 1",
+      "question": "Why does episode 1 fail under randomized conditions?",
+      "answer": "Hard randomized episode with worst controller `expert_pd`. Recommended first step: Reduce control delay or switch to the guarded/learned policy family; lower actuator gain.",
+      "article_path": "outputs/knowledge_base/episode_1.md"
+    },
+    {
+      "id": "INC-002",
+      "target": "episode 14",
+      "question": "Why does episode 14 fail under randomized conditions?",
+      "answer": "Hard randomized episode with worst controller `expert_pd`. Recommended first step: Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; lower actuator gain.",
+      "article_path": "outputs/knowledge_base/episode_14.md"
+    },
+    {
+      "id": "INC-003",
+      "target": "episode 17",
+      "question": "Why does episode 17 fail under randomized conditions?",
+      "answer": "Hard randomized episode with worst controller `expert_pd`. Recommended first step: Lower actuator gain; raise joint damping.",
+      "article_path": "outputs/knowledge_base/episode_17.md"
+    },
+    {
+      "id": "INC-004",
+      "target": "episode 9",
+      "question": "Why does episode 9 fail under randomized conditions?",
+      "answer": "Hard randomized episode with worst controller `rl_policy`. Recommended first step: Add observation smoothing; lower actuator gain.",
+      "article_path": "outputs/knowledge_base/episode_9.md"
+    },
+    {
+      "id": "INC-005",
+      "target": "episode 5",
+      "question": "Why does episode 5 fail under randomized conditions?",
+      "answer": "Hard randomized episode with worst controller `expert_pd`. Recommended first step: Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; raise joint damping.",
+      "article_path": "outputs/knowledge_base/episode_5.md"
+    }
+  ]
+}

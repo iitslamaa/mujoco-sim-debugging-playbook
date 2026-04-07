@@ -3074,7 +3074,170 @@
       "regression_gate_status": "pass"
     }
   },
-  "incidents": null,
+  "incidents": {
+    "summary": {
+      "count": 5,
+      "top_incident": "INC-001"
+    },
+    "bundles": [
+      {
+        "id": "INC-001",
+        "target": "episode 1",
+        "kind": "randomized_episode",
+        "priority_score": 217.08717748779893,
+        "summary": "Hard randomized episode with worst controller `expert_pd`.",
+        "evidence": "Difficulty `1.1709`, success `0.000`, delay `5`, noise `0.0068`.",
+        "next_action": "Reduce control delay or switch to the guarded/learned policy family; lower actuator gain.",
+        "recommendation": {
+          "kind": "randomized_episode",
+          "target": "episode 1",
+          "severity": 1.1708717748779893,
+          "recommendation": "Reduce control delay or switch to the guarded/learned policy family; lower actuator gain.",
+          "evidence": "This randomized episode had `0.000` success rate with worst controller `expert_pd`. The playbook's best control_dt sweep setting is `0.01`.",
+          "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+        },
+        "anomaly_context": {
+          "episode": 1,
+          "difficulty_score": 1.1708717748779893,
+          "avg_final_error": 0.17087177487798924,
+          "success_rate": 0.0,
+          "best_controller": "rl_policy",
+          "worst_controller": "expert_pd",
+          "worst_final_error": 0.18158924545080263,
+          "joint_damping": 1.729174779325379,
+          "actuator_gain": 46.894996522872425,
+          "sensor_noise_std": 0.006776718264752566,
+          "control_delay_steps": 5
+        },
+        "bundle_path": "outputs/incidents/episode_1.md"
+      },
+      {
+        "id": "INC-002",
+        "target": "episode 14",
+        "kind": "randomized_episode",
+        "priority_score": 216.6659123947502,
+        "summary": "Hard randomized episode with worst controller `expert_pd`.",
+        "evidence": "Difficulty `1.1667`, success `0.000`, delay `5`, noise `0.0110`.",
+        "next_action": "Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; lower actuator gain.",
+        "recommendation": {
+          "kind": "randomized_episode",
+          "target": "episode 14",
+          "severity": 1.166659123947502,
+          "recommendation": "Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; lower actuator gain.",
+          "evidence": "This randomized episode had `0.000` success rate with worst controller `expert_pd`. The playbook's best control_dt sweep setting is `0.01`.",
+          "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+        },
+        "anomaly_context": {
+          "episode": 14,
+          "difficulty_score": 1.166659123947502,
+          "avg_final_error": 0.16665912394750193,
+          "success_rate": 0.0,
+          "best_controller": "rl_policy",
+          "worst_controller": "expert_pd",
+          "worst_final_error": 0.17820569813513884,
+          "joint_damping": 3.782089089350272,
+          "actuator_gain": 47.668466249738096,
+          "sensor_noise_std": 0.011028728485583719,
+          "control_delay_steps": 5
+        },
+        "bundle_path": "outputs/incidents/episode_14.md"
+      },
+      {
+        "id": "INC-003",
+        "target": "episode 17",
+        "kind": "randomized_episode",
+        "priority_score": 215.77372914512094,
+        "summary": "Hard randomized episode with worst controller `expert_pd`.",
+        "evidence": "Difficulty `1.1577`, success `0.000`, delay `0`, noise `0.0094`.",
+        "next_action": "Lower actuator gain; raise joint damping.",
+        "recommendation": {
+          "kind": "randomized_episode",
+          "target": "episode 17",
+          "severity": 1.1577372914512094,
+          "recommendation": "Lower actuator gain; raise joint damping.",
+          "evidence": "This randomized episode had `0.000` success rate with worst controller `expert_pd`. The playbook's best control_dt sweep setting is `0.01`.",
+          "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+        },
+        "anomaly_context": {
+          "episode": 17,
+          "difficulty_score": 1.1577372914512094,
+          "avg_final_error": 0.15773729145120932,
+          "success_rate": 0.0,
+          "best_controller": "rl_policy",
+          "worst_controller": "expert_pd",
+          "worst_final_error": 0.15906712664537617,
+          "joint_damping": 0.8849033957559737,
+          "actuator_gain": 46.42217069731403,
+          "sensor_noise_std": 0.009361803923376447,
+          "control_delay_steps": 0
+        },
+        "bundle_path": "outputs/incidents/episode_17.md"
+      },
+      {
+        "id": "INC-004",
+        "target": "episode 9",
+        "kind": "randomized_episode",
+        "priority_score": 215.1461366675756,
+        "summary": "Hard randomized episode with worst controller `rl_policy`.",
+        "evidence": "Difficulty `1.1515`, success `0.000`, delay `1`, noise `0.0172`.",
+        "next_action": "Add observation smoothing; lower actuator gain.",
+        "recommendation": {
+          "kind": "randomized_episode",
+          "target": "episode 9",
+          "severity": 1.151461366675756,
+          "recommendation": "Add observation smoothing; lower actuator gain.",
+          "evidence": "This randomized episode had `0.000` success rate with worst controller `rl_policy`. The playbook's best control_dt sweep setting is `0.01`.",
+          "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+        },
+        "anomaly_context": {
+          "episode": 9,
+          "difficulty_score": 1.151461366675756,
+          "avg_final_error": 0.1514613666757561,
+          "success_rate": 0.0,
+          "best_controller": "hybrid_guardrail",
+          "worst_controller": "rl_policy",
+          "worst_final_error": 0.15414417465008007,
+          "joint_damping": 1.3510857586984368,
+          "actuator_gain": 53.06512399670722,
+          "sensor_noise_std": 0.017233493284833652,
+          "control_delay_steps": 1
+        },
+        "bundle_path": "outputs/incidents/episode_9.md"
+      },
+      {
+        "id": "INC-005",
+        "target": "episode 5",
+        "kind": "randomized_episode",
+        "priority_score": 212.455734536996,
+        "summary": "Hard randomized episode with worst controller `expert_pd`.",
+        "evidence": "Difficulty `1.1246`, success `0.000`, delay `4`, noise `0.0167`.",
+        "next_action": "Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; raise joint damping.",
+        "recommendation": {
+          "kind": "randomized_episode",
+          "target": "episode 5",
+          "severity": 1.12455734536996,
+          "recommendation": "Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; raise joint damping.",
+          "evidence": "This randomized episode had `0.000` success rate with worst controller `expert_pd`. The playbook's best control_dt sweep setting is `0.01`.",
+          "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+        },
+        "anomaly_context": {
+          "episode": 5,
+          "difficulty_score": 1.12455734536996,
+          "avg_final_error": 0.12455734536995995,
+          "success_rate": 0.0,
+          "best_controller": "rl_policy",
+          "worst_controller": "expert_pd",
+          "worst_final_error": 0.13033066401262156,
+          "joint_damping": 1.058942999724618,
+          "actuator_gain": 37.2397730888738,
+          "sensor_noise_std": 0.01674931029848154,
+          "control_delay_steps": 4
+        },
+        "bundle_path": "outputs/incidents/episode_5.md"
+      }
+    ]
+  },
+  "knowledge_base": null,
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -3109,6 +3272,7 @@
     "anomaly_difficulty_image": "outputs/anomalies/randomization_difficulty.png",
     "recommendations_markdown": "outputs/recommendations/recommendations.md",
     "triage_markdown": "outputs/triage/triage_queue.md",
-    "incident_index_markdown": "outputs/incidents/index.md"
+    "incident_index_markdown": "outputs/incidents/index.md",
+    "knowledge_base_markdown": "outputs/knowledge_base/index.md"
   }
 }

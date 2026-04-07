@@ -12,6 +12,7 @@ __all__ = [
     "generalization",
     "incidents",
     "learning",
+    "knowledge_base",
     "metrics",
     "plot",
     "provenance",
