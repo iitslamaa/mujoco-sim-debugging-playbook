@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install bootstrap-env test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note artifact-closeout artifact-scorecard artifact-packet environment-doctor dashboard-snapshot dashboard-snapshot-history dashboard-snapshot-drift dashboard-snapshot-alerts dashboard-snapshot-monitor dashboard-snapshot-review dashboard-snapshot-handoff dashboard-snapshot-closeout dashboard-snapshot-scorecard dashboard-snapshot-digest dashboard-snapshot-actions dashboard-snapshot-alert-packet dashboard-snapshot-resolution-plan dashboard-snapshot-execution-board dashboard-snapshot-owner-load dashboard-snapshot-readiness-gate dashboard-snapshot-recovery-forecast dashboard-snapshot-milestones dashboard-snapshot-watchlist dashboard-snapshot-focus dashboard-snapshot-priorities dashboard-snapshot-status-brief dashboard-snapshot-lead case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
+.PHONY: install bootstrap-env debug-bundle test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note artifact-closeout artifact-scorecard artifact-packet environment-doctor dashboard-snapshot dashboard-snapshot-history dashboard-snapshot-drift dashboard-snapshot-alerts dashboard-snapshot-monitor dashboard-snapshot-review dashboard-snapshot-handoff dashboard-snapshot-closeout dashboard-snapshot-scorecard dashboard-snapshot-digest dashboard-snapshot-actions dashboard-snapshot-alert-packet dashboard-snapshot-resolution-plan dashboard-snapshot-execution-board dashboard-snapshot-owner-load dashboard-snapshot-readiness-gate dashboard-snapshot-recovery-forecast dashboard-snapshot-milestones dashboard-snapshot-watchlist dashboard-snapshot-focus dashboard-snapshot-priorities dashboard-snapshot-status-brief dashboard-snapshot-lead case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -9,6 +9,9 @@ install:
 
 bootstrap-env:
 	bash scripts/bootstrap_env.sh
+
+debug-bundle:
+	bash scripts/collect_debug_bundle.sh
 
 test:
 	$(PYTHON) -m pytest -q

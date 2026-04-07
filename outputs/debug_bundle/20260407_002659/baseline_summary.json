@@ -1,0 +1,331 @@
+{
+  "config": {
+    "name": "baseline",
+    "episodes": 10,
+    "episode_horizon_s": 3.5,
+    "seed": 7,
+    "output_dir": "outputs/baseline",
+    "task": {
+      "target_radius": 0.045,
+      "target_range": {
+        "x": [
+          0.12,
+          0.3
+        ],
+        "y": [
+          0.04,
+          0.28
+        ]
+      },
+      "link_lengths": [
+        0.18,
+        0.16
+      ]
+    },
+    "sim": {
+      "physics_timestep": 0.002,
+      "control_dt": 0.02,
+      "joint_damping": 1.8,
+      "friction_loss": 0.02,
+      "actuator_gain": 38.0,
+      "sensor_noise_std": 0.0,
+      "control_delay_steps": 0
+    },
+    "controller": {
+      "kp": 22.0,
+      "kd": 4.0,
+      "max_torque": 6.0
+    }
+  },
+  "summary": {
+    "success_rate": 0.1,
+    "final_error_mean": 0.09427099044986048,
+    "min_error_mean": 0.09246723438882257,
+    "mean_error_mean": 0.10713942105722465,
+    "max_overshoot_mean": 0.0006764868345528703,
+    "oscillation_index_mean": 0.9798850574712642,
+    "control_energy_mean": 162.0204255530985,
+    "settling_time_mean": 0.68
+  },
+  "episodes": [
+    {
+      "episode": 0,
+      "target_x": 0.23251718398884005,
+      "target_y": 0.2553313122326981,
+      "success": 0,
+      "final_error": 0.12759550658082913,
+      "min_error": 0.12373046435226857,
+      "mean_error": 0.14910836407140204,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 177.0789344677809
+    },
+    {
+      "episode": 1,
+      "target_x": 0.2596234242441348,
+      "target_y": 0.09404972559774205,
+      "success": 1,
+      "final_error": 0.0189719320110068,
+      "min_error": 0.0189719320110068,
+      "mean_error": 0.03215645505647371,
+      "max_overshoot": 0.00031279921681093975,
+      "settling_time_s": 0.68,
+      "oscillation_index": 0.9827586206896551,
+      "control_energy": 166.04313984991308
+    },
+    {
+      "episode": 2,
+      "target_x": 0.17402993128402058,
+      "target_y": 0.24965282689510288,
+      "success": 0,
+      "final_error": 0.13076944787784525,
+      "min_error": 0.13076944787784525,
+      "mean_error": 0.15160878382548854,
+      "max_overshoot": 0.0032834054763221654,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 163.04757183359357
+    },
+    {
+      "episode": 3,
+      "target_x": 0.12094775482180345,
+      "target_y": 0.23709482041186392,
+      "success": 0,
+      "final_error": 0.12414950969730491,
+      "min_error": 0.12414950969730491,
+      "mean_error": 0.14223183684059593,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9540229885057471,
+      "control_energy": 155.26426841848334
+    },
+    {
+      "episode": 4,
+      "target_x": 0.2634724971753683,
+      "target_y": 0.152304388682493,
+      "success": 0,
+      "final_error": 0.05925618336629805,
+      "min_error": 0.05925618336629805,
+      "mean_error": 0.0635233101829657,
+      "max_overshoot": 0.003168663652395598,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 154.5483872915152
+    },
+    {
+      "episode": 5,
+      "target_x": 0.17454583682747643,
+      "target_y": 0.10682214690418561,
+      "success": 0,
+      "final_error": 0.05233155743910397,
+      "min_error": 0.047808702785157,
+      "mean_error": 0.06318919255026131,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9482758620689655,
+      "control_energy": 160.49409043906164
+    },
+    {
+      "episode": 6,
+      "target_x": 0.16587652577774242,
+      "target_y": 0.14681831341183518,
+      "success": 0,
+      "final_error": 0.07708109154984505,
+      "min_error": 0.07708109154984505,
+      "mean_error": 0.0863980506003188,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9540229885057471,
+      "control_energy": 145.42388484299164
+    },
+    {
+      "episode": 7,
+      "target_x": 0.21081868661243158,
+      "target_y": 0.1728393644978782,
+      "success": 0,
+      "final_error": 0.09580493561690218,
+      "min_error": 0.09580493561690218,
+      "mean_error": 0.10120996040886207,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9885057471264368,
+      "control_energy": 150.8285887636692
+    },
+    {
+      "episode": 8,
+      "target_x": 0.2991900510181907,
+      "target_y": 0.23023886061130075,
+      "success": 0,
+      "final_error": 0.12074637979423736,
+      "min_error": 0.1152155540382593,
+      "mean_error": 0.11864962972230977,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 167.41355033474076
+    },
+    {
+      "episode": 9,
+      "target_x": 0.23199226129940928,
+      "target_y": 0.2773504354436524,
+      "success": 0,
+      "final_error": 0.13600336056523213,
+      "min_error": 0.13188452259333847,
+      "mean_error": 0.16331862731356872,
+      "max_overshoot": 0.0,
+      "settling_time_s": null,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 180.06183928923588
+    }
+  ],
+  "trace_manifest": [
+    {
+      "episode": 0,
+      "target_xy": [
+        0.23251718398884005,
+        0.2553313122326981
+      ],
+      "trace_path": "outputs/baseline/traces/episode_000.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_000.png"
+    },
+    {
+      "episode": 1,
+      "target_xy": [
+        0.2596234242441348,
+        0.09404972559774205
+      ],
+      "trace_path": "outputs/baseline/traces/episode_001.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_001.png"
+    },
+    {
+      "episode": 2,
+      "target_xy": [
+        0.17402993128402058,
+        0.24965282689510288
+      ],
+      "trace_path": "outputs/baseline/traces/episode_002.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_002.png"
+    },
+    {
+      "episode": 3,
+      "target_xy": [
+        0.12094775482180345,
+        0.23709482041186392
+      ],
+      "trace_path": "outputs/baseline/traces/episode_003.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_003.png"
+    },
+    {
+      "episode": 4,
+      "target_xy": [
+        0.2634724971753683,
+        0.152304388682493
+      ],
+      "trace_path": "outputs/baseline/traces/episode_004.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_004.png"
+    },
+    {
+      "episode": 5,
+      "target_xy": [
+        0.17454583682747643,
+        0.10682214690418561
+      ],
+      "trace_path": "outputs/baseline/traces/episode_005.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_005.png"
+    },
+    {
+      "episode": 6,
+      "target_xy": [
+        0.16587652577774242,
+        0.14681831341183518
+      ],
+      "trace_path": "outputs/baseline/traces/episode_006.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_006.png"
+    },
+    {
+      "episode": 7,
+      "target_xy": [
+        0.21081868661243158,
+        0.1728393644978782
+      ],
+      "trace_path": "outputs/baseline/traces/episode_007.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_007.png"
+    },
+    {
+      "episode": 8,
+      "target_xy": [
+        0.2991900510181907,
+        0.23023886061130075
+      ],
+      "trace_path": "outputs/baseline/traces/episode_008.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_008.png"
+    },
+    {
+      "episode": 9,
+      "target_xy": [
+        0.23199226129940928,
+        0.2773504354436524
+      ],
+      "trace_path": "outputs/baseline/traces/episode_009.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_009.png"
+    }
+  ],
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "6444c3dd13a6edff3a559e930c33e4ebcde7494b",
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@6444c3dd13a6edff3a559e930c33e4ebcde7494b#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  }
+}

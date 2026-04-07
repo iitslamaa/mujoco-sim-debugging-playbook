@@ -97,6 +97,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Docker and `Makefile` workflows for reproducible local setup
 - Bootstrap script for clean-machine setup validation
 - Environment doctor that checks local setup, tools, and container readiness
+- Debug-bundle collector for packaging reproduction artifacts and handoff evidence
 - GitHub issue templates and CI for public-repo readiness
 
 ![PyTorch policy rollout](outputs/media/reacher_demo.gif)
@@ -197,6 +198,7 @@ make artifact-closeout
 make artifact-scorecard
 make artifact-packet
 make bootstrap-env
+make debug-bundle
 make environment-doctor
 make dashboard-snapshot
 make dashboard-snapshot-history
@@ -276,6 +278,14 @@ python scripts/run_environment_doctor.py
 ```
 
 This captures the current local setup, checks tool availability, and emits support-style setup recommendations under `outputs/environment_doctor/`.
+
+## Collect a debug bundle
+
+```bash
+bash scripts/collect_debug_bundle.sh
+```
+
+This packages the current diagnostics, environment capture, support cases, and summary artifacts into one timestamped handoff directory.
 
 ## Train a PyTorch policy
 
@@ -998,6 +1008,7 @@ This writes:
 - [dashboard-snapshot-milestones-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-milestones-guide.md)
 - [bootstrap-env-guide.md](/Users/lamayassine/mujoco/docs/bootstrap-env-guide.md)
 - [environment-doctor-guide.md](/Users/lamayassine/mujoco/docs/environment-doctor-guide.md)
+- [debug-bundle-guide.md](/Users/lamayassine/mujoco/docs/debug-bundle-guide.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
 - [dashboard-snapshot-priorities-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-priorities-guide.md)
