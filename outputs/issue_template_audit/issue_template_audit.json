@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "template_count": 2,
+    "described_count": 2
+  },
+  "templates": [
+    {
+      "name": "bug_report.yml",
+      "has_description": true,
+      "has_title": true,
+      "path": "/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml"
+    },
+    {
+      "name": "support_request.yml",
+      "has_description": true,
+      "has_title": true,
+      "path": "/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/support_request.yml"
+    }
+  ]
+}
