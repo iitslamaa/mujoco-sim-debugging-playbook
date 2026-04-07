@@ -45,6 +45,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Regression snapshot and diff tooling for tracking behavior drift over time
 - Threshold-based regression gates for catching unacceptable drift in CI
 - Historical trend reporting for tracking metric drift across snapshots
+- Artifact manifests and a provenance index for tying outputs back to code, inputs, and Git state
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -105,6 +106,7 @@ make snapshot
 make regression-diff
 make regression-check
 make regression-history
+make provenance
 make demo-gif
 make dashboard
 ```
@@ -243,6 +245,15 @@ python scripts/build_regression_history.py \
 
 This compiles saved snapshots into a small history dataset with trend summaries and a multi-metric plot.
 
+## Build provenance artifacts
+
+```bash
+python scripts/backfill_provenance_manifests.py
+python scripts/build_provenance_index.py
+```
+
+This writes per-run `manifest.json` files plus a repo-level provenance index for browsing generated outputs.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -268,6 +279,8 @@ This writes:
 - [learning-guide.md](/Users/lamayassine/mujoco/docs/learning-guide.md)
 - [case-study-guide.md](/Users/lamayassine/mujoco/docs/case-study-guide.md)
 - [regression-guide.md](/Users/lamayassine/mujoco/docs/regression-guide.md)
+- [provenance-guide.md](/Users/lamayassine/mujoco/docs/provenance-guide.md)
+- [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
 - [support_request.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/support_request.yml)
 - [ci.yml](/Users/lamayassine/mujoco/.github/workflows/ci.yml)

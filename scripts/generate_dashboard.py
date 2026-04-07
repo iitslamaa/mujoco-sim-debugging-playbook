@@ -27,6 +27,7 @@ def main() -> None:
     regression_diff = _read_json(ROOT / "outputs" / "regression" / "latest_diff" / "regression_diff.json")
     regression_gate = _read_json(ROOT / "outputs" / "regression" / "gate" / "regression_gate.json")
     regression_history = _read_json(ROOT / "outputs" / "regression" / "history" / "history.json")
+    provenance_index = _read_json(ROOT / "outputs" / "provenance" / "index.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -36,6 +37,22 @@ def main() -> None:
                 "path": str(case_path.relative_to(ROOT)),
             }
         )
+
+    provenance_summary = None
+    if provenance_index:
+        provenance_summary = {
+            "summary": provenance_index["summary"],
+            "recent_manifests": [
+                {
+                    "run_type": entry["run_type"],
+                    "created_at": entry["created_at"],
+                    "manifest_path": entry["manifest_path"],
+                    "git_head": entry["environment"]["tooling"].get("git_head"),
+                    "git_is_dirty": entry["environment"]["tooling"].get("git_is_dirty"),
+                }
+                for entry in provenance_index.get("manifests", [])[:5]
+            ],
+        }
 
     payload = {
         "repo": "mujoco-sim-debugging-playbook",
@@ -67,6 +84,7 @@ def main() -> None:
         "regression_diff": regression_diff,
         "regression_gate": regression_gate,
         "regression_history": regression_history,
+        "provenance_index": provenance_summary,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -85,6 +103,7 @@ def main() -> None:
             "regression_gate_markdown": "outputs/regression/gate/regression_gate.md",
             "regression_history_markdown": "outputs/regression/history/history.md",
             "regression_history_image": "outputs/regression/history/history.png",
+            "provenance_index_markdown": "outputs/provenance/index.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

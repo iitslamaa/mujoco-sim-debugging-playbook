@@ -1,0 +1,404 @@
+{
+  "run_type": "imitation_dataset",
+  "created_at": "2026-04-07T00:53:38.640799+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "9947b323eef041fdf26a802bee3ff945811ccd89",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M .github/workflows/ci.yml",
+        " M Makefile",
+        " M README.md",
+        " M dashboard/app.js",
+        " M dashboard/data.json",
+        " M dashboard/index.html",
+        " M scripts/generate_dashboard.py",
+        " M scripts/smoke_test.py",
+        " M src/mujoco_sim_debugging_playbook/__init__.py",
+        " M src/mujoco_sim_debugging_playbook/benchmark.py",
+        " M src/mujoco_sim_debugging_playbook/environment.py",
+        " M src/mujoco_sim_debugging_playbook/experiment.py",
+        " M src/mujoco_sim_debugging_playbook/generalization.py",
+        " M src/mujoco_sim_debugging_playbook/learning.py",
+        " M src/mujoco_sim_debugging_playbook/rl.py",
+        "?? docs/provenance-guide.md",
+        "?? outputs/baseline/manifest.json",
+        "?? outputs/controller_benchmark/manifest.json",
+        "?? outputs/domain_randomization/manifest.json",
+        "?? outputs/interesting_sweeps/manifest.json",
+        "?? outputs/learning/dataset/manifest.json",
+        "?? outputs/learning/evaluation/manifest.json",
+        "?? outputs/learning/training/manifest.json",
+        "?? outputs/provenance/",
+        "?? outputs/rl/evaluation/manifest.json",
+        "?? outputs/rl/training/manifest.json",
+        "?? scripts/backfill_provenance_manifests.py",
+        "?? scripts/build_provenance_index.py",
+        "?? src/mujoco_sim_debugging_playbook/provenance.py",
+        "?? tests/test_provenance.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@9947b323eef041fdf26a802bee3ff945811ccd89#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {
+    "episodes": 24
+  },
+  "inputs": [],
+  "outputs": [
+    {
+      "path": "outputs/learning/dataset/dataset_summary.json",
+      "exists": true,
+      "sha256": "01d72305748176f4ec0ab2cf344650b26dd42931eea9c0b8aa723da4da0f1559",
+      "size_bytes": 3503
+    },
+    {
+      "path": "outputs/learning/dataset/imitation_dataset.npz",
+      "exists": true,
+      "sha256": "352977ed23e4a6fdeb10183ca353d5b365948c175276eab0e8e0f30041067940",
+      "size_bytes": 112731
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_000.json",
+      "exists": true,
+      "sha256": "ea84d17c2dfc07faaead3482f4cffab50c7bd17c3a9913b0c36e063c589172c4",
+      "size_bytes": 83180
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_001.json",
+      "exists": true,
+      "sha256": "fdd4aad019141e68886683f56cd0eb1a05237a1fd514b857e00865c4456cda13",
+      "size_bytes": 86033
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_002.json",
+      "exists": true,
+      "sha256": "76d30759267739205c4f201cd606abd60222cfde3f7a22769c429beb0dd551d8",
+      "size_bytes": 86700
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_003.json",
+      "exists": true,
+      "sha256": "f88e4275eca7d3c2f1c7ad76d2509e34d784b13f1ad7d5fd2a32fc38e1962fbb",
+      "size_bytes": 86906
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_004.json",
+      "exists": true,
+      "sha256": "006d36e3f229c51a6f8e9034dd477d31d62b2cf1d78412313a60190e402fd4cc",
+      "size_bytes": 85532
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_005.json",
+      "exists": true,
+      "sha256": "ec48483d07c89e98e82f1995d9b3d05cd0cd6ce0e9028c809a023f2958caad08",
+      "size_bytes": 86176
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_006.json",
+      "exists": true,
+      "sha256": "41730ff9896a6b97295040b4aac5c8a3c85de2851f708bebf37a47a2ef260e65",
+      "size_bytes": 86748
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_007.json",
+      "exists": true,
+      "sha256": "66ae27c26e565400ed38eb1f1f74a809ba3ca48a055ddb04b05a00fc906e4f62",
+      "size_bytes": 85707
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_008.json",
+      "exists": true,
+      "sha256": "4f1b46a213eb844dce8e394163bf103f7a68a94ccc16398098f32e0f41a73857",
+      "size_bytes": 82819
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_009.json",
+      "exists": true,
+      "sha256": "de867d41a50474b375f918928fd16af136aa1339b12ec8f2b6e2be831fc2b90b",
+      "size_bytes": 83131
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_010.json",
+      "exists": true,
+      "sha256": "0c6b0672c505dc8d0b1d4a259a61ea37f814da32845bca2afcaf8e0d55481d7d",
+      "size_bytes": 86015
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_011.json",
+      "exists": true,
+      "sha256": "001e85e6e265a7953091e16f940de42ec3a2ed543655a5c4b10000859deb2f6c",
+      "size_bytes": 85901
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_012.json",
+      "exists": true,
+      "sha256": "714aff9c00f6c8f7287050e9c343b9e69c525785dd9f48c42b38fed4ccb49346",
+      "size_bytes": 86106
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_013.json",
+      "exists": true,
+      "sha256": "b852753ec6d038fe6ed75b8ddbbb6d62b64009ba8dda2ead01da5a7b7ff33a60",
+      "size_bytes": 86742
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_014.json",
+      "exists": true,
+      "sha256": "2c1a974f2ebb40cea4f469ae50813270705d9138083042cc62b2a0b7d804dc2d",
+      "size_bytes": 86080
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_015.json",
+      "exists": true,
+      "sha256": "582e899a6494bdb4489e3491a206ee1ebc86e132c2dbd5d483ae5d1aaedf6f8d",
+      "size_bytes": 85776
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_016.json",
+      "exists": true,
+      "sha256": "979a2a57b3a1185d3be7d673a9d44eab71116387731cc648e3e8bc3ad404bad6",
+      "size_bytes": 86026
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_017.json",
+      "exists": true,
+      "sha256": "051f7296e5347c36cc9e5a1904f486a189ed9be0352ea9d4674db96e70c6953e",
+      "size_bytes": 86059
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_018.json",
+      "exists": true,
+      "sha256": "cfe4fc419a2e203623d4129c43d7873ed9a7784cf3dc2395f2632032b3ca22c9",
+      "size_bytes": 85482
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_019.json",
+      "exists": true,
+      "sha256": "ca1bf8b887a6c43268c4847b9ebcd0597e7bd3483089f201dc276f011a7ea641",
+      "size_bytes": 86166
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_020.json",
+      "exists": true,
+      "sha256": "c68a0fa5b2ca8e163d063697e64f6011866faddd8dbe44a555218119d2c85f3b",
+      "size_bytes": 86676
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_021.json",
+      "exists": true,
+      "sha256": "2d88d434ba768a08a72f4c784f5a04b56184418340687414d944e9e4ebb4744a",
+      "size_bytes": 86473
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_022.json",
+      "exists": true,
+      "sha256": "7f6f4089ac164a3d8f658f80857302a966e7500731de943dbc1f82d13e855ac9",
+      "size_bytes": 86099
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_023.json",
+      "exists": true,
+      "sha256": "3e03bf50abae8a644baf7b98564d3daf01ebdcd50d1d1ad42c00f3f6b90687cc",
+      "size_bytes": 85952
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_000.png",
+      "exists": true,
+      "sha256": "41f910f2570ba28dbd89866480f0b00382625b111f6a806c8324167e505bcd48",
+      "size_bytes": 325796
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_001.png",
+      "exists": true,
+      "sha256": "65f5d7db3b709c52e9a8268128b50462b1a6430f111fcdf24383e12ddf6419fc",
+      "size_bytes": 365101
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_002.png",
+      "exists": true,
+      "sha256": "1230bee95f5e428483a971cf531ade0d82f5c8b5503a4a86b43de16ab107c668",
+      "size_bytes": 331788
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_003.png",
+      "exists": true,
+      "sha256": "ebbe78d26989c4fb248513fcf849d6ddd27613330f8eaaf80e2aa27479065c63",
+      "size_bytes": 316268
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_004.png",
+      "exists": true,
+      "sha256": "9d44e47b8276170373524a12bc8fd960b3e0b9721222f7133715c47c41e91038",
+      "size_bytes": 372750
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_005.png",
+      "exists": true,
+      "sha256": "d527912c67c1a811e7b441dbb74b7173ae371ff7d13ccaca93b2832618719687",
+      "size_bytes": 304052
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_006.png",
+      "exists": true,
+      "sha256": "edbf2c744c0a6ae741f12080fe6b1049e3d1270f269bb705b36f3d894f4f8c7c",
+      "size_bytes": 311729
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_007.png",
+      "exists": true,
+      "sha256": "450f80c85fc746375242bbcf6182a72085d0c08509a0e8d04d417c1a424611cc",
+      "size_bytes": 324690
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_008.png",
+      "exists": true,
+      "sha256": "2581cbafb315467bfc695c47327eebee93d7650cac4b0b814370ad589bcfa71d",
+      "size_bytes": 375124
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_009.png",
+      "exists": true,
+      "sha256": "8f9886ad315abc29ed52bbe0bc742f548c09e6294375802a5e5a6b58a5797f94",
+      "size_bytes": 329667
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_010.png",
+      "exists": true,
+      "sha256": "ddc940f050dbdf14f10a676839aac8a0dabb7b1ad091ed2335ad8286413ad8b7",
+      "size_bytes": 279297
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_011.png",
+      "exists": true,
+      "sha256": "1cdc6ee75dfa31c579cf19fe457424355905dafd3d1fe7005de14fdf604e4b5e",
+      "size_bytes": 298213
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_012.png",
+      "exists": true,
+      "sha256": "67f4df30812ed8e5a085a72218465f221861cb8f7b8a51920c60205181bf1ed3",
+      "size_bytes": 290524
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_013.png",
+      "exists": true,
+      "sha256": "ff16c96ab55f4862238819e0e4adced1d8084d10d56fb4e0d9b33300dd5caf55",
+      "size_bytes": 327715
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_014.png",
+      "exists": true,
+      "sha256": "fd2bca05d88676d7db1f11824d526c7677f748d5733ce1ed5e2be01c294163d5",
+      "size_bytes": 348795
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_015.png",
+      "exists": true,
+      "sha256": "b37fc87f5c701daf3944e408e121d0808b5807b481a7ac3bc4d38de82c79d998",
+      "size_bytes": 321568
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_016.png",
+      "exists": true,
+      "sha256": "7f67af162636387b1ad14fad1a6db98c737c52f5ea3e74669b0f5ab05e61ff8d",
+      "size_bytes": 283394
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_017.png",
+      "exists": true,
+      "sha256": "4c9a9fa9ff980f6dd52b255c818cc5c98a92d4ba65e951d6e7ff62c3e7006da1",
+      "size_bytes": 354705
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_018.png",
+      "exists": true,
+      "sha256": "6e039c03150511d616f3bba9d122201ded5530a1787500d8e0743368831b1d55",
+      "size_bytes": 275671
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_019.png",
+      "exists": true,
+      "sha256": "af8ab8afab51eb2803c48eb0c38f2547616846928467f294cf507add6e80c845",
+      "size_bytes": 371162
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_020.png",
+      "exists": true,
+      "sha256": "667468997a128657121497c55ee0839d85240289f5715df4f693a7d56550f488",
+      "size_bytes": 332857
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_021.png",
+      "exists": true,
+      "sha256": "2bc3fef6563f14ad76d95de6a315920d973eafc6fa6a34cafcd8a1d58baa20b0",
+      "size_bytes": 334393
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_022.png",
+      "exists": true,
+      "sha256": "94dbafe3967b41387166d31b481ff8293010742fa0ffbe5a33a6c9cd795e2a31",
+      "size_bytes": 373987
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_023.png",
+      "exists": true,
+      "sha256": "46c684a68454e1bb561e104ac55e238dd0918855cf02d936637e44a5983e60da",
+      "size_bytes": 279600
+    }
+  ],
+  "metadata": {
+    "num_samples": 4200
+  }
+}

@@ -12,6 +12,7 @@ import numpy as np
 from mujoco_sim_debugging_playbook.config import ControllerConfig, ExperimentConfig, Range2D, SimulationConfig, TaskConfig
 from mujoco_sim_debugging_playbook.controller import ReacherController
 from mujoco_sim_debugging_playbook.environment import capture_environment_report
+from mujoco_sim_debugging_playbook.provenance import write_manifest
 from mujoco_sim_debugging_playbook.learning import load_policy, state_vector
 from mujoco_sim_debugging_playbook.metrics import aggregate_metrics
 from mujoco_sim_debugging_playbook.simulation import ReacherSimulation
@@ -236,11 +237,22 @@ def run_controller_benchmark(
             }
             benchmark_rows.append(row)
 
-    (output_dir / "benchmark_summary.json").write_text(json.dumps({
+    summary_path = output_dir / "benchmark_summary.json"
+    summary_path.write_text(json.dumps({
         "benchmark_rows": benchmark_rows,
         "environment": capture_environment_report(Path.cwd()),
         "checkpoint_path": str(checkpoint_path),
     }, indent=2))
     _plot_benchmark(benchmark_rows, output_dir)
-    _write_markdown_report(benchmark_rows, output_dir / "report.md")
+    report_path = output_dir / "report.md"
+    _write_markdown_report(benchmark_rows, report_path)
+    write_manifest(
+        repo_root=Path.cwd(),
+        output_dir=output_dir,
+        run_type="controller_benchmark",
+        config=payload,
+        inputs=[config_path, checkpoint_path],
+        outputs=[summary_path, report_path, *[str(path) for path in output_dir.glob("*.png")]],
+        metadata={"row_count": len(benchmark_rows)},
+    )
     return {"rows": benchmark_rows, "output_dir": str(output_dir)}

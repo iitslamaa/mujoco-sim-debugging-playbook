@@ -15,6 +15,7 @@ from mujoco_sim_debugging_playbook.config import (
     save_json,
 )
 from mujoco_sim_debugging_playbook.metrics import EpisodeMetrics, aggregate_metrics
+from mujoco_sim_debugging_playbook.provenance import write_manifest
 from mujoco_sim_debugging_playbook.simulation import ReacherSimulation, trace_to_dict
 from mujoco_sim_debugging_playbook.trace_plot import plot_trace
 
@@ -75,6 +76,8 @@ def run_experiment(config: ExperimentConfig) -> dict[str, Any]:
         table_rows.append(_metrics_row(episode_index, episode.metrics, target_xy.tolist()))
 
     summary = aggregate_metrics(metric_rows)
+    summary_path = output_dir / "summary.json"
+    episodes_csv_path = output_dir / "episodes.csv"
     save_json(
         {
             "config": dataclass_to_dict(config),
@@ -83,9 +86,17 @@ def run_experiment(config: ExperimentConfig) -> dict[str, Any]:
             "trace_manifest": trace_manifest,
             "environment": capture_environment_report(Path.cwd()),
         },
-        output_dir / "summary.json",
+        summary_path,
     )
-    write_episode_csv(table_rows, output_dir / "episodes.csv")
+    write_episode_csv(table_rows, episodes_csv_path)
+    write_manifest(
+        repo_root=Path.cwd(),
+        output_dir=output_dir,
+        run_type="experiment",
+        config=dataclass_to_dict(config),
+        outputs=[summary_path, episodes_csv_path, *[entry["trace_path"] for entry in trace_manifest], *[entry["trace_plot_path"] for entry in trace_manifest]],
+        metadata={"episodes": config.episodes, "summary": summary},
+    )
     return {
         "config": dataclass_to_dict(config),
         "summary": summary,
@@ -166,10 +177,23 @@ def run_sweep_suite(config_path: str | Path) -> dict[str, Any]:
             scenario_summaries.append(summary_row)
             combined_rows.append(summary_row)
 
-    write_episode_csv(combined_rows, suite_output_dir / "combined_summary.csv")
-    save_json(scenario_summaries, suite_output_dir / "combined_summary.json")
+    combined_csv_path = suite_output_dir / "combined_summary.csv"
+    combined_json_path = suite_output_dir / "combined_summary.json"
+    report_path = suite_output_dir / "report.md"
+    write_episode_csv(combined_rows, combined_csv_path)
+    save_json(scenario_summaries, combined_json_path)
     plot_sweep_results(scenario_summaries, suite_output_dir)
-    write_markdown_report(scenario_summaries, suite_output_dir / "report.md", title=sweep_payload["name"])
+    write_markdown_report(scenario_summaries, report_path, title=sweep_payload["name"])
+    plot_paths = sorted(str(path) for path in suite_output_dir.glob("*.png"))
+    write_manifest(
+        repo_root=Path.cwd(),
+        output_dir=suite_output_dir,
+        run_type="sweep_suite",
+        config=sweep_payload,
+        inputs=[config_path],
+        outputs=[combined_csv_path, combined_json_path, report_path, *plot_paths],
+        metadata={"suite": sweep_payload["name"], "scenario_count": len(scenario_summaries)},
+    )
     return {
         "suite": sweep_payload["name"],
         "output_dir": str(suite_output_dir),

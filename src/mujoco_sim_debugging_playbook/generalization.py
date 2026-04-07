@@ -13,6 +13,7 @@ import torch
 from mujoco_sim_debugging_playbook.benchmark import _expert_policy_fn, _hybrid_policy_fn, _torch_policy_fn
 from mujoco_sim_debugging_playbook.config import ControllerConfig, ExperimentConfig, Range2D, SimulationConfig, TaskConfig
 from mujoco_sim_debugging_playbook.environment import capture_environment_report
+from mujoco_sim_debugging_playbook.provenance import write_manifest
 from mujoco_sim_debugging_playbook.learning import load_policy, state_vector
 from mujoco_sim_debugging_playbook.metrics import aggregate_metrics
 from mujoco_sim_debugging_playbook.rl import load_reinforce_policy
@@ -197,8 +198,18 @@ def run_domain_randomization(
         "torch_checkpoint": str(torch_checkpoint),
         "rl_checkpoint": str(rl_checkpoint),
     }
-    (output_dir / "evaluation_rows.json").write_text(json.dumps(payload_out, indent=2))
+    summary_path = output_dir / "evaluation_rows.json"
+    summary_path.write_text(json.dumps(payload_out, indent=2))
     _plot_randomization(evaluation_rows, output_dir)
-    _write_markdown(evaluation_rows, output_dir / "report.md")
+    report_path = output_dir / "report.md"
+    _write_markdown(evaluation_rows, report_path)
+    write_manifest(
+        repo_root=Path.cwd(),
+        output_dir=output_dir,
+        run_type="domain_randomization",
+        config=payload,
+        inputs=[config_path, torch_checkpoint, rl_checkpoint],
+        outputs=[summary_path, report_path, *[str(path) for path in output_dir.glob("*.png")]],
+        metadata={"row_count": len(evaluation_rows)},
+    )
     return {"rows": evaluation_rows, "output_dir": str(output_dir)}
-

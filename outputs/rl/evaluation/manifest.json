@@ -1,0 +1,220 @@
+{
+  "run_type": "rl_evaluation",
+  "created_at": "2026-04-07T00:53:39.595693+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "9947b323eef041fdf26a802bee3ff945811ccd89",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M .github/workflows/ci.yml",
+        " M Makefile",
+        " M README.md",
+        " M dashboard/app.js",
+        " M dashboard/data.json",
+        " M dashboard/index.html",
+        " M scripts/generate_dashboard.py",
+        " M scripts/smoke_test.py",
+        " M src/mujoco_sim_debugging_playbook/__init__.py",
+        " M src/mujoco_sim_debugging_playbook/benchmark.py",
+        " M src/mujoco_sim_debugging_playbook/environment.py",
+        " M src/mujoco_sim_debugging_playbook/experiment.py",
+        " M src/mujoco_sim_debugging_playbook/generalization.py",
+        " M src/mujoco_sim_debugging_playbook/learning.py",
+        " M src/mujoco_sim_debugging_playbook/rl.py",
+        "?? docs/provenance-guide.md",
+        "?? outputs/baseline/manifest.json",
+        "?? outputs/controller_benchmark/manifest.json",
+        "?? outputs/domain_randomization/manifest.json",
+        "?? outputs/interesting_sweeps/manifest.json",
+        "?? outputs/learning/dataset/manifest.json",
+        "?? outputs/learning/evaluation/manifest.json",
+        "?? outputs/learning/training/manifest.json",
+        "?? outputs/provenance/",
+        "?? outputs/rl/evaluation/manifest.json",
+        "?? outputs/rl/training/manifest.json",
+        "?? scripts/backfill_provenance_manifests.py",
+        "?? scripts/build_provenance_index.py",
+        "?? src/mujoco_sim_debugging_playbook/provenance.py",
+        "?? tests/test_provenance.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@9947b323eef041fdf26a802bee3ff945811ccd89#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {},
+  "inputs": [
+    {
+      "path": "outputs/rl/training/reinforce_policy.pt",
+      "exists": true,
+      "sha256": "87d45e83af0e26f6282cfc2150e97942af29ccd8f455d0065b0522ec1ecdfead",
+      "size_bytes": 113901
+    }
+  ],
+  "outputs": [
+    {
+      "path": "outputs/rl/evaluation/summary.json",
+      "exists": true,
+      "sha256": "108e4556118d348bc35ce4bb9ae537e2f170d5597b5b3fc64038c541534e6372",
+      "size_bytes": 4853
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_000.json",
+      "exists": true,
+      "sha256": "b3bba2599472953c00822aa5875a7c5159da685f910edb8f179e67d2854c8a82",
+      "size_bytes": 81401
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_001.json",
+      "exists": true,
+      "sha256": "25c278446fc0084554ce0cf00d214d3c50ef32ea1796fbdf8f96a6ddc73355e6",
+      "size_bytes": 81451
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_002.json",
+      "exists": true,
+      "sha256": "b15c77a6cb007f55acab5e2861211968d2e426b3210e0f818d32867f23f5e2ed",
+      "size_bytes": 82096
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_003.json",
+      "exists": true,
+      "sha256": "c77e8095d206e837146bd5a9ebbf0984ec9f59fa75d489338ba599b8a8181e52",
+      "size_bytes": 82076
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_004.json",
+      "exists": true,
+      "sha256": "2e213851ac2d0d3cafe569d9329369209a8f017f27e85e9c4896647d5d1057d9",
+      "size_bytes": 82953
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_005.json",
+      "exists": true,
+      "sha256": "00001ef554c0521b7405eef4bffbe32b7b1d00d27793928451c539914bc5469b",
+      "size_bytes": 81213
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_006.json",
+      "exists": true,
+      "sha256": "831a1db8c246ede128cd7898e95cced82b165a4b6a124cd13f9d1de4f0762f57",
+      "size_bytes": 83178
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_007.json",
+      "exists": true,
+      "sha256": "5d1b1d323490afc285b771a8101986abdc2493119d208c20f063cc5cf515df76",
+      "size_bytes": 81956
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_000.png",
+      "exists": true,
+      "sha256": "5c48170bc7d69367a0d58430b4e27aa684a0af4a5afadeba3aaa68c626df3dd7",
+      "size_bytes": 317564
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_001.png",
+      "exists": true,
+      "sha256": "d8d75b6a9ba873c54b1f492980c3e333edff6d5ba158fbdc92f41b7253c1784f",
+      "size_bytes": 325416
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_002.png",
+      "exists": true,
+      "sha256": "c64e689baa6c2be4c837379ef5d85128ca564162b9ad58b9ef222638c9be8ab6",
+      "size_bytes": 305781
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_003.png",
+      "exists": true,
+      "sha256": "1b4134955cc94975242a7d205981941c086c1ca29b51db94bbdd0187a764612e",
+      "size_bytes": 330199
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_004.png",
+      "exists": true,
+      "sha256": "e2a8ca8c0cbfbebbee990aee75ebb7a7d82a1e5ccbb2696b2f818f20de9f2f6d",
+      "size_bytes": 330276
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_005.png",
+      "exists": true,
+      "sha256": "ec9fb1d33280d817bacbf6abca4a3e3843baf565ecb8861e7b19f021f53ddf99",
+      "size_bytes": 340435
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_006.png",
+      "exists": true,
+      "sha256": "9ed14e28ae69b472e7f63a30ee886b40bcdc003b01462cf90b7105b36b2df01c",
+      "size_bytes": 355600
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_007.png",
+      "exists": true,
+      "sha256": "7ce6c947e126aa4093aadb9860ce0b1cad648f9e9fd5431eed61bbc38c244e76",
+      "size_bytes": 289624
+    }
+  ],
+  "metadata": {
+    "summary": {
+      "success_rate": 0.25,
+      "final_error_mean": 0.08691420946544057,
+      "min_error_mean": 0.08504841869041976,
+      "mean_error_mean": 0.1062197356547452,
+      "max_overshoot_mean": 0.0005315056947790796,
+      "oscillation_index_mean": 0.9389367816091954,
+      "control_energy_mean": 165.8982154630236,
+      "settling_time_mean": 1.59
+    }
+  }
+}

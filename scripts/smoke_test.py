@@ -66,6 +66,8 @@ def main() -> None:
         ],
         env=env,
     )
+    run([sys.executable, "scripts/backfill_provenance_manifests.py"], env=env)
+    run([sys.executable, "scripts/build_provenance_index.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard.py"], env=env)
 
     summary_path = ROOT / "outputs" / "support_cases" / "actuator_gain_overshoot.md"
@@ -83,6 +85,9 @@ def main() -> None:
     dashboard_data = ROOT / "dashboard" / "data.json"
     if not dashboard_data.exists():
         raise SystemExit(f"Expected dashboard data at {dashboard_data}")
+    provenance_index = ROOT / "outputs" / "provenance" / "index.json"
+    if not provenance_index.exists():
+        raise SystemExit(f"Expected provenance index at {provenance_index}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

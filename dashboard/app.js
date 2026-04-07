@@ -202,6 +202,25 @@ async function main() {
   if (data.artifacts?.regression_history_image) {
     document.getElementById("regression-history-image").src = `../${data.artifacts.regression_history_image}`;
   }
+
+  const provenance = document.getElementById("provenance-summary");
+  if (data.provenance_index?.summary) {
+    const summary = data.provenance_index.summary;
+    const manifests = data.provenance_index.manifests || [];
+    const blocks = [
+      `<p><strong>Manifest count:</strong> ${summary.manifest_count}</p>`,
+      `<p><strong>Run types:</strong> ${(summary.run_types || []).join(", ")}</p>`,
+      `<p><strong>Latest Git HEAD:</strong> ${summary.latest_git_head || "n/a"}</p>`,
+    ];
+    manifests.slice(0, 5).forEach((manifest) => {
+      blocks.push(
+        `<p><strong>${manifest.run_type}</strong>: ${manifest.created_at} | ${manifest.manifest_path}</p>`
+      );
+    });
+    provenance.innerHTML = blocks.join("");
+  } else {
+    provenance.textContent = "Provenance index artifacts have not been generated yet.";
+  }
 }
 
 main();

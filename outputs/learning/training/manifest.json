@@ -1,0 +1,120 @@
+{
+  "run_type": "imitation_training",
+  "created_at": "2026-04-07T00:53:38.887262+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "9947b323eef041fdf26a802bee3ff945811ccd89",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M .github/workflows/ci.yml",
+        " M Makefile",
+        " M README.md",
+        " M dashboard/app.js",
+        " M dashboard/data.json",
+        " M dashboard/index.html",
+        " M scripts/generate_dashboard.py",
+        " M scripts/smoke_test.py",
+        " M src/mujoco_sim_debugging_playbook/__init__.py",
+        " M src/mujoco_sim_debugging_playbook/benchmark.py",
+        " M src/mujoco_sim_debugging_playbook/environment.py",
+        " M src/mujoco_sim_debugging_playbook/experiment.py",
+        " M src/mujoco_sim_debugging_playbook/generalization.py",
+        " M src/mujoco_sim_debugging_playbook/learning.py",
+        " M src/mujoco_sim_debugging_playbook/rl.py",
+        "?? docs/provenance-guide.md",
+        "?? outputs/baseline/manifest.json",
+        "?? outputs/controller_benchmark/manifest.json",
+        "?? outputs/domain_randomization/manifest.json",
+        "?? outputs/interesting_sweeps/manifest.json",
+        "?? outputs/learning/dataset/manifest.json",
+        "?? outputs/learning/evaluation/manifest.json",
+        "?? outputs/learning/training/manifest.json",
+        "?? outputs/provenance/",
+        "?? outputs/rl/evaluation/manifest.json",
+        "?? outputs/rl/training/manifest.json",
+        "?? scripts/backfill_provenance_manifests.py",
+        "?? scripts/build_provenance_index.py",
+        "?? src/mujoco_sim_debugging_playbook/provenance.py",
+        "?? tests/test_provenance.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@9947b323eef041fdf26a802bee3ff945811ccd89#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {},
+  "inputs": [],
+  "outputs": [
+    {
+      "path": "outputs/learning/training/training_summary.json",
+      "exists": true,
+      "sha256": "0674f3fc8a33dd06a4cddf59a2847c5e76b2bb7a2125c18be5d1f132ce4fb996",
+      "size_bytes": 9190
+    },
+    {
+      "path": "outputs/learning/training/policy.pt",
+      "exists": true,
+      "sha256": "4b66f8a47111d6dc99c7a4a9bf4bc8e33d08cf8e8549704a8f1b103c953293cf",
+      "size_bytes": 115045
+    },
+    {
+      "path": "outputs/learning/training/training_curve.png",
+      "exists": true,
+      "sha256": "7994731fdf008315b6a2db51b64549f862bc93d387dfc29fd44c78fa149673ab",
+      "size_bytes": 37032
+    }
+  ],
+  "metadata": {
+    "best_val_loss": 0.0005346758282809917
+  }
+}

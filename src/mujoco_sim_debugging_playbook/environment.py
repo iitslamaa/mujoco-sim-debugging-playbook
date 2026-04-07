@@ -23,6 +23,8 @@ def capture_environment_report(repo_root: str | Path) -> dict[str, object]:
     python_executable = sys.executable
     pip_freeze = _safe_command([python_executable, "-m", "pip", "freeze"])
     git_head = _safe_command(["git", "rev-parse", "HEAD"])
+    git_branch = _safe_command(["git", "rev-parse", "--abbrev-ref", "HEAD"])
+    git_status = _safe_command(["git", "status", "--short"])
 
     return {
         "platform": {
@@ -38,6 +40,9 @@ def capture_environment_report(repo_root: str | Path) -> dict[str, object]:
         },
         "tooling": {
             "git_head": git_head,
+            "git_branch": git_branch,
+            "git_is_dirty": bool(git_status),
+            "git_status": git_status.splitlines() if git_status else [],
             "docker_version": _safe_command(["docker", "--version"]),
             "gh_version": _safe_command(["gh", "--version"]),
         },
@@ -46,4 +51,3 @@ def capture_environment_report(repo_root: str | Path) -> dict[str, object]:
             "pip_freeze": pip_freeze.splitlines() if pip_freeze else [],
         },
     }
-

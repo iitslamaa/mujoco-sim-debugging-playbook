@@ -12,6 +12,7 @@ __all__ = [
     "learning",
     "metrics",
     "plot",
+    "provenance",
     "regression",
     "report",
     "rl",

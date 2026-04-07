@@ -14,6 +14,7 @@ from mujoco_sim_debugging_playbook.config import ControllerConfig, ExperimentCon
 from mujoco_sim_debugging_playbook.controller import ReacherController
 from mujoco_sim_debugging_playbook.environment import capture_environment_report
 from mujoco_sim_debugging_playbook.metrics import aggregate_metrics
+from mujoco_sim_debugging_playbook.provenance import write_manifest
 from mujoco_sim_debugging_playbook.simulation import ReacherSimulation, trace_to_dict
 from mujoco_sim_debugging_playbook.trace_plot import plot_trace
 
@@ -112,7 +113,16 @@ def collect_imitation_dataset(config: ExperimentConfig, episodes: int, output_di
         "dataset_path": str(dataset_path),
         "trace_manifest": trace_manifest,
     }
-    (output_path / "dataset_summary.json").write_text(json.dumps(summary, indent=2))
+    summary_path = output_path / "dataset_summary.json"
+    summary_path.write_text(json.dumps(summary, indent=2))
+    write_manifest(
+        repo_root=Path.cwd(),
+        output_dir=output_path,
+        run_type="imitation_dataset",
+        config={"episodes": episodes, "experiment_config": experiment_config_to_dict(config)},
+        outputs=[summary_path, dataset_path, *[entry["trace_path"] for entry in trace_manifest], *[str(path) for path in (output_path / "expert_trace_plots").glob("*.png")]],
+        metadata={"num_samples": int(states_array.shape[0])},
+    )
     return summary
 
 
@@ -235,7 +245,23 @@ def train_imitation_policy(
         "checkpoint_path": str(checkpoint_path),
         "history": history,
     }
-    (output_path / "training_summary.json").write_text(json.dumps(training_summary, indent=2))
+    summary_path = output_path / "training_summary.json"
+    summary_path.write_text(json.dumps(training_summary, indent=2))
+    write_manifest(
+        repo_root=Path.cwd(),
+        output_dir=output_path,
+        run_type="imitation_training",
+        config={
+            "dataset_path": str(dataset_path),
+            "epochs": epochs,
+            "batch_size": batch_size,
+            "learning_rate": learning_rate,
+            "seed": seed,
+        },
+        inputs=[dataset_path],
+        outputs=[summary_path, checkpoint_path],
+        metadata={"best_val_loss": best_val_loss},
+    )
     return training_summary
 
 
@@ -313,5 +339,47 @@ def evaluate_policy(
         "checkpoint_path": str(checkpoint_path),
         "environment": capture_environment_report(Path.cwd()),
     }
-    (output_path / "summary.json").write_text(json.dumps(payload, indent=2))
+    summary_path = output_path / "summary.json"
+    summary_path.write_text(json.dumps(payload, indent=2))
+    write_manifest(
+        repo_root=Path.cwd(),
+        output_dir=output_path,
+        run_type="imitation_evaluation",
+        config={"episodes": episodes, "experiment_config": experiment_config_to_dict(experiment_config)},
+        inputs=[checkpoint_path],
+        outputs=[summary_path, *[str(path) for path in (output_path / "traces").glob("*.json")], *[str(path) for path in (output_path / "trace_plots").glob("*.png")]],
+        metadata={"summary": summary},
+    )
     return payload
+
+
+def experiment_config_to_dict(config: ExperimentConfig) -> dict[str, Any]:
+    return {
+        "name": config.name,
+        "episodes": config.episodes,
+        "episode_horizon_s": config.episode_horizon_s,
+        "seed": config.seed,
+        "output_dir": config.output_dir,
+        "task": {
+            "target_radius": config.task.target_radius,
+            "target_range": {
+                "x": list(config.task.target_range.x),
+                "y": list(config.task.target_range.y),
+            },
+            "link_lengths": list(config.task.link_lengths),
+        },
+        "sim": {
+            "physics_timestep": config.sim.physics_timestep,
+            "control_dt": config.sim.control_dt,
+            "joint_damping": config.sim.joint_damping,
+            "actuator_gain": config.sim.actuator_gain,
+            "friction_loss": config.sim.friction_loss,
+            "sensor_noise_std": config.sim.sensor_noise_std,
+            "control_delay_steps": config.sim.control_delay_steps,
+        },
+        "controller": {
+            "kp": config.controller.kp,
+            "kd": config.controller.kd,
+            "max_torque": config.controller.max_torque,
+        },
+    }

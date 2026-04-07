@@ -1,0 +1,280 @@
+{
+  "run_type": "experiment",
+  "created_at": "2026-04-07T00:53:38.115085+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "9947b323eef041fdf26a802bee3ff945811ccd89",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M .github/workflows/ci.yml",
+        " M Makefile",
+        " M README.md",
+        " M dashboard/app.js",
+        " M dashboard/data.json",
+        " M dashboard/index.html",
+        " M scripts/generate_dashboard.py",
+        " M scripts/smoke_test.py",
+        " M src/mujoco_sim_debugging_playbook/__init__.py",
+        " M src/mujoco_sim_debugging_playbook/benchmark.py",
+        " M src/mujoco_sim_debugging_playbook/environment.py",
+        " M src/mujoco_sim_debugging_playbook/experiment.py",
+        " M src/mujoco_sim_debugging_playbook/generalization.py",
+        " M src/mujoco_sim_debugging_playbook/learning.py",
+        " M src/mujoco_sim_debugging_playbook/rl.py",
+        "?? docs/provenance-guide.md",
+        "?? outputs/baseline/manifest.json",
+        "?? outputs/controller_benchmark/manifest.json",
+        "?? outputs/domain_randomization/manifest.json",
+        "?? outputs/interesting_sweeps/manifest.json",
+        "?? outputs/learning/dataset/manifest.json",
+        "?? outputs/learning/evaluation/manifest.json",
+        "?? outputs/learning/training/manifest.json",
+        "?? outputs/provenance/",
+        "?? outputs/rl/evaluation/manifest.json",
+        "?? outputs/rl/training/manifest.json",
+        "?? scripts/backfill_provenance_manifests.py",
+        "?? scripts/build_provenance_index.py",
+        "?? src/mujoco_sim_debugging_playbook/provenance.py",
+        "?? tests/test_provenance.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@9947b323eef041fdf26a802bee3ff945811ccd89#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {
+    "name": "baseline",
+    "episodes": 10,
+    "episode_horizon_s": 3.5,
+    "seed": 7,
+    "output_dir": "outputs/baseline",
+    "task": {
+      "target_radius": 0.045,
+      "target_range": {
+        "x": [
+          0.12,
+          0.3
+        ],
+        "y": [
+          0.04,
+          0.28
+        ]
+      },
+      "link_lengths": [
+        0.18,
+        0.16
+      ]
+    },
+    "sim": {
+      "physics_timestep": 0.002,
+      "control_dt": 0.02,
+      "joint_damping": 1.8,
+      "friction_loss": 0.02,
+      "actuator_gain": 38.0,
+      "sensor_noise_std": 0.0,
+      "control_delay_steps": 0
+    },
+    "controller": {
+      "kp": 22.0,
+      "kd": 4.0,
+      "max_torque": 6.0
+    }
+  },
+  "inputs": [],
+  "outputs": [
+    {
+      "path": "outputs/baseline/summary.json",
+      "exists": true,
+      "sha256": "ffd822df9ee12d3d401032b1b3faab8f1e9d96a17ce3673e2e980107ca1b7dea",
+      "size_bytes": 9442
+    },
+    {
+      "path": "outputs/baseline/episodes.csv",
+      "exists": true,
+      "sha256": "8bdedef178604a097319cd144b77072f113960e33306a83a8c17b66d74fc856e",
+      "size_bytes": 1651
+    },
+    {
+      "path": "outputs/baseline/traces/episode_000.json",
+      "exists": true,
+      "sha256": "ea84d17c2dfc07faaead3482f4cffab50c7bd17c3a9913b0c36e063c589172c4",
+      "size_bytes": 83180
+    },
+    {
+      "path": "outputs/baseline/traces/episode_001.json",
+      "exists": true,
+      "sha256": "fdd4aad019141e68886683f56cd0eb1a05237a1fd514b857e00865c4456cda13",
+      "size_bytes": 86033
+    },
+    {
+      "path": "outputs/baseline/traces/episode_002.json",
+      "exists": true,
+      "sha256": "76d30759267739205c4f201cd606abd60222cfde3f7a22769c429beb0dd551d8",
+      "size_bytes": 86700
+    },
+    {
+      "path": "outputs/baseline/traces/episode_003.json",
+      "exists": true,
+      "sha256": "f88e4275eca7d3c2f1c7ad76d2509e34d784b13f1ad7d5fd2a32fc38e1962fbb",
+      "size_bytes": 86906
+    },
+    {
+      "path": "outputs/baseline/traces/episode_004.json",
+      "exists": true,
+      "sha256": "006d36e3f229c51a6f8e9034dd477d31d62b2cf1d78412313a60190e402fd4cc",
+      "size_bytes": 85532
+    },
+    {
+      "path": "outputs/baseline/traces/episode_005.json",
+      "exists": true,
+      "sha256": "ec48483d07c89e98e82f1995d9b3d05cd0cd6ce0e9028c809a023f2958caad08",
+      "size_bytes": 86176
+    },
+    {
+      "path": "outputs/baseline/traces/episode_006.json",
+      "exists": true,
+      "sha256": "41730ff9896a6b97295040b4aac5c8a3c85de2851f708bebf37a47a2ef260e65",
+      "size_bytes": 86748
+    },
+    {
+      "path": "outputs/baseline/traces/episode_007.json",
+      "exists": true,
+      "sha256": "66ae27c26e565400ed38eb1f1f74a809ba3ca48a055ddb04b05a00fc906e4f62",
+      "size_bytes": 85707
+    },
+    {
+      "path": "outputs/baseline/traces/episode_008.json",
+      "exists": true,
+      "sha256": "4f1b46a213eb844dce8e394163bf103f7a68a94ccc16398098f32e0f41a73857",
+      "size_bytes": 82819
+    },
+    {
+      "path": "outputs/baseline/traces/episode_009.json",
+      "exists": true,
+      "sha256": "de867d41a50474b375f918928fd16af136aa1339b12ec8f2b6e2be831fc2b90b",
+      "size_bytes": 83131
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_000.png",
+      "exists": true,
+      "sha256": "38e0c5e3a823e4456fade83bf4455fa9444cf559bc224b9ae0a87b3e92de8890",
+      "size_bytes": 325743
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_001.png",
+      "exists": true,
+      "sha256": "1cdd3906ba416a5f42746e0064e3d47d77ce2cb66337a69b7b973ea89e576657",
+      "size_bytes": 365035
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_002.png",
+      "exists": true,
+      "sha256": "b5e04a804ec53293848d1088dd8db631364b2b3743699b196a0793b18bd49df8",
+      "size_bytes": 331834
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_003.png",
+      "exists": true,
+      "sha256": "1f862296917246bf66f9c36bea62cc27d460e2f9cc9affb94c0127121963b763",
+      "size_bytes": 316193
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_004.png",
+      "exists": true,
+      "sha256": "0f55a9680f71830653f5783dc80f610b571819d2ebb73c6ff040d174e8f405a3",
+      "size_bytes": 372626
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_005.png",
+      "exists": true,
+      "sha256": "c705dc50843962eacd96588a9d32c1cdf9599402629288f854641d3fb3c87b0c",
+      "size_bytes": 303974
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_006.png",
+      "exists": true,
+      "sha256": "81e17addfb2ebca68cdd2fcf474f8f100ad9fd7b3a3e17402f828ad94539500d",
+      "size_bytes": 311703
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_007.png",
+      "exists": true,
+      "sha256": "c0e6feda433d940811589eee579e1652e9fc9e952cd77c6e9289e1d39f646dee",
+      "size_bytes": 324684
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_008.png",
+      "exists": true,
+      "sha256": "0cb383e67ad73a8e38d1284d257231b8af862d72b284ebe5be518ce2819864f3",
+      "size_bytes": 375106
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_009.png",
+      "exists": true,
+      "sha256": "f9adb546b240ebcde37341df49abec9b5c2a0e3d229b3dafe0c53f65cf3b8ecc",
+      "size_bytes": 329608
+    }
+  ],
+  "metadata": {
+    "summary": {
+      "success_rate": 0.1,
+      "final_error_mean": 0.09427099044986048,
+      "min_error_mean": 0.09246723438882257,
+      "mean_error_mean": 0.10713942105722465,
+      "max_overshoot_mean": 0.0006764868345528703,
+      "oscillation_index_mean": 0.9798850574712642,
+      "control_energy_mean": 162.0204255530985,
+      "settling_time_mean": 0.68
+    }
+  }
+}

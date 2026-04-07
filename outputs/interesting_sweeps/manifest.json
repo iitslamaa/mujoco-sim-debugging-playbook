@@ -1,0 +1,158 @@
+{
+  "run_type": "sweep_suite",
+  "created_at": "2026-04-07T00:53:38.398875+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "9947b323eef041fdf26a802bee3ff945811ccd89",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M .github/workflows/ci.yml",
+        " M Makefile",
+        " M README.md",
+        " M dashboard/app.js",
+        " M dashboard/data.json",
+        " M dashboard/index.html",
+        " M scripts/generate_dashboard.py",
+        " M scripts/smoke_test.py",
+        " M src/mujoco_sim_debugging_playbook/__init__.py",
+        " M src/mujoco_sim_debugging_playbook/benchmark.py",
+        " M src/mujoco_sim_debugging_playbook/environment.py",
+        " M src/mujoco_sim_debugging_playbook/experiment.py",
+        " M src/mujoco_sim_debugging_playbook/generalization.py",
+        " M src/mujoco_sim_debugging_playbook/learning.py",
+        " M src/mujoco_sim_debugging_playbook/rl.py",
+        "?? docs/provenance-guide.md",
+        "?? outputs/baseline/manifest.json",
+        "?? outputs/controller_benchmark/manifest.json",
+        "?? outputs/domain_randomization/manifest.json",
+        "?? outputs/interesting_sweeps/manifest.json",
+        "?? outputs/learning/dataset/manifest.json",
+        "?? outputs/learning/evaluation/manifest.json",
+        "?? outputs/learning/training/manifest.json",
+        "?? outputs/provenance/",
+        "?? outputs/rl/evaluation/manifest.json",
+        "?? outputs/rl/training/manifest.json",
+        "?? scripts/backfill_provenance_manifests.py",
+        "?? scripts/build_provenance_index.py",
+        "?? src/mujoco_sim_debugging_playbook/provenance.py",
+        "?? tests/test_provenance.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@9947b323eef041fdf26a802bee3ff945811ccd89#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {
+    "suite_name": "interesting_sweeps"
+  },
+  "inputs": [],
+  "outputs": [
+    {
+      "path": "outputs/interesting_sweeps/combined_summary.json",
+      "exists": true,
+      "sha256": "16ae63dcd1c81571923ef728e49cdd240a90b760a6e48c9b8fa781bf04d9e9ec",
+      "size_bytes": 11944
+    },
+    {
+      "path": "outputs/interesting_sweeps/combined_summary.csv",
+      "exists": true,
+      "sha256": "b5ae671ceb897e66a3eb3969e4dd616d9a23ced29b12fb56b52a6743ea9c28c8",
+      "size_bytes": 4938
+    },
+    {
+      "path": "outputs/interesting_sweeps/report.md",
+      "exists": true,
+      "sha256": "20bd21dc0d9a2237fe4e8961f330d19b4bd8d85f5bcdf89fab94ae00ebca0246",
+      "size_bytes": 3512
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain.png",
+      "exists": true,
+      "sha256": "a70c742dc70933c740ac6ee824d9dc012cdea8c5f60cab29b6df9c8ae98b9b55",
+      "size_bytes": 209879
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps.png",
+      "exists": true,
+      "sha256": "a1079d4442622deb27aab897d7f1a7e7933303898a898fa4789df56ae508e000",
+      "size_bytes": 181514
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt.png",
+      "exists": true,
+      "sha256": "e00b9c84926450737cfb6060e272b30771dc487216530e40ace302647cfb1afe",
+      "size_bytes": 191876
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss.png",
+      "exists": true,
+      "sha256": "e24a8984e2c90d2cb1982328efaa2498d08ac70ee5de19cb88464cdace252646",
+      "size_bytes": 191320
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping.png",
+      "exists": true,
+      "sha256": "7bc6a6779e6f87544f6ad832d69c311aa288bc65818f58dd4d3ea5f3e01e2dd2",
+      "size_bytes": 216303
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std.png",
+      "exists": true,
+      "sha256": "4cc44b5fd34086484adf5949258cee84d53817c70e95d82338964fdab48060cd",
+      "size_bytes": 184117
+    }
+  ],
+  "metadata": {
+    "scenario_count": 29
+  }
+}

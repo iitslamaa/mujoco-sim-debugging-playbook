@@ -12,6 +12,7 @@ from mujoco_sim_debugging_playbook.config import ExperimentConfig
 from mujoco_sim_debugging_playbook.environment import capture_environment_report
 from mujoco_sim_debugging_playbook.learning import PolicyNetwork, load_policy, state_vector
 from mujoco_sim_debugging_playbook.metrics import aggregate_metrics
+from mujoco_sim_debugging_playbook.provenance import write_manifest
 from mujoco_sim_debugging_playbook.simulation import ReacherSimulation, trace_to_dict
 from mujoco_sim_debugging_playbook.trace_plot import plot_trace
 
@@ -164,7 +165,24 @@ def train_policy_gradient(
         "checkpoint_path": str(checkpoint_path),
         "history": history,
     }
-    (output_path / "training_summary.json").write_text(json.dumps(summary, indent=2))
+    summary_path = output_path / "training_summary.json"
+    summary_path.write_text(json.dumps(summary, indent=2))
+    write_manifest(
+        repo_root=Path.cwd(),
+        output_dir=output_path,
+        run_type="rl_training",
+        config={
+            "imitation_checkpoint": str(imitation_checkpoint),
+            "iterations": iterations,
+            "episodes_per_iteration": episodes_per_iteration,
+            "gamma": gamma,
+            "learning_rate": learning_rate,
+            "entropy_coef": entropy_coef,
+        },
+        inputs=[imitation_checkpoint],
+        outputs=[summary_path, checkpoint_path],
+        metadata={"final_record": history[-1] if history else None},
+    )
     return summary
 
 
@@ -242,6 +260,15 @@ def evaluate_reinforce_policy(
         "checkpoint_path": str(checkpoint_path),
         "environment": capture_environment_report(Path.cwd()),
     }
-    (output_path / "summary.json").write_text(json.dumps(payload, indent=2))
+    summary_path = output_path / "summary.json"
+    summary_path.write_text(json.dumps(payload, indent=2))
+    write_manifest(
+        repo_root=Path.cwd(),
+        output_dir=output_path,
+        run_type="rl_evaluation",
+        config={"episodes": episodes, "experiment_name": experiment_config.name},
+        inputs=[checkpoint_path],
+        outputs=[summary_path, *[str(path) for path in (output_path / "traces").glob("*.json")], *[str(path) for path in (output_path / "trace_plots").glob("*.png")]],
+        metadata={"summary": payload["summary"]},
+    )
     return payload
-

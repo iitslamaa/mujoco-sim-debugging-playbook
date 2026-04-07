@@ -38,5 +38,9 @@ jobs:
             --snapshot-dir outputs/regression/snapshots \
             --output-dir outputs/regression/ci_history \
             --gate-report outputs/regression/ci_gate/regression_gate.json
+      - name: Build provenance index
+        run: |
+          MPLCONFIGDIR=/tmp/mpl python scripts/backfill_provenance_manifests.py
+          MPLCONFIGDIR=/tmp/mpl python scripts/build_provenance_index.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py
