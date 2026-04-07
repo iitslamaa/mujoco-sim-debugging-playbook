@@ -102,6 +102,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_artifact_handoff.py"], env=env)
     run([sys.executable, "scripts/generate_artifact_review_note.py"], env=env)
     run([sys.executable, "scripts/generate_artifact_closeout.py"], env=env)
+    run([sys.executable, "scripts/generate_artifact_scorecard.py"], env=env)
     run(
         [
             sys.executable,
@@ -240,6 +241,9 @@ def main() -> None:
     artifact_closeout = ROOT / "outputs" / "artifact_closeout" / "artifact_closeout.json"
     if not artifact_closeout.exists():
         raise SystemExit(f"Expected artifact closeout at {artifact_closeout}")
+    artifact_scorecard = ROOT / "outputs" / "artifact_scorecard" / "artifact_scorecard.json"
+    if not artifact_scorecard.exists():
+        raise SystemExit(f"Expected artifact scorecard at {artifact_scorecard}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

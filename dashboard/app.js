@@ -832,6 +832,23 @@ async function main() {
   } else {
     artifactCloseoutSummary.textContent = "Artifact closeout has not been generated yet.";
   }
+
+  const artifactScorecardSummary = document.getElementById("artifact-scorecard-summary");
+  if (data.artifact_scorecard?.summary) {
+    const summary = data.artifact_scorecard.summary;
+    const items = [
+      `<p><strong>Metrics:</strong> ${summary.metric_count}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Closeout status:</strong> ${summary.closeout_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+    ];
+    (data.artifact_scorecard.metrics || []).forEach((metric) => {
+      items.push(`<p><strong>${metric.name}</strong>: ${metric.value}</p>`);
+    });
+    artifactScorecardSummary.innerHTML = items.join("");
+  } else {
+    artifactScorecardSummary.textContent = "Artifact scorecard has not been generated yet.";
+  }
 }
 
 main();

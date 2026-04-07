@@ -1,0 +1,68 @@
+{
+  "summary": {
+    "metric_count": 8,
+    "current_status": "fail",
+    "closeout_status": "not_ready_to_close",
+    "projected_terminal_status": "pass"
+  },
+  "metrics": [
+    {
+      "name": "current_status",
+      "value": "fail"
+    },
+    {
+      "name": "closeout_status",
+      "value": "not_ready_to_close"
+    },
+    {
+      "name": "projected_terminal_status",
+      "value": "pass"
+    },
+    {
+      "name": "failure_count",
+      "value": 5
+    },
+    {
+      "name": "top_risk_score",
+      "value": 1.551
+    },
+    {
+      "name": "critical_alert_count",
+      "value": 2
+    },
+    {
+      "name": "remaining_action_count",
+      "value": 3
+    },
+    {
+      "name": "status_direction",
+      "value": "improving"
+    }
+  ],
+  "top_actions": [
+    {
+      "priority": "P0",
+      "target": "outputs/support_readiness/support_readiness.json",
+      "owner": "artifact-integrity",
+      "phase": "Clear support report bundle",
+      "reason": "High-risk artifact should move to a more specialized owner.",
+      "expected_impact": "Reduce breach pressure on the support-report bundle."
+    },
+    {
+      "priority": "P0",
+      "target": "outputs/scenario_plan/scenario_plan.json",
+      "owner": "artifact-integrity",
+      "phase": "Clear support report bundle",
+      "reason": "High-risk artifact should move to a more specialized owner.",
+      "expected_impact": "Reduce breach pressure on the support-report bundle."
+    },
+    {
+      "priority": "P1",
+      "target": "Stabilize top risks",
+      "owner": "artifact-integrity",
+      "phase": "Stabilize top risks",
+      "reason": "This is the nearest-due recovery phase in the current delivery forecast.",
+      "expected_impact": "Prevent the current at-risk phase from becoming a breach."
+    }
+  ]
+}

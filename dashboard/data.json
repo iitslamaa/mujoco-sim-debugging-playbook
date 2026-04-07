@@ -5232,6 +5232,7 @@
       }
     ]
   },
+  "artifact_scorecard": null,
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5296,6 +5297,7 @@
     "artifact_digest_markdown": "outputs/artifact_digest/artifact_digest.md",
     "artifact_handoff_markdown": "outputs/artifact_handoff/artifact_handoff.md",
     "artifact_review_note_markdown": "outputs/artifact_review_note/artifact_review_note.md",
-    "artifact_closeout_markdown": "outputs/artifact_closeout/artifact_closeout.md"
+    "artifact_closeout_markdown": "outputs/artifact_closeout/artifact_closeout.md",
+    "artifact_scorecard_markdown": "outputs/artifact_scorecard/artifact_scorecard.md"
   }
 }

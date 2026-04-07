@@ -116,5 +116,7 @@ jobs:
         run: python scripts/generate_artifact_review_note.py
       - name: Build artifact closeout
         run: python scripts/generate_artifact_closeout.py
+      - name: Build artifact scorecard
+        run: python scripts/generate_artifact_scorecard.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

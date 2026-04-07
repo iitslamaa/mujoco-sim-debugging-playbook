@@ -13,6 +13,7 @@ __all__ = [
     "artifact_handoff",
     "artifact_review_note",
     "artifact_closeout",
+    "artifact_scorecard",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

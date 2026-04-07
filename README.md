@@ -89,6 +89,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact handoff packets that package the current state for the next recovery owner
 - Artifact review notes that summarize what changed, what blocks progress, and what should be approved next
 - Artifact closeout packets that decide whether the current recovery cycle is ready to close
+- Artifact scorecards that give a one-screen KPI view of the maintenance stack
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -188,6 +189,7 @@ make artifact-digest
 make artifact-handoff
 make artifact-review-note
 make artifact-closeout
+make artifact-scorecard
 make case-studies
 make snapshot
 make regression-diff
@@ -687,6 +689,14 @@ python scripts/generate_artifact_closeout.py
 
 This creates a final closeout packet that decides whether the current artifact-recovery cycle is ready to close.
 
+## Build an artifact scorecard
+
+```bash
+python scripts/generate_artifact_scorecard.py
+```
+
+This creates a compact KPI summary for the artifact-maintenance stack.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -727,6 +737,7 @@ This writes:
 - [artifact-handoff-guide.md](/Users/lamayassine/mujoco/docs/artifact-handoff-guide.md)
 - [artifact-review-note-guide.md](/Users/lamayassine/mujoco/docs/artifact-review-note-guide.md)
 - [artifact-closeout-guide.md](/Users/lamayassine/mujoco/docs/artifact-closeout-guide.md)
+- [artifact-scorecard-guide.md](/Users/lamayassine/mujoco/docs/artifact-scorecard-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
