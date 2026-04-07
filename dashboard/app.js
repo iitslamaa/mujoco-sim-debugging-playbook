@@ -302,6 +302,17 @@ async function main() {
   } else {
     knowledgeBaseSummary.textContent = "Knowledge base artifacts have not been generated yet.";
   }
+
+  const escalationSummary = document.getElementById("escalation-summary");
+  if (data.escalation?.items) {
+    const items = [];
+    data.escalation.items.slice(0, 5).forEach((row) => {
+      items.push(`<p><strong>${row.target}</strong>: ${row.severity} / ${row.owner} / ${row.escalation_path}</p>`);
+    });
+    escalationSummary.innerHTML = items.join("");
+  } else {
+    escalationSummary.textContent = "Escalation artifacts have not been generated yet.";
+  }
 }
 
 main();

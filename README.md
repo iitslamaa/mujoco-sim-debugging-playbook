@@ -112,6 +112,7 @@ make recommendations
 make triage
 make incidents
 make knowledge-base
+make escalation
 make case-studies
 make snapshot
 make regression-diff
@@ -335,6 +336,18 @@ python scripts/generate_knowledge_base.py \
 ```
 
 This converts the incident bundles into reusable, self-service support entries.
+
+## Generate the escalation matrix
+
+```bash
+python scripts/generate_escalation_matrix.py \
+  --triage outputs/triage/triage_queue.json \
+  --incidents outputs/incidents/index.json \
+  --regression-gate outputs/regression/gate/regression_gate.json \
+  --output-dir outputs/escalation
+```
+
+This classifies current triage items by severity, owner, and escalation path.
 
 ## Generate a diagnostics bundle
 

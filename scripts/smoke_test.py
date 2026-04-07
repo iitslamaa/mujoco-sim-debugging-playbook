@@ -73,6 +73,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_triage_queue.py"], env=env)
     run([sys.executable, "scripts/generate_incident_bundles.py"], env=env)
     run([sys.executable, "scripts/generate_knowledge_base.py"], env=env)
+    run([sys.executable, "scripts/generate_escalation_matrix.py"], env=env)
     run(
         [
             sys.executable,
@@ -124,6 +125,9 @@ def main() -> None:
     knowledge_base = ROOT / "outputs" / "knowledge_base" / "index.json"
     if not knowledge_base.exists():
         raise SystemExit(f"Expected knowledge base at {knowledge_base}")
+    escalation = ROOT / "outputs" / "escalation" / "escalation_matrix.json"
+    if not escalation.exists():
+        raise SystemExit(f"Expected escalation matrix at {escalation}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

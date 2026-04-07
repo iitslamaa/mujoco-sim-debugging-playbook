@@ -9,6 +9,7 @@ __all__ = [
     "experiment",
     "environment",
     "diagnostics",
+    "escalation",
     "generalization",
     "incidents",
     "learning",

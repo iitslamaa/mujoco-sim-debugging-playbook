@@ -34,6 +34,7 @@ def main() -> None:
     triage = _read_json(ROOT / "outputs" / "triage" / "triage_queue.json")
     incidents = _read_json(ROOT / "outputs" / "incidents" / "index.json")
     knowledge_base = _read_json(ROOT / "outputs" / "knowledge_base" / "index.json")
+    escalation = _read_json(ROOT / "outputs" / "escalation" / "escalation_matrix.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -97,6 +98,7 @@ def main() -> None:
         "triage": triage,
         "incidents": incidents,
         "knowledge_base": knowledge_base,
+        "escalation": escalation,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -124,6 +126,7 @@ def main() -> None:
             "triage_markdown": "outputs/triage/triage_queue.md",
             "incident_index_markdown": "outputs/incidents/index.md",
             "knowledge_base_markdown": "outputs/knowledge_base/index.md",
+            "escalation_markdown": "outputs/escalation/escalation_matrix.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

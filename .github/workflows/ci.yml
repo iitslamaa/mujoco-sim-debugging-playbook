@@ -58,5 +58,7 @@ jobs:
         run: python scripts/generate_incident_bundles.py
       - name: Build knowledge base
         run: python scripts/generate_knowledge_base.py
+      - name: Build escalation matrix
+        run: python scripts/generate_escalation_matrix.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py
