@@ -433,6 +433,22 @@ async function main() {
   } else {
     opsReviewSummary.textContent = "Ops review artifacts have not been generated yet.";
   }
+
+  const supportReadinessSummary = document.getElementById("support-readiness-summary");
+  if (data.support_readiness?.summary) {
+    const summary = data.support_readiness.summary;
+    const items = [
+      `<p><strong>Status:</strong> ${summary.status}</p>`,
+      `<p><strong>Failures:</strong> ${summary.failure_count}</p>`,
+      `<p><strong>Warnings:</strong> ${summary.warning_count}</p>`,
+    ];
+    (data.support_readiness.checks || []).slice(0, 5).forEach((check) => {
+      items.push(`<p><strong>${check.name}</strong>: ${check.status} | ${check.message}</p>`);
+    });
+    supportReadinessSummary.innerHTML = items.join("");
+  } else {
+    supportReadinessSummary.textContent = "Support readiness artifacts have not been generated yet.";
+  }
 }
 
 main();

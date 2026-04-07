@@ -20,6 +20,7 @@ __all__ = [
     "plot",
     "provenance",
     "recommendations",
+    "readiness",
     "release_notes",
     "regression",
     "report",

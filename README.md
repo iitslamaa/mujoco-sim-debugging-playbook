@@ -58,6 +58,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Delivery forecasting that flags at-risk or breaching support work before it slips
 - Capacity planning that suggests owner rebalancing when forecasted work overloads the queue
 - Ops-review generation that synthesizes wins, risks, and next actions from the live support artifacts
+- Support-readiness gating that summarizes whether the current state is operationally ready for release
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -125,6 +126,7 @@ make workstreams
 make sla
 make capacity
 make ops-review
+make support-readiness
 make case-studies
 make snapshot
 make regression-diff
@@ -400,6 +402,12 @@ python scripts/generate_capacity_plan.py
 
 ```bash
 python scripts/generate_ops_review.py
+```
+
+## Generate the support readiness gate
+
+```bash
+python scripts/generate_support_readiness.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.

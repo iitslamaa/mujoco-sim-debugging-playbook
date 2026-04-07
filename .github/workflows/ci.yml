@@ -72,5 +72,7 @@ jobs:
         run: python scripts/generate_capacity_plan.py
       - name: Build ops review
         run: python scripts/generate_ops_review.py
+      - name: Build support readiness gate
+        run: python scripts/generate_support_readiness.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

@@ -3923,6 +3923,58 @@
       }
     ]
   },
+  "support_readiness": {
+    "summary": {
+      "status": "fail",
+      "failure_count": 1,
+      "warning_count": 5,
+      "check_count": 7
+    },
+    "checks": [
+      {
+        "name": "incident_coverage",
+        "status": "warn",
+        "value": 0.45454545454545453,
+        "message": "Incident coverage is 45.5% of the queue."
+      },
+      {
+        "name": "knowledge_base_coverage",
+        "status": "warn",
+        "value": 0.45454545454545453,
+        "message": "Knowledge-base coverage is 45.5% of the queue."
+      },
+      {
+        "name": "delivery_breaches",
+        "status": "fail",
+        "value": 2,
+        "message": "2 forecasted support items are in breach."
+      },
+      {
+        "name": "delivery_at_risk",
+        "status": "warn",
+        "value": 3,
+        "message": "3 support items are forecasted as at risk."
+      },
+      {
+        "name": "overloaded_owners",
+        "status": "warn",
+        "value": 1,
+        "message": "1 owners are currently overloaded."
+      },
+      {
+        "name": "gap_backlog",
+        "status": "warn",
+        "value": 5,
+        "message": "5 support gaps still need follow-up work."
+      },
+      {
+        "name": "regression_gate",
+        "status": "pass",
+        "value": "pass",
+        "message": "Regression gate status is pass with 0 violations."
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -3965,6 +4017,7 @@
     "workstream_plan_markdown": "outputs/workstreams/workstream_plan.md",
     "sla_markdown": "outputs/sla/sla_report.md",
     "capacity_markdown": "outputs/capacity/capacity_plan.md",
-    "ops_review_markdown": "outputs/ops_review/ops_review.md"
+    "ops_review_markdown": "outputs/ops_review/ops_review.md",
+    "support_readiness_markdown": "outputs/support_readiness/support_readiness.md"
   }
 }
