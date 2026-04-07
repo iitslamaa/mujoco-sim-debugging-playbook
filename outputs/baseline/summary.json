@@ -186,7 +186,8 @@
         0.23251718398884005,
         0.2553313122326981
       ],
-      "trace_path": "outputs/baseline/traces/episode_000.json"
+      "trace_path": "outputs/baseline/traces/episode_000.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_000.png"
     },
     {
       "episode": 1,
@@ -194,7 +195,8 @@
         0.2596234242441348,
         0.09404972559774205
       ],
-      "trace_path": "outputs/baseline/traces/episode_001.json"
+      "trace_path": "outputs/baseline/traces/episode_001.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_001.png"
     },
     {
       "episode": 2,
@@ -202,7 +204,8 @@
         0.17402993128402058,
         0.24965282689510288
       ],
-      "trace_path": "outputs/baseline/traces/episode_002.json"
+      "trace_path": "outputs/baseline/traces/episode_002.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_002.png"
     },
     {
       "episode": 3,
@@ -210,7 +213,8 @@
         0.12094775482180345,
         0.23709482041186392
       ],
-      "trace_path": "outputs/baseline/traces/episode_003.json"
+      "trace_path": "outputs/baseline/traces/episode_003.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_003.png"
     },
     {
       "episode": 4,
@@ -218,7 +222,8 @@
         0.2634724971753683,
         0.152304388682493
       ],
-      "trace_path": "outputs/baseline/traces/episode_004.json"
+      "trace_path": "outputs/baseline/traces/episode_004.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_004.png"
     },
     {
       "episode": 5,
@@ -226,7 +231,8 @@
         0.17454583682747643,
         0.10682214690418561
       ],
-      "trace_path": "outputs/baseline/traces/episode_005.json"
+      "trace_path": "outputs/baseline/traces/episode_005.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_005.png"
     },
     {
       "episode": 6,
@@ -234,7 +240,8 @@
         0.16587652577774242,
         0.14681831341183518
       ],
-      "trace_path": "outputs/baseline/traces/episode_006.json"
+      "trace_path": "outputs/baseline/traces/episode_006.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_006.png"
     },
     {
       "episode": 7,
@@ -242,7 +249,8 @@
         0.21081868661243158,
         0.1728393644978782
       ],
-      "trace_path": "outputs/baseline/traces/episode_007.json"
+      "trace_path": "outputs/baseline/traces/episode_007.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_007.png"
     },
     {
       "episode": 8,
@@ -250,7 +258,8 @@
         0.2991900510181907,
         0.23023886061130075
       ],
-      "trace_path": "outputs/baseline/traces/episode_008.json"
+      "trace_path": "outputs/baseline/traces/episode_008.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_008.png"
     },
     {
       "episode": 9,
@@ -258,7 +267,58 @@
         0.23199226129940928,
         0.2773504354436524
       ],
-      "trace_path": "outputs/baseline/traces/episode_009.json"
+      "trace_path": "outputs/baseline/traces/episode_009.json",
+      "trace_plot_path": "outputs/baseline/trace_plots/episode_009.png"
     }
-  ]
+  ],
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "141f2e7b251c51afbda3f9bee04c61433060c4c6",
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "kiwisolver==1.5.0",
+        "matplotlib==3.10.8",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@141f2e7b251c51afbda3f9bee04c61433060c4c6#egg=mujoco_sim_debugging_playbook",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "tomli==2.4.1",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  }
 }

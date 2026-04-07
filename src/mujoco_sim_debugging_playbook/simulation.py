@@ -20,6 +20,9 @@ class EpisodeTrace:
     target_joint_angles: list[list[float]]
     torques: list[list[float]]
     errors: list[float]
+    observed_joint_angles: list[list[float]]
+    observed_joint_velocities: list[list[float]]
+    error_deltas: list[float]
 
 
 @dataclass
@@ -107,8 +110,12 @@ class ReacherSimulation:
             target_joint_angles=[],
             torques=[],
             errors=[],
+            observed_joint_angles=[],
+            observed_joint_velocities=[],
+            error_deltas=[],
         )
 
+        previous_error: float | None = None
         for _ in range(num_control_steps):
             observed_qpos, observed_qvel = self._observe()
             control_state = self.controller.compute(
@@ -126,9 +133,13 @@ class ReacherSimulation:
             trace.target_xy.append(target_xy.tolist())
             trace.ee_xy.append(ee_xy.tolist())
             trace.joint_angles.append(self.data.qpos.copy().tolist())
+            trace.observed_joint_angles.append(observed_qpos.tolist())
+            trace.observed_joint_velocities.append(observed_qvel.tolist())
             trace.target_joint_angles.append(control_state.delayed_joint_angles.tolist())
             trace.torques.append(control_state.torque.tolist())
             trace.errors.append(error)
+            trace.error_deltas.append(0.0 if previous_error is None else error - previous_error)
+            previous_error = error
 
         metrics = compute_episode_metrics(
             errors=np.asarray(trace.errors),
@@ -141,4 +152,3 @@ class ReacherSimulation:
 
 def trace_to_dict(trace: EpisodeTrace) -> dict[str, list[list[float]] | list[float]]:
     return asdict(trace)
-

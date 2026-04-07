@@ -8,6 +8,7 @@ This checklist is written from a user-support perspective, mirroring how a techn
 - Docker build succeeds
 - smoke test runs without manual fixes
 - baseline experiment produces outputs in the documented locations
+- diagnostics bundle generation succeeds
 
 ## Behavior validation
 
@@ -15,6 +16,7 @@ This checklist is written from a user-support perspective, mirroring how a techn
 - key sweep configs finish without crashing
 - output plots and reports generate successfully
 - no change silently breaks support-case scripts
+- trace plots are produced for per-episode inspection
 
 ## User-facing artifacts
 
@@ -22,4 +24,3 @@ This checklist is written from a user-support perspective, mirroring how a techn
 - troubleshooting guide reflects current failure modes
 - issue templates still ask for enough context to reproduce problems
 - support case outputs still point to valid files and metrics
-

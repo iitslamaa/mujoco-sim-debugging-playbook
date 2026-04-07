@@ -16,6 +16,7 @@ from mujoco_sim_debugging_playbook.config import (
 )
 from mujoco_sim_debugging_playbook.metrics import EpisodeMetrics, aggregate_metrics
 from mujoco_sim_debugging_playbook.simulation import ReacherSimulation, trace_to_dict
+from mujoco_sim_debugging_playbook.trace_plot import plot_trace
 
 
 def _metrics_row(index: int, metrics: EpisodeMetrics, target_xy: list[float]) -> dict[str, Any]:
@@ -35,6 +36,8 @@ def _metrics_row(index: int, metrics: EpisodeMetrics, target_xy: list[float]) ->
 
 
 def run_experiment(config: ExperimentConfig) -> dict[str, Any]:
+    from mujoco_sim_debugging_playbook.environment import capture_environment_report
+
     output_dir = Path(config.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -54,11 +57,17 @@ def run_experiment(config: ExperimentConfig) -> dict[str, Any]:
         episode = simulation.run_episode(target_xy=target_xy, horizon_s=config.episode_horizon_s)
         trace_path = output_dir / "traces" / f"episode_{episode_index:03d}.json"
         save_json(trace_to_dict(episode.trace), trace_path)
+        plot_trace(
+            trace_path=trace_path,
+            output_path=output_dir / "trace_plots" / f"episode_{episode_index:03d}.png",
+            title=f"{config.name} episode {episode_index:03d}",
+        )
         trace_manifest.append(
             {
                 "episode": episode_index,
                 "target_xy": target_xy.tolist(),
                 "trace_path": str(trace_path),
+                "trace_plot_path": str(output_dir / "trace_plots" / f"episode_{episode_index:03d}.png"),
             }
         )
 
@@ -72,6 +81,7 @@ def run_experiment(config: ExperimentConfig) -> dict[str, Any]:
             "summary": summary,
             "episodes": table_rows,
             "trace_manifest": trace_manifest,
+            "environment": capture_environment_report(Path.cwd()),
         },
         output_dir / "summary.json",
     )

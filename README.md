@@ -45,6 +45,7 @@ That is exactly the kind of muscle a technical solutions engineer needs when sup
 - Markdown report generation summarizing results
 - Troubleshooting guide that frames the repo like a simulation support/debugging playbook
 - Support-case library with response-draft generation
+- Diagnostics bundles with environment capture and scenario comparisons
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
 
@@ -88,6 +89,7 @@ make install
 make test
 make baseline
 make support-case
+make diagnostics
 ```
 
 ## Run a baseline experiment
@@ -119,11 +121,28 @@ python scripts/run_issue_case.py --case actuator_gain_overshoot
 
 This generates a support-style Markdown response draft under `outputs/support_cases/` using the saved sweep summaries.
 
+## Generate a diagnostics bundle
+
+```bash
+python scripts/generate_diagnostics_bundle.py \
+  --summary outputs/baseline/summary.json \
+  --label baseline \
+  --summary outputs/interesting_sweeps/actuator_gain_18p0/summary.json \
+  --label actuator_gain_18
+```
+
+This writes:
+
+- `outputs/diagnostics/diagnostics.md`
+- `outputs/diagnostics/environment.json`
+- per-episode trace plots under each experiment output directory
+
 ## Public-repo / support-facing assets
 
 - [support-playbook.md](/Users/lamayassine/mujoco/docs/support-playbook.md)
 - [release-validation.md](/Users/lamayassine/mujoco/docs/release-validation.md)
 - [interview-guide.md](/Users/lamayassine/mujoco/docs/interview-guide.md)
+- [diagnostics-guide.md](/Users/lamayassine/mujoco/docs/diagnostics-guide.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
 - [support_request.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/support_request.yml)
 - [ci.yml](/Users/lamayassine/mujoco/.github/workflows/ci.yml)
@@ -156,6 +175,17 @@ This generates a support-style Markdown response draft under `outputs/support_ca
 
 These are intentionally written like public support tickets: a problem statement, a repro command, a checklist, and a draft response.
 
+## Diagnostics and provenance
+
+Each experiment now captures more than scalar metrics:
+
+- summary data with environment metadata
+- per-episode trace manifests
+- trace plots for visual debugging
+- comparison tooling for baseline-vs-candidate analysis
+
+That makes the repo easier to talk about as a real engineering/debugging system instead of only an academic experiment.
+
 ## Key findings to look for
 
 Once you run the sweeps, the most useful patterns to discuss are:
@@ -184,6 +214,7 @@ This repo is built to signal fit for:
 - Python-based tooling and experimentation
 - user enablement and documentation
 - Linux developer workflows with Docker, bash-friendly scripts, and virtualenvs
+- reproducibility and release validation via diagnostics bundles and environment capture
 - GitHub contribution patterns with CI, issue templates, and contributor guidance
 - support-minded engineering rather than only algorithm implementation
 
