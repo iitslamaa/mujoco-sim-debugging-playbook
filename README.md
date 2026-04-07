@@ -235,6 +235,7 @@ make machine-readiness
 make bundle-quality
 make release-blockers
 make support-session-note
+make environment-alignment
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -1187,6 +1188,7 @@ This writes:
 - [bundle-quality-guide.md](/Users/lamayassine/mujoco/docs/bundle-quality-guide.md)
 - [release-blockers-guide.md](/Users/lamayassine/mujoco/docs/release-blockers-guide.md)
 - [support-session-note-guide.md](/Users/lamayassine/mujoco/docs/support-session-note-guide.md)
+- [environment-alignment-guide.md](/Users/lamayassine/mujoco/docs/environment-alignment-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [support-workflow-index.md](/Users/lamayassine/mujoco/docs/support-workflow-index.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
