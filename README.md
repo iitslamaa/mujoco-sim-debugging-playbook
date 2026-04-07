@@ -107,6 +107,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Toolchain inventory for quick local runtime and CLI inspection
 - Support case catalog for scanning documented repro narratives
 - Setup FAQ generator for self-serve environment troubleshooting
+- Response rubric for support-case answer quality
 - Repro inventory that enumerates documented support cases and evidence paths
 - GitHub issue templates and CI for public-repo readiness
 
@@ -218,6 +219,7 @@ make issue-template-audit
 make toolchain-inventory
 make support-case-catalog
 make setup-faq
+make response-rubric
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -378,6 +380,14 @@ python scripts/generate_setup_faq.py
 ```
 
 This turns the current environment doctor and compatibility outputs into a small self-serve FAQ.
+
+## Generate a response rubric
+
+```bash
+python scripts/generate_response_rubric.py
+```
+
+This records the criteria used to keep support-case responses consistent and actionable.
 
 ## Generate a repro inventory
 
@@ -1118,6 +1128,7 @@ This writes:
 - [toolchain-inventory-guide.md](/Users/lamayassine/mujoco/docs/toolchain-inventory-guide.md)
 - [support-case-catalog-guide.md](/Users/lamayassine/mujoco/docs/support-case-catalog-guide.md)
 - [setup-faq-guide.md](/Users/lamayassine/mujoco/docs/setup-faq-guide.md)
+- [response-rubric-guide.md](/Users/lamayassine/mujoco/docs/response-rubric-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
