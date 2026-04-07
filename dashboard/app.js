@@ -1114,6 +1114,27 @@ async function main() {
   } else {
     dashboardSnapshotAlertPacketSummary.textContent = "Dashboard snapshot alert packet has not been generated yet.";
   }
+
+  const dashboardSnapshotResolutionPlanSummary = document.getElementById("dashboard-snapshot-resolution-plan-summary");
+  if (data.dashboard_snapshot_resolution_plan?.summary) {
+    const summary = data.dashboard_snapshot_resolution_plan.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Phases:</strong> ${summary.phase_count}</p>`,
+      `<p><strong>Alerts:</strong> ${summary.alert_count}</p>`,
+      `<p><strong>Critical alerts:</strong> ${summary.critical_count}</p>`,
+    ];
+    (data.dashboard_snapshot_resolution_plan.phases || []).forEach((phase) => {
+      items.push(`<p><strong>${phase.name}</strong></p>`);
+      (phase.items || []).forEach((item) => {
+        items.push(`<p>[${phase.priority}] ${item}</p>`);
+      });
+    });
+    dashboardSnapshotResolutionPlanSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotResolutionPlanSummary.textContent = "Dashboard snapshot resolution plan has not been generated yet.";
+  }
 }
 
 main();

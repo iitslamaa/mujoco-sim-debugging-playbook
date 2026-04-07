@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "current_status": "fail",
+    "handoff_owner": "dashboard-stabilization",
+    "phase_count": 2,
+    "alert_count": 3,
+    "critical_count": 1
+  },
+  "phases": [
+    {
+      "name": "Immediate stabilization",
+      "priority": "P0",
+      "items": [
+        "Status transition to pass"
+      ]
+    },
+    {
+      "name": "Follow-up cleanup",
+      "priority": "P1",
+      "items": [
+        "Current dashboard status is not yet pass.",
+        "Critical snapshot alerts are still active."
+      ]
+    }
+  ]
+}
