@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "transition_count": 3,
+    "first_pass_snapshot": "full_refresh_projection",
+    "largest_failure_drop_transition": "current_state -> support_sprint_projection",
+    "largest_failure_drop": 4,
+    "largest_risk_drop_transition": "support_sprint_projection -> full_refresh_projection",
+    "largest_risk_drop": 1.358
+  },
+  "transitions": [
+    {
+      "from": "baseline_backlog",
+      "to": "current_state",
+      "from_status": "fail",
+      "to_status": "fail",
+      "failure_delta": -1,
+      "risk_delta": -0.14900000000000002,
+      "baseline_success_rate_delta": 0.0,
+      "status_changed": false,
+      "improved_failures": true,
+      "improved_risk": true
+    },
+    {
+      "from": "current_state",
+      "to": "support_sprint_projection",
+      "from_status": "fail",
+      "to_status": "fail",
+      "failure_delta": -4,
+      "risk_delta": -0.19299999999999984,
+      "baseline_success_rate_delta": 0.0,
+      "status_changed": false,
+      "improved_failures": true,
+      "improved_risk": true
+    },
+    {
+      "from": "support_sprint_projection",
+      "to": "full_refresh_projection",
+      "from_status": "fail",
+      "to_status": "pass",
+      "failure_delta": -1,
+      "risk_delta": -1.358,
+      "baseline_success_rate_delta": 0.0,
+      "status_changed": true,
+      "improved_failures": true,
+      "improved_risk": true
+    }
+  ]
+}

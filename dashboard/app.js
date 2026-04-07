@@ -906,6 +906,25 @@ async function main() {
   } else {
     dashboardSnapshotHistorySummary.textContent = "Dashboard snapshot history has not been generated yet.";
   }
+
+  const dashboardSnapshotDriftSummary = document.getElementById("dashboard-snapshot-drift-summary");
+  if (data.dashboard_snapshot_drift?.summary) {
+    const summary = data.dashboard_snapshot_drift.summary;
+    const items = [
+      `<p><strong>Transitions:</strong> ${summary.transition_count}</p>`,
+      `<p><strong>First pass snapshot:</strong> ${summary.first_pass_snapshot}</p>`,
+      `<p><strong>Largest failure drop:</strong> ${summary.largest_failure_drop_transition} (${summary.largest_failure_drop})</p>`,
+      `<p><strong>Largest risk drop:</strong> ${summary.largest_risk_drop_transition} (${Number(summary.largest_risk_drop).toFixed(3)})</p>`,
+    ];
+    (data.dashboard_snapshot_drift.transitions || []).forEach((transition) => {
+      items.push(
+        `<p><strong>${transition.from} -> ${transition.to}</strong>: ${transition.failure_delta} failures, risk ${Number(transition.risk_delta).toFixed(3)}</p>`
+      );
+    });
+    dashboardSnapshotDriftSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotDriftSummary.textContent = "Dashboard snapshot drift has not been generated yet.";
+  }
 }
 
 main();

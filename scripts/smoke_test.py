@@ -106,6 +106,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_artifact_packet.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot_history.py"], env=env)
+    run([sys.executable, "scripts/generate_dashboard_snapshot_drift.py"], env=env)
     run(
         [
             sys.executable,
@@ -256,6 +257,9 @@ def main() -> None:
     dashboard_snapshot_history = ROOT / "outputs" / "dashboard_snapshots" / "history.json"
     if not dashboard_snapshot_history.exists():
         raise SystemExit(f"Expected dashboard snapshot history at {dashboard_snapshot_history}")
+    dashboard_snapshot_drift = ROOT / "outputs" / "dashboard_snapshots" / "drift.json"
+    if not dashboard_snapshot_drift.exists():
+        raise SystemExit(f"Expected dashboard snapshot drift at {dashboard_snapshot_drift}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

@@ -196,6 +196,7 @@ make artifact-scorecard
 make artifact-packet
 make dashboard-snapshot
 make dashboard-snapshot-history
+make dashboard-snapshot-drift
 make case-studies
 make snapshot
 make regression-diff
@@ -727,6 +728,14 @@ python scripts/generate_dashboard_snapshot_history.py
 
 This tracks how preserved dashboard snapshots evolve over time using the artifact history signal.
 
+## Build dashboard snapshot drift
+
+```bash
+python scripts/generate_dashboard_snapshot_drift.py
+```
+
+This compares consecutive preserved dashboard states and highlights the biggest changes between them.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -771,6 +780,7 @@ This writes:
 - [artifact-packet-guide.md](/Users/lamayassine/mujoco/docs/artifact-packet-guide.md)
 - [dashboard-snapshot-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-guide.md)
 - [dashboard-snapshot-history-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-history-guide.md)
+- [dashboard-snapshot-drift-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-drift-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
