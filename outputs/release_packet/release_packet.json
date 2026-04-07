@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "base_ref": "9947b32",
+    "head_ref": "HEAD",
+    "commit_count": 1,
+    "support_status": "fail",
+    "breach_count": 2
+  },
+  "highlights": [
+    "Knowledge base coverage is 45.5% of the open queue.",
+    "The triage system has 5 incident bundles and 5 knowledge-base entries ready for reuse."
+  ],
+  "risks": [
+    "2 items are already in breach and 3 more are at risk.",
+    "The highest-pressure lane is `incident_backfill` and the most overloaded owner is `controls-and-policy`.",
+    "The top uncovered support gap is `low_damping_high_gain / expert_pd`."
+  ]
+}
