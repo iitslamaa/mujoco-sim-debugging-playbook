@@ -63,6 +63,7 @@ __all__ = [
     "generalization",
     "impact_analysis",
     "incidents",
+    "issue_template_audit",
     "learning",
     "maintenance_risk",
     "knowledge_base",
