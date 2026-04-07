@@ -942,6 +942,29 @@ async function main() {
   } else {
     dashboardSnapshotAlertsSummary.textContent = "Dashboard snapshot alerts have not been generated yet.";
   }
+
+  const dashboardSnapshotMonitorSummary = document.getElementById("dashboard-snapshot-monitor-summary");
+  if (data.dashboard_snapshot_monitor?.summary) {
+    const summary = data.dashboard_snapshot_monitor.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Headlines:</strong> ${summary.headline_count}</p>`,
+      `<p><strong>Alerts:</strong> ${summary.alert_count}</p>`,
+      `<p><strong>Critical alerts:</strong> ${summary.critical_count}</p>`,
+      `<p><strong>Dominant transition:</strong> ${summary.dominant_transition}</p>`,
+    ];
+    (data.dashboard_snapshot_monitor.headlines || []).forEach((headline) => {
+      items.push(`<p>${headline}</p>`);
+    });
+    if (data.dashboard_snapshot_monitor.highest_priority_alert) {
+      const alert = data.dashboard_snapshot_monitor.highest_priority_alert;
+      items.push(`<p><strong>[${alert.severity}] ${alert.title}</strong>: ${alert.message}</p>`);
+    }
+    dashboardSnapshotMonitorSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotMonitorSummary.textContent = "Dashboard snapshot monitor has not been generated yet.";
+  }
 }
 
 main();

@@ -198,6 +198,7 @@ make dashboard-snapshot
 make dashboard-snapshot-history
 make dashboard-snapshot-drift
 make dashboard-snapshot-alerts
+make dashboard-snapshot-monitor
 make case-studies
 make snapshot
 make regression-diff
@@ -745,6 +746,14 @@ python scripts/generate_dashboard_snapshot_alerts.py
 
 This turns major snapshot timeline changes into a compact alert feed.
 
+## Build dashboard snapshot monitor
+
+```bash
+python scripts/generate_dashboard_snapshot_monitor.py
+```
+
+This rolls the snapshot history, drift, and alerts into one monitoring summary.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -791,6 +800,7 @@ This writes:
 - [dashboard-snapshot-history-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-history-guide.md)
 - [dashboard-snapshot-drift-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-drift-guide.md)
 - [dashboard-snapshot-alerts-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-alerts-guide.md)
+- [dashboard-snapshot-monitor-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-monitor-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

@@ -19,6 +19,7 @@ __all__ = [
     "dashboard_snapshot_history",
     "dashboard_snapshot_drift",
     "dashboard_snapshot_alerts",
+    "dashboard_snapshot_monitor",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",
