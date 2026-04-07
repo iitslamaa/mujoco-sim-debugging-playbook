@@ -174,7 +174,6 @@ This writes:
 
 - [support-playbook.md](/Users/lamayassine/mujoco/docs/support-playbook.md)
 - [release-validation.md](/Users/lamayassine/mujoco/docs/release-validation.md)
-- [interview-guide.md](/Users/lamayassine/mujoco/docs/interview-guide.md)
 - [diagnostics-guide.md](/Users/lamayassine/mujoco/docs/diagnostics-guide.md)
 - [dashboard/index.html](/Users/lamayassine/mujoco/dashboard/index.html)
 - [learning-guide.md](/Users/lamayassine/mujoco/docs/learning-guide.md)
@@ -195,7 +194,7 @@ This writes:
 - `control_delay_steps`: tests latency-induced overshoot and recovery issues
 - `friction_loss`: tests energy loss and convergence difficulty
 
-`configs/stress_sweeps.json` pushes harder into regimes that often create interview-worthy failure cases:
+`configs/stress_sweeps.json` pushes harder into regimes that often produce more severe and interesting failure cases:
 
 - high delay with high gain
 - low damping with aggressive actuators
@@ -250,7 +249,3 @@ The debugging guide lives in [troubleshooting.md](/Users/lamayassine/mujoco/docs
 - success in one configuration but failure in another
 - timestep and delay sensitivity
 - how to inspect traces instead of guessing
-
-## Resume framing
-
-Built a public MuJoCo simulation support lab to study how control and physics parameters affect robotic reaching performance; created reproducible sweeps, generated support-style repro artifacts, added Docker/CI workflows, and documented debugging playbooks for instability, observation noise, latency, and controller tuning.

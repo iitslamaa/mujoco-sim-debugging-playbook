@@ -38,5 +38,3 @@ A strong support engineer does not only reproduce a bug. They package the eviden
 - users get a clear explanation
 - maintainers get reproducible artifacts
 - release owners get a validation surface
-- interviews get a much more concrete debugging story
-

@@ -35,9 +35,7 @@ python scripts/run_issue_case.py --case actuator_gain_overshoot
 
 The output is a Markdown response draft and repro checklist under `outputs/support_cases/`.
 
-## Why this maps to Isaac Lab support work
-
-The exact tools differ, but the workflow is the same:
+## Why this workflow is useful
 
 - users report a confusing training or sim behavior
 - the engineer reproduces it under a controlled setup

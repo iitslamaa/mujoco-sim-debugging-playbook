@@ -1,6 +1,6 @@
 # Release Validation Checklist
 
-This checklist is written from a user-support perspective, mirroring how a technical solutions engineer would sanity-check a new simulator or environment release.
+This checklist is written from a user-support perspective for sanity-checking a new simulator or environment release.
 
 ## Environment and install
 
