@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "item_count": 3
+  },
+  "items": [
+    {
+      "name": "issue_templates_present",
+      "status": "pass"
+    },
+    {
+      "name": "template_descriptions_present",
+      "status": "pass"
+    },
+    {
+      "name": "response_criteria_available",
+      "status": "pass"
+    }
+  ]
+}
