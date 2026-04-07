@@ -62,5 +62,7 @@ jobs:
         run: python scripts/generate_escalation_matrix.py
       - name: Build support ops report
         run: python scripts/generate_support_ops_report.py
+      - name: Build support gap report
+        run: python scripts/generate_support_gap_report.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

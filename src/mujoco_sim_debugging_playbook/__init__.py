@@ -24,6 +24,7 @@ __all__ = [
     "rl",
     "simulation",
     "support",
+    "support_gaps",
     "support_ops",
     "triage",
     "trace_plot",

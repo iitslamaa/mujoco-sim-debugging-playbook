@@ -328,6 +328,26 @@ async function main() {
   } else {
     supportOpsSummary.textContent = "Support ops artifacts have not been generated yet.";
   }
+
+  const supportGapSummary = document.getElementById("support-gap-summary");
+  if (data.support_gaps?.summary) {
+    const summary = data.support_gaps.summary;
+    const items = [
+      `<p><strong>Needs follow-up:</strong> ${summary.needs_follow_up_count}</p>`,
+      `<p><strong>Fully covered:</strong> ${summary.fully_covered_count}</p>`,
+      `<p><strong>Critical gaps:</strong> ${summary.uncovered_critical_count}</p>`,
+      `<p><strong>Top gap:</strong> ${summary.top_gap_target || "n/a"}</p>`,
+    ];
+    (data.support_gaps.items || []).slice(0, 4).forEach((item) => {
+      const missing = item.missing_artifacts.length > 0 ? item.missing_artifacts.join(", ") : "none";
+      items.push(
+        `<p><strong>${item.target}</strong>: gap ${item.gap_score.toFixed(2)} | missing ${missing}</p>`
+      );
+    });
+    supportGapSummary.innerHTML = items.join("");
+  } else {
+    supportGapSummary.textContent = "Support gap artifacts have not been generated yet.";
+  }
 }
 
 main();

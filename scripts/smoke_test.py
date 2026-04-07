@@ -75,6 +75,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_knowledge_base.py"], env=env)
     run([sys.executable, "scripts/generate_escalation_matrix.py"], env=env)
     run([sys.executable, "scripts/generate_support_ops_report.py"], env=env)
+    run([sys.executable, "scripts/generate_support_gap_report.py"], env=env)
     run(
         [
             sys.executable,
@@ -132,6 +133,9 @@ def main() -> None:
     support_ops = ROOT / "outputs" / "support_ops" / "support_ops.json"
     if not support_ops.exists():
         raise SystemExit(f"Expected support ops report at {support_ops}")
+    support_gaps = ROOT / "outputs" / "support_gaps" / "support_gaps.json"
+    if not support_gaps.exists():
+        raise SystemExit(f"Expected support gap report at {support_gaps}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])
