@@ -224,6 +224,7 @@ make toolchain-inventory
 make support-case-catalog
 make setup-faq
 make response-rubric
+make support-response-template
 make local-paths-report
 make release-checklist
 make environment-diff
@@ -1178,6 +1179,7 @@ This writes:
 - [support-case-catalog-guide.md](/Users/lamayassine/mujoco/docs/support-case-catalog-guide.md)
 - [setup-faq-guide.md](/Users/lamayassine/mujoco/docs/setup-faq-guide.md)
 - [response-rubric-guide.md](/Users/lamayassine/mujoco/docs/response-rubric-guide.md)
+- [support-response-template-guide.md](/Users/lamayassine/mujoco/docs/support-response-template-guide.md)
 - [local-paths-guide.md](/Users/lamayassine/mujoco/docs/local-paths-guide.md)
 - [release-checklist-guide.md](/Users/lamayassine/mujoco/docs/release-checklist-guide.md)
 - [environment-diff-guide.md](/Users/lamayassine/mujoco/docs/environment-diff-guide.md)
