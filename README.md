@@ -245,6 +245,7 @@ make environment-alignment
 make support-command-catalog
 make repro-inventory
 make repro-bundle-index
+make repro-readiness
 make environment-doctor
 make dashboard-snapshot
 make dashboard-snapshot-history
@@ -1206,6 +1207,7 @@ This writes:
 - [support-command-catalog-guide.md](/Users/lamayassine/mujoco/docs/support-command-catalog-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [repro-bundle-index-guide.md](/Users/lamayassine/mujoco/docs/repro-bundle-index-guide.md)
+- [repro-readiness-guide.md](/Users/lamayassine/mujoco/docs/repro-readiness-guide.md)
 - [support-workflow-index.md](/Users/lamayassine/mujoco/docs/support-workflow-index.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
