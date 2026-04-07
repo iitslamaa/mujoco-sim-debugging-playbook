@@ -236,6 +236,7 @@ make bundle-verifier
 make release-matrix
 make machine-readiness
 make bundle-quality
+make bundle-coverage
 make release-blockers
 make support-session-note
 make environment-alignment
@@ -1194,6 +1195,7 @@ This writes:
 - [release-matrix-guide.md](/Users/lamayassine/mujoco/docs/release-matrix-guide.md)
 - [machine-readiness-guide.md](/Users/lamayassine/mujoco/docs/machine-readiness-guide.md)
 - [bundle-quality-guide.md](/Users/lamayassine/mujoco/docs/bundle-quality-guide.md)
+- [bundle-coverage-guide.md](/Users/lamayassine/mujoco/docs/bundle-coverage-guide.md)
 - [release-blockers-guide.md](/Users/lamayassine/mujoco/docs/release-blockers-guide.md)
 - [support-session-note-guide.md](/Users/lamayassine/mujoco/docs/support-session-note-guide.md)
 - [environment-alignment-guide.md](/Users/lamayassine/mujoco/docs/environment-alignment-guide.md)
