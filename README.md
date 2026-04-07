@@ -64,6 +64,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Backlog-aging analytics that expose support debt through due horizon, effort, and risk buckets
 - Documentation audits that show how much of the queue is covered by reusable self-serve guidance
 - Risk-register generation that merges simulation, readiness, and staffing concerns into one ranked list
+- Owner alerts that condense overloaded ownership into short, actionable notifications
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -137,6 +138,7 @@ make responder-load
 make backlog-aging
 make documentation-audit
 make risk-register
+make owner-alerts
 make case-studies
 make snapshot
 make regression-diff
@@ -448,6 +450,12 @@ python scripts/generate_documentation_audit.py
 
 ```bash
 python scripts/generate_risk_register.py
+```
+
+## Generate the owner alerts
+
+```bash
+python scripts/generate_owner_alerts.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.
