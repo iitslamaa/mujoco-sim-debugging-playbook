@@ -6036,6 +6036,25 @@
       "Critical alert pressure remains active."
     ]
   },
+  "dashboard_snapshot_status_brief": {
+    "summary": {
+      "current_status": "fail",
+      "next_status": "warn",
+      "projected_terminal_status": "pass",
+      "handoff_owner": "dashboard-stabilization",
+      "top_priority": "Status transition to pass",
+      "critical_alerts": 1
+    },
+    "headlines": [
+      "Current dashboard status is fail.",
+      "Projected terminal status is pass.",
+      "Largest recovery step is current_state -> support_sprint_projection."
+    ],
+    "blockers": [
+      "Closeout has not reached ready_to_close.",
+      "Critical alert pressure remains active."
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -6123,6 +6142,7 @@
     "dashboard_snapshot_milestones_markdown": "outputs/dashboard_snapshots/milestones.md",
     "dashboard_snapshot_watchlist_markdown": "outputs/dashboard_snapshots/watchlist.md",
     "dashboard_snapshot_focus_markdown": "outputs/dashboard_snapshots/focus.md",
-    "dashboard_snapshot_priorities_markdown": "outputs/dashboard_snapshots/priorities.md"
+    "dashboard_snapshot_priorities_markdown": "outputs/dashboard_snapshots/priorities.md",
+    "dashboard_snapshot_status_brief_markdown": "outputs/dashboard_snapshots/status_brief.md"
   }
 }

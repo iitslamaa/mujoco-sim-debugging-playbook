@@ -36,6 +36,7 @@ __all__ = [
     "dashboard_snapshot_watchlist",
     "dashboard_snapshot_focus",
     "dashboard_snapshot_priorities",
+    "dashboard_snapshot_status_brief",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

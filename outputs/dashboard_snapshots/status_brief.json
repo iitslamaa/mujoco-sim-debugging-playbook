@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "current_status": "fail",
+    "next_status": "warn",
+    "projected_terminal_status": "pass",
+    "handoff_owner": "dashboard-stabilization",
+    "top_priority": "Status transition to pass",
+    "critical_alerts": 1
+  },
+  "headlines": [
+    "Current dashboard status is fail.",
+    "Projected terminal status is pass.",
+    "Largest recovery step is current_state -> support_sprint_projection."
+  ],
+  "blockers": [
+    "Closeout has not reached ready_to_close.",
+    "Critical alert pressure remains active."
+  ]
+}
