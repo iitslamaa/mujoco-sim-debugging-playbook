@@ -231,6 +231,7 @@ make support-intake-checklist
 make machine-profile
 make bundle-verifier
 make release-matrix
+make machine-readiness
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -1179,6 +1180,7 @@ This writes:
 - [machine-profile-guide.md](/Users/lamayassine/mujoco/docs/machine-profile-guide.md)
 - [bundle-verifier-guide.md](/Users/lamayassine/mujoco/docs/bundle-verifier-guide.md)
 - [release-matrix-guide.md](/Users/lamayassine/mujoco/docs/release-matrix-guide.md)
+- [machine-readiness-guide.md](/Users/lamayassine/mujoco/docs/machine-readiness-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [support-workflow-index.md](/Users/lamayassine/mujoco/docs/support-workflow-index.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
