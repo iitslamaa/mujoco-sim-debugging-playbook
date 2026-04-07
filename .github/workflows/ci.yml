@@ -120,5 +120,7 @@ jobs:
         run: python scripts/generate_artifact_scorecard.py
       - name: Build artifact packet
         run: python scripts/generate_artifact_packet.py
+      - name: Build dashboard snapshot
+        run: python scripts/generate_dashboard_snapshot.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

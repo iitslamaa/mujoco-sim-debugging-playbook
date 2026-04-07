@@ -91,6 +91,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact closeout packets that decide whether the current recovery cycle is ready to close
 - Artifact scorecards that give a one-screen KPI view of the maintenance stack
 - Artifact packets that bundle the scorecard, digest, handoff, and closeout into one shareable package
+- Dashboard snapshots that preserve lightweight static summaries of the live dashboard state
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -192,6 +193,7 @@ make artifact-review-note
 make artifact-closeout
 make artifact-scorecard
 make artifact-packet
+make dashboard-snapshot
 make case-studies
 make snapshot
 make regression-diff
@@ -707,6 +709,14 @@ python scripts/generate_artifact_packet.py
 
 This bundles the scorecard, digest, handoff, and closeout views into one shareable artifact package.
 
+## Build a dashboard snapshot
+
+```bash
+python scripts/generate_dashboard_snapshot.py
+```
+
+This captures a lightweight static snapshot of the current dashboard and artifact packet state.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -749,6 +759,7 @@ This writes:
 - [artifact-closeout-guide.md](/Users/lamayassine/mujoco/docs/artifact-closeout-guide.md)
 - [artifact-scorecard-guide.md](/Users/lamayassine/mujoco/docs/artifact-scorecard-guide.md)
 - [artifact-packet-guide.md](/Users/lamayassine/mujoco/docs/artifact-packet-guide.md)
+- [dashboard-snapshot-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

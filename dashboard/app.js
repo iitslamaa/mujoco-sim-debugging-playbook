@@ -868,6 +868,25 @@ async function main() {
   } else {
     artifactPacketSummary.textContent = "Artifact packet has not been generated yet.";
   }
+
+  const dashboardSnapshotSummary = document.getElementById("dashboard-snapshot-summary");
+  if (data.dashboard_snapshot) {
+    const snapshot = data.dashboard_snapshot;
+    const items = [
+      `<p><strong>Name:</strong> ${snapshot.name}</p>`,
+      `<p><strong>Date:</strong> ${snapshot.date}</p>`,
+      `<p><strong>Baseline success rate:</strong> ${Number(snapshot.baseline_success_rate).toFixed(3)}</p>`,
+      `<p><strong>Current status:</strong> ${snapshot.artifact_summary.current_status}</p>`,
+      `<p><strong>Closeout status:</strong> ${snapshot.artifact_summary.closeout_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${snapshot.artifact_summary.projected_terminal_status}</p>`,
+    ];
+    (snapshot.highlights || []).forEach((highlight) => {
+      items.push(`<p>${highlight}</p>`);
+    });
+    dashboardSnapshotSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotSummary.textContent = "Dashboard snapshot has not been generated yet.";
+  }
 }
 
 main();

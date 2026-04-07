@@ -1,0 +1,20 @@
+{
+  "name": "latest",
+  "date": "2026-04-06",
+  "repo": "mujoco-sim-debugging-playbook",
+  "baseline_success_rate": 0.1,
+  "artifact_summary": {
+    "current_status": "fail",
+    "closeout_status": "not_ready_to_close",
+    "projected_terminal_status": "pass",
+    "headline_count": 3,
+    "handoff_owner": "artifact-reporting",
+    "remaining_action_count": 3
+  },
+  "highlights": [
+    "Current status: fail",
+    "Closeout status: not_ready_to_close",
+    "Projected terminal status: pass",
+    "Handoff owner: artifact-reporting"
+  ]
+}
