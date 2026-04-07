@@ -25,6 +25,7 @@ def main() -> None:
     benchmark_summary = _read_json(ROOT / "outputs" / "controller_benchmark" / "benchmark_summary.json")
     randomization_summary = _read_json(ROOT / "outputs" / "domain_randomization" / "evaluation_rows.json")
     regression_diff = _read_json(ROOT / "outputs" / "regression" / "latest_diff" / "regression_diff.json")
+    regression_gate = _read_json(ROOT / "outputs" / "regression" / "gate" / "regression_gate.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -63,6 +64,7 @@ def main() -> None:
         "benchmark_summary": benchmark_summary,
         "randomization_summary": randomization_summary,
         "regression_diff": regression_diff,
+        "regression_gate": regression_gate,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -78,6 +80,7 @@ def main() -> None:
             "case_study_image": "outputs/case_studies/controller_robustness_story.png",
             "regression_diff_markdown": "outputs/regression/latest_diff/regression_diff.md",
             "regression_diff_image": "outputs/regression/latest_diff/regression_diff.png",
+            "regression_gate_markdown": "outputs/regression/gate/regression_gate.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

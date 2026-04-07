@@ -43,6 +43,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Domain-randomization evaluation that measures policy robustness under changing physics
 - Automated case-study generation that turns experiment outputs into polished narratives
 - Regression snapshot and diff tooling for tracking behavior drift over time
+- Threshold-based regression gates for catching unacceptable drift in CI
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -101,6 +102,7 @@ make randomization
 make case-studies
 make snapshot
 make regression-diff
+make regression-check
 make demo-gif
 make dashboard
 ```
@@ -215,6 +217,18 @@ python scripts/compare_regression_snapshots.py \
 ```
 
 This captures a summary snapshot and generates a diff report against a reference snapshot.
+
+## Enforce regression thresholds
+
+```bash
+python scripts/check_regressions.py \
+  --left outputs/regression/snapshots/baseline_reference.json \
+  --right outputs/regression/snapshots/current.json \
+  --thresholds configs/regression_thresholds.json \
+  --output-dir outputs/regression/gate
+```
+
+This evaluates the diff against explicit policy limits and writes a pass/fail gate report.
 
 ## Generate a diagnostics bundle
 

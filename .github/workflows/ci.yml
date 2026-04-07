@@ -23,5 +23,14 @@ jobs:
           pip install pytest
       - name: Run tests
         run: pytest -q
+      - name: Create regression snapshot
+        run: MPLCONFIGDIR=/tmp/mpl python scripts/create_regression_snapshot.py --name ci_candidate
+      - name: Enforce regression thresholds
+        run: |
+          MPLCONFIGDIR=/tmp/mpl python scripts/check_regressions.py \
+            --left outputs/regression/snapshots/baseline_reference.json \
+            --right outputs/regression/snapshots/ci_candidate.json \
+            --thresholds configs/regression_thresholds.json \
+            --output-dir outputs/regression/ci_gate
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

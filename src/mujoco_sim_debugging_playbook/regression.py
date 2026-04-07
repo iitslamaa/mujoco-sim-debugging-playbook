@@ -97,6 +97,92 @@ def compare_snapshots(left_path: str | Path, right_path: str | Path, output_dir:
     return payload
 
 
+def load_regression_thresholds(path: str | Path) -> dict[str, Any]:
+    return _read_json(path)
+
+
+def evaluate_regression_diff(
+    diff_payload: dict[str, Any],
+    thresholds: dict[str, Any],
+) -> dict[str, Any]:
+    scalar_results = {}
+    controller_results = {}
+    violations: list[dict[str, Any]] = []
+
+    for metric, delta in diff_payload.get("scalar_deltas", {}).items():
+        threshold = thresholds.get("scalar_thresholds", {}).get(metric, {})
+        result = _evaluate_delta(delta, threshold)
+        scalar_results[metric] = result
+        if not result["passed"]:
+            violations.append(
+                {
+                    "scope": "scalar",
+                    "metric": metric,
+                    "delta": delta,
+                    "rule": threshold,
+                    "message": result["message"],
+                }
+            )
+
+    for metric, controllers in diff_payload.get("controller_deltas", {}).items():
+        metric_thresholds = thresholds.get("controller_thresholds", {}).get(metric, {})
+        controller_results[metric] = {}
+        for controller, delta in controllers.items():
+            threshold = metric_thresholds.get(controller, metric_thresholds.get("*", {}))
+            result = _evaluate_delta(delta, threshold)
+            controller_results[metric][controller] = result
+            if not result["passed"]:
+                violations.append(
+                    {
+                        "scope": "controller",
+                        "metric": metric,
+                        "controller": controller,
+                        "delta": delta,
+                        "rule": threshold,
+                        "message": result["message"],
+                    }
+                )
+
+    return {
+        "status": "pass" if not violations else "fail",
+        "left": diff_payload["left"],
+        "right": diff_payload["right"],
+        "violation_count": len(violations),
+        "violations": violations,
+        "scalar_results": scalar_results,
+        "controller_results": controller_results,
+    }
+
+
+def write_regression_gate_report(report: dict[str, Any], output_dir: str | Path) -> None:
+    output = Path(output_dir)
+    output.mkdir(parents=True, exist_ok=True)
+    (output / "regression_gate.json").write_text(json.dumps(report, indent=2))
+    _write_gate_markdown(report, output / "regression_gate.md")
+
+
+def _evaluate_delta(delta: float, threshold: dict[str, Any]) -> dict[str, Any]:
+    min_delta = threshold.get("min_delta")
+    max_delta = threshold.get("max_delta")
+    passed = True
+    message = "within configured thresholds"
+
+    if min_delta is not None and delta < float(min_delta):
+        passed = False
+        message = f"delta {delta:.4f} is below minimum allowed {float(min_delta):.4f}"
+    if max_delta is not None and delta > float(max_delta):
+        passed = False
+        message = f"delta {delta:.4f} is above maximum allowed {float(max_delta):.4f}"
+
+    return {
+        "delta": float(delta),
+        "min_delta": None if min_delta is None else float(min_delta),
+        "max_delta": None if max_delta is None else float(max_delta),
+        "passed": passed,
+        "message": message,
+    }
+
+
 def _write_markdown(payload: dict[str, Any], path: str | Path) -> None:
     lines = [
         "# Regression Diff",
@@ -126,6 +212,52 @@ def _write_markdown(payload: dict[str, Any], path: str | Path) -> None:
         lines.append("")
 
     Path(path).write_text("\n".join(lines))
+
+
+def _write_gate_markdown(report: dict[str, Any], path: str | Path) -> None:
+    lines = [
+        "# Regression Gate",
+        "",
+        f"Comparison: `{report['left']}` -> `{report['right']}`",
+        "",
+        f"Status: **{report['status'].upper()}**",
+        "",
+        f"Violation count: `{report['violation_count']}`",
+        "",
+    ]
+
+    if report["violations"]:
+        lines.extend(["## Violations", ""])
+        for violation in report["violations"]:
+            scope = violation["scope"]
+            metric = violation["metric"]
+            controller = violation.get("controller")
+            target = f"{metric} / {controller}" if controller else metric
+            lines.append(f"- `{scope}` `{target}`: {violation['message']}")
+        lines.append("")
+    else:
+        lines.extend(["## Violations", "", "- None", ""])
+
+    lines.extend(["## Scalar checks", "", "| metric | delta | min | max | passed |", "| --- | ---: | ---: | ---: | --- |"])
+    for metric, result in report["scalar_results"].items():
+        lines.append(
+            f"| {metric} | {result['delta']:.4f} | {_fmt_limit(result['min_delta'])} | {_fmt_limit(result['max_delta'])} | {'yes' if result['passed'] else 'no'} |"
+        )
+
+    lines.extend(["", "## Controller checks", ""])
+    for metric, controllers in report["controller_results"].items():
+        lines.extend([f"### {metric}", "", "| controller | delta | min | max | passed |", "| --- | ---: | ---: | ---: | --- |"])
+        for controller, result in controllers.items():
+            lines.append(
+                f"| {controller} | {result['delta']:.4f} | {_fmt_limit(result['min_delta'])} | {_fmt_limit(result['max_delta'])} | {'yes' if result['passed'] else 'no'} |"
+            )
+        lines.append("")
+
+    Path(path).write_text("\n".join(lines))
+
+
+def _fmt_limit(value: float | None) -> str:
+    return "--" if value is None else f"{value:.4f}"
 
 
 def _plot_regression(payload: dict[str, Any], path: str | Path) -> None:

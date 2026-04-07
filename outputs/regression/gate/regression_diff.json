@@ -1,0 +1,31 @@
+{
+  "left": "baseline_reference",
+  "right": "current",
+  "scalar_deltas": {
+    "baseline_success_rate": 0.0,
+    "baseline_final_error_mean": 0.0,
+    "imitation_success_rate": 0.0,
+    "imitation_final_error_mean": 0.0,
+    "rl_success_rate": 0.0,
+    "rl_final_error_mean": 0.0
+  },
+  "controller_deltas": {
+    "benchmark_success_rate_by_controller": {
+      "expert_pd": 0.0,
+      "hybrid_guardrail": 0.0,
+      "torch_policy": 0.0
+    },
+    "randomization_success_rate_by_controller": {
+      "expert_pd": 0.0,
+      "hybrid_guardrail": 0.0,
+      "rl_policy": 0.0,
+      "torch_policy": 0.0
+    },
+    "randomization_final_error_by_controller": {
+      "expert_pd": 0.0,
+      "hybrid_guardrail": 0.0,
+      "rl_policy": 0.0,
+      "torch_policy": 0.0
+    }
+  }
+}

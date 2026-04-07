@@ -1,0 +1,39 @@
+{
+  "scalar_thresholds": {
+    "baseline_success_rate": {
+      "min_delta": -0.05
+    },
+    "baseline_final_error_mean": {
+      "max_delta": 0.02
+    },
+    "imitation_success_rate": {
+      "min_delta": -0.08
+    },
+    "imitation_final_error_mean": {
+      "max_delta": 0.03
+    },
+    "rl_success_rate": {
+      "min_delta": -0.08
+    },
+    "rl_final_error_mean": {
+      "max_delta": 0.03
+    }
+  },
+  "controller_thresholds": {
+    "benchmark_success_rate_by_controller": {
+      "*": {
+        "min_delta": -0.10
+      }
+    },
+    "randomization_success_rate_by_controller": {
+      "*": {
+        "min_delta": -0.12
+      }
+    },
+    "randomization_final_error_by_controller": {
+      "*": {
+        "max_delta": 0.04
+      }
+    }
+  }
+}

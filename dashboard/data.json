@@ -2000,7 +2000,38 @@
     "torch_checkpoint": "/Users/lamayassine/mujoco/outputs/learning/training/policy.pt",
     "rl_checkpoint": "/Users/lamayassine/mujoco/outputs/rl/training/reinforce_policy.pt"
   },
-  "regression_diff": null,
+  "regression_diff": {
+    "left": "baseline_reference",
+    "right": "current",
+    "scalar_deltas": {
+      "baseline_success_rate": 0.0,
+      "baseline_final_error_mean": 0.0,
+      "imitation_success_rate": 0.0,
+      "imitation_final_error_mean": 0.0,
+      "rl_success_rate": 0.0,
+      "rl_final_error_mean": 0.0
+    },
+    "controller_deltas": {
+      "benchmark_success_rate_by_controller": {
+        "expert_pd": 0.0,
+        "hybrid_guardrail": 0.0,
+        "torch_policy": 0.0
+      },
+      "randomization_success_rate_by_controller": {
+        "expert_pd": 0.0,
+        "hybrid_guardrail": 0.0,
+        "rl_policy": 0.0,
+        "torch_policy": 0.0
+      },
+      "randomization_final_error_by_controller": {
+        "expert_pd": 0.0,
+        "hybrid_guardrail": 0.0,
+        "rl_policy": 0.0,
+        "torch_policy": 0.0
+      }
+    }
+  },
+  "regression_gate": null,
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -2024,6 +2055,7 @@
     "randomization_report": "outputs/domain_randomization/report.md",
     "case_study_image": "outputs/case_studies/controller_robustness_story.png",
     "regression_diff_markdown": "outputs/regression/latest_diff/regression_diff.md",
-    "regression_diff_image": "outputs/regression/latest_diff/regression_diff.png"
+    "regression_diff_image": "outputs/regression/latest_diff/regression_diff.png",
+    "regression_gate_markdown": "outputs/regression/gate/regression_gate.md"
   }
 }

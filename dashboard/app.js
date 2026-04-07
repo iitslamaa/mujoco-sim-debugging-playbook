@@ -160,6 +160,29 @@ async function main() {
   if (data.artifacts?.regression_diff_image) {
     document.getElementById("regression-image").src = `../${data.artifacts.regression_diff_image}`;
   }
+
+  const regressionGate = document.getElementById("regression-gate");
+  if (data.regression_gate) {
+    const violations = data.regression_gate.violations || [];
+    const summary = [
+      `<p><strong>Status:</strong> ${data.regression_gate.status.toUpperCase()}</p>`,
+      `<p><strong>Violations:</strong> ${data.regression_gate.violation_count}</p>`,
+    ];
+    if (violations.length > 0) {
+      summary.push("<p><strong>Triggered checks:</strong></p>");
+      violations.forEach((violation) => {
+        const target = violation.controller
+          ? `${violation.metric} / ${violation.controller}`
+          : violation.metric;
+        summary.push(`<p>${target}: ${violation.message}</p>`);
+      });
+    } else {
+      summary.push("<p>All configured thresholds are passing.</p>");
+    }
+    regressionGate.innerHTML = summary.join("");
+  } else {
+    regressionGate.textContent = "Regression gate artifacts have not been generated yet.";
+  }
 }
 
 main();

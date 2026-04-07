@@ -8,6 +8,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from mujoco_sim_debugging_playbook.regression import compare_snapshots
+from mujoco_sim_debugging_playbook.regression import evaluate_regression_diff
 
 
 def test_compare_snapshots_generates_outputs(tmp_path: Path) -> None:
@@ -46,3 +47,37 @@ def test_compare_snapshots_generates_outputs(tmp_path: Path) -> None:
     assert payload["scalar_deltas"]["baseline_success_rate"] == 0.1
     assert (output_dir / "regression_diff.md").exists()
     assert (output_dir / "regression_diff.png").exists()
+
+
+def test_evaluate_regression_diff_flags_threshold_violation() -> None:
+    diff_payload = {
+        "left": "baseline",
+        "right": "candidate",
+        "scalar_deltas": {
+            "baseline_success_rate": -0.08,
+            "baseline_final_error_mean": 0.01,
+        },
+        "controller_deltas": {
+            "benchmark_success_rate_by_controller": {
+                "expert_pd": -0.02,
+                "torch_policy": -0.15,
+            }
+        },
+    }
+    thresholds = {
+        "scalar_thresholds": {
+            "baseline_success_rate": {"min_delta": -0.05},
+            "baseline_final_error_mean": {"max_delta": 0.02},
+        },
+        "controller_thresholds": {
+            "benchmark_success_rate_by_controller": {
+                "*": {"min_delta": -0.10}
+            }
+        },
+    }
+
+    report = evaluate_regression_diff(diff_payload, thresholds)
+    assert report["status"] == "fail"
+    assert report["violation_count"] == 2
+    assert report["scalar_results"]["baseline_success_rate"]["passed"] is False
+    assert report["controller_results"]["benchmark_success_rate_by_controller"]["torch_policy"]["passed"] is False
