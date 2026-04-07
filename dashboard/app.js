@@ -348,6 +348,26 @@ async function main() {
   } else {
     supportGapSummary.textContent = "Support gap artifacts have not been generated yet.";
   }
+
+  const workstreamSummary = document.getElementById("workstream-summary");
+  if (data.workstreams?.summary) {
+    const summary = data.workstreams.summary;
+    const items = [
+      `<p><strong>Active lanes:</strong> ${summary.lane_count}</p>`,
+      `<p><strong>Planned items:</strong> ${summary.item_count}</p>`,
+      `<p><strong>Blocking items:</strong> ${summary.blocking_count}</p>`,
+      `<p><strong>Estimated points:</strong> ${summary.estimated_points}</p>`,
+      `<p><strong>Top lane:</strong> ${summary.top_lane || "n/a"}</p>`,
+    ];
+    (data.workstreams.lanes || []).slice(0, 3).forEach((lane) => {
+      items.push(
+        `<p><strong>${lane.lane}</strong>: ${lane.item_count} items, ${lane.blocking_count} blocking, ${lane.estimated_points} pts</p>`
+      );
+    });
+    workstreamSummary.innerHTML = items.join("");
+  } else {
+    workstreamSummary.textContent = "Workstream planning artifacts have not been generated yet.";
+  }
 }
 
 main();

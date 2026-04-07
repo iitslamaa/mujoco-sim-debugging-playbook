@@ -54,6 +54,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - A generated knowledge base that turns incidents into reusable FAQ-style support guidance
 - Support-ops metrics that summarize queue load, coverage, and escalation burden
 - Support gap analysis that highlights which high-priority items still need incident or self-serve coverage
+- Workstream planning that turns support gaps into concrete remediation lanes with effort estimates
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -117,6 +118,7 @@ make knowledge-base
 make escalation
 make support-ops
 make support-gaps
+make workstreams
 make case-studies
 make snapshot
 make regression-diff
@@ -368,6 +370,12 @@ python scripts/generate_support_ops_report.py \
 
 ```bash
 python scripts/generate_support_gap_report.py
+```
+
+## Generate the workstream plan
+
+```bash
+python scripts/generate_workstream_plan.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.

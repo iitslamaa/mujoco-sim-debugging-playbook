@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "lane_count": 1,
+    "item_count": 5,
+    "blocking_count": 2,
+    "estimated_points": 22,
+    "top_lane": "incident_backfill"
+  },
+  "lanes": [
+    {
+      "lane": "incident_backfill",
+      "item_count": 5,
+      "blocking_count": 2,
+      "estimated_points": 22,
+      "items": [
+        {
+          "target": "low_damping_high_gain / expert_pd",
+          "kind": "benchmark_case",
+          "severity": "high",
+          "owner": "controls-and-policy",
+          "priority_score": 86.56076130168697,
+          "gap_score": 43.28038065084348,
+          "effort": {
+            "points": 5,
+            "size": "large"
+          },
+          "blocking": true,
+          "deliverable": "Create a reproducible incident bundle and attach trace evidence.",
+          "rationale": "Elevated benchmark risk in `low_damping_high_gain` for `expert_pd`.",
+          "recommended_action": "Increase joint damping and reduce actuator gain before changing controller structure."
+        },
+        {
+          "target": "low_damping_high_gain / hybrid_guardrail",
+          "kind": "benchmark_case",
+          "severity": "high",
+          "owner": "controls-and-policy",
+          "priority_score": 85.96110995332191,
+          "gap_score": 42.980554976660954,
+          "effort": {
+            "points": 5,
+            "size": "large"
+          },
+          "blocking": true,
+          "deliverable": "Create a reproducible incident bundle and attach trace evidence.",
+          "rationale": "Elevated benchmark risk in `low_damping_high_gain` for `hybrid_guardrail`.",
+          "recommended_action": "Increase joint damping and reduce actuator gain before changing controller structure."
+        },
+        {
+          "target": "noise_heavy / expert_pd",
+          "kind": "benchmark_case",
+          "severity": "medium",
+          "owner": "controls-and-policy",
+          "priority_score": 54.43645713085175,
+          "gap_score": 27.218228565425875,
+          "effort": {
+            "points": 4,
+            "size": "medium"
+          },
+          "blocking": false,
+          "deliverable": "Create a reproducible incident bundle and attach trace evidence.",
+          "rationale": "Elevated benchmark risk in `noise_heavy` for `expert_pd`.",
+          "recommended_action": "Add observation filtering or slightly lower controller aggressiveness under noisy sensing."
+        },
+        {
+          "target": "noise_heavy / hybrid_guardrail",
+          "kind": "benchmark_case",
+          "severity": "medium",
+          "owner": "controls-and-policy",
+          "priority_score": 54.40973871573384,
+          "gap_score": 27.204869357866915,
+          "effort": {
+            "points": 4,
+            "size": "medium"
+          },
+          "blocking": false,
+          "deliverable": "Create a reproducible incident bundle and attach trace evidence.",
+          "rationale": "Elevated benchmark risk in `noise_heavy` for `hybrid_guardrail`.",
+          "recommended_action": "Add observation filtering or slightly lower controller aggressiveness under noisy sensing."
+        },
+        {
+          "target": "delay_heavy / expert_pd",
+          "kind": "benchmark_case",
+          "severity": "medium",
+          "owner": "controls-and-policy",
+          "priority_score": 54.34715297184783,
+          "gap_score": 27.173576485923913,
+          "effort": {
+            "points": 4,
+            "size": "medium"
+          },
+          "blocking": false,
+          "deliverable": "Create a reproducible incident bundle and attach trace evidence.",
+          "rationale": "Elevated benchmark risk in `delay_heavy` for `expert_pd`.",
+          "recommended_action": "Increase control frequency or use a more delay-tolerant guarded policy blend."
+        }
+      ]
+    }
+  ]
+}

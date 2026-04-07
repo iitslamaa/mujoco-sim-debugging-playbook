@@ -37,6 +37,7 @@ def main() -> None:
     escalation = _read_json(ROOT / "outputs" / "escalation" / "escalation_matrix.json")
     support_ops = _read_json(ROOT / "outputs" / "support_ops" / "support_ops.json")
     support_gaps = _read_json(ROOT / "outputs" / "support_gaps" / "support_gaps.json")
+    workstreams = _read_json(ROOT / "outputs" / "workstreams" / "workstream_plan.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -103,6 +104,7 @@ def main() -> None:
         "escalation": escalation,
         "support_ops": support_ops,
         "support_gaps": support_gaps,
+        "workstreams": workstreams,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -133,6 +135,7 @@ def main() -> None:
             "escalation_markdown": "outputs/escalation/escalation_matrix.md",
             "support_ops_markdown": "outputs/support_ops/support_ops.md",
             "support_gaps_markdown": "outputs/support_gaps/support_gaps.md",
+            "workstream_plan_markdown": "outputs/workstreams/workstream_plan.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))
