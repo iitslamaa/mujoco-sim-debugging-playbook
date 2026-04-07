@@ -108,6 +108,7 @@ __all__ = [
     "support",
     "support_case_catalog",
     "support_command_catalog",
+    "support_triage_reply",
     "support_session_note",
     "support_intake_checklist",
     "support_gaps",
