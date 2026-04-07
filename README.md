@@ -99,6 +99,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Environment doctor that checks local setup, tools, and container readiness
 - Debug-bundle collector for packaging reproduction artifacts and handoff evidence
 - Container smoke runner for validating the Docker path end to end
+- Compatibility report for Python, MuJoCo, and core tooling readiness
 - GitHub issue templates and CI for public-repo readiness
 
 ![PyTorch policy rollout](outputs/media/reacher_demo.gif)
@@ -201,6 +202,7 @@ make artifact-packet
 make bootstrap-env
 make debug-bundle
 make container-smoke
+make compatibility
 make environment-doctor
 make dashboard-snapshot
 make dashboard-snapshot-history
@@ -296,6 +298,14 @@ bash scripts/run_container_smoke.sh
 ```
 
 This builds the Docker image and runs the smoke test inside the container workflow.
+
+## Generate a compatibility report
+
+```bash
+python scripts/generate_compatibility_report.py
+```
+
+This summarizes whether the current environment matches the expected Python, MuJoCo, Docker, and GitHub CLI surface.
 
 ## Train a PyTorch policy
 
@@ -1020,6 +1030,7 @@ This writes:
 - [environment-doctor-guide.md](/Users/lamayassine/mujoco/docs/environment-doctor-guide.md)
 - [debug-bundle-guide.md](/Users/lamayassine/mujoco/docs/debug-bundle-guide.md)
 - [container-smoke-guide.md](/Users/lamayassine/mujoco/docs/container-smoke-guide.md)
+- [compatibility-guide.md](/Users/lamayassine/mujoco/docs/compatibility-guide.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
 - [dashboard-snapshot-priorities-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-priorities-guide.md)

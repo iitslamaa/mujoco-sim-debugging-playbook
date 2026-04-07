@@ -47,6 +47,7 @@ __all__ = [
     "briefing_note",
     "capacity",
     "case_studies",
+    "compatibility",
     "config",
     "controller",
     "dependency_map",

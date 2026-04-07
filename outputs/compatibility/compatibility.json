@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "status": "warn",
+    "check_count": 4,
+    "pass_count": 3,
+    "warn_count": 1
+  },
+  "checks": [
+    {
+      "name": "python_supported",
+      "status": "pass",
+      "detail": "Detected Python 3.10.2"
+    },
+    {
+      "name": "mujoco_detected",
+      "status": "pass",
+      "detail": "Detected MuJoCo 3.6.0"
+    },
+    {
+      "name": "docker_available",
+      "status": "warn",
+      "detail": "Docker not detected"
+    },
+    {
+      "name": "gh_available",
+      "status": "pass",
+      "detail": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    }
+  ]
+}
