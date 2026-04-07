@@ -18,6 +18,7 @@ __all__ = [
     "learning",
     "knowledge_base",
     "metrics",
+    "owner_alerts",
     "ops_review",
     "plot",
     "provenance",
