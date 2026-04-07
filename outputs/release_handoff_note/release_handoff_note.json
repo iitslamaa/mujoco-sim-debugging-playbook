@@ -1,0 +1,9 @@
+{
+  "summary": {
+    "status": "warn",
+    "blocker_count": 3,
+    "matrix_row_count": 2
+  },
+  "next_owner": "release-review",
+  "note": "Clear environment and release blockers before shipping."
+}
