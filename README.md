@@ -104,6 +104,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Docker context report for base image and CLI visibility
 - Issue template audit for support-request and bug-report completeness
 - Toolchain inventory for quick local runtime and CLI inspection
+- Support case catalog for scanning documented repro narratives
 - Repro inventory that enumerates documented support cases and evidence paths
 - GitHub issue templates and CI for public-repo readiness
 
@@ -212,6 +213,7 @@ make dependency-snapshot
 make docker-context
 make issue-template-audit
 make toolchain-inventory
+make support-case-catalog
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -348,6 +350,14 @@ python scripts/generate_toolchain_inventory.py
 ```
 
 This records the main runtime and CLI versions captured in the current environment report.
+
+## Generate a support case catalog
+
+```bash
+python scripts/generate_support_case_catalog.py
+```
+
+This lists the currently documented support cases and their titles.
 
 ## Generate a repro inventory
 
@@ -1085,6 +1095,7 @@ This writes:
 - [docker-context-guide.md](/Users/lamayassine/mujoco/docs/docker-context-guide.md)
 - [issue-template-audit-guide.md](/Users/lamayassine/mujoco/docs/issue-template-audit-guide.md)
 - [toolchain-inventory-guide.md](/Users/lamayassine/mujoco/docs/toolchain-inventory-guide.md)
+- [support-case-catalog-guide.md](/Users/lamayassine/mujoco/docs/support-case-catalog-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
