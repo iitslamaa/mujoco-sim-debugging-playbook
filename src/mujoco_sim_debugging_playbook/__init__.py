@@ -1,6 +1,7 @@
 """MuJoCo simulation debugging playbook."""
 
 __all__ = [
+    "action_register",
     "anomaly",
     "backlog_aging",
     "benchmark",
