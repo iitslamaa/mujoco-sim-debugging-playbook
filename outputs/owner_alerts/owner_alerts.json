@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "count": 1
+  },
+  "alerts": [
+    {
+      "owner": "controls-and-policy",
+      "severity": "high",
+      "message": "controls-and-policy has 2 breaches and 3 at-risk items.",
+      "targets": [
+        "low_damping_high_gain / expert_pd",
+        "low_damping_high_gain / hybrid_guardrail",
+        "noise_heavy / expert_pd"
+      ]
+    }
+  ]
+}
