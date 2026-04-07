@@ -92,6 +92,7 @@ __all__ = [
     "support_response_template",
     "risk_register",
     "release_notes",
+    "release_dry_run",
     "release_checklist",
     "release_blockers",
     "release_matrix",
