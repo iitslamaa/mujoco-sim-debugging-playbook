@@ -2,6 +2,7 @@
 
 __all__ = [
     "benchmark",
+    "case_studies",
     "config",
     "controller",
     "experiment",

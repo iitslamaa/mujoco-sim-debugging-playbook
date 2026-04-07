@@ -134,6 +134,19 @@ async function main() {
   } else {
     randomizationBox.textContent = "Domain-randomization artifacts have not been generated yet.";
   }
+
+  const caseStudyLinks = document.getElementById("case-study-links");
+  const caseStudies = data.case_studies || {};
+  Object.entries(caseStudies).forEach(([name, path]) => {
+    const a = document.createElement("a");
+    a.href = `../${path}`;
+    a.textContent = name.replaceAll("_", " ");
+    a.target = "_blank";
+    caseStudyLinks.appendChild(a);
+  });
+  if (data.artifacts?.case_study_image) {
+    document.getElementById("case-study-image").src = `../${data.artifacts.case_study_image}`;
+  }
 }
 
 main();

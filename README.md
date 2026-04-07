@@ -41,6 +41,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Static dashboard for browsing artifacts, environment details, and support cases
 - Multi-controller benchmark comparing expert, learned, and guarded hybrid control
 - Domain-randomization evaluation that measures policy robustness under changing physics
+- Automated case-study generation that turns experiment outputs into polished narratives
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -96,6 +97,7 @@ make train-rl
 make eval-rl
 make benchmark
 make randomization
+make case-studies
 make demo-gif
 make dashboard
 ```
@@ -192,6 +194,14 @@ python scripts/run_domain_randomization.py
 
 This evaluates controllers under episode-to-episode randomized damping, friction, actuator gain, observation noise, and control delay.
 
+## Generate a case study
+
+```bash
+python scripts/generate_case_studies.py
+```
+
+This produces a higher-level writeup and summary visual from the benchmark and domain-randomization outputs.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -215,6 +225,7 @@ This writes:
 - [diagnostics-guide.md](/Users/lamayassine/mujoco/docs/diagnostics-guide.md)
 - [dashboard/index.html](/Users/lamayassine/mujoco/dashboard/index.html)
 - [learning-guide.md](/Users/lamayassine/mujoco/docs/learning-guide.md)
+- [case-study-guide.md](/Users/lamayassine/mujoco/docs/case-study-guide.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
 - [support_request.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/support_request.yml)
 - [ci.yml](/Users/lamayassine/mujoco/.github/workflows/ci.yml)
@@ -290,6 +301,14 @@ The repo also evaluates how controllers generalize when simulator parameters shi
 - control delay is randomized
 
 This gives the project a stronger robustness and sim-to-real flavored evaluation story.
+
+## Generated case studies
+
+The repo can also synthesize raw experiment outputs into polished summary artifacts:
+
+- a Markdown case study
+- a summary graphic for quick scanning
+- reusable conclusions grounded in benchmark and randomization results
 
 ## Key findings to look for
 

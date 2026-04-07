@@ -2000,6 +2000,9 @@
     "torch_checkpoint": "/Users/lamayassine/mujoco/outputs/learning/training/policy.pt",
     "rl_checkpoint": "/Users/lamayassine/mujoco/outputs/rl/training/reinforce_policy.pt"
   },
+  "case_studies": {
+    "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
+  },
   "support_cases": [
     {
       "name": "actuator_gain_overshoot",
@@ -2017,6 +2020,7 @@
     "diagnostics_markdown": "outputs/diagnostics/diagnostics.md",
     "support_case_markdown": "outputs/support_cases/actuator_gain_overshoot.md",
     "benchmark_report": "outputs/controller_benchmark/report.md",
-    "randomization_report": "outputs/domain_randomization/report.md"
+    "randomization_report": "outputs/domain_randomization/report.md",
+    "case_study_image": "outputs/case_studies/controller_robustness_story.png"
   }
 }

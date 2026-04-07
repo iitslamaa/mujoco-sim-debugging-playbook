@@ -24,6 +24,7 @@ def main() -> None:
     rl_evaluation = _read_json(ROOT / "outputs" / "rl" / "evaluation" / "summary.json")
     benchmark_summary = _read_json(ROOT / "outputs" / "controller_benchmark" / "benchmark_summary.json")
     randomization_summary = _read_json(ROOT / "outputs" / "domain_randomization" / "evaluation_rows.json")
+    case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
         support_cases.append(
@@ -60,6 +61,9 @@ def main() -> None:
         "rl_evaluation": rl_evaluation,
         "benchmark_summary": benchmark_summary,
         "randomization_summary": randomization_summary,
+        "case_studies": {
+            "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
+        } if case_study_exists else None,
         "support_cases": support_cases,
         "artifacts": {
             "demo_gif": "outputs/media/reacher_demo.gif",
@@ -69,6 +73,7 @@ def main() -> None:
             "support_case_markdown": "outputs/support_cases/actuator_gain_overshoot.md",
             "benchmark_report": "outputs/controller_benchmark/report.md",
             "randomization_report": "outputs/domain_randomization/report.md",
+            "case_study_image": "outputs/case_studies/controller_robustness_story.png",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))
