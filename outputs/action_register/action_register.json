@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "count": 3
+  },
+  "actions": [
+    {
+      "target": "low_damping_high_gain / expert_pd",
+      "owner": "simulation-debugging",
+      "action": "Increase joint damping and reduce actuator gain before changing controller structure.",
+      "reason": "Current owner has a breaching item and should offload work to keep the queue moving.",
+      "priority": "high"
+    },
+    {
+      "target": "low_damping_high_gain / hybrid_guardrail",
+      "owner": "simulation-debugging",
+      "action": "Increase joint damping and reduce actuator gain before changing controller structure.",
+      "reason": "Current owner has a breaching item and should offload work to keep the queue moving.",
+      "priority": "high"
+    },
+    {
+      "target": "delay_heavy / expert_pd",
+      "owner": "simulation-debugging",
+      "action": "Increase control frequency or use a more delay-tolerant guarded policy blend.",
+      "reason": "This item is at risk and benefits from parallel evidence gathering.",
+      "priority": "medium"
+    }
+  ]
+}
