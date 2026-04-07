@@ -1174,6 +1174,27 @@ async function main() {
   } else {
     dashboardSnapshotOwnerLoadSummary.textContent = "Dashboard snapshot owner load has not been generated yet.";
   }
+
+  const dashboardSnapshotReadinessGateSummary = document.getElementById("dashboard-snapshot-readiness-gate-summary");
+  if (data.dashboard_snapshot_readiness_gate?.summary) {
+    const summary = data.dashboard_snapshot_readiness_gate.summary;
+    const items = [
+      `<p><strong>Status:</strong> ${summary.status}</p>`,
+      `<p><strong>Owner:</strong> ${summary.owner}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Failures:</strong> ${summary.failure_count}</p>`,
+      `<p><strong>Warnings:</strong> ${summary.warning_count}</p>`,
+    ];
+    (data.dashboard_snapshot_readiness_gate.failures || []).forEach((failure) => {
+      items.push(`<p>${failure}</p>`);
+    });
+    (data.dashboard_snapshot_readiness_gate.warnings || []).forEach((warning) => {
+      items.push(`<p>${warning}</p>`);
+    });
+    dashboardSnapshotReadinessGateSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotReadinessGateSummary.textContent = "Dashboard snapshot readiness gate has not been generated yet.";
+  }
 }
 
 main();

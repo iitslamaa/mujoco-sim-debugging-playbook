@@ -30,6 +30,7 @@ __all__ = [
     "dashboard_snapshot_resolution_plan",
     "dashboard_snapshot_execution_board",
     "dashboard_snapshot_owner_load",
+    "dashboard_snapshot_readiness_gate",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

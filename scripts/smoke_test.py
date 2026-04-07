@@ -119,6 +119,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_dashboard_snapshot_resolution_plan.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot_execution_board.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot_owner_load.py"], env=env)
+    run([sys.executable, "scripts/generate_dashboard_snapshot_readiness_gate.py"], env=env)
     run(
         [
             sys.executable,
@@ -308,6 +309,9 @@ def main() -> None:
     dashboard_snapshot_owner_load = ROOT / "outputs" / "dashboard_snapshots" / "owner_load.json"
     if not dashboard_snapshot_owner_load.exists():
         raise SystemExit(f"Expected dashboard snapshot owner load at {dashboard_snapshot_owner_load}")
+    dashboard_snapshot_readiness_gate = ROOT / "outputs" / "dashboard_snapshots" / "readiness_gate.json"
+    if not dashboard_snapshot_readiness_gate.exists():
+        raise SystemExit(f"Expected dashboard snapshot readiness gate at {dashboard_snapshot_readiness_gate}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

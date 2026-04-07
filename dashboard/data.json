@@ -5891,6 +5891,22 @@
       "warning_alert_count": 2
     }
   },
+  "dashboard_snapshot_readiness_gate": {
+    "summary": {
+      "status": "fail",
+      "owner": "dashboard-stabilization",
+      "failure_count": 2,
+      "warning_count": 1,
+      "current_status": "fail"
+    },
+    "failures": [
+      "Closeout has not reached ready_to_close.",
+      "Critical alert pressure remains active."
+    ],
+    "warnings": [
+      "Planned follow-up workload is still elevated."
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5972,6 +5988,7 @@
     "dashboard_snapshot_alert_packet_markdown": "outputs/dashboard_snapshots/alert_packet.md",
     "dashboard_snapshot_resolution_plan_markdown": "outputs/dashboard_snapshots/resolution_plan.md",
     "dashboard_snapshot_execution_board_markdown": "outputs/dashboard_snapshots/execution_board.md",
-    "dashboard_snapshot_owner_load_markdown": "outputs/dashboard_snapshots/owner_load.md"
+    "dashboard_snapshot_owner_load_markdown": "outputs/dashboard_snapshots/owner_load.md",
+    "dashboard_snapshot_readiness_gate_markdown": "outputs/dashboard_snapshots/readiness_gate.md"
   }
 }

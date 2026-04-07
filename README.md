@@ -209,6 +209,7 @@ make dashboard-snapshot-alert-packet
 make dashboard-snapshot-resolution-plan
 make dashboard-snapshot-execution-board
 make dashboard-snapshot-owner-load
+make dashboard-snapshot-readiness-gate
 make case-studies
 make snapshot
 make regression-diff
@@ -844,6 +845,14 @@ python scripts/generate_dashboard_snapshot_owner_load.py
 
 This summarizes the current execution and alert pressure carried by the active owner.
 
+## Build dashboard snapshot readiness gate
+
+```bash
+python scripts/generate_dashboard_snapshot_readiness_gate.py
+```
+
+This turns the current owner-load and closeout state into a pass, warn, or fail readiness verdict.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -901,6 +910,7 @@ This writes:
 - [dashboard-snapshot-resolution-plan-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-resolution-plan-guide.md)
 - [dashboard-snapshot-execution-board-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-execution-board-guide.md)
 - [dashboard-snapshot-owner-load-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-owner-load-guide.md)
+- [dashboard-snapshot-readiness-gate-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-readiness-gate-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
