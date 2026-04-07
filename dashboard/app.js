@@ -739,6 +739,25 @@ async function main() {
   } else {
     artifactActionsSummary.textContent = "Artifact actions have not been generated yet.";
   }
+
+  const artifactAlertsSummary = document.getElementById("artifact-alerts-summary");
+  if (data.artifact_alerts?.summary) {
+    const summary = data.artifact_alerts.summary;
+    const items = [
+      `<p><strong>Alerts:</strong> ${summary.alert_count}</p>`,
+      `<p><strong>Critical:</strong> ${summary.critical_count}</p>`,
+      `<p><strong>Warning:</strong> ${summary.warning_count}</p>`,
+      `<p><strong>Info:</strong> ${summary.info_count}</p>`,
+    ];
+    (data.artifact_alerts.alerts || []).forEach((alert) => {
+      items.push(
+        `<p><strong>${alert.severity}</strong> ${alert.title}: ${alert.message}</p>`
+      );
+    });
+    artifactAlertsSummary.innerHTML = items.join("");
+  } else {
+    artifactAlertsSummary.textContent = "Artifact alerts have not been generated yet.";
+  }
 }
 
 main();

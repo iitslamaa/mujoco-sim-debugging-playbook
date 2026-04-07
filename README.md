@@ -84,6 +84,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact executive summaries that condense the whole artifact-health stack into one status note
 - Artifact history that shows whether artifact health is improving across past, current, and projected states
 - Artifact action registers that turn the maintenance stack into a prioritized next-step queue
+- Artifact alerts that emit short operator-style notifications from the artifact-health stack
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -178,6 +179,7 @@ make artifact-capacity
 make artifact-exec-summary
 make artifact-history
 make artifact-actions
+make artifact-alerts
 make case-studies
 make snapshot
 make regression-diff
@@ -637,6 +639,14 @@ python scripts/generate_artifact_actions.py
 
 This synthesizes the artifact stack into a prioritized list of next actions.
 
+## Build artifact alerts
+
+```bash
+python scripts/generate_artifact_alerts.py
+```
+
+This converts the artifact stack into short notifications for failing readiness, breach phases, overloaded owners, and immediate next actions.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -672,6 +682,7 @@ This writes:
 - [artifact-exec-summary-guide.md](/Users/lamayassine/mujoco/docs/artifact-exec-summary-guide.md)
 - [artifact-history-guide.md](/Users/lamayassine/mujoco/docs/artifact-history-guide.md)
 - [artifact-actions-guide.md](/Users/lamayassine/mujoco/docs/artifact-actions-guide.md)
+- [artifact-alerts-guide.md](/Users/lamayassine/mujoco/docs/artifact-alerts-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

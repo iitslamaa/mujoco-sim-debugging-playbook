@@ -8,6 +8,7 @@ __all__ = [
     "artifact_exec_summary",
     "artifact_history",
     "artifact_actions",
+    "artifact_alerts",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

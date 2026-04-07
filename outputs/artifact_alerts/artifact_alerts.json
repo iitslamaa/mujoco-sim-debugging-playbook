@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "alert_count": 5,
+    "critical_count": 2,
+    "warning_count": 1,
+    "info_count": 2
+  },
+  "alerts": [
+    {
+      "severity": "critical",
+      "title": "Artifact readiness is failing",
+      "message": "Current artifact status is fail with 5 failures."
+    },
+    {
+      "severity": "critical",
+      "title": "Recovery phase in breach",
+      "message": "Clear support report bundle is in breach and due on 2026-04-15."
+    },
+    {
+      "severity": "warning",
+      "title": "Owner overloaded",
+      "message": "artifact-reporting is overloaded with 5 commands."
+    },
+    {
+      "severity": "info",
+      "title": "Next action: P0",
+      "message": "artifact-integrity should take outputs/support_readiness/support_readiness.json in phase Clear support report bundle."
+    },
+    {
+      "severity": "info",
+      "title": "Next action: P0",
+      "message": "artifact-integrity should take outputs/scenario_plan/scenario_plan.json in phase Clear support report bundle."
+    }
+  ]
+}

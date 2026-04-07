@@ -106,5 +106,7 @@ jobs:
         run: python scripts/generate_artifact_history.py
       - name: Build artifact actions
         run: python scripts/generate_artifact_actions.py
+      - name: Build artifact alerts
+        run: python scripts/generate_artifact_alerts.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py
