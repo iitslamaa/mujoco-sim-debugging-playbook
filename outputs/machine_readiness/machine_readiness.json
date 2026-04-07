@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "status": "warn",
+    "system": "Darwin",
+    "machine": "arm64",
+    "warning_count": 2
+  },
+  "warnings": [
+    "docker_cli",
+    "docker_available"
+  ]
+}
