@@ -232,6 +232,7 @@ make machine-profile
 make bundle-verifier
 make release-matrix
 make machine-readiness
+make bundle-quality
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -1181,6 +1182,7 @@ This writes:
 - [bundle-verifier-guide.md](/Users/lamayassine/mujoco/docs/bundle-verifier-guide.md)
 - [release-matrix-guide.md](/Users/lamayassine/mujoco/docs/release-matrix-guide.md)
 - [machine-readiness-guide.md](/Users/lamayassine/mujoco/docs/machine-readiness-guide.md)
+- [bundle-quality-guide.md](/Users/lamayassine/mujoco/docs/bundle-quality-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [support-workflow-index.md](/Users/lamayassine/mujoco/docs/support-workflow-index.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
