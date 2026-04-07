@@ -211,6 +211,7 @@ make dashboard-snapshot-execution-board
 make dashboard-snapshot-owner-load
 make dashboard-snapshot-readiness-gate
 make dashboard-snapshot-recovery-forecast
+make dashboard-snapshot-milestones
 make case-studies
 make snapshot
 make regression-diff
@@ -862,6 +863,14 @@ python scripts/generate_dashboard_snapshot_recovery_forecast.py
 
 This forecasts the next likely readiness state from the current gate and active plan.
 
+## Build dashboard snapshot milestones
+
+```bash
+python scripts/generate_dashboard_snapshot_milestones.py
+```
+
+This expresses the current, next, and terminal states as a compact milestone progression.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -921,6 +930,7 @@ This writes:
 - [dashboard-snapshot-owner-load-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-owner-load-guide.md)
 - [dashboard-snapshot-readiness-gate-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-readiness-gate-guide.md)
 - [dashboard-snapshot-recovery-forecast-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-recovery-forecast-guide.md)
+- [dashboard-snapshot-milestones-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-milestones-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

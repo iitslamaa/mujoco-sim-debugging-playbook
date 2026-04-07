@@ -1213,6 +1213,24 @@ async function main() {
   } else {
     dashboardSnapshotRecoveryForecastSummary.textContent = "Dashboard snapshot recovery forecast has not been generated yet.";
   }
+
+  const dashboardSnapshotMilestonesSummary = document.getElementById("dashboard-snapshot-milestones-summary");
+  if (data.dashboard_snapshot_milestones?.summary) {
+    const summary = data.dashboard_snapshot_milestones.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Projected next status:</strong> ${summary.projected_next_status}</p>`,
+      `<p><strong>Terminal status:</strong> ${summary.terminal_status}</p>`,
+      `<p><strong>Confidence:</strong> ${summary.confidence}</p>`,
+      `<p><strong>Milestones:</strong> ${summary.milestone_count}</p>`,
+    ];
+    (data.dashboard_snapshot_milestones.milestones || []).forEach((milestone) => {
+      items.push(`<p><strong>${milestone.label}</strong>: ${milestone.status}</p>`);
+    });
+    dashboardSnapshotMilestonesSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotMilestonesSummary.textContent = "Dashboard snapshot milestones have not been generated yet.";
+  }
 }
 
 main();

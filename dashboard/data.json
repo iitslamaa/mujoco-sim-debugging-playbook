@@ -5921,6 +5921,29 @@
       "Critical alert count is 1."
     ]
   },
+  "dashboard_snapshot_milestones": {
+    "summary": {
+      "milestone_count": 3,
+      "current_status": "fail",
+      "projected_next_status": "warn",
+      "terminal_status": "pass",
+      "confidence": "medium"
+    },
+    "milestones": [
+      {
+        "label": "Current",
+        "status": "fail"
+      },
+      {
+        "label": "Next",
+        "status": "warn"
+      },
+      {
+        "label": "Terminal",
+        "status": "pass"
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -6004,6 +6027,7 @@
     "dashboard_snapshot_execution_board_markdown": "outputs/dashboard_snapshots/execution_board.md",
     "dashboard_snapshot_owner_load_markdown": "outputs/dashboard_snapshots/owner_load.md",
     "dashboard_snapshot_readiness_gate_markdown": "outputs/dashboard_snapshots/readiness_gate.md",
-    "dashboard_snapshot_recovery_forecast_markdown": "outputs/dashboard_snapshots/recovery_forecast.md"
+    "dashboard_snapshot_recovery_forecast_markdown": "outputs/dashboard_snapshots/recovery_forecast.md",
+    "dashboard_snapshot_milestones_markdown": "outputs/dashboard_snapshots/milestones.md"
   }
 }

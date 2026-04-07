@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "milestone_count": 3,
+    "current_status": "fail",
+    "projected_next_status": "warn",
+    "terminal_status": "pass",
+    "confidence": "medium"
+  },
+  "milestones": [
+    {
+      "label": "Current",
+      "status": "fail"
+    },
+    {
+      "label": "Next",
+      "status": "warn"
+    },
+    {
+      "label": "Terminal",
+      "status": "pass"
+    }
+  ]
+}

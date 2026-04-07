@@ -82,6 +82,7 @@ def main() -> None:
     dashboard_snapshot_owner_load = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "owner_load.json")
     dashboard_snapshot_readiness_gate = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "readiness_gate.json")
     dashboard_snapshot_recovery_forecast = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "recovery_forecast.json")
+    dashboard_snapshot_milestones = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "milestones.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -193,6 +194,7 @@ def main() -> None:
         "dashboard_snapshot_owner_load": dashboard_snapshot_owner_load,
         "dashboard_snapshot_readiness_gate": dashboard_snapshot_readiness_gate,
         "dashboard_snapshot_recovery_forecast": dashboard_snapshot_recovery_forecast,
+        "dashboard_snapshot_milestones": dashboard_snapshot_milestones,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -268,6 +270,7 @@ def main() -> None:
             "dashboard_snapshot_owner_load_markdown": "outputs/dashboard_snapshots/owner_load.md",
             "dashboard_snapshot_readiness_gate_markdown": "outputs/dashboard_snapshots/readiness_gate.md",
             "dashboard_snapshot_recovery_forecast_markdown": "outputs/dashboard_snapshots/recovery_forecast.md",
+            "dashboard_snapshot_milestones_markdown": "outputs/dashboard_snapshots/milestones.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))
