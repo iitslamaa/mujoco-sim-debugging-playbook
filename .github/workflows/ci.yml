@@ -102,5 +102,7 @@ jobs:
         run: python scripts/generate_artifact_capacity.py
       - name: Build artifact executive summary
         run: python scripts/generate_artifact_exec_summary.py
+      - name: Build artifact history
+        run: python scripts/generate_artifact_history.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

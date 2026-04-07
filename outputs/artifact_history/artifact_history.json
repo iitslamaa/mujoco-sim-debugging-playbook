@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "snapshot_count": 4,
+    "current_status": "fail",
+    "projected_terminal_status": "pass",
+    "status_direction": "improving",
+    "failure_direction": "improving",
+    "top_risk_direction": "improving"
+  },
+  "snapshots": [
+    {
+      "name": "baseline_backlog",
+      "date": "2026-03-30",
+      "status": "fail",
+      "failure_count": 6,
+      "breach_count": 2,
+      "overloaded_owner_count": 2,
+      "top_risk_score": 1.7
+    },
+    {
+      "name": "current_state",
+      "date": "2026-04-06",
+      "status": "fail",
+      "failure_count": 5,
+      "breach_count": 1,
+      "overloaded_owner_count": 1,
+      "top_risk_score": 1.551
+    },
+    {
+      "name": "support_sprint_projection",
+      "date": "2026-04-09",
+      "status": "fail",
+      "failure_count": 1,
+      "breach_count": 0,
+      "overloaded_owner_count": 0,
+      "top_risk_score": 1.358
+    },
+    {
+      "name": "full_refresh_projection",
+      "date": "2026-04-13",
+      "status": "pass",
+      "failure_count": 0,
+      "breach_count": 0,
+      "overloaded_owner_count": 0,
+      "top_risk_score": 0.0
+    }
+  ],
+  "trend_summary": {
+    "status_direction": "improving",
+    "failure_direction": "improving",
+    "breach_direction": "improving",
+    "top_risk_direction": "improving"
+  }
+}

@@ -82,6 +82,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact delivery forecasts that flag which recovery phases are most likely to slip
 - Artifact capacity plans that recommend how to rebalance recovery work to reduce breach risk
 - Artifact executive summaries that condense the whole artifact-health stack into one status note
+- Artifact history that shows whether artifact health is improving across past, current, and projected states
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -174,6 +175,7 @@ make artifact-recovery
 make artifact-delivery
 make artifact-capacity
 make artifact-exec-summary
+make artifact-history
 make case-studies
 make snapshot
 make regression-diff
@@ -617,6 +619,14 @@ python scripts/generate_artifact_exec_summary.py
 
 This condenses readiness, maintenance risk, delivery risk, and capacity pressure into one leadership-style artifact summary.
 
+## Build artifact history
+
+```bash
+python scripts/generate_artifact_history.py
+```
+
+This turns the latest executive summary plus recovery projections into a small trend view for artifact-health direction.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -650,6 +660,7 @@ This writes:
 - [artifact-delivery-guide.md](/Users/lamayassine/mujoco/docs/artifact-delivery-guide.md)
 - [artifact-capacity-guide.md](/Users/lamayassine/mujoco/docs/artifact-capacity-guide.md)
 - [artifact-exec-summary-guide.md](/Users/lamayassine/mujoco/docs/artifact-exec-summary-guide.md)
+- [artifact-history-guide.md](/Users/lamayassine/mujoco/docs/artifact-history-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

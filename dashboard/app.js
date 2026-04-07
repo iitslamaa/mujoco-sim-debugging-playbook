@@ -699,6 +699,27 @@ async function main() {
   } else {
     artifactExecSummary.textContent = "Artifact executive summary has not been generated yet.";
   }
+
+  const artifactHistorySummary = document.getElementById("artifact-history-summary");
+  if (data.artifact_history?.summary) {
+    const summary = data.artifact_history.summary;
+    const items = [
+      `<p><strong>Snapshots:</strong> ${summary.snapshot_count}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Status direction:</strong> ${summary.status_direction}</p>`,
+      `<p><strong>Failure direction:</strong> ${summary.failure_direction}</p>`,
+      `<p><strong>Top risk direction:</strong> ${summary.top_risk_direction}</p>`,
+    ];
+    (data.artifact_history.snapshots || []).forEach((snapshot) => {
+      items.push(
+        `<p><strong>${snapshot.name}</strong>: ${snapshot.status}, ${snapshot.failure_count} failures, risk ${Number(snapshot.top_risk_score).toFixed(3)}</p>`
+      );
+    });
+    artifactHistorySummary.innerHTML = items.join("");
+  } else {
+    artifactHistorySummary.textContent = "Artifact history has not been generated yet.";
+  }
 }
 
 main();
