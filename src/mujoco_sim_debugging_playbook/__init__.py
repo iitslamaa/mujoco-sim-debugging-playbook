@@ -50,6 +50,7 @@ __all__ = [
     "config",
     "controller",
     "dependency_map",
+    "doctor",
     "documentation_audit",
     "experiment",
     "environment",

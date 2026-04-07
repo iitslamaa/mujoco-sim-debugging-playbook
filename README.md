@@ -95,6 +95,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Dashboard snapshot history that tracks how preserved dashboard summaries change over time
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
+- Environment doctor that checks local setup, tools, and container readiness
 - GitHub issue templates and CI for public-repo readiness
 
 ![PyTorch policy rollout](outputs/media/reacher_demo.gif)
@@ -194,6 +195,7 @@ make artifact-review-note
 make artifact-closeout
 make artifact-scorecard
 make artifact-packet
+make environment-doctor
 make dashboard-snapshot
 make dashboard-snapshot-history
 make dashboard-snapshot-drift
@@ -256,6 +258,14 @@ python scripts/run_issue_case.py --case actuator_gain_overshoot
 ```
 
 This generates a support-style Markdown response draft under `outputs/support_cases/` using the saved sweep summaries.
+
+## Run the environment doctor
+
+```bash
+python scripts/run_environment_doctor.py
+```
+
+This captures the current local setup, checks tool availability, and emits support-style setup recommendations under `outputs/environment_doctor/`.
 
 ## Train a PyTorch policy
 
@@ -976,6 +986,7 @@ This writes:
 - [dashboard-snapshot-readiness-gate-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-readiness-gate-guide.md)
 - [dashboard-snapshot-recovery-forecast-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-recovery-forecast-guide.md)
 - [dashboard-snapshot-milestones-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-milestones-guide.md)
+- [environment-doctor-guide.md](/Users/lamayassine/mujoco/docs/environment-doctor-guide.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
 - [dashboard-snapshot-priorities-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-priorities-guide.md)

@@ -65,6 +65,7 @@ def main() -> None:
     artifact_closeout = _read_json(ROOT / "outputs" / "artifact_closeout" / "artifact_closeout.json")
     artifact_scorecard = _read_json(ROOT / "outputs" / "artifact_scorecard" / "artifact_scorecard.json")
     artifact_packet = _read_json(ROOT / "outputs" / "artifact_packet" / "artifact_packet.json")
+    environment_doctor = _read_json(ROOT / "outputs" / "environment_doctor" / "doctor.json")
     dashboard_snapshot = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "latest.json")
     dashboard_snapshot_history = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "history.json")
     dashboard_snapshot_drift = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "drift.json")
@@ -182,6 +183,7 @@ def main() -> None:
         "artifact_closeout": artifact_closeout,
         "artifact_scorecard": artifact_scorecard,
         "artifact_packet": artifact_packet,
+        "environment_doctor": environment_doctor,
         "dashboard_snapshot": dashboard_snapshot,
         "dashboard_snapshot_history": dashboard_snapshot_history,
         "dashboard_snapshot_drift": dashboard_snapshot_drift,
@@ -263,6 +265,7 @@ def main() -> None:
             "artifact_closeout_markdown": "outputs/artifact_closeout/artifact_closeout.md",
             "artifact_scorecard_markdown": "outputs/artifact_scorecard/artifact_scorecard.md",
             "artifact_packet_markdown": "outputs/artifact_packet/artifact_packet.md",
+            "environment_doctor_markdown": "outputs/environment_doctor/doctor.md",
             "dashboard_snapshot_markdown": "outputs/dashboard_snapshots/latest.md",
             "dashboard_snapshot_history_markdown": "outputs/dashboard_snapshots/history.md",
             "dashboard_snapshot_drift_markdown": "outputs/dashboard_snapshots/drift.md",

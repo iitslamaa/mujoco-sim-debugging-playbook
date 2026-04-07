@@ -20,6 +20,25 @@ async function main() {
     envList.appendChild(li);
   });
 
+  const environmentDoctor = document.getElementById("environment-doctor-summary");
+  if (data.environment_doctor?.summary) {
+    const summary = data.environment_doctor.summary;
+    const lines = [
+      `<p><strong>Status:</strong> ${summary.status}</p>`,
+      `<p><strong>Checks:</strong> ${summary.check_count}</p>`,
+      `<p><strong>Warnings:</strong> ${summary.warning_count}</p>`,
+      `<p><strong>Failures:</strong> ${summary.failure_count}</p>`,
+      `<p><strong>Python:</strong> ${summary.python_version}</p>`,
+      `<p><strong>MuJoCo:</strong> ${summary.mujoco_version}</p>`,
+    ];
+    (data.environment_doctor.recommendations || []).slice(0, 2).forEach((item) => {
+      lines.push(`<p><strong>Recommendation:</strong> ${item}</p>`);
+    });
+    environmentDoctor.innerHTML = lines.join("");
+  } else {
+    environmentDoctor.textContent = "Environment doctor artifacts have not been generated yet.";
+  }
+
   const learning = document.getElementById("learning-summary");
   if (data.learning_training) {
     learning.innerHTML = `

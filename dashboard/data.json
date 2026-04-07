@@ -5507,6 +5507,7 @@
       ]
     }
   },
+  "environment_doctor": null,
   "dashboard_snapshot": {
     "name": "latest",
     "date": "2026-04-06",
@@ -6142,6 +6143,7 @@
     "artifact_closeout_markdown": "outputs/artifact_closeout/artifact_closeout.md",
     "artifact_scorecard_markdown": "outputs/artifact_scorecard/artifact_scorecard.md",
     "artifact_packet_markdown": "outputs/artifact_packet/artifact_packet.md",
+    "environment_doctor_markdown": "outputs/environment_doctor/doctor.md",
     "dashboard_snapshot_markdown": "outputs/dashboard_snapshots/latest.md",
     "dashboard_snapshot_history_markdown": "outputs/dashboard_snapshots/history.md",
     "dashboard_snapshot_drift_markdown": "outputs/dashboard_snapshots/drift.md",

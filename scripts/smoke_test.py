@@ -104,6 +104,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_artifact_closeout.py"], env=env)
     run([sys.executable, "scripts/generate_artifact_scorecard.py"], env=env)
     run([sys.executable, "scripts/generate_artifact_packet.py"], env=env)
+    run([sys.executable, "scripts/run_environment_doctor.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot_history.py"], env=env)
     run([sys.executable, "scripts/generate_dashboard_snapshot_drift.py"], env=env)
@@ -271,6 +272,9 @@ def main() -> None:
     artifact_packet = ROOT / "outputs" / "artifact_packet" / "artifact_packet.json"
     if not artifact_packet.exists():
         raise SystemExit(f"Expected artifact packet at {artifact_packet}")
+    environment_doctor = ROOT / "outputs" / "environment_doctor" / "doctor.json"
+    if not environment_doctor.exists():
+        raise SystemExit(f"Expected environment doctor report at {environment_doctor}")
     dashboard_snapshot = ROOT / "outputs" / "dashboard_snapshots" / "latest.json"
     if not dashboard_snapshot.exists():
         raise SystemExit(f"Expected dashboard snapshot at {dashboard_snapshot}")
