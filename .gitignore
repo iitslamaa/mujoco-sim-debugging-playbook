@@ -7,6 +7,9 @@ __pycache__/
 .DS_Store
 outputs/**/traces/
 outputs/**/episodes.csv
+outputs/learning/dataset/expert_traces/
+outputs/learning/dataset/expert_trace_plots/
+outputs/learning/dataset/imitation_dataset.npz
 dist/
 build/
 *.egg-info/

@@ -1,0 +1,105 @@
+{
+  "episodes": 24,
+  "num_samples": 4200,
+  "state_dim": 10,
+  "action_dim": 2,
+  "dataset_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/imitation_dataset.npz",
+  "trace_manifest": [
+    {
+      "episode": 0,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_000.json"
+    },
+    {
+      "episode": 1,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_001.json"
+    },
+    {
+      "episode": 2,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_002.json"
+    },
+    {
+      "episode": 3,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_003.json"
+    },
+    {
+      "episode": 4,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_004.json"
+    },
+    {
+      "episode": 5,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_005.json"
+    },
+    {
+      "episode": 6,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_006.json"
+    },
+    {
+      "episode": 7,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_007.json"
+    },
+    {
+      "episode": 8,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_008.json"
+    },
+    {
+      "episode": 9,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_009.json"
+    },
+    {
+      "episode": 10,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_010.json"
+    },
+    {
+      "episode": 11,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_011.json"
+    },
+    {
+      "episode": 12,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_012.json"
+    },
+    {
+      "episode": 13,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_013.json"
+    },
+    {
+      "episode": 14,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_014.json"
+    },
+    {
+      "episode": 15,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_015.json"
+    },
+    {
+      "episode": 16,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_016.json"
+    },
+    {
+      "episode": 17,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_017.json"
+    },
+    {
+      "episode": 18,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_018.json"
+    },
+    {
+      "episode": 19,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_019.json"
+    },
+    {
+      "episode": 20,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_020.json"
+    },
+    {
+      "episode": 21,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_021.json"
+    },
+    {
+      "episode": 22,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_022.json"
+    },
+    {
+      "episode": 23,
+      "trace_path": "/Users/lamayassine/mujoco/outputs/learning/dataset/expert_traces/episode_023.json"
+    }
+  ]
+}

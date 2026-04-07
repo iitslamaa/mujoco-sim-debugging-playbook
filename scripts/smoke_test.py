@@ -33,6 +33,40 @@ def main() -> None:
         ],
         env=env,
     )
+    run(
+        [
+            sys.executable,
+            "scripts/train_torch_policy.py",
+            "--dataset-episodes",
+            "4",
+            "--epochs",
+            "3",
+        ],
+        env=env,
+    )
+    run(
+        [
+            sys.executable,
+            "scripts/evaluate_torch_policy.py",
+            "--episodes",
+            "2",
+        ],
+        env=env,
+    )
+    run(
+        [
+            sys.executable,
+            "scripts/generate_demo_gif.py",
+            "--trace",
+            "outputs/learning/evaluation/traces/episode_000.json",
+            "--output",
+            "outputs/media/reacher_demo.gif",
+            "--title",
+            "PyTorch policy rollout",
+        ],
+        env=env,
+    )
+    run([sys.executable, "scripts/generate_dashboard.py"], env=env)
 
     summary_path = ROOT / "outputs" / "support_cases" / "actuator_gain_overshoot.md"
     if not summary_path.exists():
@@ -40,6 +74,15 @@ def main() -> None:
     diagnostics_path = ROOT / "outputs" / "diagnostics" / "diagnostics.md"
     if not diagnostics_path.exists():
         raise SystemExit(f"Expected diagnostics bundle at {diagnostics_path}")
+    learning_checkpoint = ROOT / "outputs" / "learning" / "training" / "policy.pt"
+    if not learning_checkpoint.exists():
+        raise SystemExit(f"Expected policy checkpoint at {learning_checkpoint}")
+    demo_gif = ROOT / "outputs" / "media" / "reacher_demo.gif"
+    if not demo_gif.exists():
+        raise SystemExit(f"Expected demo GIF at {demo_gif}")
+    dashboard_data = ROOT / "dashboard" / "data.json"
+    if not dashboard_data.exists():
+        raise SystemExit(f"Expected dashboard data at {dashboard_data}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

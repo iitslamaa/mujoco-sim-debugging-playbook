@@ -2,12 +2,12 @@ from __future__ import annotations
 
 from dataclasses import asdict, dataclass
 from importlib import resources
-from pathlib import Path
+from typing import Callable
 
 import mujoco
 import numpy as np
 
-from mujoco_sim_debugging_playbook.config import ControllerConfig, ExperimentConfig, SimulationConfig, TaskConfig
+from mujoco_sim_debugging_playbook.config import ControllerConfig, SimulationConfig, TaskConfig
 from mujoco_sim_debugging_playbook.controller import ReacherController
 from mujoco_sim_debugging_playbook.metrics import EpisodeMetrics, compute_episode_metrics
 
@@ -99,11 +99,11 @@ class ReacherSimulation:
     def _ee_xy(self) -> np.ndarray:
         return self.data.site_xpos[self.ee_site_id, :2].copy()
 
-    def run_episode(self, target_xy: np.ndarray, horizon_s: float) -> EpisodeResult:
-        self.reset(target_xy)
+    def _step(self) -> None:
+        mujoco.mj_step(self.model, self.data)
 
-        num_control_steps = max(1, int(horizon_s / self.sim_config.control_dt))
-        trace = EpisodeTrace(
+    def _empty_trace(self) -> EpisodeTrace:
+        return EpisodeTrace(
             target_xy=[],
             ee_xy=[],
             joint_angles=[],
@@ -114,6 +114,21 @@ class ReacherSimulation:
             observed_joint_velocities=[],
             error_deltas=[],
         )
+
+    def _finalize_episode(self, trace: EpisodeTrace) -> EpisodeResult:
+        metrics = compute_episode_metrics(
+            errors=np.asarray(trace.errors),
+            torques=np.asarray(trace.torques),
+            control_dt=self.sim_config.control_dt,
+            target_radius=self.task_config.target_radius,
+        )
+        return EpisodeResult(metrics=metrics, trace=trace)
+
+    def run_episode(self, target_xy: np.ndarray, horizon_s: float) -> EpisodeResult:
+        self.reset(target_xy)
+
+        num_control_steps = max(1, int(horizon_s / self.sim_config.control_dt))
+        trace = self._empty_trace()
 
         previous_error: float | None = None
         for _ in range(num_control_steps):
@@ -126,7 +141,7 @@ class ReacherSimulation:
             self.data.ctrl[:] = control_state.torque
 
             for _ in range(self.physics_steps_per_control):
-                mujoco.mj_step(self.model, self.data)
+                self._step()
 
             ee_xy = self._ee_xy()
             error = float(np.linalg.norm(target_xy - ee_xy))
@@ -141,13 +156,41 @@ class ReacherSimulation:
             trace.error_deltas.append(0.0 if previous_error is None else error - previous_error)
             previous_error = error
 
-        metrics = compute_episode_metrics(
-            errors=np.asarray(trace.errors),
-            torques=np.asarray(trace.torques),
-            control_dt=self.sim_config.control_dt,
-            target_radius=self.task_config.target_radius,
-        )
-        return EpisodeResult(metrics=metrics, trace=trace)
+        return self._finalize_episode(trace)
+
+    def run_episode_with_policy(
+        self,
+        target_xy: np.ndarray,
+        horizon_s: float,
+        torque_policy: Callable[[np.ndarray, np.ndarray, np.ndarray], np.ndarray],
+    ) -> EpisodeResult:
+        self.reset(target_xy)
+        num_control_steps = max(1, int(horizon_s / self.sim_config.control_dt))
+        trace = self._empty_trace()
+
+        previous_error: float | None = None
+        for _ in range(num_control_steps):
+            observed_qpos, observed_qvel = self._observe()
+            torque = np.asarray(torque_policy(observed_qpos, observed_qvel, target_xy), dtype=float)
+            self.data.ctrl[:] = torque
+
+            for _ in range(self.physics_steps_per_control):
+                self._step()
+
+            ee_xy = self._ee_xy()
+            error = float(np.linalg.norm(target_xy - ee_xy))
+            trace.target_xy.append(target_xy.tolist())
+            trace.ee_xy.append(ee_xy.tolist())
+            trace.joint_angles.append(self.data.qpos.copy().tolist())
+            trace.observed_joint_angles.append(observed_qpos.tolist())
+            trace.observed_joint_velocities.append(observed_qvel.tolist())
+            trace.target_joint_angles.append([0.0, 0.0])
+            trace.torques.append(torque.tolist())
+            trace.errors.append(error)
+            trace.error_deltas.append(0.0 if previous_error is None else error - previous_error)
+            previous_error = error
+
+        return self._finalize_episode(trace)
 
 
 def trace_to_dict(trace: EpisodeTrace) -> dict[str, list[list[float]] | list[float]]:

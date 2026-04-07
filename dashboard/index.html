@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MuJoCo Sim Debugging Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Portfolio dashboard</p>
+          <h1>MuJoCo Simulation Support Dashboard</h1>
+          <p class="lede">
+            A lightweight browser for experiment health, PyTorch learning artifacts, and support-case outputs.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="metric" id="success-rate">--</div>
+          <div class="metric-label">baseline success rate</div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>Environment</h2>
+          <ul id="environment-list"></ul>
+        </article>
+        <article class="panel">
+          <h2>Learning</h2>
+          <div id="learning-summary"></div>
+        </article>
+        <article class="panel">
+          <h2>Artifacts</h2>
+          <div id="artifact-links" class="link-list"></div>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>Demo GIF</h2>
+          <img id="demo-gif" class="preview" alt="Demo GIF preview" />
+        </article>
+        <article class="panel">
+          <h2>Training Curve</h2>
+          <img id="training-curve" class="preview" alt="Training curve preview" />
+        </article>
+        <article class="panel">
+          <h2>Policy Eval</h2>
+          <div id="policy-eval"></div>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel wide">
+          <h2>Support Cases</h2>
+          <div id="support-cases" class="link-list"></div>
+        </article>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>

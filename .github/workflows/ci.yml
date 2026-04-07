@@ -20,5 +20,4 @@ jobs:
       - name: Run tests
         run: pytest -q
       - name: Run smoke baseline
-        run: python scripts/run_baseline.py --episodes 2
-
+        run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

@@ -1,0 +1,160 @@
+{
+  "summary": {
+    "success_rate": 0.375,
+    "final_error_mean": 0.07278485667434885,
+    "min_error_mean": 0.06655850826826605,
+    "mean_error_mean": 0.08339171187908137,
+    "max_overshoot_mean": 3.752481097562925e-05,
+    "oscillation_index_mean": 0.9461206896551724,
+    "control_energy_mean": 160.04512468269033,
+    "settling_time_mean": 1.1066666666666667
+  },
+  "episodes": [
+    {
+      "episode": 0,
+      "target_x": 0.2740788871191471,
+      "target_y": 0.19174603726469588,
+      "success": 0,
+      "final_error": 0.08481861968279884,
+      "mean_error": 0.08739873827556628,
+      "max_overshoot": 0.0,
+      "oscillation_index": 0.9827586206896551,
+      "control_energy": 153.12758658507153
+    },
+    {
+      "episode": 1,
+      "target_x": 0.14122300025273535,
+      "target_y": 0.12415184468243405,
+      "success": 0,
+      "final_error": 0.0726703202815553,
+      "mean_error": 0.08070791367049626,
+      "max_overshoot": 0.0,
+      "oscillation_index": 0.9367816091954023,
+      "control_energy": 147.65219705299663
+    },
+    {
+      "episode": 2,
+      "target_x": 0.16321960027697552,
+      "target_y": 0.05820052276322039,
+      "success": 1,
+      "final_error": 0.024688591927432744,
+      "mean_error": 0.061048156714376176,
+      "max_overshoot": 0.0,
+      "oscillation_index": 0.8908045977011494,
+      "control_energy": 182.37563685378638
+    },
+    {
+      "episode": 3,
+      "target_x": 0.20576514316964004,
+      "target_y": 0.2545120761626471,
+      "success": 0,
+      "final_error": 0.12750881722249172,
+      "mean_error": 0.15155041116075355,
+      "max_overshoot": 0.0001785929716796586,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 167.13774050204614
+    },
+    {
+      "episode": 4,
+      "target_x": 0.19942741725458418,
+      "target_y": 0.18837594060397997,
+      "success": 0,
+      "final_error": 0.10945085375320135,
+      "mean_error": 0.11311249968694796,
+      "max_overshoot": 0.0,
+      "oscillation_index": 0.9885057471264368,
+      "control_energy": 149.21271539887184
+    },
+    {
+      "episode": 5,
+      "target_x": 0.2158888588209721,
+      "target_y": 0.17314653743367378,
+      "success": 0,
+      "final_error": 0.0998218353606776,
+      "mean_error": 0.10245648123793448,
+      "max_overshoot": 0.0001216055161253754,
+      "oscillation_index": 0.9942528735632183,
+      "control_energy": 150.39791439170114
+    },
+    {
+      "episode": 6,
+      "target_x": 0.1938067052694155,
+      "target_y": 0.06934862802335957,
+      "success": 1,
+      "final_error": 0.021708671999844074,
+      "mean_error": 0.04890480838192337,
+      "max_overshoot": 0.0,
+      "oscillation_index": 0.8563218390804598,
+      "control_energy": 178.73615078193853
+    },
+    {
+      "episode": 7,
+      "target_x": 0.29983326146248374,
+      "target_y": 0.08497270757113062,
+      "success": 1,
+      "final_error": 0.04161114316678917,
+      "mean_error": 0.021954685904652858,
+      "max_overshoot": 0.0,
+      "oscillation_index": 0.9252873563218391,
+      "control_energy": 151.7210558951105
+    }
+  ],
+  "checkpoint_path": "/Users/lamayassine/mujoco/outputs/learning/training/policy.pt",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "6444c3dd13a6edff3a559e930c33e4ebcde7494b",
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@6444c3dd13a6edff3a559e930c33e4ebcde7494b#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  }
+}

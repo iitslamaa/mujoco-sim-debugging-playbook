@@ -21,6 +21,7 @@ It demonstrates:
 - debugging instincts around unstable or degraded control behavior
 - clear technical writing for user enablement
 - support-triage thinking for user-reported failures
+- PyTorch fluency through a learned imitation baseline, training curves, checkpoints, and evaluation rollouts
 - Linux-style tooling with bash, Docker, CI, and GitHub workflows
 
 The core task is a planar 2-DoF robotic arm reaching for sampled workspace targets. A baseline inverse-kinematics-plus-PD controller is evaluated while varying important simulation and control parameters such as damping, actuator gain, noise, delay, and control frequency.
@@ -46,8 +47,15 @@ That is exactly the kind of muscle a technical solutions engineer needs when sup
 - Troubleshooting guide that frames the repo like a simulation support/debugging playbook
 - Support-case library with response-draft generation
 - Diagnostics bundles with environment capture and scenario comparisons
+- PyTorch imitation-learning pipeline with dataset generation, training, and policy evaluation
+- Static dashboard for browsing artifacts, environment details, and support cases
+- Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
+
+![PyTorch policy rollout](outputs/media/reacher_demo.gif)
+
+![Training curve](outputs/learning/training/training_curve.png)
 
 ## Repository layout
 
@@ -90,6 +98,10 @@ make test
 make baseline
 make support-case
 make diagnostics
+make train-policy
+make eval-policy
+make demo-gif
+make dashboard
 ```
 
 ## Run a baseline experiment
@@ -121,6 +133,38 @@ python scripts/run_issue_case.py --case actuator_gain_overshoot
 
 This generates a support-style Markdown response draft under `outputs/support_cases/` using the saved sweep summaries.
 
+## Train a PyTorch policy
+
+```bash
+python scripts/train_torch_policy.py --dataset-episodes 20 --epochs 80
+python scripts/evaluate_torch_policy.py --episodes 8
+```
+
+This pipeline:
+
+- collects expert rollouts from the analytical MuJoCo controller
+- builds an imitation dataset
+- trains a multilayer PyTorch policy network
+- saves checkpoints and a training curve
+- evaluates the learned policy back in MuJoCo
+
+## Dashboard and demo media
+
+```bash
+python scripts/generate_demo_gif.py \
+  --trace outputs/learning/evaluation/traces/episode_000.json \
+  --output outputs/media/reacher_demo.gif \
+  --title "PyTorch policy rollout"
+
+python scripts/generate_dashboard.py
+```
+
+This produces:
+
+- `outputs/media/reacher_demo.gif`
+- `dashboard/index.html`
+- `dashboard/data.json`
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -143,6 +187,8 @@ This writes:
 - [release-validation.md](/Users/lamayassine/mujoco/docs/release-validation.md)
 - [interview-guide.md](/Users/lamayassine/mujoco/docs/interview-guide.md)
 - [diagnostics-guide.md](/Users/lamayassine/mujoco/docs/diagnostics-guide.md)
+- [dashboard/index.html](/Users/lamayassine/mujoco/dashboard/index.html)
+- [learning-guide.md](/Users/lamayassine/mujoco/docs/learning-guide.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
 - [support_request.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/support_request.yml)
 - [ci.yml](/Users/lamayassine/mujoco/.github/workflows/ci.yml)
@@ -186,6 +232,16 @@ Each experiment now captures more than scalar metrics:
 
 That makes the repo easier to talk about as a real engineering/debugging system instead of only an academic experiment.
 
+## PyTorch learning workflow
+
+The repo now includes a learned baseline rather than only a hand-written controller:
+
+- expert data is generated from MuJoCo controller rollouts
+- state vectors include joint position, joint velocity, and target coordinates
+- a PyTorch MLP policy is trained to imitate expert torques
+- checkpoints, loss curves, and evaluation summaries are saved as reproducible artifacts
+- the learned policy can be compared directly against the expert controller
+
 ## Key findings to look for
 
 Once you run the sweeps, the most useful patterns to discuss are:
@@ -212,6 +268,7 @@ This repo is built to signal fit for:
 
 - simulation troubleshooting
 - Python-based tooling and experimentation
+- PyTorch-centered model training and evaluation workflows
 - user enablement and documentation
 - Linux developer workflows with Docker, bash-friendly scripts, and virtualenvs
 - reproducibility and release validation via diagnostics bundles and environment capture
