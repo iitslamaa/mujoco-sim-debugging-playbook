@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "status": "pass",
+    "file_count": 9,
+    "evidence_hit_count": 5
+  },
+  "high_value_files": [
+    "baseline_summary.json",
+    "benchmark_summary.json",
+    "diagnostics.md",
+    "environment.json",
+    "environment_doctor.md"
+  ]
+}
