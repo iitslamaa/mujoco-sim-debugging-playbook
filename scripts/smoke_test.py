@@ -68,6 +68,7 @@ def main() -> None:
     )
     run([sys.executable, "scripts/backfill_provenance_manifests.py"], env=env)
     run([sys.executable, "scripts/build_provenance_index.py"], env=env)
+    run([sys.executable, "scripts/generate_anomaly_report.py"], env=env)
     run(
         [
             sys.executable,
@@ -104,6 +105,9 @@ def main() -> None:
     release_notes = ROOT / "outputs" / "releases" / "latest" / "release_notes.json"
     if not release_notes.exists():
         raise SystemExit(f"Expected release notes at {release_notes}")
+    anomaly_report = ROOT / "outputs" / "anomalies" / "anomaly_report.json"
+    if not anomaly_report.exists():
+        raise SystemExit(f"Expected anomaly report at {anomaly_report}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

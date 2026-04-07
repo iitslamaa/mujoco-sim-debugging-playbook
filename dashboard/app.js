@@ -237,6 +237,26 @@ async function main() {
   } else {
     releaseNotes.textContent = "Release note artifacts have not been generated yet.";
   }
+
+  const anomalySummary = document.getElementById("anomaly-summary");
+  if (data.anomalies) {
+    const items = [];
+    (data.anomalies.benchmark_anomalies?.top_cases || []).slice(0, 3).forEach((row) => {
+      items.push(`<p><strong>${row.scenario} / ${row.controller}</strong>: risk ${Number(row.risk_score).toFixed(3)}</p>`);
+    });
+    (data.anomalies.parameter_effects || []).slice(0, 2).forEach((row) => {
+      items.push(`<p><strong>${row.parameter}</strong>: corr ${Number(row.correlation_with_difficulty).toFixed(3)}</p>`);
+    });
+    anomalySummary.innerHTML = items.join("");
+  } else {
+    anomalySummary.textContent = "Anomaly artifacts have not been generated yet.";
+  }
+  if (data.artifacts?.anomaly_benchmark_image) {
+    document.getElementById("anomaly-benchmark-image").src = `../${data.artifacts.anomaly_benchmark_image}`;
+  }
+  if (data.artifacts?.anomaly_difficulty_image) {
+    document.getElementById("anomaly-difficulty-image").src = `../${data.artifacts.anomaly_difficulty_image}`;
+  }
 }
 
 main();

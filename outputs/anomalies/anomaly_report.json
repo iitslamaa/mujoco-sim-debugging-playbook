@@ -1,0 +1,377 @@
+{
+  "benchmark_anomalies": {
+    "top_cases": [
+      {
+        "scenario": "low_damping_high_gain",
+        "controller": "expert_pd",
+        "risk_score": 0.36560761301686967,
+        "success_gap": 0.0,
+        "error_gap": 0.0034329903936610173,
+        "energy_gap": 19.796520342909957,
+        "success_rate": 0.625,
+        "final_error_mean": 0.05705251211360072
+      },
+      {
+        "scenario": "low_damping_high_gain",
+        "controller": "hybrid_guardrail",
+        "risk_score": 0.35961109953321907,
+        "success_gap": 0.0,
+        "error_gap": 0.0030437092285907352,
+        "energy_gap": 19.915794330760292,
+        "success_rate": 0.625,
+        "final_error_mean": 0.05666323094853044
+      },
+      {
+        "scenario": "noise_heavy",
+        "controller": "expert_pd",
+        "risk_score": 0.044364571308517474,
+        "success_gap": 0.0,
+        "error_gap": 0.0007836518043976629,
+        "energy_gap": 1.9127690147042813,
+        "success_rate": 0.5,
+        "final_error_mean": 0.04741182405223131
+      },
+      {
+        "scenario": "noise_heavy",
+        "controller": "hybrid_guardrail",
+        "risk_score": 0.044097387157338366,
+        "success_gap": 0.0,
+        "error_gap": 0.0007861879531834287,
+        "energy_gap": 1.891575206244653,
+        "success_rate": 0.5,
+        "final_error_mean": 0.047414360201017074
+      },
+      {
+        "scenario": "delay_heavy",
+        "controller": "expert_pd",
+        "risk_score": 0.04347152971847829,
+        "success_gap": 0.0,
+        "error_gap": 0.0004978867626937791,
+        "energy_gap": 2.2342529643068474,
+        "success_rate": 0.625,
+        "final_error_mean": 0.044202775619900096
+      },
+      {
+        "scenario": "baseline",
+        "controller": "torch_policy",
+        "risk_score": 0.04029562000366166,
+        "success_gap": 0.0,
+        "error_gap": 0.002014781000183083,
+        "energy_gap": 0.0,
+        "success_rate": 0.625,
+        "final_error_mean": 0.04421550561356468
+      },
+      {
+        "scenario": "baseline",
+        "controller": "hybrid_guardrail",
+        "risk_score": 0.03181354405571045,
+        "success_gap": 0.0,
+        "error_gap": 0.00020071507475059175,
+        "energy_gap": 1.8532828373799077,
+        "success_rate": 0.625,
+        "final_error_mean": 0.04240143968813219
+      },
+      {
+        "scenario": "baseline",
+        "controller": "expert_pd",
+        "risk_score": 0.027941005732711233,
+        "success_gap": 0.0,
+        "error_gap": 0.0,
+        "energy_gap": 1.8627337155140822,
+        "success_rate": 0.625,
+        "final_error_mean": 0.0422007246133816
+      }
+    ],
+    "controllers": [
+      "expert_pd",
+      "hybrid_guardrail",
+      "torch_policy"
+    ],
+    "scenarios": [
+      "baseline",
+      "delay_heavy",
+      "low_damping_high_gain",
+      "noise_heavy"
+    ],
+    "heatmap": [
+      [
+        0.027941005732711233,
+        0.04347152971847829,
+        0.36560761301686967,
+        0.044364571308517474
+      ],
+      [
+        0.03181354405571045,
+        0.02386844213385018,
+        0.35961109953321907,
+        0.044097387157338366
+      ],
+      [
+        0.04029562000366166,
+        0.010212335127167266,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "randomization_anomalies": {
+    "episodes": [
+      {
+        "episode": 1,
+        "difficulty_score": 1.1708717748779893,
+        "avg_final_error": 0.17087177487798924,
+        "success_rate": 0.0,
+        "best_controller": "rl_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.18158924545080263,
+        "joint_damping": 1.729174779325379,
+        "actuator_gain": 46.894996522872425,
+        "sensor_noise_std": 0.006776718264752566,
+        "control_delay_steps": 5
+      },
+      {
+        "episode": 14,
+        "difficulty_score": 1.166659123947502,
+        "avg_final_error": 0.16665912394750193,
+        "success_rate": 0.0,
+        "best_controller": "rl_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.17820569813513884,
+        "joint_damping": 3.782089089350272,
+        "actuator_gain": 47.668466249738096,
+        "sensor_noise_std": 0.011028728485583719,
+        "control_delay_steps": 5
+      },
+      {
+        "episode": 17,
+        "difficulty_score": 1.1577372914512094,
+        "avg_final_error": 0.15773729145120932,
+        "success_rate": 0.0,
+        "best_controller": "rl_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.15906712664537617,
+        "joint_damping": 0.8849033957559737,
+        "actuator_gain": 46.42217069731403,
+        "sensor_noise_std": 0.009361803923376447,
+        "control_delay_steps": 0
+      },
+      {
+        "episode": 9,
+        "difficulty_score": 1.151461366675756,
+        "avg_final_error": 0.1514613666757561,
+        "success_rate": 0.0,
+        "best_controller": "hybrid_guardrail",
+        "worst_controller": "rl_policy",
+        "worst_final_error": 0.15414417465008007,
+        "joint_damping": 1.3510857586984368,
+        "actuator_gain": 53.06512399670722,
+        "sensor_noise_std": 0.017233493284833652,
+        "control_delay_steps": 1
+      },
+      {
+        "episode": 5,
+        "difficulty_score": 1.12455734536996,
+        "avg_final_error": 0.12455734536995995,
+        "success_rate": 0.0,
+        "best_controller": "rl_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.13033066401262156,
+        "joint_damping": 1.058942999724618,
+        "actuator_gain": 37.2397730888738,
+        "sensor_noise_std": 0.01674931029848154,
+        "control_delay_steps": 4
+      },
+      {
+        "episode": 13,
+        "difficulty_score": 1.1133064942686617,
+        "avg_final_error": 0.11330649426866173,
+        "success_rate": 0.0,
+        "best_controller": "hybrid_guardrail",
+        "worst_controller": "rl_policy",
+        "worst_final_error": 0.14802909504987088,
+        "joint_damping": 1.8944449883641998,
+        "actuator_gain": 54.71560270468244,
+        "sensor_noise_std": 0.0009127192952961094,
+        "control_delay_steps": 1
+      },
+      {
+        "episode": 4,
+        "difficulty_score": 1.1100530138040399,
+        "avg_final_error": 0.11005301380403978,
+        "success_rate": 0.0,
+        "best_controller": "hybrid_guardrail",
+        "worst_controller": "torch_policy",
+        "worst_final_error": 0.112365329692327,
+        "joint_damping": 3.307082916134258,
+        "actuator_gain": 34.546605883793625,
+        "sensor_noise_std": 0.011672806366924407,
+        "control_delay_steps": 4
+      },
+      {
+        "episode": 6,
+        "difficulty_score": 1.0961995722196962,
+        "avg_final_error": 0.09619957221969612,
+        "success_rate": 0.0,
+        "best_controller": "hybrid_guardrail",
+        "worst_controller": "torch_policy",
+        "worst_final_error": 0.10486774902346435,
+        "joint_damping": 3.808645815029939,
+        "actuator_gain": 30.21954168153615,
+        "sensor_noise_std": 0.017566871971717142,
+        "control_delay_steps": 3
+      },
+      {
+        "episode": 16,
+        "difficulty_score": 1.0810338577767773,
+        "avg_final_error": 0.08103385777677719,
+        "success_rate": 0.0,
+        "best_controller": "rl_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.08586610075100859,
+        "joint_damping": 2.902690386731819,
+        "actuator_gain": 39.35278047322343,
+        "sensor_noise_std": 0.011607132995267989,
+        "control_delay_steps": 3
+      },
+      {
+        "episode": 8,
+        "difficulty_score": 1.0750993701946367,
+        "avg_final_error": 0.07509937019463679,
+        "success_rate": 0.0,
+        "best_controller": "torch_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.08297819736311743,
+        "joint_damping": 1.7373109385390089,
+        "actuator_gain": 57.43649750784921,
+        "sensor_noise_std": 0.006442112896209427,
+        "control_delay_steps": 5
+      },
+      {
+        "episode": 11,
+        "difficulty_score": 1.0743696206492168,
+        "avg_final_error": 0.07436962064921672,
+        "success_rate": 0.0,
+        "best_controller": "torch_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.08227898825071384,
+        "joint_damping": 1.9744423684634598,
+        "actuator_gain": 51.63374567562403,
+        "sensor_noise_std": 0.0010537650059448823,
+        "control_delay_steps": 2
+      },
+      {
+        "episode": 2,
+        "difficulty_score": 1.0710432872574063,
+        "avg_final_error": 0.07104328725740623,
+        "success_rate": 0.0,
+        "best_controller": "torch_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.08620731140767142,
+        "joint_damping": 2.762864323589505,
+        "actuator_gain": 56.72135465563329,
+        "sensor_noise_std": 0.006756487863240152,
+        "control_delay_steps": 0
+      },
+      {
+        "episode": 15,
+        "difficulty_score": 1.070752662187112,
+        "avg_final_error": 0.07075266218711185,
+        "success_rate": 0.0,
+        "best_controller": "expert_pd",
+        "worst_controller": "rl_policy",
+        "worst_final_error": 0.0716991835389897,
+        "joint_damping": 4.1088221932200115,
+        "actuator_gain": 60.19079244536684,
+        "sensor_noise_std": 0.013925047911790472,
+        "control_delay_steps": 0
+      },
+      {
+        "episode": 0,
+        "difficulty_score": 0.5565537051753779,
+        "avg_final_error": 0.05655370517537796,
+        "success_rate": 0.5,
+        "best_controller": "torch_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.08440316044616734,
+        "joint_damping": 4.025774191255618,
+        "actuator_gain": 28.78688837795168,
+        "sensor_noise_std": 0.016539761718614897,
+        "control_delay_steps": 2
+      },
+      {
+        "episode": 7,
+        "difficulty_score": 0.5441798153800226,
+        "avg_final_error": 0.04417981538002263,
+        "success_rate": 0.5,
+        "best_controller": "hybrid_guardrail",
+        "worst_controller": "torch_policy",
+        "worst_final_error": 0.046073871743281716,
+        "joint_damping": 3.400454097623505,
+        "actuator_gain": 27.098263505437814,
+        "sensor_noise_std": 0.011332820049924055,
+        "control_delay_steps": 0
+      },
+      {
+        "episode": 12,
+        "difficulty_score": 0.5343276506267617,
+        "avg_final_error": 0.03432765062676169,
+        "success_rate": 0.5,
+        "best_controller": "hybrid_guardrail",
+        "worst_controller": "torch_policy",
+        "worst_final_error": 0.04674307948336016,
+        "joint_damping": 1.3603465456068378,
+        "actuator_gain": 27.99191028140084,
+        "sensor_noise_std": 0.014451233551966368,
+        "control_delay_steps": 0
+      },
+      {
+        "episode": 3,
+        "difficulty_score": 0.029990926695030735,
+        "avg_final_error": 0.029990926695030735,
+        "success_rate": 1.0,
+        "best_controller": "torch_policy",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.03782506576512075,
+        "joint_damping": 2.657889096447159,
+        "actuator_gain": 59.25902861383419,
+        "sensor_noise_std": 0.001169649525240193,
+        "control_delay_steps": 2
+      },
+      {
+        "episode": 10,
+        "difficulty_score": 0.01604176791009834,
+        "avg_final_error": 0.01604176791009834,
+        "success_rate": 1.0,
+        "best_controller": "hybrid_guardrail",
+        "worst_controller": "expert_pd",
+        "worst_final_error": 0.023345956037579427,
+        "joint_damping": 2.517234192787106,
+        "actuator_gain": 28.93718258789345,
+        "sensor_noise_std": 0.017646793657843024,
+        "control_delay_steps": 1
+      }
+    ]
+  },
+  "parameter_effects": [
+    {
+      "parameter": "friction_loss",
+      "correlation_with_difficulty": -0.44149976078377157
+    },
+    {
+      "parameter": "control_delay_steps",
+      "correlation_with_difficulty": 0.2885437081458722
+    },
+    {
+      "parameter": "actuator_gain",
+      "correlation_with_difficulty": 0.28422074622117505
+    },
+    {
+      "parameter": "joint_damping",
+      "correlation_with_difficulty": -0.12723446877668693
+    },
+    {
+      "parameter": "sensor_noise_std",
+      "correlation_with_difficulty": -0.062332585085612215
+    }
+  ]
+}

@@ -47,6 +47,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Historical trend reporting for tracking metric drift across snapshots
 - Artifact manifests and a provenance index for tying outputs back to code, inputs, and Git state
 - Commit-linked release notes for summarizing code, metric, and artifact changes between Git SHAs
+- Scenario-level anomaly analysis that pinpoints brittle controller/scenario combinations and hard randomized episodes
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -102,6 +103,7 @@ make train-rl
 make eval-rl
 make benchmark
 make randomization
+make anomalies
 make case-studies
 make snapshot
 make regression-diff
@@ -266,6 +268,17 @@ python scripts/generate_release_notes.py \
 ```
 
 This produces a compact release summary that ties together Git commits, changed files, regression status, and provenance coverage.
+
+## Generate anomaly analysis
+
+```bash
+python scripts/generate_anomaly_report.py \
+  --benchmark outputs/controller_benchmark/benchmark_summary.json \
+  --randomization outputs/domain_randomization/evaluation_rows.json \
+  --output-dir outputs/anomalies
+```
+
+This ranks the riskiest benchmark cases, highlights the hardest randomized episodes, and estimates which simulator parameters correlate most with difficulty.
 
 ## Generate a diagnostics bundle
 

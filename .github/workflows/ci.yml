@@ -48,5 +48,7 @@ jobs:
             --base 9947b32 \
             --head HEAD \
             --output-dir outputs/releases/ci
+      - name: Build anomaly analysis
+        run: MPLCONFIGDIR=/tmp/mpl python scripts/generate_anomaly_report.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

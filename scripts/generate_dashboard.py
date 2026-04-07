@@ -29,6 +29,7 @@ def main() -> None:
     regression_history = _read_json(ROOT / "outputs" / "regression" / "history" / "history.json")
     provenance_index = _read_json(ROOT / "outputs" / "provenance" / "index.json")
     release_notes = _read_json(ROOT / "outputs" / "releases" / "latest" / "release_notes.json")
+    anomalies = _read_json(ROOT / "outputs" / "anomalies" / "anomaly_report.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -87,6 +88,7 @@ def main() -> None:
         "regression_history": regression_history,
         "provenance_index": provenance_summary,
         "release_notes": release_notes,
+        "anomalies": anomalies,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -107,6 +109,9 @@ def main() -> None:
             "regression_history_image": "outputs/regression/history/history.png",
             "provenance_index_markdown": "outputs/provenance/index.md",
             "release_notes_markdown": "outputs/releases/latest/release_notes.md",
+            "anomaly_report_markdown": "outputs/anomalies/anomaly_report.md",
+            "anomaly_benchmark_image": "outputs/anomalies/benchmark_risk_heatmap.png",
+            "anomaly_difficulty_image": "outputs/anomalies/randomization_difficulty.png",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))
