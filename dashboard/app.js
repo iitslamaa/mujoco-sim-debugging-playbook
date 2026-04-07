@@ -965,6 +965,32 @@ async function main() {
   } else {
     dashboardSnapshotMonitorSummary.textContent = "Dashboard snapshot monitor has not been generated yet.";
   }
+
+  const dashboardSnapshotReviewSummary = document.getElementById("dashboard-snapshot-review-summary");
+  if (data.dashboard_snapshot_review?.summary) {
+    const summary = data.dashboard_snapshot_review.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Headlines:</strong> ${summary.headline_count}</p>`,
+      `<p><strong>Critical alerts:</strong> ${summary.critical_count}</p>`,
+      `<p><strong>Blockers:</strong> ${summary.blocker_count}</p>`,
+      `<p><strong>Next focus:</strong> ${summary.next_focus}</p>`,
+    ];
+    (data.dashboard_snapshot_review.headlines || []).forEach((headline) => {
+      items.push(`<p>${headline}</p>`);
+    });
+    if (data.dashboard_snapshot_review.top_alert) {
+      const alert = data.dashboard_snapshot_review.top_alert;
+      items.push(`<p><strong>[${alert.severity}] ${alert.title}</strong>: ${alert.message}</p>`);
+    }
+    (data.dashboard_snapshot_review.blockers || []).forEach((blocker) => {
+      items.push(`<p>${blocker}</p>`);
+    });
+    dashboardSnapshotReviewSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotReviewSummary.textContent = "Dashboard snapshot review has not been generated yet.";
+  }
 }
 
 main();

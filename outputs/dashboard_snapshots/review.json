@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "current_status": "fail",
+    "projected_terminal_status": "pass",
+    "blocker_count": 2,
+    "headline_count": 4,
+    "critical_count": 1,
+    "next_focus": "Status transition to pass"
+  },
+  "headlines": [
+    "Current dashboard status is fail.",
+    "Projected terminal status is pass.",
+    "Largest recovery step is current_state -> support_sprint_projection.",
+    "First preserved pass state appears at full_refresh_projection."
+  ],
+  "top_alert": {
+    "severity": "critical",
+    "title": "Status transition to pass",
+    "message": "support_sprint_projection -> full_refresh_projection changes status from fail to pass."
+  },
+  "blockers": [
+    "Current dashboard status is not yet pass.",
+    "Critical snapshot alerts are still active."
+  ]
+}

@@ -70,6 +70,7 @@ def main() -> None:
     dashboard_snapshot_drift = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "drift.json")
     dashboard_snapshot_alerts = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "alerts.json")
     dashboard_snapshot_monitor = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "monitor.json")
+    dashboard_snapshot_review = _read_json(ROOT / "outputs" / "dashboard_snapshots" / "review.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -169,6 +170,7 @@ def main() -> None:
         "dashboard_snapshot_drift": dashboard_snapshot_drift,
         "dashboard_snapshot_alerts": dashboard_snapshot_alerts,
         "dashboard_snapshot_monitor": dashboard_snapshot_monitor,
+        "dashboard_snapshot_review": dashboard_snapshot_review,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -232,6 +234,7 @@ def main() -> None:
             "dashboard_snapshot_drift_markdown": "outputs/dashboard_snapshots/drift.md",
             "dashboard_snapshot_alerts_markdown": "outputs/dashboard_snapshots/alerts.md",
             "dashboard_snapshot_monitor_markdown": "outputs/dashboard_snapshots/monitor.md",
+            "dashboard_snapshot_review_markdown": "outputs/dashboard_snapshots/review.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))
