@@ -62,6 +62,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - What-if scenario planning that shows how readiness changes under targeted remediation strategies
 - Responder-load analytics that rank owner pressure across breaches, risky items, and total effort
 - Backlog-aging analytics that expose support debt through due horizon, effort, and risk buckets
+- Documentation audits that show how much of the queue is covered by reusable self-serve guidance
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -133,6 +134,7 @@ make support-readiness
 make scenario-plan
 make responder-load
 make backlog-aging
+make documentation-audit
 make case-studies
 make snapshot
 make regression-diff
@@ -432,6 +434,12 @@ python scripts/generate_responder_load.py
 
 ```bash
 python scripts/generate_backlog_aging.py
+```
+
+## Generate the documentation audit
+
+```bash
+python scripts/generate_documentation_audit.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.
