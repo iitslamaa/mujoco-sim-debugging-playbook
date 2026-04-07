@@ -68,6 +68,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Release-packet generation that combines commit range, support status, wins, and top risks
 - Evidence inventory generation that catalogs generated artifacts across the entire outputs tree
 - Action-register generation that turns recommended follow-up work into a flat execution list
+- Scorecard generation that condenses the most important support-health KPIs into one tiny artifact
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -145,6 +146,7 @@ make owner-alerts
 make release-packet
 make evidence-inventory
 make action-register
+make scorecard
 make case-studies
 make snapshot
 make regression-diff
@@ -480,6 +482,12 @@ python scripts/generate_evidence_inventory.py
 
 ```bash
 python scripts/generate_action_register.py
+```
+
+## Generate the support scorecard
+
+```bash
+python scripts/generate_scorecard.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.
