@@ -27,6 +27,7 @@ __all__ = [
     "responder_load",
     "risk_register",
     "release_notes",
+    "release_packet",
     "regression",
     "report",
     "rl",
