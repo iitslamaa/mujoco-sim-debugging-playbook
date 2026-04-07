@@ -51,6 +51,7 @@ __all__ = [
     "config",
     "controller",
     "dependency_map",
+    "dependency_snapshot",
     "doctor",
     "documentation_audit",
     "experiment",
