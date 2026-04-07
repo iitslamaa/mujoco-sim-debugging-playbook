@@ -1013,6 +1013,28 @@ async function main() {
   } else {
     dashboardSnapshotHandoffSummary.textContent = "Dashboard snapshot handoff has not been generated yet.";
   }
+
+  const dashboardSnapshotCloseoutSummary = document.getElementById("dashboard-snapshot-closeout-summary");
+  if (data.dashboard_snapshot_closeout?.summary) {
+    const summary = data.dashboard_snapshot_closeout.summary;
+    const items = [
+      `<p><strong>Closeout status:</strong> ${summary.closeout_status}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Remaining items:</strong> ${summary.remaining_item_count}</p>`,
+      `<p><strong>Blockers:</strong> ${summary.blocker_count}</p>`,
+    ];
+    (data.dashboard_snapshot_closeout.remaining_items || []).forEach((item) => {
+      items.push(`<p>${item}</p>`);
+    });
+    (data.dashboard_snapshot_closeout.blockers || []).forEach((blocker) => {
+      items.push(`<p>${blocker}</p>`);
+    });
+    dashboardSnapshotCloseoutSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotCloseoutSummary.textContent = "Dashboard snapshot closeout has not been generated yet.";
+  }
 }
 
 main();

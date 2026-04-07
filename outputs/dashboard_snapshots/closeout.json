@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "closeout_status": "not_ready_to_close",
+    "handoff_owner": "dashboard-stabilization",
+    "current_status": "fail",
+    "projected_terminal_status": "pass",
+    "remaining_item_count": 3,
+    "blocker_count": 2
+  },
+  "remaining_items": [
+    "Status transition to pass",
+    "Current dashboard status is not yet pass.",
+    "Critical snapshot alerts are still active."
+  ],
+  "blockers": [
+    "Current dashboard status is not yet pass.",
+    "Critical snapshot alerts are still active."
+  ]
+}

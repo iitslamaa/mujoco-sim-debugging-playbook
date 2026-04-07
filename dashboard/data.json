@@ -5715,6 +5715,25 @@
       "First preserved pass state appears at full_refresh_projection."
     ]
   },
+  "dashboard_snapshot_closeout": {
+    "summary": {
+      "closeout_status": "not_ready_to_close",
+      "handoff_owner": "dashboard-stabilization",
+      "current_status": "fail",
+      "projected_terminal_status": "pass",
+      "remaining_item_count": 3,
+      "blocker_count": 2
+    },
+    "remaining_items": [
+      "Status transition to pass",
+      "Current dashboard status is not yet pass.",
+      "Critical snapshot alerts are still active."
+    ],
+    "blockers": [
+      "Current dashboard status is not yet pass.",
+      "Critical snapshot alerts are still active."
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5788,6 +5807,7 @@
     "dashboard_snapshot_alerts_markdown": "outputs/dashboard_snapshots/alerts.md",
     "dashboard_snapshot_monitor_markdown": "outputs/dashboard_snapshots/monitor.md",
     "dashboard_snapshot_review_markdown": "outputs/dashboard_snapshots/review.md",
-    "dashboard_snapshot_handoff_markdown": "outputs/dashboard_snapshots/handoff.md"
+    "dashboard_snapshot_handoff_markdown": "outputs/dashboard_snapshots/handoff.md",
+    "dashboard_snapshot_closeout_markdown": "outputs/dashboard_snapshots/closeout.md"
   }
 }
