@@ -4335,6 +4335,92 @@
       }
     ]
   },
+  "refresh_bundle": {
+    "summary": {
+      "bundle_count": 2,
+      "action_count": 6
+    },
+    "bundles": [
+      {
+        "bundle": "dashboard_refresh",
+        "action_count": 1,
+        "high_priority_count": 1,
+        "max_impact_count": 0
+      },
+      {
+        "bundle": "support_report_refresh",
+        "action_count": 5,
+        "high_priority_count": 0,
+        "max_impact_count": 3
+      }
+    ],
+    "actions": [
+      {
+        "bundle": "dashboard_refresh",
+        "artifact": "dashboard/data.json",
+        "priority": "high",
+        "command": "python scripts/generate_dashboard.py",
+        "impact_count": 0,
+        "impacted_artifacts": []
+      },
+      {
+        "bundle": "support_report_refresh",
+        "artifact": "outputs/ops_review/ops_review.json",
+        "priority": "medium",
+        "command": "python scripts/generate_ops_review.py",
+        "impact_count": 2,
+        "impacted_artifacts": [
+          "dashboard/data.json",
+          "outputs/briefing_note/briefing_note.json"
+        ]
+      },
+      {
+        "bundle": "support_report_refresh",
+        "artifact": "outputs/support_readiness/support_readiness.json",
+        "priority": "medium",
+        "command": "python scripts/generate_support_readiness.py",
+        "impact_count": 3,
+        "impacted_artifacts": [
+          "dashboard/data.json",
+          "outputs/scenario_plan/scenario_plan.json",
+          "outputs/scorecard/scorecard.json"
+        ]
+      },
+      {
+        "bundle": "support_report_refresh",
+        "artifact": "outputs/scenario_plan/scenario_plan.json",
+        "priority": "medium",
+        "command": "python scripts/generate_scenario_plan.py",
+        "impact_count": 3,
+        "impacted_artifacts": [
+          "dashboard/data.json",
+          "outputs/briefing_note/briefing_note.json",
+          "outputs/scorecard/scorecard.json"
+        ]
+      },
+      {
+        "bundle": "support_report_refresh",
+        "artifact": "outputs/scorecard/scorecard.json",
+        "priority": "medium",
+        "command": "python scripts/generate_scorecard.py",
+        "impact_count": 2,
+        "impacted_artifacts": [
+          "dashboard/data.json",
+          "outputs/briefing_note/briefing_note.json"
+        ]
+      },
+      {
+        "bundle": "support_report_refresh",
+        "artifact": "outputs/briefing_note/briefing_note.json",
+        "priority": "medium",
+        "command": "python scripts/generate_briefing_note.py",
+        "impact_count": 1,
+        "impacted_artifacts": [
+          "dashboard/data.json"
+        ]
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4383,6 +4469,7 @@
     "artifact_freshness_markdown": "outputs/artifact_freshness/artifact_freshness.md",
     "regeneration_plan_markdown": "outputs/regeneration_plan/regeneration_plan.md",
     "dependency_map_markdown": "outputs/dependency_map/dependency_map.md",
-    "impact_analysis_markdown": "outputs/impact_analysis/impact_analysis.md"
+    "impact_analysis_markdown": "outputs/impact_analysis/impact_analysis.md",
+    "refresh_bundle_markdown": "outputs/refresh_bundle/refresh_bundle.md"
   }
 }

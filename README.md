@@ -73,6 +73,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact-freshness audits that flag generated reports or dashboard data that may need regeneration
 - Dependency maps that show which high-level artifacts feed each public-facing report
 - Impact analysis that shows which downstream artifacts are affected when an upstream dependency changes
+- Refresh bundles that group stale outputs into a few coordinated rerun packages
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -156,6 +157,7 @@ make artifact-freshness
 make regeneration-plan
 make dependency-map
 make impact-analysis
+make refresh-bundle
 make case-studies
 make snapshot
 make regression-diff
@@ -527,6 +529,12 @@ python scripts/generate_dependency_map.py
 
 ```bash
 python scripts/generate_impact_analysis.py
+```
+
+## Generate the refresh bundle
+
+```bash
+python scripts/generate_refresh_bundle.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.

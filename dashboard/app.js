@@ -529,6 +529,23 @@ async function main() {
   } else {
     impactAnalysisSummary.textContent = "Impact analysis artifacts have not been generated yet.";
   }
+
+  const refreshBundleSummary = document.getElementById("refresh-bundle-summary");
+  if (data.refresh_bundle?.summary) {
+    const summary = data.refresh_bundle.summary;
+    const items = [
+      `<p><strong>Bundles:</strong> ${summary.bundle_count}</p>`,
+      `<p><strong>Actions:</strong> ${summary.action_count}</p>`,
+    ];
+    (data.refresh_bundle.bundles || []).forEach((bundle) => {
+      items.push(
+        `<p><strong>${bundle.bundle}</strong>: ${bundle.action_count} actions, ${bundle.high_priority_count} high priority</p>`
+      );
+    });
+    refreshBundleSummary.innerHTML = items.join("");
+  } else {
+    refreshBundleSummary.textContent = "Refresh bundle artifacts have not been generated yet.";
+  }
 }
 
 main();

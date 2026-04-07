@@ -86,6 +86,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_regeneration_plan.py"], env=env)
     run([sys.executable, "scripts/generate_dependency_map.py"], env=env)
     run([sys.executable, "scripts/generate_impact_analysis.py"], env=env)
+    run([sys.executable, "scripts/generate_refresh_bundle.py"], env=env)
     run(
         [
             sys.executable,
@@ -176,6 +177,9 @@ def main() -> None:
     impact_analysis = ROOT / "outputs" / "impact_analysis" / "impact_analysis.json"
     if not impact_analysis.exists():
         raise SystemExit(f"Expected impact analysis at {impact_analysis}")
+    refresh_bundle = ROOT / "outputs" / "refresh_bundle" / "refresh_bundle.json"
+    if not refresh_bundle.exists():
+        raise SystemExit(f"Expected refresh bundle at {refresh_bundle}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])
