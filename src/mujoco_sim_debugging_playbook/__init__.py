@@ -14,6 +14,7 @@ __all__ = [
     "artifact_review_note",
     "artifact_closeout",
     "artifact_scorecard",
+    "artifact_packet",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

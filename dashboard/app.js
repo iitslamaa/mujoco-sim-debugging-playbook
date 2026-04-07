@@ -849,6 +849,25 @@ async function main() {
   } else {
     artifactScorecardSummary.textContent = "Artifact scorecard has not been generated yet.";
   }
+
+  const artifactPacketSummary = document.getElementById("artifact-packet-summary");
+  if (data.artifact_packet?.summary) {
+    const summary = data.artifact_packet.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Closeout status:</strong> ${summary.closeout_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Headlines:</strong> ${summary.headline_count}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Remaining actions:</strong> ${summary.remaining_action_count}</p>`,
+    ];
+    (data.artifact_packet.digest?.headlines || []).forEach((headline) => {
+      items.push(`<p>${headline}</p>`);
+    });
+    artifactPacketSummary.innerHTML = items.join("");
+  } else {
+    artifactPacketSummary.textContent = "Artifact packet has not been generated yet.";
+  }
 }
 
 main();
