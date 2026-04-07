@@ -5,6 +5,7 @@ __all__ = [
     "anomaly",
     "backlog_aging",
     "benchmark",
+    "briefing_note",
     "capacity",
     "case_studies",
     "config",
