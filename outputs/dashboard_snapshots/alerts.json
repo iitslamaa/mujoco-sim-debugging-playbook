@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "alert_count": 4,
+    "critical_count": 1,
+    "warning_count": 2,
+    "info_count": 1
+  },
+  "alerts": [
+    {
+      "severity": "critical",
+      "title": "Status transition to pass",
+      "message": "support_sprint_projection -> full_refresh_projection changes status from fail to pass."
+    },
+    {
+      "severity": "warning",
+      "title": "Large failure drop detected",
+      "message": "current_state -> support_sprint_projection reduces failures by 4."
+    },
+    {
+      "severity": "warning",
+      "title": "Large risk drop detected",
+      "message": "support_sprint_projection -> full_refresh_projection reduces top risk by 1.358."
+    },
+    {
+      "severity": "info",
+      "title": "First pass milestone reached",
+      "message": "Dashboard state first reaches pass at full_refresh_projection."
+    }
+  ]
+}

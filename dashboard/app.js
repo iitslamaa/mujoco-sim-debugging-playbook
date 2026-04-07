@@ -925,6 +925,23 @@ async function main() {
   } else {
     dashboardSnapshotDriftSummary.textContent = "Dashboard snapshot drift has not been generated yet.";
   }
+
+  const dashboardSnapshotAlertsSummary = document.getElementById("dashboard-snapshot-alerts-summary");
+  if (data.dashboard_snapshot_alerts?.summary) {
+    const summary = data.dashboard_snapshot_alerts.summary;
+    const items = [
+      `<p><strong>Alerts:</strong> ${summary.alert_count}</p>`,
+      `<p><strong>Critical:</strong> ${summary.critical_count}</p>`,
+      `<p><strong>Warning:</strong> ${summary.warning_count}</p>`,
+      `<p><strong>Info:</strong> ${summary.info_count}</p>`,
+    ];
+    (data.dashboard_snapshot_alerts.alerts || []).forEach((alert) => {
+      items.push(`<p><strong>[${alert.severity}] ${alert.title}</strong>: ${alert.message}</p>`);
+    });
+    dashboardSnapshotAlertsSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotAlertsSummary.textContent = "Dashboard snapshot alerts have not been generated yet.";
+  }
 }
 
 main();

@@ -5569,7 +5569,84 @@
       }
     ]
   },
-  "dashboard_snapshot_drift": null,
+  "dashboard_snapshot_drift": {
+    "summary": {
+      "transition_count": 3,
+      "first_pass_snapshot": "full_refresh_projection",
+      "largest_failure_drop_transition": "current_state -> support_sprint_projection",
+      "largest_failure_drop": 4,
+      "largest_risk_drop_transition": "support_sprint_projection -> full_refresh_projection",
+      "largest_risk_drop": 1.358
+    },
+    "transitions": [
+      {
+        "from": "baseline_backlog",
+        "to": "current_state",
+        "from_status": "fail",
+        "to_status": "fail",
+        "failure_delta": -1,
+        "risk_delta": -0.14900000000000002,
+        "baseline_success_rate_delta": 0.0,
+        "status_changed": false,
+        "improved_failures": true,
+        "improved_risk": true
+      },
+      {
+        "from": "current_state",
+        "to": "support_sprint_projection",
+        "from_status": "fail",
+        "to_status": "fail",
+        "failure_delta": -4,
+        "risk_delta": -0.19299999999999984,
+        "baseline_success_rate_delta": 0.0,
+        "status_changed": false,
+        "improved_failures": true,
+        "improved_risk": true
+      },
+      {
+        "from": "support_sprint_projection",
+        "to": "full_refresh_projection",
+        "from_status": "fail",
+        "to_status": "pass",
+        "failure_delta": -1,
+        "risk_delta": -1.358,
+        "baseline_success_rate_delta": 0.0,
+        "status_changed": true,
+        "improved_failures": true,
+        "improved_risk": true
+      }
+    ]
+  },
+  "dashboard_snapshot_alerts": {
+    "summary": {
+      "alert_count": 4,
+      "critical_count": 1,
+      "warning_count": 2,
+      "info_count": 1
+    },
+    "alerts": [
+      {
+        "severity": "critical",
+        "title": "Status transition to pass",
+        "message": "support_sprint_projection -> full_refresh_projection changes status from fail to pass."
+      },
+      {
+        "severity": "warning",
+        "title": "Large failure drop detected",
+        "message": "current_state -> support_sprint_projection reduces failures by 4."
+      },
+      {
+        "severity": "warning",
+        "title": "Large risk drop detected",
+        "message": "support_sprint_projection -> full_refresh_projection reduces top risk by 1.358."
+      },
+      {
+        "severity": "info",
+        "title": "First pass milestone reached",
+        "message": "Dashboard state first reaches pass at full_refresh_projection."
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5639,6 +5716,7 @@
     "artifact_packet_markdown": "outputs/artifact_packet/artifact_packet.md",
     "dashboard_snapshot_markdown": "outputs/dashboard_snapshots/latest.md",
     "dashboard_snapshot_history_markdown": "outputs/dashboard_snapshots/history.md",
-    "dashboard_snapshot_drift_markdown": "outputs/dashboard_snapshots/drift.md"
+    "dashboard_snapshot_drift_markdown": "outputs/dashboard_snapshots/drift.md",
+    "dashboard_snapshot_alerts_markdown": "outputs/dashboard_snapshots/alerts.md"
   }
 }

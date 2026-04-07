@@ -197,6 +197,7 @@ make artifact-packet
 make dashboard-snapshot
 make dashboard-snapshot-history
 make dashboard-snapshot-drift
+make dashboard-snapshot-alerts
 make case-studies
 make snapshot
 make regression-diff
@@ -736,6 +737,14 @@ python scripts/generate_dashboard_snapshot_drift.py
 
 This compares consecutive preserved dashboard states and highlights the biggest changes between them.
 
+## Build dashboard snapshot alerts
+
+```bash
+python scripts/generate_dashboard_snapshot_alerts.py
+```
+
+This turns major snapshot timeline changes into a compact alert feed.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -781,6 +790,7 @@ This writes:
 - [dashboard-snapshot-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-guide.md)
 - [dashboard-snapshot-history-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-history-guide.md)
 - [dashboard-snapshot-drift-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-drift-guide.md)
+- [dashboard-snapshot-alerts-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-alerts-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

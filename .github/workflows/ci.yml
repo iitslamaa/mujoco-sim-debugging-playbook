@@ -126,5 +126,7 @@ jobs:
         run: python scripts/generate_dashboard_snapshot_history.py
       - name: Build dashboard snapshot drift
         run: python scripts/generate_dashboard_snapshot_drift.py
+      - name: Build dashboard snapshot alerts
+        run: python scripts/generate_dashboard_snapshot_alerts.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py
