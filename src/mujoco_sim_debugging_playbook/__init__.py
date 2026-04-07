@@ -90,6 +90,7 @@ __all__ = [
     "simulation",
     "sla",
     "support",
+    "support_case_catalog",
     "support_gaps",
     "support_ops",
     "triage",
