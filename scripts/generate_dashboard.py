@@ -39,6 +39,7 @@ def main() -> None:
     support_gaps = _read_json(ROOT / "outputs" / "support_gaps" / "support_gaps.json")
     workstreams = _read_json(ROOT / "outputs" / "workstreams" / "workstream_plan.json")
     sla = _read_json(ROOT / "outputs" / "sla" / "sla_report.json")
+    capacity = _read_json(ROOT / "outputs" / "capacity" / "capacity_plan.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -107,6 +108,7 @@ def main() -> None:
         "support_gaps": support_gaps,
         "workstreams": workstreams,
         "sla": sla,
+        "capacity": capacity,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -139,6 +141,7 @@ def main() -> None:
             "support_gaps_markdown": "outputs/support_gaps/support_gaps.md",
             "workstream_plan_markdown": "outputs/workstreams/workstream_plan.md",
             "sla_markdown": "outputs/sla/sla_report.md",
+            "capacity_markdown": "outputs/capacity/capacity_plan.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

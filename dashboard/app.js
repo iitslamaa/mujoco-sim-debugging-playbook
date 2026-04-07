@@ -387,6 +387,29 @@ async function main() {
   } else {
     slaSummary.textContent = "Delivery forecast artifacts have not been generated yet.";
   }
+
+  const capacitySummary = document.getElementById("capacity-summary");
+  if (data.capacity?.summary) {
+    const summary = data.capacity.summary;
+    const items = [
+      `<p><strong>Overloaded owners:</strong> ${summary.overloaded_owner_count}</p>`,
+      `<p><strong>Rebalance candidates:</strong> ${summary.rebalance_item_count}</p>`,
+      `<p><strong>Highest-pressure lane:</strong> ${summary.highest_pressure_lane || "n/a"}</p>`,
+    ];
+    (data.capacity.owners || []).slice(0, 3).forEach((owner) => {
+      items.push(
+        `<p><strong>${owner.owner}</strong>: ${owner.status}, ${owner.effort_points} pts, ${owner.breach_count} breaches</p>`
+      );
+    });
+    (data.capacity.rebalance_items || []).slice(0, 3).forEach((item) => {
+      items.push(
+        `<p><strong>${item.target}</strong>: ${item.current_owner} -> ${item.recommended_owner}</p>`
+      );
+    });
+    capacitySummary.innerHTML = items.join("");
+  } else {
+    capacitySummary.textContent = "Capacity planning artifacts have not been generated yet.";
+  }
 }
 
 main();

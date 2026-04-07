@@ -3,6 +3,7 @@
 __all__ = [
     "anomaly",
     "benchmark",
+    "capacity",
     "case_studies",
     "config",
     "controller",
