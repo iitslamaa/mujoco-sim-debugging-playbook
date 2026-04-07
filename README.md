@@ -98,6 +98,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Bootstrap script for clean-machine setup validation
 - Environment doctor that checks local setup, tools, and container readiness
 - Debug-bundle collector for packaging reproduction artifacts and handoff evidence
+- Debug-bundle manifest for indexing the latest handoff package
 - Container smoke runner for validating the Docker path end to end
 - Compatibility report for Python, MuJoCo, and core tooling readiness
 - Dependency snapshot for concrete package-level environment capture
@@ -208,6 +209,7 @@ make artifact-scorecard
 make artifact-packet
 make bootstrap-env
 make debug-bundle
+make debug-bundle-manifest
 make container-smoke
 make compatibility
 make dependency-snapshot
@@ -304,6 +306,14 @@ bash scripts/collect_debug_bundle.sh
 ```
 
 This packages the current diagnostics, environment capture, support cases, and summary artifacts into one timestamped handoff directory.
+
+## Generate a debug bundle manifest
+
+```bash
+python scripts/generate_debug_bundle_manifest.py
+```
+
+This summarizes the latest debug bundle and lists its included files.
 
 ## Run container smoke
 
@@ -1099,6 +1109,7 @@ This writes:
 - [bootstrap-env-guide.md](/Users/lamayassine/mujoco/docs/bootstrap-env-guide.md)
 - [environment-doctor-guide.md](/Users/lamayassine/mujoco/docs/environment-doctor-guide.md)
 - [debug-bundle-guide.md](/Users/lamayassine/mujoco/docs/debug-bundle-guide.md)
+- [debug-bundle-manifest-guide.md](/Users/lamayassine/mujoco/docs/debug-bundle-manifest-guide.md)
 - [container-smoke-guide.md](/Users/lamayassine/mujoco/docs/container-smoke-guide.md)
 - [compatibility-guide.md](/Users/lamayassine/mujoco/docs/compatibility-guide.md)
 - [dependency-snapshot-guide.md](/Users/lamayassine/mujoco/docs/dependency-snapshot-guide.md)
