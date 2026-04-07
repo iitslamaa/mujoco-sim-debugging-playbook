@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "knowledge_base_coverage": 0.45454545454545453,
+    "entry_count": 5,
+    "uncovered_count": 5
+  },
+  "covered_targets": [
+    "episode 1",
+    "episode 14",
+    "episode 17",
+    "episode 5",
+    "episode 9"
+  ],
+  "uncovered_targets": [
+    "delay_heavy / expert_pd",
+    "low_damping_high_gain / expert_pd",
+    "low_damping_high_gain / hybrid_guardrail",
+    "noise_heavy / expert_pd",
+    "noise_heavy / hybrid_guardrail"
+  ]
+}
