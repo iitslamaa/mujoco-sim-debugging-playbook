@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
+.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -161,6 +161,9 @@ artifact-delivery:
 
 artifact-capacity:
 	$(PYTHON) scripts/generate_artifact_capacity.py
+
+artifact-exec-summary:
+	$(PYTHON) scripts/generate_artifact_exec_summary.py
 
 case-studies:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_case_studies.py

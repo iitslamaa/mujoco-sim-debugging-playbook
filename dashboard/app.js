@@ -678,6 +678,27 @@ async function main() {
   } else {
     artifactCapacitySummary.textContent = "Artifact capacity artifacts have not been generated yet.";
   }
+
+  const artifactExecSummary = document.getElementById("artifact-exec-summary");
+  if (data.artifact_exec_summary?.summary) {
+    const summary = data.artifact_exec_summary.summary;
+    const items = [
+      `<p><strong>Status:</strong> ${summary.status}</p>`,
+      `<p><strong>Failures:</strong> ${summary.failure_count}</p>`,
+      `<p><strong>Top risk artifact:</strong> ${summary.top_risk_artifact || "n/a"}</p>`,
+      `<p><strong>Breach phase:</strong> ${summary.breach_phase || "n/a"}</p>`,
+      `<p><strong>Overloaded owner:</strong> ${summary.overloaded_owner || "n/a"}</p>`,
+    ];
+    (data.artifact_exec_summary.wins || []).slice(0, 2).forEach((win) => {
+      items.push(`<p><strong>Win:</strong> ${win}</p>`);
+    });
+    (data.artifact_exec_summary.risks || []).slice(0, 2).forEach((risk) => {
+      items.push(`<p><strong>Risk:</strong> ${risk}</p>`);
+    });
+    artifactExecSummary.innerHTML = items.join("");
+  } else {
+    artifactExecSummary.textContent = "Artifact executive summary has not been generated yet.";
+  }
 }
 
 main();

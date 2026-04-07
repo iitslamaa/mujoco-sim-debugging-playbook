@@ -100,5 +100,7 @@ jobs:
         run: python scripts/generate_artifact_delivery.py
       - name: Build artifact capacity plan
         run: python scripts/generate_artifact_capacity.py
+      - name: Build artifact executive summary
+        run: python scripts/generate_artifact_exec_summary.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

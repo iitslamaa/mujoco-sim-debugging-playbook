@@ -4871,6 +4871,40 @@
       }
     ]
   },
+  "artifact_exec_summary": {
+    "summary": {
+      "status": "fail",
+      "failure_count": 5,
+      "top_risk_artifact": "outputs/support_readiness/support_readiness.json",
+      "top_risk_score": 1.551,
+      "breach_phase": "Clear support report bundle",
+      "overloaded_owner": "artifact-reporting"
+    },
+    "wins": [
+      "The artifact-readiness gate is surfacing crisp failures rather than ambiguous warnings.",
+      "The capacity model narrowed the highest-pressure phase to `Clear support report bundle`.",
+      "The recovery plan can still reach `fail` -> `pass` with the current three-phase structure."
+    ],
+    "risks": [
+      "Top artifact risk remains `outputs/support_readiness/support_readiness.json` at score `1.551`.",
+      "Delivery forecast shows `Clear support report bundle` in breach with due date `2026-04-15`.",
+      "Owner `artifact-reporting` is overloaded with `5` commands across active phases."
+    ],
+    "next_actions": [
+      {
+        "artifact": "outputs/support_readiness/support_readiness.json",
+        "phase": "Clear support report bundle",
+        "owner": "artifact-integrity",
+        "action": "High-risk artifact should move to a more specialized owner."
+      },
+      {
+        "artifact": "outputs/scenario_plan/scenario_plan.json",
+        "phase": "Clear support report bundle",
+        "owner": "artifact-integrity",
+        "action": "High-risk artifact should move to a more specialized owner."
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4927,6 +4961,7 @@
     "artifact_scenarios_markdown": "outputs/artifact_scenarios/artifact_scenarios.md",
     "artifact_recovery_markdown": "outputs/artifact_recovery/artifact_recovery.md",
     "artifact_delivery_markdown": "outputs/artifact_delivery/artifact_delivery.md",
-    "artifact_capacity_markdown": "outputs/artifact_capacity/artifact_capacity.md"
+    "artifact_capacity_markdown": "outputs/artifact_capacity/artifact_capacity.md",
+    "artifact_exec_summary_markdown": "outputs/artifact_exec_summary/artifact_exec_summary.md"
   }
 }

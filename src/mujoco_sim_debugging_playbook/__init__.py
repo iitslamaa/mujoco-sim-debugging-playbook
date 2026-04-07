@@ -5,6 +5,7 @@ __all__ = [
     "anomaly",
     "artifact_freshness",
     "artifact_delivery",
+    "artifact_exec_summary",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",
