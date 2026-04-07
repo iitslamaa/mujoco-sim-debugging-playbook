@@ -90,6 +90,7 @@ __all__ = [
     "risk_register",
     "release_notes",
     "release_checklist",
+    "release_blockers",
     "release_matrix",
     "release_packet",
     "regression",
