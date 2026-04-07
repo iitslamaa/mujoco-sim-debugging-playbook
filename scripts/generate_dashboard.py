@@ -52,6 +52,7 @@ def main() -> None:
     maintenance_risk = _read_json(ROOT / "outputs" / "maintenance_risk" / "maintenance_risk.json")
     artifact_readiness = _read_json(ROOT / "outputs" / "artifact_readiness" / "artifact_readiness.json")
     artifact_scenarios = _read_json(ROOT / "outputs" / "artifact_scenarios" / "artifact_scenarios.json")
+    artifact_recovery = _read_json(ROOT / "outputs" / "artifact_recovery" / "artifact_recovery.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -133,6 +134,7 @@ def main() -> None:
         "maintenance_risk": maintenance_risk,
         "artifact_readiness": artifact_readiness,
         "artifact_scenarios": artifact_scenarios,
+        "artifact_recovery": artifact_recovery,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -178,6 +180,7 @@ def main() -> None:
             "maintenance_risk_markdown": "outputs/maintenance_risk/maintenance_risk.md",
             "artifact_readiness_markdown": "outputs/artifact_readiness/artifact_readiness.md",
             "artifact_scenarios_markdown": "outputs/artifact_scenarios/artifact_scenarios.md",
+            "artifact_recovery_markdown": "outputs/artifact_recovery/artifact_recovery.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

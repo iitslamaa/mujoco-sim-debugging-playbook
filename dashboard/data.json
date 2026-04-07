@@ -4610,7 +4610,118 @@
       }
     ]
   },
-  "artifact_scenarios": null,
+  "artifact_scenarios": {
+    "baseline": {
+      "status": "fail",
+      "failure_count": 5,
+      "warning_count": 0,
+      "top_risk_artifact": "outputs/support_readiness/support_readiness.json",
+      "stale_count": 6,
+      "refresh_step_count": 6
+    },
+    "scenarios": [
+      {
+        "name": "Dashboard refresh only",
+        "description": "Refresh the public dashboard artifact while leaving the support-report bundle untouched.",
+        "status": "fail",
+        "failure_count": 4,
+        "warning_count": 0,
+        "top_risk_artifact": "outputs/support_readiness/support_readiness.json",
+        "stale_count": 5,
+        "refresh_step_count": 5
+      },
+      {
+        "name": "Support report sprint",
+        "description": "Refresh the support-report bundle but leave the dashboard artifact stale.",
+        "status": "fail",
+        "failure_count": 1,
+        "warning_count": 1,
+        "top_risk_artifact": "dashboard/data.json",
+        "stale_count": 1,
+        "refresh_step_count": 1
+      },
+      {
+        "name": "Top-risk stabilization",
+        "description": "Refresh the highest-risk support outputs first, but leave lower-risk artifacts pending.",
+        "status": "fail",
+        "failure_count": 3,
+        "warning_count": 1,
+        "top_risk_artifact": "outputs/ops_review/ops_review.json",
+        "stale_count": 4,
+        "refresh_step_count": 4
+      },
+      {
+        "name": "Full artifact refresh",
+        "description": "Refresh every stale artifact so the published surface is fully current.",
+        "status": "pass",
+        "failure_count": 0,
+        "warning_count": 0,
+        "top_risk_artifact": "outputs/scenario_plan/scenario_plan.json",
+        "stale_count": 0,
+        "refresh_step_count": 0
+      }
+    ]
+  },
+  "artifact_recovery": {
+    "summary": {
+      "current_status": "fail",
+      "current_failure_count": 5,
+      "phase_count": 3,
+      "top_risk_artifact": "outputs/support_readiness/support_readiness.json",
+      "target_status": "pass"
+    },
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Stabilize top risks",
+        "goal": "Reduce the highest-impact stale artifacts first to shrink maintenance risk quickly.",
+        "expected_status": "fail",
+        "expected_failure_count": 3,
+        "commands": [
+          "python scripts/generate_support_readiness.py",
+          "python scripts/generate_scenario_plan.py"
+        ],
+        "focus_artifacts": [
+          "outputs/support_readiness/support_readiness.json",
+          "outputs/scenario_plan/scenario_plan.json"
+        ]
+      },
+      {
+        "phase": 2,
+        "name": "Clear support report bundle",
+        "goal": "Refresh the support-report bundle so the public support surface is nearly current.",
+        "expected_status": "fail",
+        "expected_failure_count": 1,
+        "commands": [
+          "python scripts/generate_scenario_plan.py",
+          "python scripts/generate_support_readiness.py",
+          "python scripts/generate_ops_review.py",
+          "python scripts/generate_scorecard.py",
+          "python scripts/generate_briefing_note.py"
+        ],
+        "focus_artifacts": [
+          "outputs/scenario_plan/scenario_plan.json",
+          "outputs/support_readiness/support_readiness.json",
+          "outputs/ops_review/ops_review.json",
+          "outputs/scorecard/scorecard.json",
+          "outputs/briefing_note/briefing_note.json"
+        ]
+      },
+      {
+        "phase": 3,
+        "name": "Clear dashboard lag",
+        "goal": "Refresh the public dashboard so the surfaced state matches the refreshed support reports.",
+        "expected_status": "pass",
+        "expected_failure_count": 0,
+        "commands": [
+          "python scripts/generate_dashboard.py"
+        ],
+        "focus_artifacts": [
+          "dashboard/data.json"
+        ]
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4664,6 +4775,7 @@
     "refresh_checklist_markdown": "outputs/refresh_checklist/refresh_checklist.md",
     "maintenance_risk_markdown": "outputs/maintenance_risk/maintenance_risk.md",
     "artifact_readiness_markdown": "outputs/artifact_readiness/artifact_readiness.md",
-    "artifact_scenarios_markdown": "outputs/artifact_scenarios/artifact_scenarios.md"
+    "artifact_scenarios_markdown": "outputs/artifact_scenarios/artifact_scenarios.md",
+    "artifact_recovery_markdown": "outputs/artifact_recovery/artifact_recovery.md"
   }
 }
