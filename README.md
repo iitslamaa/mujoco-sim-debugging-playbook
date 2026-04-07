@@ -42,6 +42,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Multi-controller benchmark comparing expert, learned, and guarded hybrid control
 - Domain-randomization evaluation that measures policy robustness under changing physics
 - Automated case-study generation that turns experiment outputs into polished narratives
+- Regression snapshot and diff tooling for tracking behavior drift over time
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -98,6 +99,8 @@ make eval-rl
 make benchmark
 make randomization
 make case-studies
+make snapshot
+make regression-diff
 make demo-gif
 make dashboard
 ```
@@ -202,6 +205,17 @@ python scripts/generate_case_studies.py
 
 This produces a higher-level writeup and summary visual from the benchmark and domain-randomization outputs.
 
+## Track regressions
+
+```bash
+python scripts/create_regression_snapshot.py --name current
+python scripts/compare_regression_snapshots.py \
+  --left outputs/regression/snapshots/baseline_reference.json \
+  --right outputs/regression/snapshots/current.json
+```
+
+This captures a summary snapshot and generates a diff report against a reference snapshot.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -226,6 +240,7 @@ This writes:
 - [dashboard/index.html](/Users/lamayassine/mujoco/dashboard/index.html)
 - [learning-guide.md](/Users/lamayassine/mujoco/docs/learning-guide.md)
 - [case-study-guide.md](/Users/lamayassine/mujoco/docs/case-study-guide.md)
+- [regression-guide.md](/Users/lamayassine/mujoco/docs/regression-guide.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
 - [support_request.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/support_request.yml)
 - [ci.yml](/Users/lamayassine/mujoco/.github/workflows/ci.yml)
@@ -309,6 +324,17 @@ The repo can also synthesize raw experiment outputs into polished summary artifa
 - a Markdown case study
 - a summary graphic for quick scanning
 - reusable conclusions grounded in benchmark and randomization results
+
+## Regression tracking
+
+The repo can snapshot its current performance surface and compare it against a saved reference:
+
+- baseline metrics
+- imitation and RL evaluation metrics
+- controller benchmark aggregates
+- domain-randomization robustness aggregates
+
+That makes it easier to treat the project like a maintained platform instead of a one-time report.
 
 ## Key findings to look for
 

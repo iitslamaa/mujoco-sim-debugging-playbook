@@ -24,6 +24,7 @@ def main() -> None:
     rl_evaluation = _read_json(ROOT / "outputs" / "rl" / "evaluation" / "summary.json")
     benchmark_summary = _read_json(ROOT / "outputs" / "controller_benchmark" / "benchmark_summary.json")
     randomization_summary = _read_json(ROOT / "outputs" / "domain_randomization" / "evaluation_rows.json")
+    regression_diff = _read_json(ROOT / "outputs" / "regression" / "latest_diff" / "regression_diff.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -61,6 +62,7 @@ def main() -> None:
         "rl_evaluation": rl_evaluation,
         "benchmark_summary": benchmark_summary,
         "randomization_summary": randomization_summary,
+        "regression_diff": regression_diff,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -74,6 +76,8 @@ def main() -> None:
             "benchmark_report": "outputs/controller_benchmark/report.md",
             "randomization_report": "outputs/domain_randomization/report.md",
             "case_study_image": "outputs/case_studies/controller_robustness_story.png",
+            "regression_diff_markdown": "outputs/regression/latest_diff/regression_diff.md",
+            "regression_diff_image": "outputs/regression/latest_diff/regression_diff.png",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

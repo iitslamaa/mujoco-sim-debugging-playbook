@@ -2000,6 +2000,7 @@
     "torch_checkpoint": "/Users/lamayassine/mujoco/outputs/learning/training/policy.pt",
     "rl_checkpoint": "/Users/lamayassine/mujoco/outputs/rl/training/reinforce_policy.pt"
   },
+  "regression_diff": null,
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -2021,6 +2022,8 @@
     "support_case_markdown": "outputs/support_cases/actuator_gain_overshoot.md",
     "benchmark_report": "outputs/controller_benchmark/report.md",
     "randomization_report": "outputs/domain_randomization/report.md",
-    "case_study_image": "outputs/case_studies/controller_robustness_story.png"
+    "case_study_image": "outputs/case_studies/controller_robustness_story.png",
+    "regression_diff_markdown": "outputs/regression/latest_diff/regression_diff.md",
+    "regression_diff_image": "outputs/regression/latest_diff/regression_diff.png"
   }
 }

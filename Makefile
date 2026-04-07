@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization case-studies demo-gif dashboard format-help
+.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization case-studies snapshot regression-diff demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -56,6 +56,14 @@ randomization:
 
 case-studies:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_case_studies.py
+
+snapshot:
+	$(PYTHON) scripts/create_regression_snapshot.py --name current
+
+regression-diff:
+	$(PYTHON) scripts/compare_regression_snapshots.py \
+		--left outputs/regression/snapshots/baseline_reference.json \
+		--right outputs/regression/snapshots/current.json
 
 demo-gif:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_demo_gif.py \

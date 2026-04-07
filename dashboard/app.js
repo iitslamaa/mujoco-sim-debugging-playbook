@@ -147,6 +147,19 @@ async function main() {
   if (data.artifacts?.case_study_image) {
     document.getElementById("case-study-image").src = `../${data.artifacts.case_study_image}`;
   }
+
+  const regressionSummary = document.getElementById("regression-summary");
+  if (data.regression_diff?.scalar_deltas) {
+    const blocks = Object.entries(data.regression_diff.scalar_deltas).map(
+      ([key, value]) => `<p><strong>${key}</strong>: ${Number(value).toFixed(4)}</p>`
+    );
+    regressionSummary.innerHTML = blocks.join("");
+  } else {
+    regressionSummary.textContent = "Regression diff artifacts have not been generated yet.";
+  }
+  if (data.artifacts?.regression_diff_image) {
+    document.getElementById("regression-image").src = `../${data.artifacts.regression_diff_image}`;
+  }
 }
 
 main();

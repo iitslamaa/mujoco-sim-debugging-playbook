@@ -1,0 +1,85 @@
+{
+  "name": "baseline_reference",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "73ffedfa541b4ebc5000f2b17221bae62f15e213",
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@73ffedfa541b4ebc5000f2b17221bae62f15e213#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "metrics": {
+    "baseline_success_rate": 0.1,
+    "baseline_final_error_mean": 0.09427099044986048,
+    "imitation_success_rate": 0.375,
+    "imitation_final_error_mean": 0.07278485667434885,
+    "rl_success_rate": 0.25,
+    "rl_final_error_mean": 0.08691420946544057,
+    "benchmark_success_rate_by_controller": {
+      "expert_pd": 0.59375,
+      "torch_policy": 0.59375,
+      "hybrid_guardrail": 0.59375
+    },
+    "randomization_success_rate_by_controller": {
+      "expert_pd": 0.2222222222222222,
+      "torch_policy": 0.16666666666666666,
+      "hybrid_guardrail": 0.2222222222222222,
+      "rl_policy": 0.16666666666666666
+    },
+    "randomization_final_error_by_controller": {
+      "expert_pd": 0.09524142045932454,
+      "torch_policy": 0.09004613368031694,
+      "hybrid_guardrail": 0.09005264486878208,
+      "rl_policy": 0.0900461668731885
+    }
+  }
+}

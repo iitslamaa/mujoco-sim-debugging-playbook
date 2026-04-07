@@ -1,0 +1,48 @@
+from pathlib import Path
+import json
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from mujoco_sim_debugging_playbook.regression import compare_snapshots
+
+
+def test_compare_snapshots_generates_outputs(tmp_path: Path) -> None:
+    left = tmp_path / "left.json"
+    right = tmp_path / "right.json"
+    left.write_text(json.dumps({
+        "name": "left",
+        "metrics": {
+            "baseline_success_rate": 0.1,
+            "baseline_final_error_mean": 0.2,
+            "imitation_success_rate": 0.2,
+            "imitation_final_error_mean": 0.15,
+            "rl_success_rate": 0.3,
+            "rl_final_error_mean": 0.12,
+            "benchmark_success_rate_by_controller": {"expert_pd": 0.5},
+            "randomization_success_rate_by_controller": {"expert_pd": 0.2},
+            "randomization_final_error_by_controller": {"expert_pd": 0.1}
+        }
+    }))
+    right.write_text(json.dumps({
+        "name": "right",
+        "metrics": {
+            "baseline_success_rate": 0.2,
+            "baseline_final_error_mean": 0.1,
+            "imitation_success_rate": 0.25,
+            "imitation_final_error_mean": 0.14,
+            "rl_success_rate": 0.4,
+            "rl_final_error_mean": 0.1,
+            "benchmark_success_rate_by_controller": {"expert_pd": 0.55},
+            "randomization_success_rate_by_controller": {"expert_pd": 0.25},
+            "randomization_final_error_by_controller": {"expert_pd": 0.08}
+        }
+    }))
+    output_dir = tmp_path / "diff"
+    payload = compare_snapshots(left, right, output_dir)
+    assert payload["scalar_deltas"]["baseline_success_rate"] == 0.1
+    assert (output_dir / "regression_diff.md").exists()
+    assert (output_dir / "regression_diff.png").exists()
