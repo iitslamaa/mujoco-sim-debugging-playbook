@@ -1315,6 +1315,30 @@ async function main() {
   } else {
     dashboardSnapshotStatusBriefSummary.textContent = "Dashboard snapshot status brief has not been generated yet.";
   }
+
+  const dashboardSnapshotLeadSummary = document.getElementById("dashboard-snapshot-lead-summary");
+  if (data.dashboard_snapshot_lead?.summary) {
+    const summary = data.dashboard_snapshot_lead.summary;
+    const items = [
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Next status:</strong> ${summary.next_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Top priority:</strong> ${summary.top_priority}</p>`,
+      `<p><strong>Next focus:</strong> ${summary.next_focus}</p>`,
+      `<p><strong>Critical alerts:</strong> ${summary.critical_alerts}</p>`,
+      `<p><strong>Lead statement:</strong> ${data.dashboard_snapshot_lead.lead_statement}</p>`,
+    ];
+    (data.dashboard_snapshot_lead.headlines || []).forEach((headline) => {
+      items.push(`<p><strong>Headline:</strong> ${headline}</p>`);
+    });
+    (data.dashboard_snapshot_lead.blockers || []).forEach((blocker) => {
+      items.push(`<p><strong>Blocker:</strong> ${blocker}</p>`);
+    });
+    dashboardSnapshotLeadSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotLeadSummary.textContent = "Dashboard snapshot lead has not been generated yet.";
+  }
 }
 
 main();

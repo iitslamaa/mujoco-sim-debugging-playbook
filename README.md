@@ -216,6 +216,7 @@ make dashboard-snapshot-watchlist
 make dashboard-snapshot-focus
 make dashboard-snapshot-priorities
 make dashboard-snapshot-status-brief
+make dashboard-snapshot-lead
 make case-studies
 make snapshot
 make regression-diff
@@ -907,6 +908,14 @@ python scripts/generate_dashboard_snapshot_status_brief.py
 
 This combines the current priorities and monitor headlines into one compact update.
 
+## Build dashboard snapshot lead
+
+```bash
+python scripts/generate_dashboard_snapshot_lead.py
+```
+
+This turns the current brief and review state into one short situation report.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -971,6 +980,7 @@ This writes:
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
 - [dashboard-snapshot-priorities-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-priorities-guide.md)
 - [dashboard-snapshot-status-brief-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-status-brief-guide.md)
+- [dashboard-snapshot-lead-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-lead-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
