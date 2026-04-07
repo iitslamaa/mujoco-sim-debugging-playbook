@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "item_count": 5,
+    "stale_count": 4,
+    "oldest_target": "delay_heavy / expert_pd"
+  },
+  "bucket_counts": {
+    "fresh": 0,
+    "warming": 1,
+    "stale": 4
+  },
+  "rows": [
+    {
+      "target": "delay_heavy / expert_pd",
+      "lane": "incident_backfill",
+      "status": "at_risk",
+      "aging_score": 17.0,
+      "bucket": "stale",
+      "due_in_days": 12
+    },
+    {
+      "target": "noise_heavy / hybrid_guardrail",
+      "lane": "incident_backfill",
+      "status": "at_risk",
+      "aging_score": 15.0,
+      "bucket": "stale",
+      "due_in_days": 10
+    },
+    {
+      "target": "low_damping_high_gain / hybrid_guardrail",
+      "lane": "incident_backfill",
+      "status": "breach",
+      "aging_score": 14.0,
+      "bucket": "stale",
+      "due_in_days": 6
+    },
+    {
+      "target": "noise_heavy / expert_pd",
+      "lane": "incident_backfill",
+      "status": "at_risk",
+      "aging_score": 13.0,
+      "bucket": "stale",
+      "due_in_days": 8
+    },
+    {
+      "target": "low_damping_high_gain / expert_pd",
+      "lane": "incident_backfill",
+      "status": "breach",
+      "aging_score": 11.0,
+      "bucket": "warming",
+      "due_in_days": 3
+    }
+  ]
+}
