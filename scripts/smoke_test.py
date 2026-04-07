@@ -100,6 +100,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_artifact_alerts.py"], env=env)
     run([sys.executable, "scripts/generate_artifact_digest.py"], env=env)
     run([sys.executable, "scripts/generate_artifact_handoff.py"], env=env)
+    run([sys.executable, "scripts/generate_artifact_review_note.py"], env=env)
     run(
         [
             sys.executable,
@@ -232,6 +233,9 @@ def main() -> None:
     artifact_handoff = ROOT / "outputs" / "artifact_handoff" / "artifact_handoff.json"
     if not artifact_handoff.exists():
         raise SystemExit(f"Expected artifact handoff at {artifact_handoff}")
+    artifact_review_note = ROOT / "outputs" / "artifact_review_note" / "artifact_review_note.json"
+    if not artifact_review_note.exists():
+        raise SystemExit(f"Expected artifact review note at {artifact_review_note}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

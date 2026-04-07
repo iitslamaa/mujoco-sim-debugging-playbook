@@ -87,6 +87,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact alerts that emit short operator-style notifications from the artifact-health stack
 - Artifact digests that roll alerts, actions, and trend signals into a compact briefing
 - Artifact handoff packets that package the current state for the next recovery owner
+- Artifact review notes that summarize what changed, what blocks progress, and what should be approved next
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -184,6 +185,7 @@ make artifact-actions
 make artifact-alerts
 make artifact-digest
 make artifact-handoff
+make artifact-review-note
 make case-studies
 make snapshot
 make regression-diff
@@ -667,6 +669,14 @@ python scripts/generate_artifact_handoff.py
 
 This packages the current artifact-health state into a concise handoff for the next owner or recovery cycle.
 
+## Build an artifact review note
+
+```bash
+python scripts/generate_artifact_review_note.py
+```
+
+This creates a reviewer-facing note covering what changed, what still blocks progress, and what to approve next.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -705,6 +715,7 @@ This writes:
 - [artifact-alerts-guide.md](/Users/lamayassine/mujoco/docs/artifact-alerts-guide.md)
 - [artifact-digest-guide.md](/Users/lamayassine/mujoco/docs/artifact-digest-guide.md)
 - [artifact-handoff-guide.md](/Users/lamayassine/mujoco/docs/artifact-handoff-guide.md)
+- [artifact-review-note-guide.md](/Users/lamayassine/mujoco/docs/artifact-review-note-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

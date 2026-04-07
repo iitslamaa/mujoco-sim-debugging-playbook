@@ -5092,7 +5092,93 @@
       }
     ]
   },
-  "artifact_handoff": null,
+  "artifact_handoff": {
+    "summary": {
+      "status": "fail",
+      "top_risk_artifact": "outputs/support_readiness/support_readiness.json",
+      "breach_phase": "Clear support report bundle",
+      "handoff_owner": "artifact-reporting",
+      "critical_alert_count": 2,
+      "action_count": 3
+    },
+    "headlines": [
+      "Artifact status is fail with 5 failures.",
+      "Top risk remains outputs/support_readiness/support_readiness.json at 1.551.",
+      "Trend direction is improving toward pass."
+    ],
+    "alerts": [
+      {
+        "severity": "critical",
+        "title": "Artifact readiness is failing",
+        "message": "Current artifact status is fail with 5 failures."
+      },
+      {
+        "severity": "critical",
+        "title": "Recovery phase in breach",
+        "message": "Clear support report bundle is in breach and due on 2026-04-15."
+      },
+      {
+        "severity": "warning",
+        "title": "Owner overloaded",
+        "message": "artifact-reporting is overloaded with 5 commands."
+      }
+    ],
+    "actions": [
+      {
+        "priority": "P0",
+        "target": "outputs/support_readiness/support_readiness.json",
+        "owner": "artifact-integrity",
+        "phase": "Clear support report bundle",
+        "reason": "High-risk artifact should move to a more specialized owner.",
+        "expected_impact": "Reduce breach pressure on the support-report bundle."
+      },
+      {
+        "priority": "P0",
+        "target": "outputs/scenario_plan/scenario_plan.json",
+        "owner": "artifact-integrity",
+        "phase": "Clear support report bundle",
+        "reason": "High-risk artifact should move to a more specialized owner.",
+        "expected_impact": "Reduce breach pressure on the support-report bundle."
+      },
+      {
+        "priority": "P1",
+        "target": "Stabilize top risks",
+        "owner": "artifact-integrity",
+        "phase": "Stabilize top risks",
+        "reason": "This is the nearest-due recovery phase in the current delivery forecast.",
+        "expected_impact": "Prevent the current at-risk phase from becoming a breach."
+      }
+    ],
+    "owner_context": {
+      "owner": "artifact-reporting",
+      "command_count": 5,
+      "phase_count": 1,
+      "status": "overloaded"
+    }
+  },
+  "artifact_review_note": {
+    "summary": {
+      "status": "fail",
+      "projected_terminal_status": "pass",
+      "changed_count": 2,
+      "blocker_count": 3,
+      "approval_count": 3
+    },
+    "changed": [
+      "Artifact status is fail with 5 failures.",
+      "Trend direction is improving toward pass."
+    ],
+    "blockers": [
+      "Current artifact status is fail with 5 failures.",
+      "Clear support report bundle is in breach and due on 2026-04-15.",
+      "artifact-reporting is overloaded with 5 commands."
+    ],
+    "approvals": [
+      "P0 outputs/support_readiness/support_readiness.json -> artifact-integrity",
+      "P0 outputs/scenario_plan/scenario_plan.json -> artifact-integrity",
+      "P1 Stabilize top risks -> artifact-integrity"
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5155,6 +5241,7 @@
     "artifact_actions_markdown": "outputs/artifact_actions/artifact_actions.md",
     "artifact_alerts_markdown": "outputs/artifact_alerts/artifact_alerts.md",
     "artifact_digest_markdown": "outputs/artifact_digest/artifact_digest.md",
-    "artifact_handoff_markdown": "outputs/artifact_handoff/artifact_handoff.md"
+    "artifact_handoff_markdown": "outputs/artifact_handoff/artifact_handoff.md",
+    "artifact_review_note_markdown": "outputs/artifact_review_note/artifact_review_note.md"
   }
 }

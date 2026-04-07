@@ -112,5 +112,7 @@ jobs:
         run: python scripts/generate_artifact_digest.py
       - name: Build artifact handoff
         run: python scripts/generate_artifact_handoff.py
+      - name: Build artifact review note
+        run: python scripts/generate_artifact_review_note.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

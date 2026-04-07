@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "status": "fail",
+    "projected_terminal_status": "pass",
+    "changed_count": 2,
+    "blocker_count": 3,
+    "approval_count": 3
+  },
+  "changed": [
+    "Artifact status is fail with 5 failures.",
+    "Trend direction is improving toward pass."
+  ],
+  "blockers": [
+    "Current artifact status is fail with 5 failures.",
+    "Clear support report bundle is in breach and due on 2026-04-15.",
+    "artifact-reporting is overloaded with 5 commands."
+  ],
+  "approvals": [
+    "P0 outputs/support_readiness/support_readiness.json -> artifact-integrity",
+    "P0 outputs/scenario_plan/scenario_plan.json -> artifact-integrity",
+    "P1 Stabilize top risks -> artifact-integrity"
+  ]
+}

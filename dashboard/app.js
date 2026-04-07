@@ -795,6 +795,24 @@ async function main() {
   } else {
     artifactHandoffSummary.textContent = "Artifact handoff has not been generated yet.";
   }
+
+  const artifactReviewNoteSummary = document.getElementById("artifact-review-note-summary");
+  if (data.artifact_review_note?.summary) {
+    const summary = data.artifact_review_note.summary;
+    const items = [
+      `<p><strong>Status:</strong> ${summary.status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Changed items:</strong> ${summary.changed_count}</p>`,
+      `<p><strong>Blockers:</strong> ${summary.blocker_count}</p>`,
+      `<p><strong>Approval items:</strong> ${summary.approval_count}</p>`,
+    ];
+    (data.artifact_review_note.blockers || []).forEach((blocker) => {
+      items.push(`<p><strong>Blocker:</strong> ${blocker}</p>`);
+    });
+    artifactReviewNoteSummary.innerHTML = items.join("");
+  } else {
+    artifactReviewNoteSummary.textContent = "Artifact review note has not been generated yet.";
+  }
 }
 
 main();

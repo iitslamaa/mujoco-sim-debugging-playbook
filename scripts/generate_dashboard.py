@@ -61,6 +61,7 @@ def main() -> None:
     artifact_alerts = _read_json(ROOT / "outputs" / "artifact_alerts" / "artifact_alerts.json")
     artifact_digest = _read_json(ROOT / "outputs" / "artifact_digest" / "artifact_digest.json")
     artifact_handoff = _read_json(ROOT / "outputs" / "artifact_handoff" / "artifact_handoff.json")
+    artifact_review_note = _read_json(ROOT / "outputs" / "artifact_review_note" / "artifact_review_note.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -151,6 +152,7 @@ def main() -> None:
         "artifact_alerts": artifact_alerts,
         "artifact_digest": artifact_digest,
         "artifact_handoff": artifact_handoff,
+        "artifact_review_note": artifact_review_note,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -205,6 +207,7 @@ def main() -> None:
             "artifact_alerts_markdown": "outputs/artifact_alerts/artifact_alerts.md",
             "artifact_digest_markdown": "outputs/artifact_digest/artifact_digest.md",
             "artifact_handoff_markdown": "outputs/artifact_handoff/artifact_handoff.md",
+            "artifact_review_note_markdown": "outputs/artifact_review_note/artifact_review_note.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))
