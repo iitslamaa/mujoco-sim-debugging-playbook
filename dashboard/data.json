@@ -4959,6 +4959,48 @@
       "top_risk_direction": "improving"
     }
   },
+  "artifact_actions": {
+    "summary": {
+      "action_count": 4,
+      "current_status": "fail",
+      "projected_terminal_status": "pass",
+      "top_risk_artifact": "outputs/support_readiness/support_readiness.json"
+    },
+    "actions": [
+      {
+        "priority": "P0",
+        "target": "outputs/support_readiness/support_readiness.json",
+        "owner": "artifact-integrity",
+        "phase": "Clear support report bundle",
+        "reason": "High-risk artifact should move to a more specialized owner.",
+        "expected_impact": "Reduce breach pressure on the support-report bundle."
+      },
+      {
+        "priority": "P0",
+        "target": "outputs/scenario_plan/scenario_plan.json",
+        "owner": "artifact-integrity",
+        "phase": "Clear support report bundle",
+        "reason": "High-risk artifact should move to a more specialized owner.",
+        "expected_impact": "Reduce breach pressure on the support-report bundle."
+      },
+      {
+        "priority": "P1",
+        "target": "Stabilize top risks",
+        "owner": "artifact-integrity",
+        "phase": "Stabilize top risks",
+        "reason": "This is the nearest-due recovery phase in the current delivery forecast.",
+        "expected_impact": "Prevent the current at-risk phase from becoming a breach."
+      },
+      {
+        "priority": "P2",
+        "target": "full_refresh_projection",
+        "owner": "artifact-program",
+        "phase": "Full artifact refresh",
+        "reason": "History shows a full refresh is the path to a pass state.",
+        "expected_impact": "Move the artifact surface from fail to pass."
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5017,6 +5059,7 @@
     "artifact_delivery_markdown": "outputs/artifact_delivery/artifact_delivery.md",
     "artifact_capacity_markdown": "outputs/artifact_capacity/artifact_capacity.md",
     "artifact_exec_summary_markdown": "outputs/artifact_exec_summary/artifact_exec_summary.md",
-    "artifact_history_markdown": "outputs/artifact_history/artifact_history.md"
+    "artifact_history_markdown": "outputs/artifact_history/artifact_history.md",
+    "artifact_actions_markdown": "outputs/artifact_actions/artifact_actions.md"
   }
 }

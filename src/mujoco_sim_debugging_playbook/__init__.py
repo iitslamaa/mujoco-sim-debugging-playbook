@@ -7,6 +7,7 @@ __all__ = [
     "artifact_delivery",
     "artifact_exec_summary",
     "artifact_history",
+    "artifact_actions",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

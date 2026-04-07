@@ -57,6 +57,7 @@ def main() -> None:
     artifact_capacity = _read_json(ROOT / "outputs" / "artifact_capacity" / "artifact_capacity.json")
     artifact_exec_summary = _read_json(ROOT / "outputs" / "artifact_exec_summary" / "artifact_exec_summary.json")
     artifact_history = _read_json(ROOT / "outputs" / "artifact_history" / "artifact_history.json")
+    artifact_actions = _read_json(ROOT / "outputs" / "artifact_actions" / "artifact_actions.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -143,6 +144,7 @@ def main() -> None:
         "artifact_capacity": artifact_capacity,
         "artifact_exec_summary": artifact_exec_summary,
         "artifact_history": artifact_history,
+        "artifact_actions": artifact_actions,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -193,6 +195,7 @@ def main() -> None:
             "artifact_capacity_markdown": "outputs/artifact_capacity/artifact_capacity.md",
             "artifact_exec_summary_markdown": "outputs/artifact_exec_summary/artifact_exec_summary.md",
             "artifact_history_markdown": "outputs/artifact_history/artifact_history.md",
+            "artifact_actions_markdown": "outputs/artifact_actions/artifact_actions.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

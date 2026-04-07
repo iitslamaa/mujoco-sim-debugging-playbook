@@ -720,6 +720,25 @@ async function main() {
   } else {
     artifactHistorySummary.textContent = "Artifact history has not been generated yet.";
   }
+
+  const artifactActionsSummary = document.getElementById("artifact-actions-summary");
+  if (data.artifact_actions?.summary) {
+    const summary = data.artifact_actions.summary;
+    const items = [
+      `<p><strong>Actions:</strong> ${summary.action_count}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Top risk artifact:</strong> ${summary.top_risk_artifact || "n/a"}</p>`,
+    ];
+    (data.artifact_actions.actions || []).forEach((action) => {
+      items.push(
+        `<p><strong>${action.priority}</strong> ${action.target}: ${action.owner} -> ${action.expected_impact}</p>`
+      );
+    });
+    artifactActionsSummary.innerHTML = items.join("");
+  } else {
+    artifactActionsSummary.textContent = "Artifact actions have not been generated yet.";
+  }
 }
 
 main();
