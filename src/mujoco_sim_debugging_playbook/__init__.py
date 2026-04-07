@@ -41,6 +41,7 @@ __all__ = [
     "artifact_capacity",
     "debug_bundle_manifest",
     "bundle_verifier",
+    "bundle_quality",
     "artifact_readiness",
     "artifact_recovery",
     "artifact_scenarios",
