@@ -50,6 +50,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Scenario-level anomaly analysis that pinpoints brittle controller/scenario combinations and hard randomized episodes
 - Automated mitigation recommendations that turn anomalies into actionable tuning guidance
 - A synthesized support triage queue that prioritizes what an engineer should inspect first
+- Incident bundles that package top-priority issues into handoff-ready case files
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -108,6 +109,7 @@ make randomization
 make anomalies
 make recommendations
 make triage
+make incidents
 make case-studies
 make snapshot
 make regression-diff
@@ -307,6 +309,19 @@ python scripts/generate_triage_queue.py \
 ```
 
 This prioritizes the highest-value follow-up items using anomaly severity, release scope, and current regression state.
+
+## Generate incident bundles
+
+```bash
+python scripts/generate_incident_bundles.py \
+  --triage outputs/triage/triage_queue.json \
+  --anomalies outputs/anomalies/anomaly_report.json \
+  --recommendations outputs/recommendations/recommendations.json \
+  --output-dir outputs/incidents \
+  --limit 5
+```
+
+This creates handoff-ready case files for the highest-priority support items.
 
 ## Generate a diagnostics bundle
 

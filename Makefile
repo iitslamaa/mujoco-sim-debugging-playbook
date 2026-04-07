@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
+.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -62,6 +62,9 @@ recommendations:
 
 triage:
 	$(PYTHON) scripts/generate_triage_queue.py
+
+incidents:
+	$(PYTHON) scripts/generate_incident_bundles.py
 
 case-studies:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_case_studies.py

@@ -280,6 +280,17 @@ async function main() {
   } else {
     triageSummary.textContent = "Triage queue artifacts have not been generated yet.";
   }
+
+  const incidentSummary = document.getElementById("incident-summary");
+  if (data.incidents?.bundles) {
+    const items = [];
+    data.incidents.bundles.slice(0, 5).forEach((bundle) => {
+      items.push(`<p><strong>${bundle.id}</strong> ${bundle.target}: ${bundle.next_action}</p>`);
+    });
+    incidentSummary.innerHTML = items.join("");
+  } else {
+    incidentSummary.textContent = "Incident bundle artifacts have not been generated yet.";
+  }
 }
 
 main();

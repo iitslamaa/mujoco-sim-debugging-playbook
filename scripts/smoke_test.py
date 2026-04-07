@@ -71,6 +71,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_anomaly_report.py"], env=env)
     run([sys.executable, "scripts/generate_recommendations.py"], env=env)
     run([sys.executable, "scripts/generate_triage_queue.py"], env=env)
+    run([sys.executable, "scripts/generate_incident_bundles.py"], env=env)
     run(
         [
             sys.executable,
@@ -116,6 +117,9 @@ def main() -> None:
     triage_queue = ROOT / "outputs" / "triage" / "triage_queue.json"
     if not triage_queue.exists():
         raise SystemExit(f"Expected triage queue at {triage_queue}")
+    incidents_index = ROOT / "outputs" / "incidents" / "index.json"
+    if not incidents_index.exists():
+        raise SystemExit(f"Expected incident bundles at {incidents_index}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])
