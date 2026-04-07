@@ -269,6 +269,17 @@ async function main() {
   } else {
     recommendationSummary.textContent = "Recommendation artifacts have not been generated yet.";
   }
+
+  const triageSummary = document.getElementById("triage-summary");
+  if (data.triage?.items) {
+    const items = [];
+    data.triage.items.slice(0, 6).forEach((row) => {
+      items.push(`<p><strong>${row.target}</strong> (${row.kind}, ${Number(row.priority_score).toFixed(1)}): ${row.next_action}</p>`);
+    });
+    triageSummary.innerHTML = items.join("");
+  } else {
+    triageSummary.textContent = "Triage queue artifacts have not been generated yet.";
+  }
 }
 
 main();

@@ -49,6 +49,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Commit-linked release notes for summarizing code, metric, and artifact changes between Git SHAs
 - Scenario-level anomaly analysis that pinpoints brittle controller/scenario combinations and hard randomized episodes
 - Automated mitigation recommendations that turn anomalies into actionable tuning guidance
+- A synthesized support triage queue that prioritizes what an engineer should inspect first
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -106,6 +107,7 @@ make benchmark
 make randomization
 make anomalies
 make recommendations
+make triage
 make case-studies
 make snapshot
 make regression-diff
@@ -292,6 +294,19 @@ python scripts/generate_recommendations.py \
 ```
 
 This turns anomaly findings into concrete follow-up actions with supporting sweep evidence and tradeoff notes.
+
+## Generate a support triage queue
+
+```bash
+python scripts/generate_triage_queue.py \
+  --anomalies outputs/anomalies/anomaly_report.json \
+  --recommendations outputs/recommendations/recommendations.json \
+  --regression-gate outputs/regression/gate/regression_gate.json \
+  --release-notes outputs/releases/latest/release_notes.json \
+  --output-dir outputs/triage
+```
+
+This prioritizes the highest-value follow-up items using anomaly severity, release scope, and current regression state.
 
 ## Generate a diagnostics bundle
 

@@ -2849,7 +2849,135 @@
       }
     ]
   },
-  "recommendations": null,
+  "recommendations": {
+    "recommendations": [
+      {
+        "kind": "benchmark_case",
+        "target": "low_damping_high_gain / expert_pd",
+        "severity": 0.36560761301686967,
+        "recommendation": "Increase joint damping and reduce actuator gain before changing controller structure.",
+        "evidence": "Highest benchmark risk is in `low_damping_high_gain`. Sweep evidence shows the best joint damping setting in the playbook is `5.5` with `0.0665` final error.",
+        "tradeoff": "Higher damping reduces aggressiveness and may slightly slow settling."
+      },
+      {
+        "kind": "benchmark_case",
+        "target": "low_damping_high_gain / hybrid_guardrail",
+        "severity": 0.35961109953321907,
+        "recommendation": "Increase joint damping and reduce actuator gain before changing controller structure.",
+        "evidence": "Highest benchmark risk is in `low_damping_high_gain`. Sweep evidence shows the best joint damping setting in the playbook is `5.5` with `0.0665` final error.",
+        "tradeoff": "Higher damping reduces aggressiveness and may slightly slow settling."
+      },
+      {
+        "kind": "benchmark_case",
+        "target": "noise_heavy / expert_pd",
+        "severity": 0.044364571308517474,
+        "recommendation": "Add observation filtering or slightly lower controller aggressiveness under noisy sensing.",
+        "evidence": "The noisy scenario is among the top anomaly cases. Sweep rows around sensor noise show best success at `0.02` with `0.333` success.",
+        "tradeoff": "Filtering helps stability but can add lag and reduce responsiveness."
+      },
+      {
+        "kind": "benchmark_case",
+        "target": "noise_heavy / hybrid_guardrail",
+        "severity": 0.044097387157338366,
+        "recommendation": "Add observation filtering or slightly lower controller aggressiveness under noisy sensing.",
+        "evidence": "The noisy scenario is among the top anomaly cases. Sweep rows around sensor noise show best success at `0.02` with `0.333` success.",
+        "tradeoff": "Filtering helps stability but can add lag and reduce responsiveness."
+      },
+      {
+        "kind": "benchmark_case",
+        "target": "delay_heavy / expert_pd",
+        "severity": 0.04347152971847829,
+        "recommendation": "Increase control frequency or use a more delay-tolerant guarded policy blend.",
+        "evidence": "Delay-heavy behavior is elevated in the benchmark, and the sweep suggests lower control_dt (`0.01`) gives the strongest success profile.",
+        "tradeoff": "Higher control frequency increases compute cost and can amplify noisy actuation if left untuned."
+      },
+      {
+        "kind": "randomized_episode",
+        "target": "episode 1",
+        "severity": 1.1708717748779893,
+        "recommendation": "Reduce control delay or switch to the guarded/learned policy family; lower actuator gain.",
+        "evidence": "This randomized episode had `0.000` success rate with worst controller `expert_pd`. The playbook's best control_dt sweep setting is `0.01`.",
+        "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+      },
+      {
+        "kind": "randomized_episode",
+        "target": "episode 14",
+        "severity": 1.166659123947502,
+        "recommendation": "Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; lower actuator gain.",
+        "evidence": "This randomized episode had `0.000` success rate with worst controller `expert_pd`. The playbook's best control_dt sweep setting is `0.01`.",
+        "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+      },
+      {
+        "kind": "randomized_episode",
+        "target": "episode 17",
+        "severity": 1.1577372914512094,
+        "recommendation": "Lower actuator gain; raise joint damping.",
+        "evidence": "This randomized episode had `0.000` success rate with worst controller `expert_pd`. The playbook's best control_dt sweep setting is `0.01`.",
+        "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+      },
+      {
+        "kind": "randomized_episode",
+        "target": "episode 9",
+        "severity": 1.151461366675756,
+        "recommendation": "Add observation smoothing; lower actuator gain.",
+        "evidence": "This randomized episode had `0.000` success rate with worst controller `rl_policy`. The playbook's best control_dt sweep setting is `0.01`.",
+        "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+      },
+      {
+        "kind": "randomized_episode",
+        "target": "episode 5",
+        "severity": 1.12455734536996,
+        "recommendation": "Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; raise joint damping.",
+        "evidence": "This randomized episode had `0.000` success rate with worst controller `expert_pd`. The playbook's best control_dt sweep setting is `0.01`.",
+        "tradeoff": "Mitigations that improve robustness can trade off speed, energy, or nominal performance."
+      }
+    ],
+    "parameter_rankings": [
+      {
+        "parameter": "actuator_gain",
+        "best_value": 18.0,
+        "best_success_rate": 0.8333333333333334,
+        "worst_value": 52.0,
+        "worst_success_rate": 0.25
+      },
+      {
+        "parameter": "control_delay_steps",
+        "best_value": 0,
+        "best_success_rate": 0.25,
+        "worst_value": 6,
+        "worst_success_rate": 0.25
+      },
+      {
+        "parameter": "control_dt",
+        "best_value": 0.01,
+        "best_success_rate": 0.6666666666666666,
+        "worst_value": 0.06,
+        "worst_success_rate": 0.16666666666666666
+      },
+      {
+        "parameter": "friction_loss",
+        "best_value": 0.1,
+        "best_success_rate": 0.25,
+        "worst_value": 0.0,
+        "worst_success_rate": 0.25
+      },
+      {
+        "parameter": "joint_damping",
+        "best_value": 5.5,
+        "best_success_rate": 0.25,
+        "worst_value": 0.4,
+        "worst_success_rate": 0.25
+      },
+      {
+        "parameter": "sensor_noise_std",
+        "best_value": 0.02,
+        "best_success_rate": 0.3333333333333333,
+        "worst_value": 0.0,
+        "worst_success_rate": 0.25
+      }
+    ]
+  },
+  "triage": null,
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -2882,6 +3010,7 @@
     "anomaly_report_markdown": "outputs/anomalies/anomaly_report.md",
     "anomaly_benchmark_image": "outputs/anomalies/benchmark_risk_heatmap.png",
     "anomaly_difficulty_image": "outputs/anomalies/randomization_difficulty.png",
-    "recommendations_markdown": "outputs/recommendations/recommendations.md"
+    "recommendations_markdown": "outputs/recommendations/recommendations.md",
+    "triage_markdown": "outputs/triage/triage_queue.md"
   }
 }

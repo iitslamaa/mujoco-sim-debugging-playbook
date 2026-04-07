@@ -31,6 +31,7 @@ def main() -> None:
     release_notes = _read_json(ROOT / "outputs" / "releases" / "latest" / "release_notes.json")
     anomalies = _read_json(ROOT / "outputs" / "anomalies" / "anomaly_report.json")
     recommendations = _read_json(ROOT / "outputs" / "recommendations" / "recommendations.json")
+    triage = _read_json(ROOT / "outputs" / "triage" / "triage_queue.json")
     case_study_exists = (ROOT / "outputs" / "case_studies" / "controller_robustness_story.md").exists()
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
@@ -91,6 +92,7 @@ def main() -> None:
         "release_notes": release_notes,
         "anomalies": anomalies,
         "recommendations": recommendations,
+        "triage": triage,
         "case_studies": {
             "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
         } if case_study_exists else None,
@@ -115,6 +117,7 @@ def main() -> None:
             "anomaly_benchmark_image": "outputs/anomalies/benchmark_risk_heatmap.png",
             "anomaly_difficulty_image": "outputs/anomalies/randomization_difficulty.png",
             "recommendations_markdown": "outputs/recommendations/recommendations.md",
+            "triage_markdown": "outputs/triage/triage_queue.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

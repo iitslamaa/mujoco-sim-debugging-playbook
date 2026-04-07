@@ -52,5 +52,7 @@ jobs:
         run: MPLCONFIGDIR=/tmp/mpl python scripts/generate_anomaly_report.py
       - name: Build mitigation recommendations
         run: python scripts/generate_recommendations.py
+      - name: Build triage queue
+        run: python scripts/generate_triage_queue.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

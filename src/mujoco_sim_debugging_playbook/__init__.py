@@ -21,5 +21,6 @@ __all__ = [
     "rl",
     "simulation",
     "support",
+    "triage",
     "trace_plot",
 ]

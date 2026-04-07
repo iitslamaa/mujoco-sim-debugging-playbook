@@ -1,0 +1,97 @@
+{
+  "items": [
+    {
+      "kind": "randomized_episode",
+      "priority_score": 217.08717748779893,
+      "target": "episode 1",
+      "summary": "Hard randomized episode with worst controller `expert_pd`.",
+      "evidence": "Difficulty `1.1709`, success `0.000`, delay `5`, noise `0.0068`.",
+      "next_action": "Reduce control delay or switch to the guarded/learned policy family; lower actuator gain."
+    },
+    {
+      "kind": "randomized_episode",
+      "priority_score": 216.6659123947502,
+      "target": "episode 14",
+      "summary": "Hard randomized episode with worst controller `expert_pd`.",
+      "evidence": "Difficulty `1.1667`, success `0.000`, delay `5`, noise `0.0110`.",
+      "next_action": "Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; lower actuator gain."
+    },
+    {
+      "kind": "randomized_episode",
+      "priority_score": 215.77372914512094,
+      "target": "episode 17",
+      "summary": "Hard randomized episode with worst controller `expert_pd`.",
+      "evidence": "Difficulty `1.1577`, success `0.000`, delay `0`, noise `0.0094`.",
+      "next_action": "Lower actuator gain; raise joint damping."
+    },
+    {
+      "kind": "randomized_episode",
+      "priority_score": 215.1461366675756,
+      "target": "episode 9",
+      "summary": "Hard randomized episode with worst controller `rl_policy`.",
+      "evidence": "Difficulty `1.1515`, success `0.000`, delay `1`, noise `0.0172`.",
+      "next_action": "Add observation smoothing; lower actuator gain."
+    },
+    {
+      "kind": "randomized_episode",
+      "priority_score": 212.455734536996,
+      "target": "episode 5",
+      "summary": "Hard randomized episode with worst controller `expert_pd`.",
+      "evidence": "Difficulty `1.1246`, success `0.000`, delay `4`, noise `0.0167`.",
+      "next_action": "Reduce control delay or switch to the guarded/learned policy family; add observation smoothing; raise joint damping."
+    },
+    {
+      "kind": "benchmark_case",
+      "priority_score": 86.56076130168697,
+      "target": "low_damping_high_gain / expert_pd",
+      "summary": "Elevated benchmark risk in `low_damping_high_gain` for `expert_pd`.",
+      "evidence": "Risk score `0.3656`, final error `0.0571`.",
+      "next_action": "Increase joint damping and reduce actuator gain before changing controller structure."
+    },
+    {
+      "kind": "benchmark_case",
+      "priority_score": 85.96110995332191,
+      "target": "low_damping_high_gain / hybrid_guardrail",
+      "summary": "Elevated benchmark risk in `low_damping_high_gain` for `hybrid_guardrail`.",
+      "evidence": "Risk score `0.3596`, final error `0.0567`.",
+      "next_action": "Increase joint damping and reduce actuator gain before changing controller structure."
+    },
+    {
+      "kind": "benchmark_case",
+      "priority_score": 54.43645713085175,
+      "target": "noise_heavy / expert_pd",
+      "summary": "Elevated benchmark risk in `noise_heavy` for `expert_pd`.",
+      "evidence": "Risk score `0.0444`, final error `0.0474`.",
+      "next_action": "Add observation filtering or slightly lower controller aggressiveness under noisy sensing."
+    },
+    {
+      "kind": "benchmark_case",
+      "priority_score": 54.40973871573384,
+      "target": "noise_heavy / hybrid_guardrail",
+      "summary": "Elevated benchmark risk in `noise_heavy` for `hybrid_guardrail`.",
+      "evidence": "Risk score `0.0441`, final error `0.0474`.",
+      "next_action": "Add observation filtering or slightly lower controller aggressiveness under noisy sensing."
+    },
+    {
+      "kind": "benchmark_case",
+      "priority_score": 54.34715297184783,
+      "target": "delay_heavy / expert_pd",
+      "summary": "Elevated benchmark risk in `delay_heavy` for `expert_pd`.",
+      "evidence": "Risk score `0.0435`, final error `0.0442`.",
+      "next_action": "Increase control frequency or use a more delay-tolerant guarded policy blend."
+    },
+    {
+      "kind": "release_review",
+      "priority_score": 25.0,
+      "target": "9947b32 -> HEAD",
+      "summary": "Recent change range to review from a support and release perspective.",
+      "evidence": "31 files changed, 4413 insertions(+), 20 deletions(-)",
+      "next_action": "Check changed areas with the highest file counts first and confirm docs, CI, and artifacts stayed aligned."
+    }
+  ],
+  "summary": {
+    "count": 11,
+    "top_priority": "episode 1",
+    "regression_gate_status": "pass"
+  }
+}
