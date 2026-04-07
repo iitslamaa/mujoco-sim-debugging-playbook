@@ -7,6 +7,7 @@ __all__ = [
     "experiment",
     "environment",
     "diagnostics",
+    "generalization",
     "learning",
     "metrics",
     "plot",

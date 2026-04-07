@@ -115,6 +115,25 @@ async function main() {
   } else {
     benchmarkBox.textContent = "Benchmark artifacts have not been generated yet.";
   }
+
+  const randomizationBox = document.getElementById("randomization-summary");
+  const randomizationRows = data.randomization_summary?.rows || [];
+  if (randomizationRows.length > 0) {
+    const grouped = new Map();
+    randomizationRows.forEach((row) => {
+      if (!grouped.has(row.controller)) grouped.set(row.controller, []);
+      grouped.get(row.controller).push(row);
+    });
+    const summaries = [];
+    grouped.forEach((rows, controller) => {
+      const success = rows.reduce((acc, row) => acc + row.success, 0) / rows.length;
+      const finalError = rows.reduce((acc, row) => acc + row.final_error, 0) / rows.length;
+      summaries.push(`<p><strong>${controller}</strong>: ${(success * 100).toFixed(1)}% success, ${finalError.toFixed(4)} mean final error</p>`);
+    });
+    randomizationBox.innerHTML = summaries.join("");
+  } else {
+    randomizationBox.textContent = "Domain-randomization artifacts have not been generated yet.";
+  }
 }
 
 main();

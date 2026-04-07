@@ -40,6 +40,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Online RL fine-tuning stage that adapts the imitation policy inside MuJoCo
 - Static dashboard for browsing artifacts, environment details, and support cases
 - Multi-controller benchmark comparing expert, learned, and guarded hybrid control
+- Domain-randomization evaluation that measures policy robustness under changing physics
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -94,6 +95,7 @@ make eval-policy
 make train-rl
 make eval-rl
 make benchmark
+make randomization
 make demo-gif
 make dashboard
 ```
@@ -182,6 +184,14 @@ This benchmark compares:
 
 across a scenario suite with baseline, noise-heavy, delay-heavy, and low-damping/high-gain conditions.
 
+## Run domain-randomization evaluation
+
+```bash
+python scripts/run_domain_randomization.py
+```
+
+This evaluates controllers under episode-to-episode randomized damping, friction, actuator gain, observation noise, and control delay.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -268,6 +278,18 @@ The repo also includes a robustness benchmark for comparing controllers under st
 - a hybrid guardrail controller that falls back toward expert behavior when state error grows
 
 That makes the project more interesting than a simple baseline-vs-policy comparison because it shows evaluation, failure analysis, and pragmatic safety-minded controller design.
+
+## Domain randomization
+
+The repo also evaluates how controllers generalize when simulator parameters shift every episode:
+
+- joint damping is randomized
+- friction loss is randomized
+- actuator gain is randomized
+- observation noise is randomized
+- control delay is randomized
+
+This gives the project a stronger robustness and sim-to-real flavored evaluation story.
 
 ## Key findings to look for
 

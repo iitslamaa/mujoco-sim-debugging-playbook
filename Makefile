@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark demo-gif dashboard format-help
+.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -50,6 +50,9 @@ eval-rl:
 
 benchmark:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/run_controller_benchmark.py
+
+randomization:
+	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/run_domain_randomization.py
 
 demo-gif:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_demo_gif.py \
