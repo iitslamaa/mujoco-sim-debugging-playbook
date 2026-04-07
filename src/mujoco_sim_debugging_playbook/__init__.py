@@ -53,6 +53,7 @@ __all__ = [
     "dependency_map",
     "dependency_snapshot",
     "doctor",
+    "docker_context",
     "documentation_audit",
     "experiment",
     "environment",
