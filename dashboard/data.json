@@ -4072,7 +4072,132 @@
       }
     ]
   },
-  "regeneration_plan": null,
+  "regeneration_plan": {
+    "summary": {
+      "count": 6,
+      "high_priority_count": 1
+    },
+    "actions": [
+      {
+        "artifact": "dashboard/data.json",
+        "status": "stale",
+        "priority": "high",
+        "command": "python scripts/generate_dashboard.py",
+        "age_delta_seconds": 776.883
+      },
+      {
+        "artifact": "outputs/ops_review/ops_review.json",
+        "status": "stale",
+        "priority": "medium",
+        "command": "python scripts/generate_ops_review.py",
+        "age_delta_seconds": 943.285
+      },
+      {
+        "artifact": "outputs/support_readiness/support_readiness.json",
+        "status": "stale",
+        "priority": "medium",
+        "command": "python scripts/generate_support_readiness.py",
+        "age_delta_seconds": 867.916
+      },
+      {
+        "artifact": "outputs/scenario_plan/scenario_plan.json",
+        "status": "stale",
+        "priority": "medium",
+        "command": "python scripts/generate_scenario_plan.py",
+        "age_delta_seconds": 776.886
+      },
+      {
+        "artifact": "outputs/scorecard/scorecard.json",
+        "status": "stale",
+        "priority": "medium",
+        "command": "python scripts/generate_scorecard.py",
+        "age_delta_seconds": 198.101
+      },
+      {
+        "artifact": "outputs/briefing_note/briefing_note.json",
+        "status": "stale",
+        "priority": "medium",
+        "command": "python scripts/generate_briefing_note.py",
+        "age_delta_seconds": 125.618
+      }
+    ]
+  },
+  "dependency_map": {
+    "summary": {
+      "artifact_count": 6,
+      "max_dependency_count": 6
+    },
+    "rows": [
+      {
+        "artifact": "dashboard/data.json",
+        "dependency_count": 6,
+        "dependencies": [
+          "scripts/generate_dashboard.py",
+          "outputs/support_readiness/support_readiness.json",
+          "outputs/scenario_plan/scenario_plan.json",
+          "outputs/ops_review/ops_review.json",
+          "outputs/scorecard/scorecard.json",
+          "outputs/briefing_note/briefing_note.json"
+        ],
+        "existing_dependency_count": 6
+      },
+      {
+        "artifact": "outputs/support_readiness/support_readiness.json",
+        "dependency_count": 6,
+        "dependencies": [
+          "scripts/generate_support_readiness.py",
+          "outputs/support_ops/support_ops.json",
+          "outputs/support_gaps/support_gaps.json",
+          "outputs/sla/sla_report.json",
+          "outputs/capacity/capacity_plan.json",
+          "outputs/releases/latest/release_notes.json"
+        ],
+        "existing_dependency_count": 6
+      },
+      {
+        "artifact": "outputs/scenario_plan/scenario_plan.json",
+        "dependency_count": 2,
+        "dependencies": [
+          "scripts/generate_scenario_plan.py",
+          "outputs/support_readiness/support_readiness.json"
+        ],
+        "existing_dependency_count": 2
+      },
+      {
+        "artifact": "outputs/ops_review/ops_review.json",
+        "dependency_count": 4,
+        "dependencies": [
+          "scripts/generate_ops_review.py",
+          "outputs/support_ops/support_ops.json",
+          "outputs/capacity/capacity_plan.json",
+          "outputs/anomalies/anomaly_report.json"
+        ],
+        "existing_dependency_count": 4
+      },
+      {
+        "artifact": "outputs/scorecard/scorecard.json",
+        "dependency_count": 4,
+        "dependencies": [
+          "scripts/generate_scorecard.py",
+          "outputs/support_ops/support_ops.json",
+          "outputs/support_readiness/support_readiness.json",
+          "outputs/scenario_plan/scenario_plan.json"
+        ],
+        "existing_dependency_count": 4
+      },
+      {
+        "artifact": "outputs/briefing_note/briefing_note.json",
+        "dependency_count": 4,
+        "dependencies": [
+          "scripts/generate_briefing_note.py",
+          "outputs/scorecard/scorecard.json",
+          "outputs/ops_review/ops_review.json",
+          "outputs/scenario_plan/scenario_plan.json"
+        ],
+        "existing_dependency_count": 4
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4119,6 +4244,7 @@
     "support_readiness_markdown": "outputs/support_readiness/support_readiness.md",
     "scenario_plan_markdown": "outputs/scenario_plan/scenario_plan.md",
     "artifact_freshness_markdown": "outputs/artifact_freshness/artifact_freshness.md",
-    "regeneration_plan_markdown": "outputs/regeneration_plan/regeneration_plan.md"
+    "regeneration_plan_markdown": "outputs/regeneration_plan/regeneration_plan.md",
+    "dependency_map_markdown": "outputs/dependency_map/dependency_map.md"
   }
 }

@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "artifact_count": 6,
+    "max_dependency_count": 6
+  },
+  "rows": [
+    {
+      "artifact": "dashboard/data.json",
+      "dependency_count": 6,
+      "dependencies": [
+        "scripts/generate_dashboard.py",
+        "outputs/support_readiness/support_readiness.json",
+        "outputs/scenario_plan/scenario_plan.json",
+        "outputs/ops_review/ops_review.json",
+        "outputs/scorecard/scorecard.json",
+        "outputs/briefing_note/briefing_note.json"
+      ],
+      "existing_dependency_count": 6
+    },
+    {
+      "artifact": "outputs/support_readiness/support_readiness.json",
+      "dependency_count": 6,
+      "dependencies": [
+        "scripts/generate_support_readiness.py",
+        "outputs/support_ops/support_ops.json",
+        "outputs/support_gaps/support_gaps.json",
+        "outputs/sla/sla_report.json",
+        "outputs/capacity/capacity_plan.json",
+        "outputs/releases/latest/release_notes.json"
+      ],
+      "existing_dependency_count": 6
+    },
+    {
+      "artifact": "outputs/scenario_plan/scenario_plan.json",
+      "dependency_count": 2,
+      "dependencies": [
+        "scripts/generate_scenario_plan.py",
+        "outputs/support_readiness/support_readiness.json"
+      ],
+      "existing_dependency_count": 2
+    },
+    {
+      "artifact": "outputs/ops_review/ops_review.json",
+      "dependency_count": 4,
+      "dependencies": [
+        "scripts/generate_ops_review.py",
+        "outputs/support_ops/support_ops.json",
+        "outputs/capacity/capacity_plan.json",
+        "outputs/anomalies/anomaly_report.json"
+      ],
+      "existing_dependency_count": 4
+    },
+    {
+      "artifact": "outputs/scorecard/scorecard.json",
+      "dependency_count": 4,
+      "dependencies": [
+        "scripts/generate_scorecard.py",
+        "outputs/support_ops/support_ops.json",
+        "outputs/support_readiness/support_readiness.json",
+        "outputs/scenario_plan/scenario_plan.json"
+      ],
+      "existing_dependency_count": 4
+    },
+    {
+      "artifact": "outputs/briefing_note/briefing_note.json",
+      "dependency_count": 4,
+      "dependencies": [
+        "scripts/generate_briefing_note.py",
+        "outputs/scorecard/scorecard.json",
+        "outputs/ops_review/ops_review.json",
+        "outputs/scenario_plan/scenario_plan.json"
+      ],
+      "existing_dependency_count": 4
+    }
+  ]
+}

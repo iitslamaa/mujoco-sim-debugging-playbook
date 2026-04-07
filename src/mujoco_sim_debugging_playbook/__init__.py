@@ -11,6 +11,7 @@ __all__ = [
     "case_studies",
     "config",
     "controller",
+    "dependency_map",
     "documentation_audit",
     "experiment",
     "environment",

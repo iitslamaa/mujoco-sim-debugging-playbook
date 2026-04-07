@@ -80,5 +80,7 @@ jobs:
         run: python scripts/generate_artifact_freshness.py
       - name: Build regeneration plan
         run: python scripts/generate_regeneration_plan.py
+      - name: Build dependency map
+        run: python scripts/generate_dependency_map.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py

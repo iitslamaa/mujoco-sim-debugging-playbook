@@ -496,6 +496,23 @@ async function main() {
   } else {
     regenerationPlanSummary.textContent = "Regeneration plan artifacts have not been generated yet.";
   }
+
+  const dependencyMapSummary = document.getElementById("dependency-map-summary");
+  if (data.dependency_map?.summary) {
+    const summary = data.dependency_map.summary;
+    const items = [
+      `<p><strong>Artifacts mapped:</strong> ${summary.artifact_count}</p>`,
+      `<p><strong>Max dependencies:</strong> ${summary.max_dependency_count}</p>`,
+    ];
+    (data.dependency_map.rows || []).slice(0, 6).forEach((row) => {
+      items.push(
+        `<p><strong>${row.artifact}</strong>: ${row.dependency_count} deps, ${row.existing_dependency_count} present</p>`
+      );
+    });
+    dependencyMapSummary.innerHTML = items.join("");
+  } else {
+    dependencyMapSummary.textContent = "Dependency map artifacts have not been generated yet.";
+  }
 }
 
 main();
