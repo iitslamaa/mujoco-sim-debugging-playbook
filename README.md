@@ -69,6 +69,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Evidence inventory generation that catalogs generated artifacts across the entire outputs tree
 - Action-register generation that turns recommended follow-up work into a flat execution list
 - Scorecard generation that condenses the most important support-health KPIs into one tiny artifact
+- Briefing-note generation that turns the support state into a concise narrative update
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -147,6 +148,7 @@ make release-packet
 make evidence-inventory
 make action-register
 make scorecard
+make briefing-note
 make case-studies
 make snapshot
 make regression-diff
@@ -488,6 +490,12 @@ python scripts/generate_action_register.py
 
 ```bash
 python scripts/generate_scorecard.py
+```
+
+## Generate the briefing note
+
+```bash
+python scripts/generate_briefing_note.py
 ```
 
 This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.
