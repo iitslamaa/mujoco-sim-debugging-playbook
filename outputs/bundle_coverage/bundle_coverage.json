@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "status": "pass",
+    "entry_count": 2,
+    "high_value_file_count": 5
+  },
+  "covered_cases": [
+    "actuator_gain_overshoot",
+    "delay_instability"
+  ]
+}
