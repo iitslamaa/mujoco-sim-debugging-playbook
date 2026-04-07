@@ -95,6 +95,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Dashboard snapshot history that tracks how preserved dashboard summaries change over time
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
+- Bootstrap script for clean-machine setup validation
 - Environment doctor that checks local setup, tools, and container readiness
 - GitHub issue templates and CI for public-repo readiness
 
@@ -195,6 +196,7 @@ make artifact-review-note
 make artifact-closeout
 make artifact-scorecard
 make artifact-packet
+make bootstrap-env
 make environment-doctor
 make dashboard-snapshot
 make dashboard-snapshot-history
@@ -258,6 +260,14 @@ python scripts/run_issue_case.py --case actuator_gain_overshoot
 ```
 
 This generates a support-style Markdown response draft under `outputs/support_cases/` using the saved sweep summaries.
+
+## Bootstrap a fresh local environment
+
+```bash
+bash scripts/bootstrap_env.sh
+```
+
+This creates a local virtual environment, installs the repo, and prints the main runtime versions.
 
 ## Run the environment doctor
 
@@ -986,6 +996,7 @@ This writes:
 - [dashboard-snapshot-readiness-gate-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-readiness-gate-guide.md)
 - [dashboard-snapshot-recovery-forecast-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-recovery-forecast-guide.md)
 - [dashboard-snapshot-milestones-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-milestones-guide.md)
+- [bootstrap-env-guide.md](/Users/lamayassine/mujoco/docs/bootstrap-env-guide.md)
 - [environment-doctor-guide.md](/Users/lamayassine/mujoco/docs/environment-doctor-guide.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
