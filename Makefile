@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install bootstrap-env debug-bundle debug-bundle-manifest container-smoke compatibility dependency-snapshot docker-context issue-template-audit toolchain-inventory support-case-catalog setup-faq response-rubric local-paths-report repro-inventory release-checklist environment-diff support-intake-checklist test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note artifact-closeout artifact-scorecard artifact-packet environment-doctor dashboard-snapshot dashboard-snapshot-history dashboard-snapshot-drift dashboard-snapshot-alerts dashboard-snapshot-monitor dashboard-snapshot-review dashboard-snapshot-handoff dashboard-snapshot-closeout dashboard-snapshot-scorecard dashboard-snapshot-digest dashboard-snapshot-actions dashboard-snapshot-alert-packet dashboard-snapshot-resolution-plan dashboard-snapshot-execution-board dashboard-snapshot-owner-load dashboard-snapshot-readiness-gate dashboard-snapshot-recovery-forecast dashboard-snapshot-milestones dashboard-snapshot-watchlist dashboard-snapshot-focus dashboard-snapshot-priorities dashboard-snapshot-status-brief dashboard-snapshot-lead case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
+.PHONY: install bootstrap-env debug-bundle debug-bundle-manifest container-smoke compatibility dependency-snapshot docker-context issue-template-audit toolchain-inventory support-case-catalog setup-faq response-rubric local-paths-report repro-inventory release-checklist environment-diff support-intake-checklist machine-profile bundle-verifier release-matrix test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note artifact-closeout artifact-scorecard artifact-packet environment-doctor dashboard-snapshot dashboard-snapshot-history dashboard-snapshot-drift dashboard-snapshot-alerts dashboard-snapshot-monitor dashboard-snapshot-review dashboard-snapshot-handoff dashboard-snapshot-closeout dashboard-snapshot-scorecard dashboard-snapshot-digest dashboard-snapshot-actions dashboard-snapshot-alert-packet dashboard-snapshot-resolution-plan dashboard-snapshot-execution-board dashboard-snapshot-owner-load dashboard-snapshot-readiness-gate dashboard-snapshot-recovery-forecast dashboard-snapshot-milestones dashboard-snapshot-watchlist dashboard-snapshot-focus dashboard-snapshot-priorities dashboard-snapshot-status-brief dashboard-snapshot-lead case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -54,6 +54,15 @@ environment-diff:
 
 support-intake-checklist:
 	$(PYTHON) scripts/generate_support_intake_checklist.py
+
+machine-profile:
+	$(PYTHON) scripts/generate_machine_profile.py
+
+bundle-verifier:
+	$(PYTHON) scripts/generate_bundle_verifier.py
+
+release-matrix:
+	$(PYTHON) scripts/generate_release_matrix.py
 
 repro-inventory:
 	$(PYTHON) scripts/generate_repro_inventory.py

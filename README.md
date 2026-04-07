@@ -228,6 +228,9 @@ make local-paths-report
 make release-checklist
 make environment-diff
 make support-intake-checklist
+make machine-profile
+make bundle-verifier
+make release-matrix
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -1173,6 +1176,9 @@ This writes:
 - [release-checklist-guide.md](/Users/lamayassine/mujoco/docs/release-checklist-guide.md)
 - [environment-diff-guide.md](/Users/lamayassine/mujoco/docs/environment-diff-guide.md)
 - [support-intake-checklist-guide.md](/Users/lamayassine/mujoco/docs/support-intake-checklist-guide.md)
+- [machine-profile-guide.md](/Users/lamayassine/mujoco/docs/machine-profile-guide.md)
+- [bundle-verifier-guide.md](/Users/lamayassine/mujoco/docs/bundle-verifier-guide.md)
+- [release-matrix-guide.md](/Users/lamayassine/mujoco/docs/release-matrix-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [support-workflow-index.md](/Users/lamayassine/mujoco/docs/support-workflow-index.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
