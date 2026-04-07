@@ -82,6 +82,7 @@ __all__ = [
     "provenance",
     "recommendations",
     "repro_inventory",
+    "repro_bundle_index",
     "regeneration_plan",
     "readiness",
     "responder_load",
