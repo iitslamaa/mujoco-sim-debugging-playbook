@@ -1,0 +1,9 @@
+{
+  "summary": {
+    "status": "pass",
+    "intake_items_ready": 3,
+    "repro_case_count": 2,
+    "required_response_criteria": 3
+  },
+  "next_step": "Start from the highest-signal repro case and attach a clear reproduction command."
+}
