@@ -20,6 +20,7 @@ def main() -> None:
     diagnostics = _read_json(ROOT / "outputs" / "diagnostics" / "environment.json")
     learning_training = _read_json(ROOT / "outputs" / "learning" / "training" / "training_summary.json")
     learning_eval = _read_json(ROOT / "outputs" / "learning" / "evaluation" / "summary.json")
+    benchmark_summary = _read_json(ROOT / "outputs" / "controller_benchmark" / "benchmark_summary.json")
     support_cases = []
     for case_path in sorted((ROOT / "outputs" / "support_cases").glob("*.md")):
         support_cases.append(
@@ -46,12 +47,14 @@ def main() -> None:
             "final_val_loss": learning_training["history"][-1]["val_loss"],
         } if learning_training else None,
         "learning_evaluation": learning_eval,
+        "benchmark_summary": benchmark_summary,
         "support_cases": support_cases,
         "artifacts": {
             "demo_gif": "outputs/media/reacher_demo.gif",
             "training_curve": "outputs/learning/training/training_curve.png",
             "diagnostics_markdown": "outputs/diagnostics/diagnostics.md",
             "support_case_markdown": "outputs/support_cases/actuator_gain_overshoot.md",
+            "benchmark_report": "outputs/controller_benchmark/report.md",
         },
     }
     (dashboard_dir / "data.json").write_text(json.dumps(payload, indent=2))

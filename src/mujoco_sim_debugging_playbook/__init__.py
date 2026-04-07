@@ -1,6 +1,7 @@
 """MuJoCo simulation debugging playbook."""
 
 __all__ = [
+    "benchmark",
     "config",
     "controller",
     "experiment",

@@ -38,6 +38,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Diagnostics bundles with environment capture and scenario comparisons
 - PyTorch imitation-learning pipeline with dataset generation, training, and policy evaluation
 - Static dashboard for browsing artifacts, environment details, and support cases
+- Multi-controller benchmark comparing expert, learned, and guarded hybrid control
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -89,6 +90,7 @@ make support-case
 make diagnostics
 make train-policy
 make eval-policy
+make benchmark
 make demo-gif
 make dashboard
 ```
@@ -153,6 +155,20 @@ This produces:
 - `outputs/media/reacher_demo.gif`
 - `dashboard/index.html`
 - `dashboard/data.json`
+
+## Run a controller benchmark
+
+```bash
+python scripts/run_controller_benchmark.py
+```
+
+This benchmark compares:
+
+- `expert_pd`
+- `torch_policy`
+- `hybrid_guardrail`
+
+across a scenario suite with baseline, noise-heavy, delay-heavy, and low-damping/high-gain conditions.
 
 ## Generate a diagnostics bundle
 
@@ -229,6 +245,16 @@ The repo now includes a learned baseline rather than only a hand-written control
 - a PyTorch MLP policy is trained to imitate expert torques
 - checkpoints, loss curves, and evaluation summaries are saved as reproducible artifacts
 - the learned policy can be compared directly against the expert controller
+
+## Controller benchmark
+
+The repo also includes a robustness benchmark for comparing controllers under stress:
+
+- expert PD control
+- learned PyTorch policy
+- a hybrid guardrail controller that falls back toward expert behavior when state error grows
+
+That makes the project more interesting than a simple baseline-vs-policy comparison because it shows evaluation, failure analysis, and pragmatic safety-minded controller design.
 
 ## Key findings to look for
 

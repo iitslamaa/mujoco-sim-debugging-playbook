@@ -67,6 +67,28 @@ async function main() {
     a.target = "_blank";
     supportCases.appendChild(a);
   });
+
+  const benchmarkBox = document.getElementById("benchmark-summary");
+  const benchmarkRows = data.benchmark_summary?.benchmark_rows || [];
+  if (benchmarkRows.length > 0) {
+    const scenarioMap = new Map();
+    benchmarkRows.forEach((row) => {
+      if (!scenarioMap.has(row.scenario)) scenarioMap.set(row.scenario, []);
+      scenarioMap.get(row.scenario).push(row);
+    });
+    const blocks = [];
+    scenarioMap.forEach((rows, scenario) => {
+      const ordered = rows.slice().sort((a, b) => {
+        if (b.success_rate !== a.success_rate) return b.success_rate - a.success_rate;
+        return a.final_error_mean - b.final_error_mean;
+      });
+      const winner = ordered[0];
+      blocks.push(`<p><strong>${scenario}</strong>: ${winner.controller} (${(winner.success_rate * 100).toFixed(1)}% success)</p>`);
+    });
+    benchmarkBox.innerHTML = blocks.join("");
+  } else {
+    benchmarkBox.textContent = "Benchmark artifacts have not been generated yet.";
+  }
 }
 
 main();

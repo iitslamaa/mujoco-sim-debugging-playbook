@@ -196,6 +196,212 @@
       }
     }
   },
+  "benchmark_summary": {
+    "benchmark_rows": [
+      {
+        "scenario": "baseline",
+        "controller": "expert_pd",
+        "success_rate": 0.625,
+        "final_error_mean": 0.0422007246133816,
+        "min_error_mean": 0.04019845872636035,
+        "mean_error_mean": 0.06120271740518693,
+        "max_overshoot_mean": 0.0009344428154141882,
+        "oscillation_index_mean": 0.8943965517241379,
+        "control_energy_mean": 170.8596718200556,
+        "settling_time_mean": 0.924
+      },
+      {
+        "scenario": "baseline",
+        "controller": "torch_policy",
+        "success_rate": 0.625,
+        "final_error_mean": 0.04421550561356468,
+        "min_error_mean": 0.04081732848281589,
+        "mean_error_mean": 0.062180185655144465,
+        "max_overshoot_mean": 0.0010142857834091329,
+        "oscillation_index_mean": 0.8915229885057471,
+        "control_energy_mean": 168.99693810454153,
+        "settling_time_mean": 0.924
+      },
+      {
+        "scenario": "baseline",
+        "controller": "hybrid_guardrail",
+        "success_rate": 0.625,
+        "final_error_mean": 0.04240143968813219,
+        "min_error_mean": 0.04036659772036766,
+        "mean_error_mean": 0.061453883559199965,
+        "max_overshoot_mean": 0.0009344428154141882,
+        "oscillation_index_mean": 0.8943965517241379,
+        "control_energy_mean": 170.85022094192144,
+        "settling_time_mean": 0.924
+      },
+      {
+        "scenario": "noise_heavy",
+        "controller": "expert_pd",
+        "success_rate": 0.5,
+        "final_error_mean": 0.04741182405223131,
+        "min_error_mean": 0.04493617379337066,
+        "mean_error_mean": 0.06831278771462013,
+        "max_overshoot_mean": 0.000761178373940562,
+        "oscillation_index_mean": 0.8354885057471264,
+        "control_energy_mean": 171.0285889237611,
+        "settling_time_mean": 1.5100000000000002
+      },
+      {
+        "scenario": "noise_heavy",
+        "controller": "torch_policy",
+        "success_rate": 0.5,
+        "final_error_mean": 0.046628172247833645,
+        "min_error_mean": 0.043394912075538895,
+        "mean_error_mean": 0.06773369564748094,
+        "max_overshoot_mean": 0.000924512130973448,
+        "oscillation_index_mean": 0.8168103448275862,
+        "control_energy_mean": 169.11581990905682,
+        "settling_time_mean": 1.52
+      },
+      {
+        "scenario": "noise_heavy",
+        "controller": "hybrid_guardrail",
+        "success_rate": 0.5,
+        "final_error_mean": 0.047414360201017074,
+        "min_error_mean": 0.04493875659116919,
+        "mean_error_mean": 0.06839938706309368,
+        "max_overshoot_mean": 0.000761178373940562,
+        "oscillation_index_mean": 0.8354885057471264,
+        "control_energy_mean": 171.00739511530148,
+        "settling_time_mean": 1.5100000000000002
+      },
+      {
+        "scenario": "delay_heavy",
+        "controller": "expert_pd",
+        "success_rate": 0.625,
+        "final_error_mean": 0.044202775619900096,
+        "min_error_mean": 0.04147914384728425,
+        "mean_error_mean": 0.06315311639565319,
+        "max_overshoot_mean": 0.0010722966859819973,
+        "oscillation_index_mean": 0.8872126436781609,
+        "control_energy_mean": 171.23119106884837,
+        "settling_time_mean": 0.9280000000000002
+      },
+      {
+        "scenario": "delay_heavy",
+        "controller": "torch_policy",
+        "success_rate": 0.625,
+        "final_error_mean": 0.04421550561356468,
+        "min_error_mean": 0.04081732848281589,
+        "mean_error_mean": 0.062180185655144465,
+        "max_overshoot_mean": 0.0010142857834091329,
+        "oscillation_index_mean": 0.8915229885057471,
+        "control_energy_mean": 168.99693810454153,
+        "settling_time_mean": 0.924
+      },
+      {
+        "scenario": "delay_heavy",
+        "controller": "hybrid_guardrail",
+        "success_rate": 0.625,
+        "final_error_mean": 0.04370488885720632,
+        "min_error_mean": 0.04152455368370799,
+        "mean_error_mean": 0.06350324562861456,
+        "max_overshoot_mean": 0.0015130627920034757,
+        "oscillation_index_mean": 0.8872126436781609,
+        "control_energy_mean": 170.58816758013154,
+        "settling_time_mean": 0.9280000000000002
+      },
+      {
+        "scenario": "low_damping_high_gain",
+        "controller": "expert_pd",
+        "success_rate": 0.625,
+        "final_error_mean": 0.05705251211360072,
+        "min_error_mean": 0.05156580511515185,
+        "mean_error_mean": 0.06918724973450119,
+        "max_overshoot_mean": 0.0007980260764191768,
+        "oscillation_index_mean": 0.9633620689655171,
+        "control_energy_mean": 179.3650124319699,
+        "settling_time_mean": 1.204
+      },
+      {
+        "scenario": "low_damping_high_gain",
+        "controller": "torch_policy",
+        "success_rate": 0.625,
+        "final_error_mean": 0.0536195217199397,
+        "min_error_mean": 0.04749374954812706,
+        "mean_error_mean": 0.06580404831766486,
+        "max_overshoot_mean": 0.001311487623416035,
+        "oscillation_index_mean": 0.9554597701149425,
+        "control_energy_mean": 159.56849208905993,
+        "settling_time_mean": 1.612
+      },
+      {
+        "scenario": "low_damping_high_gain",
+        "controller": "hybrid_guardrail",
+        "success_rate": 0.625,
+        "final_error_mean": 0.05666323094853044,
+        "min_error_mean": 0.05136408776457466,
+        "mean_error_mean": 0.06897858804436566,
+        "max_overshoot_mean": 0.0007980260764191768,
+        "oscillation_index_mean": 0.9647988505747126,
+        "control_energy_mean": 179.48428641982022,
+        "settling_time_mean": 1.204
+      }
+    ],
+    "environment": {
+      "platform": {
+        "system": "Darwin",
+        "release": "25.2.0",
+        "machine": "arm64",
+        "python_version": "3.10.2"
+      },
+      "runtime": {
+        "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+        "numpy_version": "2.2.6",
+        "mujoco_version": "3.6.0"
+      },
+      "tooling": {
+        "git_head": "2f5a2184815460ff8c4f55d5fcc1f5a2a5eaad34",
+        "docker_version": null,
+        "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+      },
+      "workspace": {
+        "repo_root": "/Users/lamayassine/mujoco",
+        "pip_freeze": [
+          "absl-py==2.4.0",
+          "contourpy==1.3.2",
+          "cycler==0.12.1",
+          "etils==1.13.0",
+          "exceptiongroup==1.3.1",
+          "filelock==3.25.2",
+          "fonttools==4.62.1",
+          "fsspec==2026.3.0",
+          "glfw==2.10.0",
+          "importlib_resources==6.5.2",
+          "iniconfig==2.3.0",
+          "Jinja2==3.1.6",
+          "kiwisolver==1.5.0",
+          "MarkupSafe==3.0.3",
+          "matplotlib==3.10.8",
+          "mpmath==1.3.0",
+          "mujoco==3.6.0",
+          "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@2f5a2184815460ff8c4f55d5fcc1f5a2a5eaad34#egg=mujoco_sim_debugging_playbook",
+          "networkx==3.4.2",
+          "numpy==2.2.6",
+          "packaging==26.0",
+          "pillow==12.2.0",
+          "pluggy==1.6.0",
+          "Pygments==2.20.0",
+          "PyOpenGL==3.1.10",
+          "pyparsing==3.3.2",
+          "pytest==9.0.2",
+          "python-dateutil==2.9.0.post0",
+          "six==1.17.0",
+          "sympy==1.14.0",
+          "tomli==2.4.1",
+          "torch==2.11.0",
+          "typing_extensions==4.15.0",
+          "zipp==3.23.0"
+        ]
+      }
+    },
+    "checkpoint_path": "/Users/lamayassine/mujoco/outputs/learning/training/policy.pt"
+  },
   "support_cases": [
     {
       "name": "actuator_gain_overshoot",
@@ -210,6 +416,7 @@
     "demo_gif": "outputs/media/reacher_demo.gif",
     "training_curve": "outputs/learning/training/training_curve.png",
     "diagnostics_markdown": "outputs/diagnostics/diagnostics.md",
-    "support_case_markdown": "outputs/support_cases/actuator_gain_overshoot.md"
+    "support_case_markdown": "outputs/support_cases/actuator_gain_overshoot.md",
+    "benchmark_report": "outputs/controller_benchmark/report.md"
   }
 }

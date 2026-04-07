@@ -1,0 +1,71 @@
+{
+  "name": "controller_benchmark",
+  "output_dir": "outputs/controller_benchmark",
+  "episodes": 8,
+  "episode_horizon_s": 3.5,
+  "seed": 31,
+  "task": {
+    "target_radius": 0.045,
+    "target_range": {
+      "x": [0.12, 0.30],
+      "y": [0.04, 0.28]
+    },
+    "link_lengths": [0.18, 0.16]
+  },
+  "controller": {
+    "kp": 22.0,
+    "kd": 4.0,
+    "max_torque": 6.0
+  },
+  "scenarios": [
+    {
+      "name": "baseline",
+      "sim": {
+        "physics_timestep": 0.002,
+        "control_dt": 0.02,
+        "joint_damping": 1.8,
+        "friction_loss": 0.02,
+        "actuator_gain": 38.0,
+        "sensor_noise_std": 0.0,
+        "control_delay_steps": 0
+      }
+    },
+    {
+      "name": "noise_heavy",
+      "sim": {
+        "physics_timestep": 0.002,
+        "control_dt": 0.02,
+        "joint_damping": 1.8,
+        "friction_loss": 0.02,
+        "actuator_gain": 38.0,
+        "sensor_noise_std": 0.015,
+        "control_delay_steps": 0
+      }
+    },
+    {
+      "name": "delay_heavy",
+      "sim": {
+        "physics_timestep": 0.002,
+        "control_dt": 0.02,
+        "joint_damping": 1.8,
+        "friction_loss": 0.02,
+        "actuator_gain": 38.0,
+        "sensor_noise_std": 0.0,
+        "control_delay_steps": 4
+      }
+    },
+    {
+      "name": "low_damping_high_gain",
+      "sim": {
+        "physics_timestep": 0.002,
+        "control_dt": 0.02,
+        "joint_damping": 0.4,
+        "friction_loss": 0.01,
+        "actuator_gain": 58.0,
+        "sensor_noise_std": 0.0,
+        "control_delay_steps": 0
+      }
+    }
+  ]
+}
+
