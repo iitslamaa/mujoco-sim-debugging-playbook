@@ -1,0 +1,9 @@
+{
+  "summary": {
+    "status": "escalate",
+    "blocker_count": 3,
+    "reply_status": "ready",
+    "session_status": "pass"
+  },
+  "handoff_note": "Start from the highest-signal repro case and attach a clear reproduction command."
+}
