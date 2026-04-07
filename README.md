@@ -88,6 +88,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact digests that roll alerts, actions, and trend signals into a compact briefing
 - Artifact handoff packets that package the current state for the next recovery owner
 - Artifact review notes that summarize what changed, what blocks progress, and what should be approved next
+- Artifact closeout packets that decide whether the current recovery cycle is ready to close
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -186,6 +187,7 @@ make artifact-alerts
 make artifact-digest
 make artifact-handoff
 make artifact-review-note
+make artifact-closeout
 make case-studies
 make snapshot
 make regression-diff
@@ -677,6 +679,14 @@ python scripts/generate_artifact_review_note.py
 
 This creates a reviewer-facing note covering what changed, what still blocks progress, and what to approve next.
 
+## Build an artifact closeout
+
+```bash
+python scripts/generate_artifact_closeout.py
+```
+
+This creates a final closeout packet that decides whether the current artifact-recovery cycle is ready to close.
+
 ## Generate a diagnostics bundle
 
 ```bash
@@ -716,6 +726,7 @@ This writes:
 - [artifact-digest-guide.md](/Users/lamayassine/mujoco/docs/artifact-digest-guide.md)
 - [artifact-handoff-guide.md](/Users/lamayassine/mujoco/docs/artifact-handoff-guide.md)
 - [artifact-review-note-guide.md](/Users/lamayassine/mujoco/docs/artifact-review-note-guide.md)
+- [artifact-closeout-guide.md](/Users/lamayassine/mujoco/docs/artifact-closeout-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)

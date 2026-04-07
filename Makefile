@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
+.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note artifact-closeout case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -182,6 +182,9 @@ artifact-handoff:
 
 artifact-review-note:
 	$(PYTHON) scripts/generate_artifact_review_note.py
+
+artifact-closeout:
+	$(PYTHON) scripts/generate_artifact_closeout.py
 
 case-studies:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_case_studies.py

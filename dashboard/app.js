@@ -813,6 +813,25 @@ async function main() {
   } else {
     artifactReviewNoteSummary.textContent = "Artifact review note has not been generated yet.";
   }
+
+  const artifactCloseoutSummary = document.getElementById("artifact-closeout-summary");
+  if (data.artifact_closeout?.summary) {
+    const summary = data.artifact_closeout.summary;
+    const items = [
+      `<p><strong>Status:</strong> ${summary.status}</p>`,
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Projected terminal status:</strong> ${summary.projected_terminal_status}</p>`,
+      `<p><strong>Blockers:</strong> ${summary.blocker_count}</p>`,
+      `<p><strong>Remaining actions:</strong> ${summary.remaining_action_count}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner || "n/a"}</p>`,
+    ];
+    (data.artifact_closeout.closeout_checks || []).forEach((check) => {
+      items.push(`<p><strong>${check.name}</strong>: ${check.status} | ${check.message}</p>`);
+    });
+    artifactCloseoutSummary.innerHTML = items.join("");
+  } else {
+    artifactCloseoutSummary.textContent = "Artifact closeout has not been generated yet.";
+  }
 }
 
 main();

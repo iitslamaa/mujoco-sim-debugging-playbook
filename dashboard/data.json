@@ -5179,6 +5179,59 @@
       "P1 Stabilize top risks -> artifact-integrity"
     ]
   },
+  "artifact_closeout": {
+    "summary": {
+      "status": "not_ready_to_close",
+      "current_status": "fail",
+      "projected_terminal_status": "pass",
+      "blocker_count": 3,
+      "remaining_action_count": 3,
+      "handoff_owner": "artifact-reporting"
+    },
+    "closeout_checks": [
+      {
+        "name": "review_blockers",
+        "status": "fail",
+        "message": "3 blockers remain."
+      },
+      {
+        "name": "projected_terminal_state",
+        "status": "pass",
+        "message": "Projected terminal status is pass."
+      },
+      {
+        "name": "handoff_alignment",
+        "status": "pass",
+        "message": "Handoff includes 3 actions."
+      }
+    ],
+    "remaining_actions": [
+      {
+        "priority": "P0",
+        "target": "outputs/support_readiness/support_readiness.json",
+        "owner": "artifact-integrity",
+        "phase": "Clear support report bundle",
+        "reason": "High-risk artifact should move to a more specialized owner.",
+        "expected_impact": "Reduce breach pressure on the support-report bundle."
+      },
+      {
+        "priority": "P0",
+        "target": "outputs/scenario_plan/scenario_plan.json",
+        "owner": "artifact-integrity",
+        "phase": "Clear support report bundle",
+        "reason": "High-risk artifact should move to a more specialized owner.",
+        "expected_impact": "Reduce breach pressure on the support-report bundle."
+      },
+      {
+        "priority": "P1",
+        "target": "Stabilize top risks",
+        "owner": "artifact-integrity",
+        "phase": "Stabilize top risks",
+        "reason": "This is the nearest-due recovery phase in the current delivery forecast.",
+        "expected_impact": "Prevent the current at-risk phase from becoming a breach."
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5242,6 +5295,7 @@
     "artifact_alerts_markdown": "outputs/artifact_alerts/artifact_alerts.md",
     "artifact_digest_markdown": "outputs/artifact_digest/artifact_digest.md",
     "artifact_handoff_markdown": "outputs/artifact_handoff/artifact_handoff.md",
-    "artifact_review_note_markdown": "outputs/artifact_review_note/artifact_review_note.md"
+    "artifact_review_note_markdown": "outputs/artifact_review_note/artifact_review_note.md",
+    "artifact_closeout_markdown": "outputs/artifact_closeout/artifact_closeout.md"
   }
 }

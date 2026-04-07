@@ -12,6 +12,7 @@ __all__ = [
     "artifact_digest",
     "artifact_handoff",
     "artifact_review_note",
+    "artifact_closeout",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",
