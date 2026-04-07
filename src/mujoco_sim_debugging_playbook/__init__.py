@@ -96,6 +96,7 @@ __all__ = [
     "release_dry_run",
     "release_checklist",
     "release_blockers",
+    "release_evidence_packet",
     "release_matrix",
     "release_packet",
     "regression",
