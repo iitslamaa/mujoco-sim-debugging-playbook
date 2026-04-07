@@ -24,6 +24,7 @@ __all__ = [
     "recommendations",
     "readiness",
     "responder_load",
+    "risk_register",
     "release_notes",
     "regression",
     "report",
