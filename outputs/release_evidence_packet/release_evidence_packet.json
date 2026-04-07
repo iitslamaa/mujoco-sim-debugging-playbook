@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "status": "warn",
+    "blocker_count": 3,
+    "matrix_row_count": 2
+  },
+  "recommendation": "Clear environment and release blockers before shipping.",
+  "blockers": [
+    "compatibility",
+    "environment_doctor",
+    "release_checklist"
+  ],
+  "matrix": [
+    {
+      "dimension": "release_checklist",
+      "status": "warn"
+    },
+    {
+      "dimension": "compatibility",
+      "status": "warn"
+    }
+  ]
+}
