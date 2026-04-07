@@ -1,0 +1,68 @@
+{
+  "summary": {
+    "count": 10,
+    "top_risk": "controls-and-policy"
+  },
+  "risks": [
+    {
+      "name": "controls-and-policy",
+      "category": "capacity",
+      "severity": 2.2,
+      "message": "controls-and-policy is overloaded with 22 effort points."
+    },
+    {
+      "name": "delivery_breaches",
+      "category": "readiness",
+      "severity": 1.0,
+      "message": "2 forecasted support items are in breach."
+    },
+    {
+      "name": "delivery_at_risk",
+      "category": "readiness",
+      "severity": 0.5,
+      "message": "3 support items are forecasted as at risk."
+    },
+    {
+      "name": "gap_backlog",
+      "category": "readiness",
+      "severity": 0.5,
+      "message": "5 support gaps still need follow-up work."
+    },
+    {
+      "name": "incident_coverage",
+      "category": "readiness",
+      "severity": 0.5,
+      "message": "Incident coverage is 45.5% of the queue."
+    },
+    {
+      "name": "knowledge_base_coverage",
+      "category": "readiness",
+      "severity": 0.5,
+      "message": "Knowledge-base coverage is 45.5% of the queue."
+    },
+    {
+      "name": "overloaded_owners",
+      "category": "readiness",
+      "severity": 0.5,
+      "message": "1 owners are currently overloaded."
+    },
+    {
+      "name": "low_damping_high_gain / expert_pd",
+      "category": "simulation",
+      "severity": 0.36560761301686967,
+      "message": "Benchmark fragility remains elevated for expert_pd in low_damping_high_gain."
+    },
+    {
+      "name": "low_damping_high_gain / hybrid_guardrail",
+      "category": "simulation",
+      "severity": 0.35961109953321907,
+      "message": "Benchmark fragility remains elevated for hybrid_guardrail in low_damping_high_gain."
+    },
+    {
+      "name": "noise_heavy / expert_pd",
+      "category": "simulation",
+      "severity": 0.044364571308517474,
+      "message": "Benchmark fragility remains elevated for expert_pd in noise_heavy."
+    }
+  ]
+}
