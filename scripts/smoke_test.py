@@ -77,6 +77,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_support_ops_report.py"], env=env)
     run([sys.executable, "scripts/generate_support_gap_report.py"], env=env)
     run([sys.executable, "scripts/generate_workstream_plan.py"], env=env)
+    run([sys.executable, "scripts/generate_sla_report.py"], env=env)
     run(
         [
             sys.executable,
@@ -140,6 +141,9 @@ def main() -> None:
     workstreams = ROOT / "outputs" / "workstreams" / "workstream_plan.json"
     if not workstreams.exists():
         raise SystemExit(f"Expected workstream plan at {workstreams}")
+    sla = ROOT / "outputs" / "sla" / "sla_report.json"
+    if not sla.exists():
+        raise SystemExit(f"Expected SLA report at {sla}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

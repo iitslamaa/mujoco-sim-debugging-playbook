@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
+.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -80,6 +80,9 @@ support-gaps:
 
 workstreams:
 	$(PYTHON) scripts/generate_workstream_plan.py
+
+sla:
+	$(PYTHON) scripts/generate_sla_report.py
 
 case-studies:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_case_studies.py

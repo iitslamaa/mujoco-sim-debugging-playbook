@@ -368,6 +368,25 @@ async function main() {
   } else {
     workstreamSummary.textContent = "Workstream planning artifacts have not been generated yet.";
   }
+
+  const slaSummary = document.getElementById("sla-summary");
+  if (data.sla?.summary) {
+    const summary = data.sla.summary;
+    const items = [
+      `<p><strong>At risk:</strong> ${summary.at_risk_count}</p>`,
+      `<p><strong>Breaches:</strong> ${summary.breach_count}</p>`,
+      `<p><strong>Next due target:</strong> ${summary.next_due_target || "n/a"}</p>`,
+      `<p><strong>Slowest lane:</strong> ${summary.slowest_lane || "n/a"}</p>`,
+    ];
+    (data.sla.items || []).slice(0, 4).forEach((item) => {
+      items.push(
+        `<p><strong>${item.target}</strong>: ${item.status}, due ${item.due_date}, ${item.estimated_days} day estimate</p>`
+      );
+    });
+    slaSummary.innerHTML = items.join("");
+  } else {
+    slaSummary.textContent = "Delivery forecast artifacts have not been generated yet.";
+  }
 }
 
 main();

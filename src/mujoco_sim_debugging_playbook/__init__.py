@@ -23,6 +23,7 @@ __all__ = [
     "report",
     "rl",
     "simulation",
+    "sla",
     "support",
     "support_gaps",
     "support_ops",

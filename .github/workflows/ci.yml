@@ -66,5 +66,7 @@ jobs:
         run: python scripts/generate_support_gap_report.py
       - name: Build workstream plan
         run: python scripts/generate_workstream_plan.py
+      - name: Build delivery forecast
+        run: python scripts/generate_sla_report.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py
