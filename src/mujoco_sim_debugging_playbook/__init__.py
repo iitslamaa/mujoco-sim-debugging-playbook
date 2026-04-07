@@ -88,6 +88,7 @@ __all__ = [
     "refresh_bundle",
     "refresh_checklist",
     "response_rubric",
+    "support_response_template",
     "risk_register",
     "release_notes",
     "release_checklist",
