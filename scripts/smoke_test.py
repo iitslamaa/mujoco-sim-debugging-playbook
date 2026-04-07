@@ -88,6 +88,7 @@ def main() -> None:
     run([sys.executable, "scripts/generate_impact_analysis.py"], env=env)
     run([sys.executable, "scripts/generate_refresh_bundle.py"], env=env)
     run([sys.executable, "scripts/generate_refresh_checklist.py"], env=env)
+    run([sys.executable, "scripts/generate_maintenance_risk.py"], env=env)
     run(
         [
             sys.executable,
@@ -184,6 +185,9 @@ def main() -> None:
     refresh_checklist = ROOT / "outputs" / "refresh_checklist" / "refresh_checklist.json"
     if not refresh_checklist.exists():
         raise SystemExit(f"Expected refresh checklist at {refresh_checklist}")
+    maintenance_risk = ROOT / "outputs" / "maintenance_risk" / "maintenance_risk.json"
+    if not maintenance_risk.exists():
+        raise SystemExit(f"Expected maintenance risk report at {maintenance_risk}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])

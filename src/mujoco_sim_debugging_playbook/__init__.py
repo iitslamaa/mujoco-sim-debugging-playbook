@@ -22,6 +22,7 @@ __all__ = [
     "impact_analysis",
     "incidents",
     "learning",
+    "maintenance_risk",
     "knowledge_base",
     "metrics",
     "owner_alerts",

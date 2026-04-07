@@ -4479,6 +4479,95 @@
       }
     ]
   },
+  "maintenance_risk": {
+    "summary": {
+      "artifact_count": 6,
+      "high_risk_count": 2,
+      "medium_risk_count": 4,
+      "top_risk_artifact": "outputs/support_readiness/support_readiness.json",
+      "top_risk_score": 1.551
+    },
+    "rows": [
+      {
+        "artifact": "outputs/support_readiness/support_readiness.json",
+        "status": "stale",
+        "priority": "medium",
+        "risk_score": 1.551,
+        "impact_count": 3,
+        "bundle_count": 1,
+        "bundles": [
+          "support_report_refresh"
+        ],
+        "command": "python scripts/generate_support_readiness.py",
+        "age_delta_seconds": 867.916
+      },
+      {
+        "artifact": "outputs/scenario_plan/scenario_plan.json",
+        "status": "stale",
+        "priority": "medium",
+        "risk_score": 1.55,
+        "impact_count": 3,
+        "bundle_count": 1,
+        "bundles": [
+          "support_report_refresh"
+        ],
+        "command": "python scripts/generate_scenario_plan.py",
+        "age_delta_seconds": 776.886
+      },
+      {
+        "artifact": "outputs/ops_review/ops_review.json",
+        "status": "stale",
+        "priority": "medium",
+        "risk_score": 1.37,
+        "impact_count": 2,
+        "bundle_count": 1,
+        "bundles": [
+          "support_report_refresh"
+        ],
+        "command": "python scripts/generate_ops_review.py",
+        "age_delta_seconds": 943.285
+      },
+      {
+        "artifact": "outputs/scorecard/scorecard.json",
+        "status": "stale",
+        "priority": "medium",
+        "risk_score": 1.362,
+        "impact_count": 2,
+        "bundle_count": 1,
+        "bundles": [
+          "support_report_refresh"
+        ],
+        "command": "python scripts/generate_scorecard.py",
+        "age_delta_seconds": 198.101
+      },
+      {
+        "artifact": "dashboard/data.json",
+        "status": "stale",
+        "priority": "high",
+        "risk_score": 1.358,
+        "impact_count": 0,
+        "bundle_count": 1,
+        "bundles": [
+          "dashboard_refresh"
+        ],
+        "command": "python scripts/generate_dashboard.py",
+        "age_delta_seconds": 776.883
+      },
+      {
+        "artifact": "outputs/briefing_note/briefing_note.json",
+        "status": "stale",
+        "priority": "medium",
+        "risk_score": 1.181,
+        "impact_count": 1,
+        "bundle_count": 1,
+        "bundles": [
+          "support_report_refresh"
+        ],
+        "command": "python scripts/generate_briefing_note.py",
+        "age_delta_seconds": 125.618
+      }
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -4529,6 +4618,7 @@
     "dependency_map_markdown": "outputs/dependency_map/dependency_map.md",
     "impact_analysis_markdown": "outputs/impact_analysis/impact_analysis.md",
     "refresh_bundle_markdown": "outputs/refresh_bundle/refresh_bundle.md",
-    "refresh_checklist_markdown": "outputs/refresh_checklist/refresh_checklist.md"
+    "refresh_checklist_markdown": "outputs/refresh_checklist/refresh_checklist.md",
+    "maintenance_risk_markdown": "outputs/maintenance_risk/maintenance_risk.md"
   }
 }

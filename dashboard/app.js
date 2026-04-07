@@ -563,6 +563,26 @@ async function main() {
   } else {
     refreshChecklistSummary.textContent = "Refresh checklist artifacts have not been generated yet.";
   }
+
+  const maintenanceRiskSummary = document.getElementById("maintenance-risk-summary");
+  if (data.maintenance_risk?.summary) {
+    const summary = data.maintenance_risk.summary;
+    const items = [
+      `<p><strong>Artifacts scored:</strong> ${summary.artifact_count}</p>`,
+      `<p><strong>High risk:</strong> ${summary.high_risk_count}</p>`,
+      `<p><strong>Medium risk:</strong> ${summary.medium_risk_count}</p>`,
+      `<p><strong>Top risk artifact:</strong> ${summary.top_risk_artifact || "n/a"}</p>`,
+      `<p><strong>Top risk score:</strong> ${Number(summary.top_risk_score || 0).toFixed(3)}</p>`,
+    ];
+    (data.maintenance_risk.rows || []).slice(0, 5).forEach((row) => {
+      items.push(
+        `<p><strong>${row.artifact}</strong>: ${row.status}, ${row.priority}, score ${Number(row.risk_score).toFixed(3)}</p>`
+      );
+    });
+    maintenanceRiskSummary.innerHTML = items.join("");
+  } else {
+    maintenanceRiskSummary.textContent = "Maintenance risk artifacts have not been generated yet.";
+  }
 }
 
 main();

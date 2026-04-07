@@ -75,6 +75,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Impact analysis that shows which downstream artifacts are affected when an upstream dependency changes
 - Refresh bundles that group stale outputs into a few coordinated rerun packages
 - Refresh checklists that turn each bundle into an ordered runbook with validation targets
+- Maintenance risk scoring that ranks stale artifacts by downstream blast radius and refresh urgency
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -160,6 +161,7 @@ make dependency-map
 make impact-analysis
 make refresh-bundle
 make refresh-checklist
+make maintenance-risk
 make case-studies
 make snapshot
 make regression-diff
@@ -545,7 +547,15 @@ python scripts/generate_refresh_bundle.py
 python scripts/generate_refresh_checklist.py
 ```
 
-This summarizes queue load, self-serve coverage, incident coverage, and escalation mix.
+This produces a runbook-style ordered checklist for each refresh bundle.
+
+## Score maintenance risk
+
+```bash
+python scripts/generate_maintenance_risk.py
+```
+
+This ranks stale or missing artifacts by urgency using freshness state, regeneration priority, dependency impact, and bundle participation.
 
 ## Generate a diagnostics bundle
 
@@ -573,6 +583,7 @@ This writes:
 - [case-study-guide.md](/Users/lamayassine/mujoco/docs/case-study-guide.md)
 - [regression-guide.md](/Users/lamayassine/mujoco/docs/regression-guide.md)
 - [provenance-guide.md](/Users/lamayassine/mujoco/docs/provenance-guide.md)
+- [maintenance-risk-guide.md](/Users/lamayassine/mujoco/docs/maintenance-risk-guide.md)
 - [index.md](/Users/lamayassine/mujoco/outputs/provenance/index.md)
 - [release_notes.md](/Users/lamayassine/mujoco/outputs/releases/latest/release_notes.md)
 - [bug_report.yml](/Users/lamayassine/mujoco/.github/ISSUE_TEMPLATE/bug_report.yml)
