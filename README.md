@@ -48,6 +48,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Artifact manifests and a provenance index for tying outputs back to code, inputs, and Git state
 - Commit-linked release notes for summarizing code, metric, and artifact changes between Git SHAs
 - Scenario-level anomaly analysis that pinpoints brittle controller/scenario combinations and hard randomized episodes
+- Automated mitigation recommendations that turn anomalies into actionable tuning guidance
 - Demo GIF generation for a stronger GitHub landing page
 - Docker and `Makefile` workflows for reproducible local setup
 - GitHub issue templates and CI for public-repo readiness
@@ -104,6 +105,7 @@ make eval-rl
 make benchmark
 make randomization
 make anomalies
+make recommendations
 make case-studies
 make snapshot
 make regression-diff
@@ -279,6 +281,17 @@ python scripts/generate_anomaly_report.py \
 ```
 
 This ranks the riskiest benchmark cases, highlights the hardest randomized episodes, and estimates which simulator parameters correlate most with difficulty.
+
+## Generate mitigation recommendations
+
+```bash
+python scripts/generate_recommendations.py \
+  --anomalies outputs/anomalies/anomaly_report.json \
+  --sweeps outputs/interesting_sweeps/combined_summary.json \
+  --output-dir outputs/recommendations
+```
+
+This turns anomaly findings into concrete follow-up actions with supporting sweep evidence and tradeoff notes.
 
 ## Generate a diagnostics bundle
 

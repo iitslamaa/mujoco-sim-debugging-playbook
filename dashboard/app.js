@@ -257,6 +257,18 @@ async function main() {
   if (data.artifacts?.anomaly_difficulty_image) {
     document.getElementById("anomaly-difficulty-image").src = `../${data.artifacts.anomaly_difficulty_image}`;
   }
+
+  const recommendationSummary = document.getElementById("recommendation-summary");
+  if (data.recommendations?.recommendations) {
+    const items = [];
+    data.recommendations.recommendations.slice(0, 5).forEach((row) => {
+      items.push(`<p><strong>${row.target}</strong>: ${row.recommendation}</p>`);
+      items.push(`<p>${row.evidence}</p>`);
+    });
+    recommendationSummary.innerHTML = items.join("");
+  } else {
+    recommendationSummary.textContent = "Recommendation artifacts have not been generated yet.";
+  }
 }
 
 main();

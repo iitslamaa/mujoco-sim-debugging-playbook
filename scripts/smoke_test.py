@@ -69,6 +69,7 @@ def main() -> None:
     run([sys.executable, "scripts/backfill_provenance_manifests.py"], env=env)
     run([sys.executable, "scripts/build_provenance_index.py"], env=env)
     run([sys.executable, "scripts/generate_anomaly_report.py"], env=env)
+    run([sys.executable, "scripts/generate_recommendations.py"], env=env)
     run(
         [
             sys.executable,
@@ -108,6 +109,9 @@ def main() -> None:
     anomaly_report = ROOT / "outputs" / "anomalies" / "anomaly_report.json"
     if not anomaly_report.exists():
         raise SystemExit(f"Expected anomaly report at {anomaly_report}")
+    recommendation_report = ROOT / "outputs" / "recommendations" / "recommendations.json"
+    if not recommendation_report.exists():
+        raise SystemExit(f"Expected recommendations at {recommendation_report}")
 
     payload = json.loads((ROOT / "outputs" / "baseline" / "summary.json").read_text())
     print("Baseline success rate:", payload["summary"]["success_rate"])
