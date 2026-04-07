@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note artifact-closeout artifact-scorecard artifact-packet dashboard-snapshot dashboard-snapshot-history dashboard-snapshot-drift dashboard-snapshot-alerts dashboard-snapshot-monitor dashboard-snapshot-review dashboard-snapshot-handoff dashboard-snapshot-closeout dashboard-snapshot-scorecard dashboard-snapshot-digest dashboard-snapshot-actions dashboard-snapshot-alert-packet dashboard-snapshot-resolution-plan dashboard-snapshot-execution-board dashboard-snapshot-owner-load dashboard-snapshot-readiness-gate case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
+.PHONY: install test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note artifact-closeout artifact-scorecard artifact-packet dashboard-snapshot dashboard-snapshot-history dashboard-snapshot-drift dashboard-snapshot-alerts dashboard-snapshot-monitor dashboard-snapshot-review dashboard-snapshot-handoff dashboard-snapshot-closeout dashboard-snapshot-scorecard dashboard-snapshot-digest dashboard-snapshot-actions dashboard-snapshot-alert-packet dashboard-snapshot-resolution-plan dashboard-snapshot-execution-board dashboard-snapshot-owner-load dashboard-snapshot-readiness-gate dashboard-snapshot-recovery-forecast case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -239,6 +239,9 @@ dashboard-snapshot-owner-load:
 
 dashboard-snapshot-readiness-gate:
 	$(PYTHON) scripts/generate_dashboard_snapshot_readiness_gate.py
+
+dashboard-snapshot-recovery-forecast:
+	$(PYTHON) scripts/generate_dashboard_snapshot_recovery_forecast.py
 
 case-studies:
 	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_case_studies.py

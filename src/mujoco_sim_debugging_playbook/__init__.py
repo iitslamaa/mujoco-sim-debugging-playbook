@@ -31,6 +31,7 @@ __all__ = [
     "dashboard_snapshot_execution_board",
     "dashboard_snapshot_owner_load",
     "dashboard_snapshot_readiness_gate",
+    "dashboard_snapshot_recovery_forecast",
     "artifact_capacity",
     "artifact_readiness",
     "artifact_recovery",

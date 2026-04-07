@@ -1195,6 +1195,24 @@ async function main() {
   } else {
     dashboardSnapshotReadinessGateSummary.textContent = "Dashboard snapshot readiness gate has not been generated yet.";
   }
+
+  const dashboardSnapshotRecoveryForecastSummary = document.getElementById("dashboard-snapshot-recovery-forecast-summary");
+  if (data.dashboard_snapshot_recovery_forecast?.summary) {
+    const summary = data.dashboard_snapshot_recovery_forecast.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Projected next status:</strong> ${summary.projected_next_status}</p>`,
+      `<p><strong>Confidence:</strong> ${summary.confidence}</p>`,
+      `<p><strong>Phases:</strong> ${summary.phase_count}</p>`,
+      `<p><strong>Critical alerts:</strong> ${summary.critical_count}</p>`,
+    ];
+    (data.dashboard_snapshot_recovery_forecast.rationale || []).forEach((item) => {
+      items.push(`<p>${item}</p>`);
+    });
+    dashboardSnapshotRecoveryForecastSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotRecoveryForecastSummary.textContent = "Dashboard snapshot recovery forecast has not been generated yet.";
+  }
 }
 
 main();

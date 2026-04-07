@@ -5907,6 +5907,20 @@
       "Planned follow-up workload is still elevated."
     ]
   },
+  "dashboard_snapshot_recovery_forecast": {
+    "summary": {
+      "current_status": "fail",
+      "projected_next_status": "warn",
+      "confidence": "medium",
+      "phase_count": 2,
+      "critical_count": 1
+    },
+    "rationale": [
+      "Current readiness is fail.",
+      "The active plan has 2 phases.",
+      "Critical alert count is 1."
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5989,6 +6003,7 @@
     "dashboard_snapshot_resolution_plan_markdown": "outputs/dashboard_snapshots/resolution_plan.md",
     "dashboard_snapshot_execution_board_markdown": "outputs/dashboard_snapshots/execution_board.md",
     "dashboard_snapshot_owner_load_markdown": "outputs/dashboard_snapshots/owner_load.md",
-    "dashboard_snapshot_readiness_gate_markdown": "outputs/dashboard_snapshots/readiness_gate.md"
+    "dashboard_snapshot_readiness_gate_markdown": "outputs/dashboard_snapshots/readiness_gate.md",
+    "dashboard_snapshot_recovery_forecast_markdown": "outputs/dashboard_snapshots/recovery_forecast.md"
   }
 }

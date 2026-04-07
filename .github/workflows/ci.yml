@@ -154,5 +154,7 @@ jobs:
         run: python scripts/generate_dashboard_snapshot_owner_load.py
       - name: Build dashboard snapshot readiness gate
         run: python scripts/generate_dashboard_snapshot_readiness_gate.py
+      - name: Build dashboard snapshot recovery forecast
+        run: python scripts/generate_dashboard_snapshot_recovery_forecast.py
       - name: Run smoke baseline
         run: MPLCONFIGDIR=/tmp/mpl python scripts/smoke_test.py
