@@ -1,0 +1,3153 @@
+{
+  "summary": {
+    "file_count": 629,
+    "area_count": 33
+  },
+  "rows": [
+    {
+      "path": "outputs/anomalies/anomaly_report.json",
+      "suffix": ".json",
+      "area": "anomalies"
+    },
+    {
+      "path": "outputs/anomalies/anomaly_report.md",
+      "suffix": ".md",
+      "area": "anomalies"
+    },
+    {
+      "path": "outputs/anomalies/benchmark_risk_heatmap.png",
+      "suffix": ".png",
+      "area": "anomalies"
+    },
+    {
+      "path": "outputs/anomalies/parameter_effects.png",
+      "suffix": ".png",
+      "area": "anomalies"
+    },
+    {
+      "path": "outputs/anomalies/randomization_difficulty.png",
+      "suffix": ".png",
+      "area": "anomalies"
+    },
+    {
+      "path": "outputs/backlog_aging/backlog_aging.json",
+      "suffix": ".json",
+      "area": "backlog_aging"
+    },
+    {
+      "path": "outputs/backlog_aging/backlog_aging.md",
+      "suffix": ".md",
+      "area": "backlog_aging"
+    },
+    {
+      "path": "outputs/baseline/episodes.csv",
+      "suffix": ".csv",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/manifest.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/summary.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_000.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_001.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_002.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_003.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_004.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_005.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_006.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_007.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_008.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/trace_plots/episode_009.png",
+      "suffix": ".png",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/baseline/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "baseline"
+    },
+    {
+      "path": "outputs/capacity/capacity_plan.json",
+      "suffix": ".json",
+      "area": "capacity"
+    },
+    {
+      "path": "outputs/capacity/capacity_plan.md",
+      "suffix": ".md",
+      "area": "capacity"
+    },
+    {
+      "path": "outputs/case_studies/controller_robustness_story.md",
+      "suffix": ".md",
+      "area": "case_studies"
+    },
+    {
+      "path": "outputs/case_studies/controller_robustness_story.png",
+      "suffix": ".png",
+      "area": "case_studies"
+    },
+    {
+      "path": "outputs/controller_benchmark/benchmark_summary.json",
+      "suffix": ".json",
+      "area": "controller_benchmark"
+    },
+    {
+      "path": "outputs/controller_benchmark/control_energy_mean.png",
+      "suffix": ".png",
+      "area": "controller_benchmark"
+    },
+    {
+      "path": "outputs/controller_benchmark/final_error_mean.png",
+      "suffix": ".png",
+      "area": "controller_benchmark"
+    },
+    {
+      "path": "outputs/controller_benchmark/manifest.json",
+      "suffix": ".json",
+      "area": "controller_benchmark"
+    },
+    {
+      "path": "outputs/controller_benchmark/report.md",
+      "suffix": ".md",
+      "area": "controller_benchmark"
+    },
+    {
+      "path": "outputs/controller_benchmark/success_rate.png",
+      "suffix": ".png",
+      "area": "controller_benchmark"
+    },
+    {
+      "path": "outputs/diagnostics/diagnostics.md",
+      "suffix": ".md",
+      "area": "diagnostics"
+    },
+    {
+      "path": "outputs/diagnostics/environment.json",
+      "suffix": ".json",
+      "area": "diagnostics"
+    },
+    {
+      "path": "outputs/documentation_audit/documentation_audit.json",
+      "suffix": ".json",
+      "area": "documentation_audit"
+    },
+    {
+      "path": "outputs/documentation_audit/documentation_audit.md",
+      "suffix": ".md",
+      "area": "documentation_audit"
+    },
+    {
+      "path": "outputs/domain_randomization/actuator_gain_scatter.png",
+      "suffix": ".png",
+      "area": "domain_randomization"
+    },
+    {
+      "path": "outputs/domain_randomization/control_delay_steps_scatter.png",
+      "suffix": ".png",
+      "area": "domain_randomization"
+    },
+    {
+      "path": "outputs/domain_randomization/evaluation_rows.json",
+      "suffix": ".json",
+      "area": "domain_randomization"
+    },
+    {
+      "path": "outputs/domain_randomization/joint_damping_scatter.png",
+      "suffix": ".png",
+      "area": "domain_randomization"
+    },
+    {
+      "path": "outputs/domain_randomization/manifest.json",
+      "suffix": ".json",
+      "area": "domain_randomization"
+    },
+    {
+      "path": "outputs/domain_randomization/report.md",
+      "suffix": ".md",
+      "area": "domain_randomization"
+    },
+    {
+      "path": "outputs/domain_randomization/sensor_noise_std_scatter.png",
+      "suffix": ".png",
+      "area": "domain_randomization"
+    },
+    {
+      "path": "outputs/escalation/escalation_matrix.json",
+      "suffix": ".json",
+      "area": "escalation"
+    },
+    {
+      "path": "outputs/escalation/escalation_matrix.md",
+      "suffix": ".md",
+      "area": "escalation"
+    },
+    {
+      "path": "outputs/incidents/episode_1.json",
+      "suffix": ".json",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/episode_1.md",
+      "suffix": ".md",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/episode_14.json",
+      "suffix": ".json",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/episode_14.md",
+      "suffix": ".md",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/episode_17.json",
+      "suffix": ".json",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/episode_17.md",
+      "suffix": ".md",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/episode_5.json",
+      "suffix": ".json",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/episode_5.md",
+      "suffix": ".md",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/episode_9.json",
+      "suffix": ".json",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/episode_9.md",
+      "suffix": ".md",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/index.json",
+      "suffix": ".json",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/incidents/index.md",
+      "suffix": ".md",
+      "area": "incidents"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain.png",
+      "suffix": ".png",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_18p0/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_28p0/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_38p0/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_52p0/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/actuator_gain_70p0/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/combined_summary.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/combined_summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps.png",
+      "suffix": ".png",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_0/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_1/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_2/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_4/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_delay_steps_6/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt.png",
+      "suffix": ".png",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p01/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p02/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p04/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/control_dt_0p06/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss.png",
+      "suffix": ".png",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p0/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p01/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p02/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p05/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/friction_loss_0p1/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping.png",
+      "suffix": ".png",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p4/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_0p8/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_1p8/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_3p2/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/joint_damping_5p5/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/manifest.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/report.md",
+      "suffix": ".md",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std.png",
+      "suffix": ".png",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p0/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p002/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p006/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p012/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/episodes.csv",
+      "suffix": ".csv",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/summary.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_008.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_009.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_010.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/interesting_sweeps/sensor_noise_std_0p02/traces/episode_011.json",
+      "suffix": ".json",
+      "area": "interesting_sweeps"
+    },
+    {
+      "path": "outputs/knowledge_base/episode_1.md",
+      "suffix": ".md",
+      "area": "knowledge_base"
+    },
+    {
+      "path": "outputs/knowledge_base/episode_14.md",
+      "suffix": ".md",
+      "area": "knowledge_base"
+    },
+    {
+      "path": "outputs/knowledge_base/episode_17.md",
+      "suffix": ".md",
+      "area": "knowledge_base"
+    },
+    {
+      "path": "outputs/knowledge_base/episode_5.md",
+      "suffix": ".md",
+      "area": "knowledge_base"
+    },
+    {
+      "path": "outputs/knowledge_base/episode_9.md",
+      "suffix": ".md",
+      "area": "knowledge_base"
+    },
+    {
+      "path": "outputs/knowledge_base/index.json",
+      "suffix": ".json",
+      "area": "knowledge_base"
+    },
+    {
+      "path": "outputs/knowledge_base/index.md",
+      "suffix": ".md",
+      "area": "knowledge_base"
+    },
+    {
+      "path": "outputs/learning/dataset/dataset_summary.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_000.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_001.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_002.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_003.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_004.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_005.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_006.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_007.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_008.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_009.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_010.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_011.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_012.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_013.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_014.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_015.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_016.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_017.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_018.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_019.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_020.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_021.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_022.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_trace_plots/episode_023.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_000.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_001.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_002.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_003.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_004.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_005.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_006.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_007.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_008.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_009.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_010.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_011.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_012.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_013.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_014.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_015.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_016.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_017.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_018.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_019.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_020.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_021.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_022.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/expert_traces/episode_023.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/imitation_dataset.npz",
+      "suffix": ".npz",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/dataset/manifest.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/manifest.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/summary.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/trace_plots/episode_000.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/trace_plots/episode_001.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/trace_plots/episode_002.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/trace_plots/episode_003.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/trace_plots/episode_004.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/trace_plots/episode_005.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/trace_plots/episode_006.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/trace_plots/episode_007.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/evaluation/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/training/manifest.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/training/policy.pt",
+      "suffix": ".pt",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/training/training_curve.png",
+      "suffix": ".png",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/learning/training/training_summary.json",
+      "suffix": ".json",
+      "area": "learning"
+    },
+    {
+      "path": "outputs/media/reacher_demo.gif",
+      "suffix": ".gif",
+      "area": "media"
+    },
+    {
+      "path": "outputs/ops_review/ops_review.json",
+      "suffix": ".json",
+      "area": "ops_review"
+    },
+    {
+      "path": "outputs/ops_review/ops_review.md",
+      "suffix": ".md",
+      "area": "ops_review"
+    },
+    {
+      "path": "outputs/owner_alerts/owner_alerts.json",
+      "suffix": ".json",
+      "area": "owner_alerts"
+    },
+    {
+      "path": "outputs/owner_alerts/owner_alerts.md",
+      "suffix": ".md",
+      "area": "owner_alerts"
+    },
+    {
+      "path": "outputs/provenance/index.json",
+      "suffix": ".json",
+      "area": "provenance"
+    },
+    {
+      "path": "outputs/provenance/index.md",
+      "suffix": ".md",
+      "area": "provenance"
+    },
+    {
+      "path": "outputs/recommendations/recommendations.json",
+      "suffix": ".json",
+      "area": "recommendations"
+    },
+    {
+      "path": "outputs/recommendations/recommendations.md",
+      "suffix": ".md",
+      "area": "recommendations"
+    },
+    {
+      "path": "outputs/regression/gate/regression_diff.json",
+      "suffix": ".json",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/gate/regression_diff.md",
+      "suffix": ".md",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/gate/regression_diff.png",
+      "suffix": ".png",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/gate/regression_gate.json",
+      "suffix": ".json",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/gate/regression_gate.md",
+      "suffix": ".md",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/history/history.json",
+      "suffix": ".json",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/history/history.md",
+      "suffix": ".md",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/history/history.png",
+      "suffix": ".png",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/latest_diff/regression_diff.json",
+      "suffix": ".json",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/latest_diff/regression_diff.md",
+      "suffix": ".md",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/latest_diff/regression_diff.png",
+      "suffix": ".png",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/snapshots/baseline_reference.json",
+      "suffix": ".json",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/regression/snapshots/current.json",
+      "suffix": ".json",
+      "area": "regression"
+    },
+    {
+      "path": "outputs/release_packet/release_packet.json",
+      "suffix": ".json",
+      "area": "release_packet"
+    },
+    {
+      "path": "outputs/release_packet/release_packet.md",
+      "suffix": ".md",
+      "area": "release_packet"
+    },
+    {
+      "path": "outputs/releases/latest/release_notes.json",
+      "suffix": ".json",
+      "area": "releases"
+    },
+    {
+      "path": "outputs/releases/latest/release_notes.md",
+      "suffix": ".md",
+      "area": "releases"
+    },
+    {
+      "path": "outputs/responder_load/responder_load.json",
+      "suffix": ".json",
+      "area": "responder_load"
+    },
+    {
+      "path": "outputs/responder_load/responder_load.md",
+      "suffix": ".md",
+      "area": "responder_load"
+    },
+    {
+      "path": "outputs/risk_register/risk_register.json",
+      "suffix": ".json",
+      "area": "risk_register"
+    },
+    {
+      "path": "outputs/risk_register/risk_register.md",
+      "suffix": ".md",
+      "area": "risk_register"
+    },
+    {
+      "path": "outputs/rl/evaluation/manifest.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/summary.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_000.png",
+      "suffix": ".png",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_001.png",
+      "suffix": ".png",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_002.png",
+      "suffix": ".png",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_003.png",
+      "suffix": ".png",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_004.png",
+      "suffix": ".png",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_005.png",
+      "suffix": ".png",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_006.png",
+      "suffix": ".png",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/trace_plots/episode_007.png",
+      "suffix": ".png",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_000.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_001.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_002.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_003.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_004.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_005.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_006.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/evaluation/traces/episode_007.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/training/manifest.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/training/reinforce_policy.pt",
+      "suffix": ".pt",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/training/training_curve.png",
+      "suffix": ".png",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/rl/training/training_summary.json",
+      "suffix": ".json",
+      "area": "rl"
+    },
+    {
+      "path": "outputs/scenario_plan/scenario_plan.json",
+      "suffix": ".json",
+      "area": "scenario_plan"
+    },
+    {
+      "path": "outputs/scenario_plan/scenario_plan.md",
+      "suffix": ".md",
+      "area": "scenario_plan"
+    },
+    {
+      "path": "outputs/sla/sla_report.json",
+      "suffix": ".json",
+      "area": "sla"
+    },
+    {
+      "path": "outputs/sla/sla_report.md",
+      "suffix": ".md",
+      "area": "sla"
+    },
+    {
+      "path": "outputs/support_cases/actuator_gain_overshoot.md",
+      "suffix": ".md",
+      "area": "support_cases"
+    },
+    {
+      "path": "outputs/support_cases/delay_instability.md",
+      "suffix": ".md",
+      "area": "support_cases"
+    },
+    {
+      "path": "outputs/support_gaps/support_gaps.json",
+      "suffix": ".json",
+      "area": "support_gaps"
+    },
+    {
+      "path": "outputs/support_gaps/support_gaps.md",
+      "suffix": ".md",
+      "area": "support_gaps"
+    },
+    {
+      "path": "outputs/support_ops/support_ops.json",
+      "suffix": ".json",
+      "area": "support_ops"
+    },
+    {
+      "path": "outputs/support_ops/support_ops.md",
+      "suffix": ".md",
+      "area": "support_ops"
+    },
+    {
+      "path": "outputs/support_readiness/support_readiness.json",
+      "suffix": ".json",
+      "area": "support_readiness"
+    },
+    {
+      "path": "outputs/support_readiness/support_readiness.md",
+      "suffix": ".md",
+      "area": "support_readiness"
+    },
+    {
+      "path": "outputs/triage/triage_queue.json",
+      "suffix": ".json",
+      "area": "triage"
+    },
+    {
+      "path": "outputs/triage/triage_queue.md",
+      "suffix": ".md",
+      "area": "triage"
+    },
+    {
+      "path": "outputs/workstreams/workstream_plan.json",
+      "suffix": ".json",
+      "area": "workstreams"
+    },
+    {
+      "path": "outputs/workstreams/workstream_plan.md",
+      "suffix": ".md",
+      "area": "workstreams"
+    }
+  ]
+}
