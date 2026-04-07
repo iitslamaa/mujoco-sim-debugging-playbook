@@ -5748,6 +5748,30 @@
       "dominant_transition": "current_state -> support_sprint_projection"
     }
   },
+  "dashboard_snapshot_digest": {
+    "summary": {
+      "headline_count": 3,
+      "attention_count": 3,
+      "current_status": "fail",
+      "closeout_status": "not_ready_to_close",
+      "handoff_owner": "dashboard-stabilization"
+    },
+    "headlines": [
+      "Dashboard snapshot status remains fail.",
+      "Projected terminal status is pass.",
+      "Closeout remains not_ready_to_close."
+    ],
+    "attention_points": [
+      "1 critical alert remains active.",
+      "2 blockers still prevent closeout.",
+      "3 remaining items are still open."
+    ],
+    "remaining_items": [
+      "Status transition to pass",
+      "Current dashboard status is not yet pass.",
+      "Critical snapshot alerts are still active."
+    ]
+  },
   "case_studies": {
     "controller_robustness_story": "outputs/case_studies/controller_robustness_story.md"
   },
@@ -5823,6 +5847,7 @@
     "dashboard_snapshot_review_markdown": "outputs/dashboard_snapshots/review.md",
     "dashboard_snapshot_handoff_markdown": "outputs/dashboard_snapshots/handoff.md",
     "dashboard_snapshot_closeout_markdown": "outputs/dashboard_snapshots/closeout.md",
-    "dashboard_snapshot_scorecard_markdown": "outputs/dashboard_snapshots/scorecard.md"
+    "dashboard_snapshot_scorecard_markdown": "outputs/dashboard_snapshots/scorecard.md",
+    "dashboard_snapshot_digest_markdown": "outputs/dashboard_snapshots/digest.md"
   }
 }

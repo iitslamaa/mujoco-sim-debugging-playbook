@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "headline_count": 3,
+    "attention_count": 3,
+    "current_status": "fail",
+    "closeout_status": "not_ready_to_close",
+    "handoff_owner": "dashboard-stabilization"
+  },
+  "headlines": [
+    "Dashboard snapshot status remains fail.",
+    "Projected terminal status is pass.",
+    "Closeout remains not_ready_to_close."
+  ],
+  "attention_points": [
+    "1 critical alert remains active.",
+    "2 blockers still prevent closeout.",
+    "3 remaining items are still open."
+  ],
+  "remaining_items": [
+    "Status transition to pass",
+    "Current dashboard status is not yet pass.",
+    "Critical snapshot alerts are still active."
+  ]
+}

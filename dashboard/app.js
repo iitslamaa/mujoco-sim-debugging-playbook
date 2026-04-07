@@ -1055,6 +1055,30 @@ async function main() {
   } else {
     dashboardSnapshotScorecardSummary.textContent = "Dashboard snapshot scorecard has not been generated yet.";
   }
+
+  const dashboardSnapshotDigestSummary = document.getElementById("dashboard-snapshot-digest-summary");
+  if (data.dashboard_snapshot_digest?.summary) {
+    const summary = data.dashboard_snapshot_digest.summary;
+    const items = [
+      `<p><strong>Current status:</strong> ${summary.current_status}</p>`,
+      `<p><strong>Closeout status:</strong> ${summary.closeout_status}</p>`,
+      `<p><strong>Handoff owner:</strong> ${summary.handoff_owner}</p>`,
+      `<p><strong>Headlines:</strong> ${summary.headline_count}</p>`,
+      `<p><strong>Attention points:</strong> ${summary.attention_count}</p>`,
+    ];
+    (data.dashboard_snapshot_digest.headlines || []).forEach((headline) => {
+      items.push(`<p>${headline}</p>`);
+    });
+    (data.dashboard_snapshot_digest.attention_points || []).forEach((point) => {
+      items.push(`<p>${point}</p>`);
+    });
+    (data.dashboard_snapshot_digest.remaining_items || []).forEach((item) => {
+      items.push(`<p>${item}</p>`);
+    });
+    dashboardSnapshotDigestSummary.innerHTML = items.join("");
+  } else {
+    dashboardSnapshotDigestSummary.textContent = "Dashboard snapshot digest has not been generated yet.";
+  }
 }
 
 main();
