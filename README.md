@@ -100,6 +100,7 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Debug-bundle collector for packaging reproduction artifacts and handoff evidence
 - Container smoke runner for validating the Docker path end to end
 - Compatibility report for Python, MuJoCo, and core tooling readiness
+- Dependency snapshot for concrete package-level environment capture
 - Repro inventory that enumerates documented support cases and evidence paths
 - GitHub issue templates and CI for public-repo readiness
 
@@ -204,6 +205,7 @@ make bootstrap-env
 make debug-bundle
 make container-smoke
 make compatibility
+make dependency-snapshot
 make repro-inventory
 make environment-doctor
 make dashboard-snapshot
@@ -308,6 +310,14 @@ python scripts/generate_compatibility_report.py
 ```
 
 This summarizes whether the current environment matches the expected Python, MuJoCo, Docker, and GitHub CLI surface.
+
+## Generate a dependency snapshot
+
+```bash
+python scripts/generate_dependency_snapshot.py
+```
+
+This records the package surface from the captured environment report.
 
 ## Generate a repro inventory
 
@@ -1041,6 +1051,7 @@ This writes:
 - [debug-bundle-guide.md](/Users/lamayassine/mujoco/docs/debug-bundle-guide.md)
 - [container-smoke-guide.md](/Users/lamayassine/mujoco/docs/container-smoke-guide.md)
 - [compatibility-guide.md](/Users/lamayassine/mujoco/docs/compatibility-guide.md)
+- [dependency-snapshot-guide.md](/Users/lamayassine/mujoco/docs/dependency-snapshot-guide.md)
 - [repro-inventory-guide.md](/Users/lamayassine/mujoco/docs/repro-inventory-guide.md)
 - [dashboard-snapshot-watchlist-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-watchlist-guide.md)
 - [dashboard-snapshot-focus-guide.md](/Users/lamayassine/mujoco/docs/dashboard-snapshot-focus-guide.md)
