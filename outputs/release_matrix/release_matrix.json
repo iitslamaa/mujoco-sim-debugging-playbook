@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "row_count": 2
+  },
+  "rows": [
+    {
+      "dimension": "release_checklist",
+      "status": "warn"
+    },
+    {
+      "dimension": "compatibility",
+      "status": "warn"
+    }
+  ]
+}
