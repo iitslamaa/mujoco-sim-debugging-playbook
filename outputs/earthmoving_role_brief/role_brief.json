@@ -1,0 +1,27 @@
+{
+  "headline": "Construction-machine simulation track with deformable terrain, calibration, scale, and debug artifacts.",
+  "fit_signals": [
+    "Built a MuJoCo dozer/blade task instead of only toy robot control.",
+    "Implemented heightmap terrain deformation with soil parameters and volume accounting.",
+    "Added sim-to-field calibration against observed construction-style logs.",
+    "Generated randomized scale runs and throughput metrics for batch evaluation.",
+    "Created ML-ready feature/label datasets for learned evaluators or surrogate models.",
+    "Added C++ terrain-kernel smoke coverage for low-level geometry/physics implementation.",
+    "Packaged failure replay, quality gates, dashboards, and review packets like production simulation infrastructure."
+  ],
+  "metrics": {
+    "gate_status": "pass",
+    "scenario_count": 3,
+    "scale_episode_count": 60,
+    "episodes_per_second": 323.78897863061485,
+    "dataset_rows": 54,
+    "failure_mode_items": 2,
+    "mean_calibration_error": 0.43782814420470373
+  },
+  "talking_points": [
+    "The current earthmoving gate is `pass`, so the track has release-style pass/fail semantics.",
+    "The scale harness ran `60` randomized episodes at `323.79` episodes/s.",
+    "The generated dataset has `54` rows with `10` features and `4` labels.",
+    "The failure-mode queue currently prioritizes `under_excavation` as the highest-ranked debugging theme."
+  ]
+}
