@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import ctypes
 import json
-import shutil
 import subprocess
 from pathlib import Path
 from typing import Any
@@ -62,13 +61,13 @@ def benchmark_rust_terrain_kernel(
 
 
 def _run_rust_ffi_kernel(root: Path, repeats: int) -> dict[str, float]:
-    rustc = shutil.which("rustc")
+    rustc = find_rustc()
     if rustc is None:
         raise RuntimeError("rustc not found")
     dylib = _dylib_path()
     subprocess.run(
         [
-            rustc,
+            str(rustc),
             "--crate-type",
             "cdylib",
             "-C",
@@ -105,6 +104,19 @@ def _dylib_path() -> Path:
     if __import__("sys").platform.startswith("win"):
         return Path("/tmp") / "mujoco_rust_terrain_kernel.dll"
     return Path("/tmp") / "libmujoco_rust_terrain_kernel.so"
+
+
+def find_rustc() -> Path | None:
+    import os
+    import shutil
+
+    path = shutil.which("rustc")
+    if path:
+        return Path(path)
+    cargo_rustc = Path(os.environ.get("HOME", "")) / ".cargo" / "bin" / "rustc"
+    if cargo_rustc.exists() and cargo_rustc.is_file():
+        return cargo_rustc
+    return None
 
 
 def _write_report(payload: dict[str, Any], output_path: Path) -> None:

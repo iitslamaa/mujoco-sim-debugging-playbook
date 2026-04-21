@@ -24,6 +24,8 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - Best blade-plan score: `0.012396`
 - Top failure mode: `under_excavation`
 - C++ terrain-kernel speedup: `7.65x`
+- Fastest native terrain kernel: `rust_ffi`
+- Rust FFI terrain-kernel speedup: `5.76x`
 
 ## Best Review Links
 
@@ -46,8 +48,9 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - The batch evaluator currently runs `60` randomized earthmoving episodes at `323.79` episodes/s.
 - The surrogate evaluator predicts `moved_volume` and related metrics from soil/blade features, with mean MAE `0.000040`.
 - The planner selected `baseline_push_d0.008_w0.24_y+0.00` as the best blade candidate under the current score function.
-- The C++ terrain kernel matches the Python terrain output and runs `7.65x` faster in the current benchmark.
-- The optional Rust FFI terrain kernel shows how this workload could move toward memory-safe native kernels called from Python simulation tooling.
+- The C++ terrain kernel matches the Python terrain output and runs `7.65x` faster in its benchmark.
+- The native kernel matrix currently reports `rust_ffi` as the fastest available terrain kernel.
+- The Rust FFI terrain kernel shows how this workload can move toward memory-safe native kernels called from Python simulation tooling.
 - The failure queue surfaces `under_excavation` as the top debug theme, with next actions attached.
 
 ## Limitations I Would State Clearly

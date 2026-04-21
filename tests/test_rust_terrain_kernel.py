@@ -1,13 +1,18 @@
 from pathlib import Path
-import shutil
 import subprocess
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from mujoco_sim_debugging_playbook.rust_kernel_benchmark import find_rustc
 
 
 def test_rust_terrain_kernel_builds_when_rust_is_available(tmp_path: Path) -> None:
-    rustc = shutil.which("rustc")
+    rustc = find_rustc()
     if rustc is None:
         return
     binary = tmp_path / "terrain_kernel_rs"

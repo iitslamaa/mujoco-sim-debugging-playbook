@@ -20,6 +20,7 @@ def build_simulation_packet(
     plan_search = _read_json(root / "outputs" / "earthmoving_plan_search" / "plan_search.json")
     failure_modes = _read_json(root / "outputs" / "earthmoving_failure_modes" / "failure_modes.json")
     kernel_benchmark = _read_json(root / "outputs" / "terrain_kernel_benchmark" / "terrain_kernel_benchmark.json")
+    native_matrix = _read_json(root / "outputs" / "native_kernel_matrix" / "native_kernel_matrix.json")
 
     payload = {
         "headline": role_brief["headline"],
@@ -38,6 +39,8 @@ def build_simulation_packet(
             "best_plan_score": plan_search["summary"]["best_candidate"]["score"],
             "top_failure_mode": failure_modes["summary"]["top_mode"],
             "cxx_kernel_speedup": kernel_benchmark["summary"]["cxx_speedup"],
+            "fastest_native_kernel": native_matrix["summary"]["fastest_kernel"],
+            "rust_ffi_speedup": _kernel_speedup(native_matrix, "rust_ffi"),
         },
         "entry_points": {
             "dashboard": "outputs/earthmoving_dashboard/index.html",
@@ -52,7 +55,7 @@ def build_simulation_packet(
             "cxx_kernel": "cpp/terrain_kernel.cpp",
             "rust_kernel_note": "docs/rust-simulation-kernel-note.md",
         },
-        "talk_track": _talk_track(role_brief, review, surrogate, plan_search, failure_modes, kernel_benchmark),
+        "talk_track": _talk_track(role_brief, review, surrogate, plan_search, failure_modes, kernel_benchmark, native_matrix),
         "limitations": [
             "The terrain model is an intentionally lightweight heightmap approximation, not a production soil mechanics solver.",
             "Field logs are synthetic placeholders for demonstrating calibration workflow and should be replaced with real machine/site data.",
@@ -87,6 +90,7 @@ def build_simulation_packet(
             root / "outputs" / "earthmoving_plan_search" / "plan_search.json",
             root / "outputs" / "earthmoving_failure_modes" / "failure_modes.json",
             root / "outputs" / "terrain_kernel_benchmark" / "terrain_kernel_benchmark.json",
+            root / "outputs" / "native_kernel_matrix" / "native_kernel_matrix.json",
         ],
         outputs=[packet_json, packet_md, root_packet],
         metadata=payload["metrics"],
@@ -122,6 +126,8 @@ def render_simulation_packet(payload: dict[str, Any]) -> str:
             f"- Best blade-plan score: `{metrics['best_plan_score']:.6f}`",
             f"- Top failure mode: `{metrics['top_failure_mode']}`",
             f"- C++ terrain-kernel speedup: `{metrics['cxx_kernel_speedup']:.2f}x`",
+            f"- Fastest native terrain kernel: `{metrics['fastest_native_kernel']}`",
+            f"- Rust FFI terrain-kernel speedup: `{metrics['rust_ffi_speedup']:.2f}x`",
             "",
             "## Best Review Links",
             "",
@@ -148,6 +154,7 @@ def _talk_track(
     plan_search: dict[str, Any],
     failure_modes: dict[str, Any],
     kernel_benchmark: dict[str, Any],
+    native_matrix: dict[str, Any],
 ) -> list[str]:
     top_sensitivity = review["summary"]["top_sensitivity"]
     best_plan = plan_search["summary"]["best_candidate"]
@@ -157,11 +164,19 @@ def _talk_track(
         f"The batch evaluator currently runs `{role_brief['metrics']['scale_episode_count']}` randomized earthmoving episodes at `{role_brief['metrics']['episodes_per_second']:.2f}` episodes/s.",
         f"The surrogate evaluator predicts `{surrogate['label_names'][0]}` and related metrics from soil/blade features, with mean MAE `{surrogate['summary']['mean_mae']:.6f}`.",
         f"The planner selected `{best_plan['candidate']}` as the best blade candidate under the current score function.",
-        f"The C++ terrain kernel matches the Python terrain output and runs `{kernel_benchmark['summary']['cxx_speedup']:.2f}x` faster in the current benchmark.",
-        "The optional Rust FFI terrain kernel shows how this workload could move toward memory-safe native kernels called from Python simulation tooling.",
+        f"The C++ terrain kernel matches the Python terrain output and runs `{kernel_benchmark['summary']['cxx_speedup']:.2f}x` faster in its benchmark.",
+        f"The native kernel matrix currently reports `{native_matrix['summary']['fastest_kernel']}` as the fastest available terrain kernel.",
+        f"The Rust FFI terrain kernel shows how this workload can move toward memory-safe native kernels called from Python simulation tooling.",
         f"The failure queue surfaces `{failure_modes['summary']['top_mode']}` as the top debug theme, with next actions attached.",
     ]
 
 
 def _read_json(path: str | Path) -> dict[str, Any]:
     return json.loads(Path(path).read_text())
+
+
+def _kernel_speedup(native_matrix: dict[str, Any], kernel: str) -> float:
+    for entry in native_matrix["entries"]:
+        if entry["kernel"] == kernel and entry["status"] == "available":
+            return float(entry["speedup_vs_python"])
+    return 0.0

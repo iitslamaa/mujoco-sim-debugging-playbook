@@ -1,6 +1,6 @@
 {
-  "run_type": "native_kernel_matrix",
-  "created_at": "2026-04-21T18:35:51.088308+00:00",
+  "run_type": "rust_kernel_benchmark",
+  "created_at": "2026-04-21T18:35:49.376036+00:00",
   "environment": {
     "platform": {
       "system": "Darwin",
@@ -77,12 +77,6 @@
   },
   "inputs": [
     {
-      "path": "cpp/terrain_kernel.cpp",
-      "exists": true,
-      "sha256": "881ca890b4f3bbdf1f252fd5924d338b288957e57d0cde01ad41924971b4991f",
-      "size_bytes": 6452
-    },
-    {
       "path": "rust/terrain_kernel_ffi.rs",
       "exists": true,
       "sha256": "657cea41fb30a89b0efc15ae74ab6420f3ca0637535fc6429b76c65a1e88f639",
@@ -91,26 +85,24 @@
   ],
   "outputs": [
     {
-      "path": "outputs/native_kernel_matrix/native_kernel_matrix.json",
+      "path": "outputs/rust_kernel_benchmark/rust_kernel_benchmark.json",
       "exists": true,
-      "sha256": "7ad59a24989c8612cfa477232ab2512cdc42c3f4f39a7aa718c3bc7dbc243f61",
-      "size_bytes": 1356
+      "sha256": "760c5e6b26acc5a0e0a3f05462c004e64f7b305ff807f4b313ebf0e4d5d13c82",
+      "size_bytes": 737
     },
     {
-      "path": "outputs/native_kernel_matrix/report.md",
+      "path": "outputs/rust_kernel_benchmark/report.md",
       "exists": true,
-      "sha256": "a39e6c6b2fad759e3a604b9f459c2b8115fbe18406c5dd6d499fa39562eea778",
-      "size_bytes": 493
+      "sha256": "3c61b1608e85098cca0574338d74a33b8b903de47e35cee71ee711330fc5f352",
+      "size_bytes": 405
     }
   ],
   "metadata": {
     "repeats": 200,
-    "available_kernels": [
-      "python",
-      "cxx",
-      "rust_ffi"
-    ],
-    "skipped_kernels": [],
-    "fastest_kernel": "rust_ffi"
+    "python_mean_ms": 0.2064843750122236,
+    "rust_mean_ms": 0.023014164999999996,
+    "rust_speedup": 8.972055906100596,
+    "moved_volume_delta": 8.673617379884035e-19,
+    "end_volume_delta": 1.5178830414797062e-17
   }
 }

@@ -3,20 +3,19 @@
     "repeats": 200,
     "available_kernels": [
       "python",
-      "cxx"
-    ],
-    "skipped_kernels": [
+      "cxx",
       "rust_ffi"
     ],
-    "fastest_kernel": "cxx"
+    "skipped_kernels": [],
+    "fastest_kernel": "rust_ffi"
   },
   "entries": [
     {
       "kernel": "python",
       "status": "available",
       "repeats": 200.0,
-      "elapsed_ms": 37.88233299565036,
-      "mean_ms": 0.1894116649782518,
+      "elapsed_ms": 43.44016599497991,
+      "mean_ms": 0.21720082997489953,
       "moved_volume": 0.0011870886132482404,
       "end_volume": 0.002969614903313318,
       "speedup_vs_python": 1.0,
@@ -27,18 +26,25 @@
       "kernel": "cxx",
       "status": "available",
       "repeats": 200.0,
-      "elapsed_ms": 6.661083,
-      "mean_ms": 0.03330541,
+      "elapsed_ms": 8.9195,
+      "mean_ms": 0.0445975,
       "moved_volume": 0.00118709,
       "end_volume": 0.00296961,
-      "speedup_vs_python": 5.687114044782868,
+      "speedup_vs_python": 4.870246762148092,
       "moved_volume_delta_vs_python": 1.3867517596483775e-09,
       "end_volume_delta_vs_python": 4.903313317872193e-09
     },
     {
       "kernel": "rust_ffi",
-      "status": "skipped",
-      "reason": "rustc not found"
+      "status": "available",
+      "repeats": 200.0,
+      "elapsed_ms": 7.547667,
+      "mean_ms": 0.037738335,
+      "moved_volume": 0.0011870886132482395,
+      "end_volume": 0.002969614903313333,
+      "speedup_vs_python": 5.755442840149136,
+      "moved_volume_delta_vs_python": 8.673617379884035e-19,
+      "end_volume_delta_vs_python": 1.5178830414797062e-17
     }
   ]
 }
