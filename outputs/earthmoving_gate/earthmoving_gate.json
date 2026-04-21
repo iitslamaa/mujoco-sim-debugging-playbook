@@ -1,0 +1,84 @@
+{
+  "status": "pass",
+  "violation_count": 0,
+  "violations": [],
+  "scenario_results": [
+    {
+      "scenario": "baseline_push",
+      "metrics": {
+        "terrain_profile_rmse": {
+          "passed": true,
+          "message": "within threshold"
+        },
+        "volume_conservation_error": {
+          "passed": true,
+          "message": "within threshold"
+        },
+        "moved_volume": {
+          "passed": true,
+          "message": "within threshold"
+        },
+        "runtime_s": {
+          "passed": true,
+          "message": "within threshold"
+        }
+      }
+    },
+    {
+      "scenario": "cohesive_soil",
+      "metrics": {
+        "terrain_profile_rmse": {
+          "passed": true,
+          "message": "within threshold"
+        },
+        "volume_conservation_error": {
+          "passed": true,
+          "message": "within threshold"
+        },
+        "moved_volume": {
+          "passed": true,
+          "message": "within threshold"
+        },
+        "runtime_s": {
+          "passed": true,
+          "message": "within threshold"
+        }
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip",
+      "metrics": {
+        "terrain_profile_rmse": {
+          "passed": true,
+          "message": "within threshold"
+        },
+        "volume_conservation_error": {
+          "passed": true,
+          "message": "within threshold"
+        },
+        "moved_volume": {
+          "passed": true,
+          "message": "within threshold"
+        },
+        "runtime_s": {
+          "passed": true,
+          "message": "within threshold"
+        }
+      }
+    }
+  ],
+  "scale_results": {
+    "episodes_per_second": {
+      "passed": true,
+      "message": "within threshold"
+    },
+    "mean_terrain_profile_rmse": {
+      "passed": true,
+      "message": "within threshold"
+    },
+    "max_terrain_profile_rmse": {
+      "passed": true,
+      "message": "within threshold"
+    }
+  }
+}

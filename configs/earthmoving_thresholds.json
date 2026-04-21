@@ -1,0 +1,27 @@
+{
+  "metric_thresholds": {
+    "terrain_profile_rmse": {
+      "max": 0.08
+    },
+    "volume_conservation_error": {
+      "max": 0.00035
+    },
+    "moved_volume": {
+      "min": 0.00035
+    },
+    "runtime_s": {
+      "max": 0.08
+    }
+  },
+  "scale_thresholds": {
+    "episodes_per_second": {
+      "min": 100.0
+    },
+    "mean_terrain_profile_rmse": {
+      "max": 0.08
+    },
+    "max_terrain_profile_rmse": {
+      "max": 0.1
+    }
+  }
+}
