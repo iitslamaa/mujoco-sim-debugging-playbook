@@ -11,6 +11,9 @@ make earthmoving-scale
 make earthmoving-sensitivity
 make earthmoving-gate
 make earthmoving-gap
+make earthmoving-review-packet
+make earthmoving-replay
+make earthmoving-dashboard
 make terrain-kernel-smoke
 ```
 
@@ -38,6 +41,9 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - a C++ terrain kernel smoke path for lower-level implementation practice
 - release-style quality gates for realism and throughput thresholds
 - gap reports that turn sensitivity and calibration outputs into next measurement priorities
+- review packets that summarize readiness, scale, calibration, and scenario results
+- replay bundles that capture one scenario's metrics, terrain stats, blade path, and debug hypotheses
+- a static dashboard for quick portfolio review
 
 ## Artifact Map
 
@@ -51,3 +57,6 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - Sensitivity report: `outputs/earthmoving_sensitivity/report.md`
 - Quality gate: `outputs/earthmoving_gate/earthmoving_gate.md`
 - Gap report: `outputs/earthmoving_gap/report.md`
+- Review packet: `outputs/earthmoving_review_packet/review_packet.md`
+- Replay bundle: `outputs/earthmoving_replay/cohesive_soil_replay.md`
+- Dashboard: `outputs/earthmoving_dashboard/index.html`
