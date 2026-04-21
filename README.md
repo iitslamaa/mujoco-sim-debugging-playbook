@@ -7,16 +7,22 @@
 If you are reviewing this for autonomous construction or robotics simulation work, start here:
 
 - [Earthmoving simulation packet](EARTHMOVING_SIMULATION_PACKET.md): concise role-focused summary, metrics, limitations, and review links
+- [Hiring manager packet](outputs/hiring_manager_packet/hiring_manager_packet.md): manager-oriented review path, technical judgment signals, limitations, and next 30-day plan
+- [Field trial visuals](outputs/field_trial_visuals/field_trial_visuals.md): terrain delta, blade path, and productivity bottleneck plots
+- [Field trial case study](outputs/field_trial_case_study/field_trial_case_study.md): scenario-level replay, observations, root-cause hypotheses, and next experiment
+- [Multi-pass plan evaluation](outputs/multipass_plan_eval/multipass_plan_eval.md): single-pass vs multi-pass task sequence comparison
+- [Task plan robustness sweep](outputs/task_plan_robustness/task_plan_robustness.md): selected task plan under soil and cycle-time uncertainty
 - [One-month robotics simulation plan](ONE_MONTH_ROBOTICS_SIMULATION_PLAN.md): full-time project curriculum for becoming useful in autonomy simulation roles
 - [Outreach note](OUTREACH_NOTE.md): repo strategy and a short recruiter update draft
 - [Earthmoving dashboard](outputs/earthmoving_dashboard/index.html): static dashboard for terrain deformation, calibration, scale, and planning artifacts
 - [Earthmoving benchmark guide](docs/earthmoving-benchmark-guide.md): command map and artifact map for the construction simulation track
+- [Jobsite autonomy evaluation](outputs/jobsite_autonomy_eval/report.md): deployment-style cycle-time, productivity, target-placement, and rework-risk scorecard
 - [C++ terrain kernel](cpp/terrain_kernel.cpp): standalone terrain-update kernel with smoke build via `make terrain-kernel-smoke`
 - [C++ terrain benchmark](outputs/terrain_kernel_benchmark/report.md): Python vs C++ terrain-update benchmark via `make terrain-kernel-benchmark`
 - [Rust simulation kernel note](docs/rust-simulation-kernel-note.md): why Rust can matter for simulation infrastructure, with an optional Rust FFI terrain-kernel scaffold
 - [Native kernel matrix](outputs/native_kernel_matrix/report.md): Python/C++/Rust availability and speed comparison via `make native-kernel-matrix`
 
-The earthmoving track demonstrates a MuJoCo dozer/blade scene, heightmap terrain deformation, soil parameter calibration, randomized scale evaluation, quality gates, deterministic replay bundles, ML-ready datasets, a surrogate evaluator, simulator-in-the-loop blade plan search, C++ and optional Rust terrain-kernel scaffolds, and generated review artifacts.
+The earthmoving track demonstrates a MuJoCo dozer/blade scene, heightmap terrain deformation, soil parameter calibration, randomized scale evaluation, jobsite productivity scoring, task-plan robustness sweeps, quality gates, deterministic replay bundles, ML-ready datasets, a surrogate evaluator, simulator-in-the-loop blade plan search, C++ and optional Rust terrain-kernel scaffolds, and generated review artifacts.
 
 ## Why this exists
 
@@ -62,6 +68,8 @@ The original core task is a planar 2-DoF robotic arm reaching for sampled worksp
 - Earthmoving benchmark with a MuJoCo dozer/blade asset, terrain before/after plots, and target-berm metrics
 - Heightmap terrain deformation with soil cohesion, friction, compaction, coupling, spillover, and volume accounting
 - Sim-to-field calibration tooling that fits soil/deformation parameters against observed construction-style logs
+- Jobsite autonomy evaluation that turns sim results into cycle-time, productivity, target-capture, and rework-risk decisions
+- Task-plan robustness sweeps that stress selected blade plans against soil and cycle-time uncertainty
 - Batch scale study for randomized earthmoving scenarios with runtime and episodes-per-second reporting
 - Standalone C++ terrain kernel with a smoke build for low-level geometry/physics implementation practice
 - Optional Rust terrain kernel scaffold for safe systems-programming practice in simulation infrastructure
@@ -203,6 +211,12 @@ make earthmoving-surrogate
 make earthmoving-plan-search
 make earthmoving-failure-modes
 make earthmoving-role-brief
+make jobsite-autonomy-eval
+make multipass-plan-eval
+make task-plan-robustness
+make field-trial-visuals
+make field-trial-case-study
+make hiring-manager-packet
 make terrain-kernel-smoke
 make randomization
 make anomalies

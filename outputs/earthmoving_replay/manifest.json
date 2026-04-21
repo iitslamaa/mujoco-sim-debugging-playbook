@@ -1,6 +1,6 @@
 {
   "run_type": "earthmoving_replay",
-  "created_at": "2026-04-21T19:12:58.742018+00:00",
+  "created_at": "2026-04-21T23:35:39.366572+00:00",
   "environment": {
     "platform": {
       "system": "Darwin",
@@ -14,33 +14,46 @@
       "mujoco_version": "3.6.0"
     },
     "tooling": {
-      "git_head": "053037e83df812871d1302586b6e9d1d899b905d",
+      "git_head": "245eee715fe8169d7c990c9e51c62394b2d79cb0",
       "git_branch": "main",
       "git_is_dirty": true,
       "git_status": [
-        "M outputs/earthmoving_benchmark/baseline_push_terrain.png",
-        " M outputs/earthmoving_benchmark/cohesive_soil_terrain.png",
-        " M outputs/earthmoving_benchmark/deposit_forward_progress.png",
-        " M outputs/earthmoving_benchmark/earthmoving_summary.json",
-        " M outputs/earthmoving_benchmark/manifest.json",
-        " M outputs/earthmoving_benchmark/moved_volume.png",
-        " M outputs/earthmoving_benchmark/report.md",
-        " M outputs/earthmoving_benchmark/runtime_s.png",
-        " M outputs/earthmoving_benchmark/shallow_blade_slip_terrain.png",
-        " M outputs/earthmoving_benchmark/terrain_profile_rmse.png",
-        " M outputs/earthmoving_benchmark/volume_conservation_error.png",
-        " M outputs/earthmoving_calibration/calibration_summary.json",
-        " M outputs/earthmoving_calibration/manifest.json",
-        " M outputs/earthmoving_calibration/report.md",
+        "M EARTHMOVING_SIMULATION_PACKET.md",
+        " M Makefile",
+        " M OUTREACH_NOTE.md",
+        " M README.md",
+        " M docs/earthmoving-benchmark-guide.md",
+        " M outputs/earthmoving_dashboard/data.json",
+        " M outputs/earthmoving_dashboard/index.html",
         " M outputs/earthmoving_replay/cohesive_soil_replay.json",
         " M outputs/earthmoving_replay/cohesive_soil_replay.md",
-        " M outputs/earthmoving_scale/manifest.json",
-        " M outputs/earthmoving_scale/report.md",
-        " M outputs/earthmoving_scale/scale_summary.json",
-        " M outputs/earthmoving_sensitivity/manifest.json",
-        " M outputs/earthmoving_sensitivity/report.md",
-        " M outputs/earthmoving_sensitivity/sensitivity_summary.json",
-        " M src/mujoco_sim_debugging_playbook/terrain.py"
+        " M outputs/earthmoving_review_packet/manifest.json",
+        " M outputs/earthmoving_review_packet/review_packet.json",
+        " M outputs/earthmoving_review_packet/review_packet.md",
+        " M outputs/earthmoving_role_brief/manifest.json",
+        " M outputs/earthmoving_role_brief/role_brief.json",
+        " M outputs/earthmoving_role_brief/role_brief.md",
+        " M outputs/simulation_packet/simulation_packet.json",
+        " M outputs/simulation_packet/simulation_packet.md",
+        " M pyproject.toml",
+        " M scripts/generate_earthmoving_review_packet.py",
+        " M src/mujoco_sim_debugging_playbook/earthmoving_dashboard.py",
+        " M src/mujoco_sim_debugging_playbook/earthmoving_review_packet.py",
+        " M src/mujoco_sim_debugging_playbook/earthmoving_role_brief.py",
+        " M src/mujoco_sim_debugging_playbook/simulation_packet.py",
+        "?? configs/jobsite_autonomy_eval.json",
+        "?? outputs/hiring_manager_packet/",
+        "?? outputs/jobsite_autonomy_eval/",
+        "?? outputs/simulation_packet/manifest.json",
+        "?? scripts/generate_field_trial_case_study.py",
+        "?? scripts/generate_hiring_manager_packet.py",
+        "?? scripts/generate_jobsite_autonomy_eval.py",
+        "?? src/mujoco_sim_debugging_playbook/field_trial_case_study.py",
+        "?? src/mujoco_sim_debugging_playbook/hiring_manager_packet.py",
+        "?? src/mujoco_sim_debugging_playbook/jobsite_autonomy_eval.py",
+        "?? tests/test_field_trial_case_study.py",
+        "?? tests/test_hiring_manager_packet.py",
+        "?? tests/test_jobsite_autonomy_eval.py"
       ],
       "docker_version": null,
       "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
@@ -65,7 +78,7 @@
         "matplotlib==3.10.8",
         "mpmath==1.3.0",
         "mujoco==3.6.0",
-        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@053037e83df812871d1302586b6e9d1d899b905d#egg=mujoco_sim_debugging_playbook",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@245eee715fe8169d7c990c9e51c62394b2d79cb0#egg=mujoco_sim_debugging_playbook",
         "networkx==3.4.2",
         "numpy==2.2.6",
         "packaging==26.0",
@@ -101,13 +114,13 @@
     {
       "path": "outputs/earthmoving_replay/cohesive_soil_replay.json",
       "exists": true,
-      "sha256": "bc489c583c604d1084a1f1f9328282f219821d3e62b50d4a5d0ec4213692acc1",
-      "size_bytes": 7551
+      "sha256": "8ab027385722adf1cd1193d061b7d431982de212f623e4dbc61111cd36b9a84c",
+      "size_bytes": 7552
     },
     {
       "path": "outputs/earthmoving_replay/cohesive_soil_replay.md",
       "exists": true,
-      "sha256": "7ae7a3d9afbf21ec987c616d6b648b794349b5d3d2a4eb739187def1192f85c0",
+      "sha256": "d1fc3cebb0fb5c53f3743dcef28b125cdfeae1610d891f8fe8b1bf7fecd9dd6b",
       "size_bytes": 550
     }
   ],
@@ -124,8 +137,8 @@
     "deposit_centroid_x": 0.34870070424937893,
     "deposit_centroid_y": 0.019444142949000754,
     "deposit_forward_progress": 0.5119604316106672,
-    "material_moved_per_second": 0.34386608535771307,
+    "material_moved_per_second": 0.32960489805989834,
     "pass_count": 1,
-    "runtime_s": 0.002532707999989725
+    "runtime_s": 0.0026422920000186423
   }
 }

@@ -19,6 +19,12 @@ make earthmoving-surrogate
 make earthmoving-plan-search
 make earthmoving-failure-modes
 make earthmoving-role-brief
+make jobsite-autonomy-eval
+make multipass-plan-eval
+make task-plan-robustness
+make field-trial-visuals
+make field-trial-case-study
+make hiring-manager-packet
 make terrain-kernel-smoke
 ```
 
@@ -31,6 +37,10 @@ make terrain-kernel-smoke
 - `volume_conservation_error`: conservation residual after compaction
 - `runtime_s`: wall-clock runtime per scenario
 - `episodes_per_second`: batch throughput for randomized scale studies
+- `cycle_time_s`: estimated cut, return, turnaround, and dump-settle time for a blade cycle
+- `productivity_m3_per_hr`: scaled volume moved per estimated operating hour
+- `target_capture_ratio`: share of moved material deposited inside the target zone
+- `rework_risk_score`: composite placement, profile-error, and volume-accounting risk signal
 - `pearson_correlation`: sensitivity estimate between soil parameters and output metrics
 - `calibration_error`: weighted relative error between simulated and observed field-log metrics
 
@@ -54,6 +64,7 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - ML-ready datasets for surrogate modeling or learned evaluator experiments
 - a deterministic surrogate evaluator over randomized terrain outcomes
 - simulator-in-the-loop blade plan search for simple autonomy/content generation loops
+- jobsite autonomy scoring that maps sim results to cycle productivity, placement, bottlenecks, and field-trial readiness
 - failure-mode reports that turn metrics into ranked debug actions
 - a role brief that summarizes the work for autonomy simulation hiring loops
 
@@ -77,3 +88,9 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - Plan search report: `outputs/earthmoving_plan_search/report.md`
 - Failure modes: `outputs/earthmoving_failure_modes/report.md`
 - Role brief: `outputs/earthmoving_role_brief/role_brief.md`
+- Jobsite autonomy evaluation: `outputs/jobsite_autonomy_eval/report.md`
+- Field trial visuals: `outputs/field_trial_visuals/field_trial_visuals.md`
+- Field trial case study: `outputs/field_trial_case_study/field_trial_case_study.md`
+- Multi-pass plan evaluation: `outputs/multipass_plan_eval/multipass_plan_eval.md`
+- Task plan robustness sweep: `outputs/task_plan_robustness/task_plan_robustness.md`
+- Hiring manager packet: `outputs/hiring_manager_packet/hiring_manager_packet.md`

@@ -12,9 +12,9 @@
     "deposit_centroid_x": 0.34870070424937893,
     "deposit_centroid_y": 0.019444142949000754,
     "deposit_forward_progress": 0.5119604316106672,
-    "material_moved_per_second": 0.34386608535771307,
+    "material_moved_per_second": 0.32960489805989834,
     "pass_count": 1,
-    "runtime_s": 0.002532707999989725
+    "runtime_s": 0.0026422920000186423
   },
   "soil": {
     "cohesion": 0.42,

@@ -1,0 +1,19 @@
+{
+  "name": "jobsite_autonomy_eval",
+  "output_dir": "outputs/jobsite_autonomy_eval",
+  "machine_profile": {
+    "label": "compact_autonomy_dozer_proxy",
+    "blade_speed_mps": 0.32,
+    "return_speed_mps": 0.55,
+    "turnaround_s": 4.0,
+    "dump_settle_s": 2.5,
+    "volume_scale_factor": 18.0
+  },
+  "targets": {
+    "min_productivity_m3_per_hr": 7.5,
+    "min_target_capture_ratio": 0.22,
+    "max_terrain_rmse": 0.075,
+    "max_volume_conservation_error": 0.003,
+    "min_deposit_forward_progress_m": 0.20
+  }
+}

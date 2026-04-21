@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mujoco-sim-debugging-playbook"
 version = "0.1.0"
-description = "MuJoCo reaching experiments for simulation debugging, parameter sensitivity, and technical writeups."
+description = "MuJoCo robotics simulation experiments for terrain deformation, autonomy evaluation, debugging, and technical writeups."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

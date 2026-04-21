@@ -46,6 +46,20 @@ def _render_html(packet: dict[str, Any]) -> str:
         f"<section><h3>{html.escape(item['name'])}</h3><p>{html.escape(item['value'])}</p><span>{html.escape(item['detail'])}</span></section>"
         for item in packet["readiness_signals"]
     )
+    jobsite = packet.get("jobsite_eval")
+    jobsite_rows = ""
+    if jobsite:
+        jobsite_rows = "\n".join(
+            "<tr>"
+            f"<td>{html.escape(row['scenario'])}</td>"
+            f"<td>{html.escape(row['decision'])}</td>"
+            f"<td>{row['productivity_m3_per_hr']:.2f}</td>"
+            f"<td>{row['cycle_time_s']:.2f}</td>"
+            f"<td>{row['target_capture_ratio']:.3f}</td>"
+            f"<td>{html.escape(row['bottleneck'])}</td>"
+            "</tr>"
+            for row in jobsite["rows"]
+        )
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -164,6 +178,7 @@ def _render_html(packet: dict[str, Any]) -> str:
         <section><h3>Best Scenario</h3><p>{html.escape(summary['best_scenario'])}</p></section>
         <section><h3>Deposit Progress</h3><p>{summary.get('mean_deposit_forward_progress', 0.0):.3f} m</p></section>
         <section><h3>Calibration Error</h3><p>{summary['mean_calibration_error']:.4f}</p></section>
+        <section><h3>Jobsite Decision</h3><p>{html.escape(summary.get('jobsite_decision', 'not_evaluated'))}</p></section>
       </div>
     </header>
     <h2>Readiness Signals</h2>
@@ -172,6 +187,11 @@ def _render_html(packet: dict[str, Any]) -> str:
     <table>
       <thead><tr><th>Scenario</th><th>Moved Volume</th><th>Deposit Progress</th><th>Terrain RMSE</th><th>Volume Error</th><th>Runtime</th></tr></thead>
       <tbody>{scenario_rows}</tbody>
+    </table>
+    <h2>Jobsite Autonomy Scorecard</h2>
+    <table>
+      <thead><tr><th>Scenario</th><th>Decision</th><th>Productivity</th><th>Cycle Time</th><th>Target Capture</th><th>Bottleneck</th></tr></thead>
+      <tbody>{jobsite_rows}</tbody>
     </table>
     <h2>Top Sensitivities</h2>
     <table>

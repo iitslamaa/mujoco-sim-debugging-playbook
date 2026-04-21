@@ -5,7 +5,7 @@
 - Moved volume: `0.000871`
 - Terrain profile RMSE: `0.014993`
 - Volume conservation error: `0.000000`
-- Runtime: `0.00253`
+- Runtime: `0.00264`
 
 ## Terrain Stats
 

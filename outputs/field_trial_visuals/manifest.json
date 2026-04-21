@@ -1,0 +1,162 @@
+{
+  "run_type": "field_trial_visuals",
+  "created_at": "2026-04-21T23:39:00.091626+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "245eee715fe8169d7c990c9e51c62394b2d79cb0",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M EARTHMOVING_SIMULATION_PACKET.md",
+        " M Makefile",
+        " M OUTREACH_NOTE.md",
+        " M README.md",
+        " M docs/earthmoving-benchmark-guide.md",
+        " M outputs/earthmoving_dashboard/data.json",
+        " M outputs/earthmoving_dashboard/index.html",
+        " M outputs/earthmoving_replay/cohesive_soil_replay.json",
+        " M outputs/earthmoving_replay/cohesive_soil_replay.md",
+        " M outputs/earthmoving_replay/manifest.json",
+        " M outputs/earthmoving_review_packet/manifest.json",
+        " M outputs/earthmoving_review_packet/review_packet.json",
+        " M outputs/earthmoving_review_packet/review_packet.md",
+        " M outputs/earthmoving_role_brief/manifest.json",
+        " M outputs/earthmoving_role_brief/role_brief.json",
+        " M outputs/earthmoving_role_brief/role_brief.md",
+        " M outputs/simulation_packet/simulation_packet.json",
+        " M outputs/simulation_packet/simulation_packet.md",
+        " M pyproject.toml",
+        " M scripts/generate_earthmoving_review_packet.py",
+        " M src/mujoco_sim_debugging_playbook/earthmoving_dashboard.py",
+        " M src/mujoco_sim_debugging_playbook/earthmoving_review_packet.py",
+        " M src/mujoco_sim_debugging_playbook/earthmoving_role_brief.py",
+        " M src/mujoco_sim_debugging_playbook/simulation_packet.py",
+        "?? configs/jobsite_autonomy_eval.json",
+        "?? outputs/field_trial_case_study/",
+        "?? outputs/field_trial_visuals/",
+        "?? outputs/hiring_manager_packet/",
+        "?? outputs/jobsite_autonomy_eval/",
+        "?? outputs/simulation_packet/manifest.json",
+        "?? scripts/generate_field_trial_case_study.py",
+        "?? scripts/generate_field_trial_visuals.py",
+        "?? scripts/generate_hiring_manager_packet.py",
+        "?? scripts/generate_jobsite_autonomy_eval.py",
+        "?? src/mujoco_sim_debugging_playbook/field_trial_case_study.py",
+        "?? src/mujoco_sim_debugging_playbook/field_trial_visuals.py",
+        "?? src/mujoco_sim_debugging_playbook/hiring_manager_packet.py",
+        "?? src/mujoco_sim_debugging_playbook/jobsite_autonomy_eval.py",
+        "?? tests/test_field_trial_case_study.py",
+        "?? tests/test_field_trial_visuals.py",
+        "?? tests/test_hiring_manager_packet.py",
+        "?? tests/test_jobsite_autonomy_eval.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@245eee715fe8169d7c990c9e51c62394b2d79cb0#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {
+    "scenario": "cohesive_soil"
+  },
+  "inputs": [
+    {
+      "path": "outputs/earthmoving_benchmark/earthmoving_summary.json",
+      "exists": true,
+      "sha256": "fc0c2c019e7ce978ae4c2903d9f788c517e25c30b1635626149d13415519b5d6",
+      "size_bytes": 721428
+    },
+    {
+      "path": "outputs/jobsite_autonomy_eval/jobsite_autonomy_eval.json",
+      "exists": true,
+      "sha256": "a81eaafc2821ad97d6ca0ee66c8762ec4191940bb2f2de41aeacd8e11cd5b6c8",
+      "size_bytes": 3179
+    },
+    {
+      "path": "outputs/earthmoving_replay/cohesive_soil_replay.json",
+      "exists": true,
+      "sha256": "8ab027385722adf1cd1193d061b7d431982de212f623e4dbc61111cd36b9a84c",
+      "size_bytes": 7552
+    }
+  ],
+  "outputs": [
+    {
+      "path": "outputs/field_trial_visuals/field_trial_visuals.json",
+      "exists": true,
+      "sha256": "eff3a635e5d748f341f86a31b3c2335ac2d0ed9570d0f8a8c41aa6fba727e1cb",
+      "size_bytes": 479
+    },
+    {
+      "path": "outputs/field_trial_visuals/field_trial_visuals.md",
+      "exists": true,
+      "sha256": "8e52f9d353744f68bf84689087ab5fe0a84f0a352bbd2abc510ff9c4a604fed8",
+      "size_bytes": 367
+    },
+    {
+      "path": "outputs/field_trial_visuals/cohesive_soil_terrain_delta.png",
+      "exists": true,
+      "sha256": "e06ac35f84c009cbcadb4b68c8f355f54192a3847db0848d2697efc01656e741",
+      "size_bytes": 54812
+    },
+    {
+      "path": "outputs/field_trial_visuals/jobsite_productivity_bottleneck.png",
+      "exists": true,
+      "sha256": "3d0582812e02a5ff3e7f1fd38d648ffe3d83264fc095095bc2c405f02e0c493c",
+      "size_bytes": 63254
+    }
+  ],
+  "metadata": {
+    "decision": "tune_before_field",
+    "bottleneck": "cycle_productivity",
+    "productivity_m3_per_hr": 5.2492239572934505,
+    "target_capture_ratio": 0.35694506097879575
+  }
+}

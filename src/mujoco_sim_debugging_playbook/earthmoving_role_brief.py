@@ -23,6 +23,7 @@ def build_earthmoving_role_brief(
         "fit_signals": [
             "Built a MuJoCo dozer/blade task instead of only toy robot control.",
             "Implemented heightmap terrain deformation with soil parameters and volume accounting.",
+            "Mapped simulation outputs to deployment-style productivity, cycle-time, placement, and rework-risk decisions.",
             "Added sim-to-field calibration against observed construction-style logs.",
             "Generated randomized scale runs and throughput metrics for batch evaluation.",
             "Created ML-ready feature/label datasets for learned evaluators or surrogate models.",
@@ -37,6 +38,8 @@ def build_earthmoving_role_brief(
             "dataset_rows": dataset["summary"]["row_count"],
             "failure_mode_items": failure_modes["summary"]["item_count"],
             "mean_calibration_error": summary["mean_calibration_error"],
+            "jobsite_decision": summary.get("jobsite_decision", "not_evaluated"),
+            "mean_productivity_m3_per_hr": summary.get("mean_productivity_m3_per_hr", 0.0),
         },
         "talking_points": _talking_points(summary, dataset, failure_modes),
     }
@@ -96,6 +99,8 @@ def _write_markdown(payload: dict[str, Any]) -> str:
             f"- Dataset rows: `{metrics['dataset_rows']}`",
             f"- Failure-mode items: `{metrics['failure_mode_items']}`",
             f"- Mean calibration error: `{metrics['mean_calibration_error']:.4f}`",
+            f"- Jobsite decision: `{metrics['jobsite_decision']}`",
+            f"- Mean scaled productivity: `{metrics['mean_productivity_m3_per_hr']:.2f}` m3/hr",
             "",
             "## Talking Points",
             "",

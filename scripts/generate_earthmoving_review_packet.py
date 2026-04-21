@@ -17,6 +17,7 @@ if __name__ == "__main__":
         sensitivity_summary_path=ROOT / "outputs" / "earthmoving_sensitivity" / "sensitivity_summary.json",
         gate_path=ROOT / "outputs" / "earthmoving_gate" / "earthmoving_gate.json",
         gap_report_path=ROOT / "outputs" / "earthmoving_gap" / "gap_report.json",
+        jobsite_eval_path=ROOT / "outputs" / "jobsite_autonomy_eval" / "jobsite_autonomy_eval.json",
         output_dir=ROOT / "outputs" / "earthmoving_review_packet",
     )
     print(

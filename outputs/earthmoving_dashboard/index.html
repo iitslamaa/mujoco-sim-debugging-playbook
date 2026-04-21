@@ -112,34 +112,43 @@
       <span>Terrain deformation, soil calibration, randomized scale, and sim-to-field diagnostics.</span>
       <div class="summary">
         <section><h3>Gate Status</h3><p>pass</p></section>
-        <section><h3>Throughput</h3><p>323.79/s</p></section>
+        <section><h3>Throughput</h3><p>287.91/s</p></section>
         <section><h3>Best Scenario</h3><p>shallow_blade_slip</p></section>
-        <section><h3>Deposit Progress</h3><p>0.066 m</p></section>
-        <section><h3>Calibration Error</h3><p>0.4378</p></section>
+        <section><h3>Deposit Progress</h3><p>0.510 m</p></section>
+        <section><h3>Calibration Error</h3><p>0.3474</p></section>
+        <section><h3>Jobsite Decision</h3><p>needs_calibration_before_field_trial</p></section>
       </div>
     </header>
     <h2>Readiness Signals</h2>
     <div class="signals"><section><h3>Quality gate</h3><p>pass</p><span>Earthmoving realism and throughput thresholds</span></section>
-<section><h3>Scale throughput</h3><p>323.79 episodes/s</p><span>Randomized batch evaluation speed</span></section>
-<section><h3>Best terrain match</h3><p>shallow_blade_slip</p><span>RMSE 0.01193</span></section>
-<section><h3>Mean deposit progress</h3><p>0.066 m</p><span>Centroid displacement from cut region to deposit region</span></section>
-<section><h3>Largest sim-to-field gap</h3><p>baseline_push</p><span>Improve delivered-material measurement around the target berm region.</span></section></div>
+<section><h3>Jobsite decision</h3><p>needs_calibration_before_field_trial</p><span>Cycle-time, productivity, placement, and rework-risk scorecard</span></section>
+<section><h3>Scale throughput</h3><p>287.91 episodes/s</p><span>Randomized batch evaluation speed</span></section>
+<section><h3>Best terrain match</h3><p>shallow_blade_slip</p><span>RMSE 0.01090</span></section>
+<section><h3>Mean deposit progress</h3><p>0.510 m</p><span>Centroid displacement from cut region to deposit region</span></section>
+<section><h3>Largest sim-to-field gap</h3><p>baseline_push</p><span>Prioritize field measurement and calibration of `cohesion` because it strongly drives `terrain_profile_rmse`.</span></section></div>
     <h2>Scenario Results</h2>
     <table>
       <thead><tr><th>Scenario</th><th>Moved Volume</th><th>Deposit Progress</th><th>Terrain RMSE</th><th>Volume Error</th><th>Runtime</th></tr></thead>
-      <tbody><tr><td>shallow_blade_slip</td><td>0.000687</td><td>0.0622</td><td>0.011930</td><td>0.000000</td><td>0.00263</td></tr>
-<tr><td>baseline_push</td><td>0.001599</td><td>0.0690</td><td>0.013620</td><td>0.000000</td><td>0.00244</td></tr>
-<tr><td>cohesive_soil</td><td>0.001111</td><td>0.0673</td><td>0.016632</td><td>0.000000</td><td>0.00253</td></tr></tbody>
+      <tbody><tr><td>shallow_blade_slip</td><td>0.000587</td><td>0.5029</td><td>0.010896</td><td>0.000000</td><td>0.00236</td></tr>
+<tr><td>baseline_push</td><td>0.001113</td><td>0.5147</td><td>0.011767</td><td>0.000000</td><td>0.00246</td></tr>
+<tr><td>cohesive_soil</td><td>0.000871</td><td>0.5120</td><td>0.014993</td><td>0.000000</td><td>0.00255</td></tr></tbody>
+    </table>
+    <h2>Jobsite Autonomy Scorecard</h2>
+    <table>
+      <thead><tr><th>Scenario</th><th>Decision</th><th>Productivity</th><th>Cycle Time</th><th>Target Capture</th><th>Bottleneck</th></tr></thead>
+      <tbody><tr><td>baseline_push</td><td>tune_before_field</td><td>6.71</td><td>10.75</td><td>0.344</td><td>cycle_productivity</td></tr>
+<tr><td>cohesive_soil</td><td>tune_before_field</td><td>5.25</td><td>10.75</td><td>0.357</td><td>cycle_productivity</td></tr>
+<tr><td>shallow_blade_slip</td><td>tune_before_field</td><td>3.54</td><td>10.75</td><td>0.322</td><td>cycle_productivity</td></tr></tbody>
     </table>
     <h2>Top Sensitivities</h2>
     <table>
       <thead><tr><th>Soil Parameter</th><th>Metric</th><th>Correlation</th></tr></thead>
-      <tbody><tr><td>blade_coupling</td><td>moved_volume</td><td>0.9453</td></tr>
-<tr><td>cohesion</td><td>terrain_profile_rmse</td><td>0.9287</td></tr>
-<tr><td>compaction_rate</td><td>terrain_profile_rmse</td><td>0.9002</td></tr>
-<tr><td>spillover_rate</td><td>terrain_profile_rmse</td><td>-0.8478</td></tr>
-<tr><td>friction_angle_deg</td><td>terrain_profile_rmse</td><td>0.7353</td></tr>
-<tr><td>spillover_rate</td><td>moved_volume</td><td>-0.4573</td></tr></tbody>
+      <tbody><tr><td>blade_coupling</td><td>moved_volume</td><td>0.9667</td></tr>
+<tr><td>cohesion</td><td>terrain_profile_rmse</td><td>0.9408</td></tr>
+<tr><td>compaction_rate</td><td>terrain_profile_rmse</td><td>0.8594</td></tr>
+<tr><td>spillover_rate</td><td>terrain_profile_rmse</td><td>-0.7478</td></tr>
+<tr><td>friction_angle_deg</td><td>terrain_profile_rmse</td><td>0.7109</td></tr>
+<tr><td>spillover_rate</td><td>moved_volume</td><td>-0.4914</td></tr></tbody>
     </table>
     <h2>Terrain Plots</h2>
     <div class="plots">

@@ -13,13 +13,21 @@
       "metric": "moved_volume",
       "pearson_correlation": 0.9666800282125874,
       "abs_correlation": 0.9666800282125874
-    }
+    },
+    "jobsite_decision": "needs_calibration_before_field_trial",
+    "release_candidate_count": 0,
+    "mean_productivity_m3_per_hr": 5.164824683887612
   },
   "readiness_signals": [
     {
       "name": "Quality gate",
       "value": "pass",
       "detail": "Earthmoving realism and throughput thresholds"
+    },
+    {
+      "name": "Jobsite decision",
+      "value": "needs_calibration_before_field_trial",
+      "detail": "Cycle-time, productivity, placement, and rework-risk scorecard"
     },
     {
       "name": "Scale throughput",
@@ -46,6 +54,7 @@
     {
       "scenario": "shallow_blade_slip",
       "moved_volume": 0.0005868779102415541,
+      "target_zone_volume": 0.00018923259076353757,
       "deposit_forward_progress": 0.5029357485833107,
       "terrain_profile_rmse": 0.010895758928837906,
       "volume_conservation_error": 4.845028458294598e-19,
@@ -54,6 +63,7 @@
     {
       "scenario": "baseline_push",
       "moved_volume": 0.0011129381521677603,
+      "target_zone_volume": 0.0003824854016792265,
       "deposit_forward_progress": 0.5146569357173252,
       "terrain_profile_rmse": 0.01176724283716192,
       "volume_conservation_error": 3.5236570605778894e-19,
@@ -62,6 +72,7 @@
     {
       "scenario": "cohesive_soil",
       "moved_volume": 0.0008709123853106295,
+      "target_zone_volume": 0.0003108678744818911,
       "deposit_forward_progress": 0.5119604316106672,
       "terrain_profile_rmse": 0.014993291725440493,
       "volume_conservation_error": 5.149960319306146e-19,
@@ -173,5 +184,103 @@
         "spillover_rate": 0.14
       }
     }
-  ]
+  ],
+  "jobsite_eval": {
+    "name": "jobsite_autonomy_eval",
+    "machine_profile": {
+      "label": "compact_autonomy_dozer_proxy",
+      "blade_speed_mps": 0.32,
+      "return_speed_mps": 0.55,
+      "turnaround_s": 4.0,
+      "dump_settle_s": 2.5,
+      "volume_scale_factor": 18.0
+    },
+    "targets": {
+      "min_productivity_m3_per_hr": 7.5,
+      "min_target_capture_ratio": 0.22,
+      "max_terrain_rmse": 0.075,
+      "max_volume_conservation_error": 0.003,
+      "min_deposit_forward_progress_m": 0.2
+    },
+    "summary": {
+      "overall_decision": "needs_calibration_before_field_trial",
+      "scenario_count": 3,
+      "release_candidate_count": 0,
+      "mean_productivity_m3_per_hr": 5.164824683887612,
+      "mean_target_capture_ratio": 0.3410187535400199,
+      "top_bottleneck": "cycle_productivity",
+      "target_productivity_m3_per_hr": 7.5,
+      "machine_profile": "compact_autonomy_dozer_proxy"
+    },
+    "rows": [
+      {
+        "scenario": "baseline_push",
+        "decision": "tune_before_field",
+        "failed_checks": [
+          "productivity"
+        ],
+        "pass_distance_m": 0.86,
+        "cycle_time_s": 10.751136363636363,
+        "scaled_moved_volume_m3": 0.020032886739019685,
+        "productivity_m3_per_hr": 6.70797856349375,
+        "target_capture_ratio": 0.3436717493548303,
+        "rework_risk_score": 0.147,
+        "bottleneck": "cycle_productivity",
+        "checks": {
+          "productivity": false,
+          "target_capture": true,
+          "terrain_rmse": true,
+          "volume_conservation": true,
+          "deposit_progress": true
+        }
+      },
+      {
+        "scenario": "cohesive_soil",
+        "decision": "tune_before_field",
+        "failed_checks": [
+          "productivity"
+        ],
+        "pass_distance_m": 0.86,
+        "cycle_time_s": 10.751136363636363,
+        "scaled_moved_volume_m3": 0.01567642293559133,
+        "productivity_m3_per_hr": 5.2492239572934505,
+        "target_capture_ratio": 0.35694506097879575,
+        "rework_risk_score": 0.153,
+        "bottleneck": "cycle_productivity",
+        "checks": {
+          "productivity": false,
+          "target_capture": true,
+          "terrain_rmse": true,
+          "volume_conservation": true,
+          "deposit_progress": true
+        }
+      },
+      {
+        "scenario": "shallow_blade_slip",
+        "decision": "tune_before_field",
+        "failed_checks": [
+          "productivity"
+        ],
+        "pass_distance_m": 0.86,
+        "cycle_time_s": 10.751136363636363,
+        "scaled_moved_volume_m3": 0.010563802384347974,
+        "productivity_m3_per_hr": 3.537271530875635,
+        "target_capture_ratio": 0.3224394502864335,
+        "rework_risk_score": 0.152,
+        "bottleneck": "cycle_productivity",
+        "checks": {
+          "productivity": false,
+          "target_capture": true,
+          "terrain_rmse": true,
+          "volume_conservation": true,
+          "deposit_progress": true
+        }
+      }
+    ],
+    "operator_notes": [
+      "baseline_push: tune before field work; primary bottleneck is cycle_productivity with failed checks productivity.",
+      "cohesive_soil: tune before field work; primary bottleneck is cycle_productivity with failed checks productivity.",
+      "shallow_blade_slip: tune before field work; primary bottleneck is cycle_productivity with failed checks productivity."
+    ]
+  }
 }

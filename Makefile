@@ -1,7 +1,7 @@
 PYTHON ?= .venv/bin/python
 PIP ?= .venv/bin/pip
 
-.PHONY: install bootstrap-env debug-bundle debug-bundle-manifest container-smoke compatibility dependency-snapshot docker-context issue-template-audit toolchain-inventory support-case-catalog setup-faq response-rubric support-response-template support-triage-reply support-escalation-brief local-paths-report repro-inventory repro-bundle-index repro-readiness release-checklist release-dry-run environment-diff support-intake-checklist machine-profile bundle-verifier release-matrix machine-readiness bundle-quality bundle-coverage release-blockers release-evidence-packet release-handoff-note support-session-note environment-alignment support-command-catalog test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark earthmoving-benchmark earthmoving-calibration earthmoving-scale earthmoving-sensitivity earthmoving-gate earthmoving-gap earthmoving-review-packet earthmoving-replay earthmoving-dashboard earthmoving-dataset earthmoving-surrogate earthmoving-plan-search earthmoving-failure-modes earthmoving-role-brief simulation-packet terrain-kernel-smoke terrain-kernel-benchmark rust-terrain-kernel-smoke rust-terrain-kernel-benchmark native-kernel-matrix randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note artifact-closeout artifact-scorecard artifact-packet environment-doctor dashboard-snapshot dashboard-snapshot-history dashboard-snapshot-drift dashboard-snapshot-alerts dashboard-snapshot-monitor dashboard-snapshot-review dashboard-snapshot-handoff dashboard-snapshot-closeout dashboard-snapshot-scorecard dashboard-snapshot-digest dashboard-snapshot-actions dashboard-snapshot-alert-packet dashboard-snapshot-resolution-plan dashboard-snapshot-execution-board dashboard-snapshot-owner-load dashboard-snapshot-readiness-gate dashboard-snapshot-recovery-forecast dashboard-snapshot-milestones dashboard-snapshot-watchlist dashboard-snapshot-focus dashboard-snapshot-priorities dashboard-snapshot-status-brief dashboard-snapshot-lead case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
+.PHONY: install bootstrap-env debug-bundle debug-bundle-manifest container-smoke compatibility dependency-snapshot docker-context issue-template-audit toolchain-inventory support-case-catalog setup-faq response-rubric support-response-template support-triage-reply support-escalation-brief local-paths-report repro-inventory repro-bundle-index repro-readiness release-checklist release-dry-run environment-diff support-intake-checklist machine-profile bundle-verifier release-matrix machine-readiness bundle-quality bundle-coverage release-blockers release-evidence-packet release-handoff-note support-session-note environment-alignment support-command-catalog test baseline sweep smoke support-case diagnostics compare train-policy eval-policy train-rl eval-rl benchmark earthmoving-benchmark earthmoving-calibration earthmoving-scale earthmoving-sensitivity earthmoving-gate earthmoving-gap earthmoving-review-packet earthmoving-replay earthmoving-dashboard earthmoving-dataset earthmoving-surrogate earthmoving-plan-search earthmoving-failure-modes earthmoving-role-brief jobsite-autonomy-eval multipass-plan-eval task-plan-robustness field-trial-visuals field-trial-case-study hiring-manager-packet simulation-packet terrain-kernel-smoke terrain-kernel-benchmark rust-terrain-kernel-smoke rust-terrain-kernel-benchmark native-kernel-matrix randomization anomalies recommendations triage incidents knowledge-base escalation support-ops support-gaps workstreams sla capacity ops-review support-readiness scenario-plan responder-load backlog-aging documentation-audit risk-register owner-alerts release-packet evidence-inventory action-register scorecard briefing-note artifact-freshness regeneration-plan dependency-map impact-analysis refresh-bundle refresh-checklist maintenance-risk artifact-readiness artifact-scenarios artifact-recovery artifact-delivery artifact-capacity artifact-exec-summary artifact-history artifact-actions artifact-alerts artifact-digest artifact-handoff artifact-review-note artifact-closeout artifact-scorecard artifact-packet environment-doctor dashboard-snapshot dashboard-snapshot-history dashboard-snapshot-drift dashboard-snapshot-alerts dashboard-snapshot-monitor dashboard-snapshot-review dashboard-snapshot-handoff dashboard-snapshot-closeout dashboard-snapshot-scorecard dashboard-snapshot-digest dashboard-snapshot-actions dashboard-snapshot-alert-packet dashboard-snapshot-resolution-plan dashboard-snapshot-execution-board dashboard-snapshot-owner-load dashboard-snapshot-readiness-gate dashboard-snapshot-recovery-forecast dashboard-snapshot-milestones dashboard-snapshot-watchlist dashboard-snapshot-focus dashboard-snapshot-priorities dashboard-snapshot-status-brief dashboard-snapshot-lead case-studies snapshot regression-diff regression-check regression-history provenance release-notes demo-gif dashboard format-help
 
 install:
 	$(PIP) install --upgrade pip setuptools wheel
@@ -197,6 +197,24 @@ earthmoving-failure-modes:
 
 earthmoving-role-brief:
 	$(PYTHON) scripts/generate_earthmoving_role_brief.py
+
+jobsite-autonomy-eval:
+	$(PYTHON) scripts/generate_jobsite_autonomy_eval.py
+
+multipass-plan-eval:
+	$(PYTHON) scripts/generate_multipass_plan_eval.py
+
+task-plan-robustness:
+	$(PYTHON) scripts/generate_task_plan_robustness.py
+
+field-trial-visuals:
+	MPLCONFIGDIR=/tmp/mpl $(PYTHON) scripts/generate_field_trial_visuals.py
+
+field-trial-case-study:
+	$(PYTHON) scripts/generate_field_trial_case_study.py
+
+hiring-manager-packet:
+	$(PYTHON) scripts/generate_hiring_manager_packet.py
 
 simulation-packet:
 	$(PYTHON) scripts/generate_simulation_packet.py

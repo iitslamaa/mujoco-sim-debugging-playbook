@@ -1,0 +1,13 @@
+{
+  "scenario": "cohesive_soil",
+  "summary": {
+    "decision": "tune_before_field",
+    "bottleneck": "cycle_productivity",
+    "productivity_m3_per_hr": 5.2492239572934505,
+    "target_capture_ratio": 0.35694506097879575
+  },
+  "plots": {
+    "terrain_delta": "/Users/lamayassine/mujoco/outputs/field_trial_visuals/cohesive_soil_terrain_delta.png",
+    "productivity_bottleneck": "/Users/lamayassine/mujoco/outputs/field_trial_visuals/jobsite_productivity_bottleneck.png"
+  }
+}
