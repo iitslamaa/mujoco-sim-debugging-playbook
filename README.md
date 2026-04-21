@@ -13,6 +13,7 @@ If you are reviewing this for autonomous construction or robotics simulation wor
 - [C++ terrain kernel](cpp/terrain_kernel.cpp): standalone terrain-update kernel with smoke build via `make terrain-kernel-smoke`
 - [C++ terrain benchmark](outputs/terrain_kernel_benchmark/report.md): Python vs C++ terrain-update benchmark via `make terrain-kernel-benchmark`
 - [Rust simulation kernel note](docs/rust-simulation-kernel-note.md): why Rust can matter for simulation infrastructure, with an optional Rust FFI terrain-kernel scaffold
+- [Native kernel matrix](outputs/native_kernel_matrix/report.md): Python/C++/Rust availability and speed comparison via `make native-kernel-matrix`
 
 The earthmoving track demonstrates a MuJoCo dozer/blade scene, heightmap terrain deformation, soil parameter calibration, randomized scale evaluation, quality gates, deterministic replay bundles, ML-ready datasets, a surrogate evaluator, simulator-in-the-loop blade plan search, C++ and optional Rust terrain-kernel scaffolds, and generated review artifacts.
 

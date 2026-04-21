@@ -35,6 +35,7 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - `surrogate_report`: [outputs/earthmoving_surrogate/report.md](outputs/earthmoving_surrogate/report.md)
 - `plan_search_report`: [outputs/earthmoving_plan_search/report.md](outputs/earthmoving_plan_search/report.md)
 - `kernel_benchmark`: [outputs/terrain_kernel_benchmark/report.md](outputs/terrain_kernel_benchmark/report.md)
+- `native_kernel_matrix`: [outputs/native_kernel_matrix/report.md](outputs/native_kernel_matrix/report.md)
 - `cxx_kernel`: [cpp/terrain_kernel.cpp](cpp/terrain_kernel.cpp)
 - `rust_kernel_note`: [docs/rust-simulation-kernel-note.md](docs/rust-simulation-kernel-note.md)
 

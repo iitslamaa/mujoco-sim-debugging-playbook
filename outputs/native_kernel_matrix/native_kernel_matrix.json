@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "repeats": 200,
+    "available_kernels": [
+      "python",
+      "cxx"
+    ],
+    "skipped_kernels": [
+      "rust_ffi"
+    ],
+    "fastest_kernel": "cxx"
+  },
+  "entries": [
+    {
+      "kernel": "python",
+      "status": "available",
+      "repeats": 200.0,
+      "elapsed_ms": 37.88233299565036,
+      "mean_ms": 0.1894116649782518,
+      "moved_volume": 0.0011870886132482404,
+      "end_volume": 0.002969614903313318,
+      "speedup_vs_python": 1.0,
+      "moved_volume_delta_vs_python": 0.0,
+      "end_volume_delta_vs_python": 0.0
+    },
+    {
+      "kernel": "cxx",
+      "status": "available",
+      "repeats": 200.0,
+      "elapsed_ms": 6.661083,
+      "mean_ms": 0.03330541,
+      "moved_volume": 0.00118709,
+      "end_volume": 0.00296961,
+      "speedup_vs_python": 5.687114044782868,
+      "moved_volume_delta_vs_python": 1.3867517596483775e-09,
+      "end_volume_delta_vs_python": 4.903313317872193e-09
+    },
+    {
+      "kernel": "rust_ffi",
+      "status": "skipped",
+      "reason": "rustc not found"
+    }
+  ]
+}
