@@ -7,6 +7,7 @@
 If you are reviewing this for autonomous construction or robotics simulation work, start here:
 
 - [Earthmoving simulation packet](EARTHMOVING_SIMULATION_PACKET.md): concise role-focused summary, metrics, limitations, and review links
+- [One-month robotics simulation plan](ONE_MONTH_ROBOTICS_SIMULATION_PLAN.md): full-time project curriculum for becoming useful in autonomy simulation roles
 - [Outreach note](OUTREACH_NOTE.md): repo strategy and a short recruiter update draft
 - [Earthmoving dashboard](outputs/earthmoving_dashboard/index.html): static dashboard for terrain deformation, calibration, scale, and planning artifacts
 - [Earthmoving benchmark guide](docs/earthmoving-benchmark-guide.md): command map and artifact map for the construction simulation track
