@@ -1,0 +1,122 @@
+{
+  "run_type": "earthmoving_plan_search",
+  "created_at": "2026-04-21T18:11:10.395937+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "4411733e846d43346221144e47a069e61c7515aa",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M Makefile",
+        "?? outputs/earthmoving_plan_search/",
+        "?? scripts/search_earthmoving_plan.py",
+        "?? src/mujoco_sim_debugging_playbook/earthmoving_plan_search.py",
+        "?? tests/test_earthmoving_plan_search.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@4411733e846d43346221144e47a069e61c7515aa#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {
+    "config_path": "/Users/lamayassine/mujoco/configs/earthmoving_benchmark.json",
+    "scenario_name": "baseline_push"
+  },
+  "inputs": [
+    {
+      "path": "configs/earthmoving_benchmark.json",
+      "exists": true,
+      "sha256": "4c7ef842ce0718791ee0e8702f739eb1ba8ae5ec85f1a4b4a37130fdacf3c746",
+      "size_bytes": 2378
+    }
+  ],
+  "outputs": [
+    {
+      "path": "outputs/earthmoving_plan_search/plan_search.json",
+      "exists": true,
+      "sha256": "40b15fdd854f04bf5c25599c098dc65476501797ebf53dc4183154808d6b89a8",
+      "size_bytes": 17028
+    },
+    {
+      "path": "outputs/earthmoving_plan_search/report.md",
+      "exists": true,
+      "sha256": "a2ae2c82ae6f09cff3811b2cc362afc93f47fdd64cf9926e7ac71358d6331973",
+      "size_bytes": 1585
+    }
+  ],
+  "metadata": {
+    "scenario": "baseline_push",
+    "candidate_count": 45,
+    "best_candidate": {
+      "candidate": "baseline_push_d0.008_w0.24_y+0.00",
+      "depth": 0.008,
+      "width": 0.24,
+      "y": 0.0,
+      "score": 0.012396205113004093,
+      "moved_volume": 0.0020334023633814106,
+      "terrain_profile_rmse": 0.01310346627218866,
+      "volume_conservation_error": 5.55653613398821e-19,
+      "runtime_s": 0.0022148339994600974
+    },
+    "baseline": {
+      "candidate": "baseline_push",
+      "depth": 0.014,
+      "width": 0.2,
+      "y": 0.0,
+      "score": 0.01306435551026425,
+      "moved_volume": 0.0015986601510945156,
+      "terrain_profile_rmse": 0.013619649147136165,
+      "volume_conservation_error": 1.0842021724855044e-19,
+      "runtime_s": 0.002118708005582448
+    }
+  }
+}
