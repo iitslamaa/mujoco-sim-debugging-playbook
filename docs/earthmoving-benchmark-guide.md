@@ -8,6 +8,9 @@ This project track demonstrates construction-style robotics simulation work: a M
 make earthmoving-benchmark
 make earthmoving-calibration
 make earthmoving-scale
+make earthmoving-sensitivity
+make earthmoving-gate
+make earthmoving-gap
 make terrain-kernel-smoke
 ```
 
@@ -19,6 +22,8 @@ make terrain-kernel-smoke
 - `volume_conservation_error`: conservation residual after compaction
 - `runtime_s`: wall-clock runtime per scenario
 - `episodes_per_second`: batch throughput for randomized scale studies
+- `pearson_correlation`: sensitivity estimate between soil parameters and output metrics
+- `calibration_error`: weighted relative error between simulated and observed field-log metrics
 
 ## Why It Exists
 
@@ -31,6 +36,8 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - deterministic replay
 - batch evaluation for many scenario variants
 - a C++ terrain kernel smoke path for lower-level implementation practice
+- release-style quality gates for realism and throughput thresholds
+- gap reports that turn sensitivity and calibration outputs into next measurement priorities
 
 ## Artifact Map
 
@@ -40,3 +47,7 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - Calibration report: `outputs/earthmoving_calibration/report.md`
 - Scale summary: `outputs/earthmoving_scale/scale_summary.json`
 - Scale report: `outputs/earthmoving_scale/report.md`
+- Sensitivity summary: `outputs/earthmoving_sensitivity/sensitivity_summary.json`
+- Sensitivity report: `outputs/earthmoving_sensitivity/report.md`
+- Quality gate: `outputs/earthmoving_gate/earthmoving_gate.md`
+- Gap report: `outputs/earthmoving_gap/report.md`

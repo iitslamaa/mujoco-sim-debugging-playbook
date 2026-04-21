@@ -175,6 +175,9 @@ make benchmark
 make earthmoving-benchmark
 make earthmoving-calibration
 make earthmoving-scale
+make earthmoving-sensitivity
+make earthmoving-gate
+make earthmoving-gap
 make terrain-kernel-smoke
 make randomization
 make anomalies
@@ -1314,6 +1317,9 @@ The repo includes a construction-style simulation track that is closer to heavy-
 - `scripts/run_earthmoving_benchmark.py` runs blade-pushing scenarios and writes terrain plots plus metrics
 - `scripts/calibrate_earthmoving_soil.py` fits simulator soil parameters to observed field-log metrics
 - `scripts/run_earthmoving_scale.py` runs randomized scenario batches and reports throughput
+- `scripts/run_earthmoving_sensitivity.py` ranks which soil parameters drive realism and performance metrics
+- `scripts/check_earthmoving_gate.py` evaluates realism and throughput thresholds for release-style gating
+- `scripts/generate_earthmoving_gap_report.py` turns calibration and sensitivity outputs into sim-to-field diagnostics
 - `cpp/terrain_kernel.cpp` mirrors the terrain update in standalone C++ with a smoke build
 
 The earthmoving metrics emphasize physical-world evaluation: material moved, target-zone volume, profile error against a target berm, conservation error, runtime, and episodes per second.
