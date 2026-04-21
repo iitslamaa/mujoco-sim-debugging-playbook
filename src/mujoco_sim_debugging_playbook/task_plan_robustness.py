@@ -5,6 +5,9 @@ from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 import numpy as np
 
 from mujoco_sim_debugging_playbook.earthmoving import load_earthmoving_config, scenario_from_dict
@@ -67,6 +70,9 @@ def build_task_plan_robustness(
     output.mkdir(parents=True, exist_ok=True)
     json_path = output / "task_plan_robustness.json"
     md_path = output / "task_plan_robustness.md"
+    plot_path = output / "productivity_distribution.png"
+    _plot_productivity_distribution(rows, targets, plot_path)
+    payload["plots"] = {"productivity_distribution": str(plot_path)}
     json_path.write_text(json.dumps(payload, indent=2))
     md_path.write_text(render_task_plan_robustness(payload))
     write_manifest(
@@ -75,7 +81,7 @@ def build_task_plan_robustness(
         run_type="task_plan_robustness",
         config={"scenario": scenario_name, "seed": seed, "episodes": episodes},
         inputs=[benchmark_config_path, jobsite_config_path],
-        outputs=[json_path, md_path],
+        outputs=[json_path, md_path, plot_path],
         metadata=payload["summary"],
     )
     return payload
@@ -98,6 +104,10 @@ def render_task_plan_robustness(payload: dict[str, Any]) -> str:
         f"- Worst productivity: `{summary['worst_productivity_m3_per_hr']:.2f}` m3/hr",
         f"- Mean target capture: `{summary['mean_target_capture_ratio']:.3f}`",
         f"- Worst failed check: `{summary['top_failed_check']}`",
+        "",
+        "## Productivity Distribution",
+        "",
+        f"![Productivity distribution]({Path(payload['plots']['productivity_distribution']).name})",
         "",
         "## Worst Episodes",
         "",
@@ -166,6 +176,23 @@ def _recommendation(rows: list[dict[str, Any]], targets: dict[str, float]) -> st
         f"Keep `single_pass_wide_cut` in tuning: pass rate is {summary['pass_rate']:.0%}, with "
         f"`{summary['top_failed_check']}` as the most common failed check."
     )
+
+
+def _plot_productivity_distribution(rows: list[dict[str, Any]], targets: dict[str, float], path: Path) -> None:
+    productivities = [row["productivity_m3_per_hr"] for row in rows]
+    target = targets["min_productivity_m3_per_hr"]
+    fig, axis = plt.subplots(figsize=(8.5, 4.6))
+    axis.hist(productivities, bins=10, color="#2563eb", alpha=0.78, edgecolor="#1f2937")
+    axis.axvline(target, color="#991b1b", linestyle="--", linewidth=2.0, label=f"target {target:.1f} m3/hr")
+    axis.axvline(np.percentile(productivities, 10), color="#b45309", linestyle=":", linewidth=2.0, label="P10")
+    axis.set_title("Task-plan productivity under uncertainty")
+    axis.set_xlabel("scaled productivity (m3/hr)")
+    axis.set_ylabel("episode count")
+    axis.grid(True, axis="y", alpha=0.25)
+    axis.legend(loc="upper left")
+    fig.tight_layout()
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
 
 
 def _read_json(path: str | Path) -> dict[str, Any]:

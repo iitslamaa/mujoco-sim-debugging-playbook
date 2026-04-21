@@ -30,7 +30,7 @@
       "cycle_time_s": 10.662616537337458,
       "productivity_m3_per_hr": 6.8619129390450455,
       "score": 1.4225730316261365,
-      "runtime_s": 0.003226708000056533,
+      "runtime_s": 0.00274424999997791,
       "blade_paths": [
         [
           {
@@ -403,7 +403,7 @@
       "cycle_time_s": 10.618262310437906,
       "productivity_m3_per_hr": 6.557112763441971,
       "score": 1.3732651338023654,
-      "runtime_s": 0.0023615000000063446,
+      "runtime_s": 0.002365583000027982,
       "blade_paths": [
         [
           {
@@ -774,7 +774,7 @@
       "cycle_time_s": 11.139605354256727,
       "productivity_m3_per_hr": 7.7534339588903105,
       "score": 1.54169950898908,
-      "runtime_s": 0.002409875000012107,
+      "runtime_s": 0.002327458000081606,
       "blade_paths": [
         [
           {
@@ -1147,7 +1147,7 @@
       "cycle_time_s": 10.58766790219958,
       "productivity_m3_per_hr": 6.989421795625735,
       "score": 1.4509058756019635,
-      "runtime_s": 0.002372416000071098,
+      "runtime_s": 0.002368832999991355,
       "blade_paths": [
         [
           {
@@ -1518,7 +1518,7 @@
       "cycle_time_s": 10.663992011585943,
       "productivity_m3_per_hr": 8.591847218884606,
       "score": 1.6668142268145394,
-      "runtime_s": 0.0023276249999071297,
+      "runtime_s": 0.002429375000019718,
       "blade_paths": [
         [
           {
@@ -1889,7 +1889,7 @@
       "cycle_time_s": 10.38372279721094,
       "productivity_m3_per_hr": 7.907922693483448,
       "score": 1.5474317981430312,
-      "runtime_s": 0.002356917000042813,
+      "runtime_s": 0.002296541000077923,
       "blade_paths": [
         [
           {
@@ -2262,7 +2262,7 @@
       "cycle_time_s": 11.797109984096338,
       "productivity_m3_per_hr": 7.042515236526202,
       "score": 1.4608726877490712,
-      "runtime_s": 0.002347000000099797,
+      "runtime_s": 0.002313457999889579,
       "blade_paths": [
         [
           {
@@ -2633,7 +2633,7 @@
       "cycle_time_s": 11.03603711672736,
       "productivity_m3_per_hr": 7.890695609145741,
       "score": 1.5568650562486253,
-      "runtime_s": 0.002735666000035053,
+      "runtime_s": 0.0024206670000239683,
       "blade_paths": [
         [
           {
@@ -3006,7 +3006,7 @@
       "cycle_time_s": 10.3905141609661,
       "productivity_m3_per_hr": 6.929845804909805,
       "score": 1.4410322688728323,
-      "runtime_s": 0.0023306250000132422,
+      "runtime_s": 0.002274624999927255,
       "blade_paths": [
         [
           {
@@ -3377,7 +3377,7 @@
       "cycle_time_s": 11.11448749438717,
       "productivity_m3_per_hr": 8.197675420774496,
       "score": 1.589154043419801,
-      "runtime_s": 0.0023074579999047273,
+      "runtime_s": 0.0022899169998709112,
       "blade_paths": [
         [
           {
@@ -3748,7 +3748,7 @@
       "cycle_time_s": 11.163603897508333,
       "productivity_m3_per_hr": 7.5477320748079295,
       "score": 1.5105898884554325,
-      "runtime_s": 0.002312584000037532,
+      "runtime_s": 0.00259929200001352,
       "blade_paths": [
         [
           {
@@ -4121,7 +4121,7 @@
       "cycle_time_s": 11.575286103576133,
       "productivity_m3_per_hr": 6.930723387912221,
       "score": 1.4326373062846471,
-      "runtime_s": 0.0023327090000293538,
+      "runtime_s": 0.0023365839999769378,
       "blade_paths": [
         [
           {
@@ -4492,7 +4492,7 @@
       "cycle_time_s": 10.512827579228885,
       "productivity_m3_per_hr": 8.188294286982735,
       "score": 1.5989479813313843,
-      "runtime_s": 0.0023077079999893613,
+      "runtime_s": 0.0022982499999670836,
       "blade_paths": [
         [
           {
@@ -4865,7 +4865,7 @@
       "cycle_time_s": 11.18435427255654,
       "productivity_m3_per_hr": 7.382867389788353,
       "score": 1.4890339813901492,
-      "runtime_s": 0.0023140830001011636,
+      "runtime_s": 0.0023271249999652355,
       "blade_paths": [
         [
           {
@@ -5238,7 +5238,7 @@
       "cycle_time_s": 11.09966881798736,
       "productivity_m3_per_hr": 7.287140333163759,
       "score": 1.480482583451269,
-      "runtime_s": 0.0022999160000836127,
+      "runtime_s": 0.002566167000168207,
       "blade_paths": [
         [
           {
@@ -5609,7 +5609,7 @@
       "cycle_time_s": 10.704457710088668,
       "productivity_m3_per_hr": 9.068479194995234,
       "score": 1.7079606474051587,
-      "runtime_s": 0.0022951250000460277,
+      "runtime_s": 0.0023703750000549917,
       "blade_paths": [
         [
           {
@@ -5980,7 +5980,7 @@
       "cycle_time_s": 11.45919901602094,
       "productivity_m3_per_hr": 8.382345591057268,
       "score": 1.6358046328367675,
-      "runtime_s": 0.002307708999978786,
+      "runtime_s": 0.0023459590001948527,
       "blade_paths": [
         [
           {
@@ -6351,7 +6351,7 @@
       "cycle_time_s": 10.526321474130379,
       "productivity_m3_per_hr": 9.30211074748909,
       "score": 1.753901956823579,
-      "runtime_s": 0.0023045829998409317,
+      "runtime_s": 0.002504915999907098,
       "blade_paths": [
         [
           {
@@ -6722,7 +6722,7 @@
       "cycle_time_s": 11.939738823858129,
       "productivity_m3_per_hr": 7.748310130198487,
       "score": 1.5284828466449358,
-      "runtime_s": 0.0023368329998447734,
+      "runtime_s": 0.0022105840000676835,
       "blade_paths": [
         [
           {
@@ -7093,7 +7093,7 @@
       "cycle_time_s": 10.855238624105558,
       "productivity_m3_per_hr": 8.445548124304173,
       "score": 1.640993992066781,
-      "runtime_s": 0.0023068750001584704,
+      "runtime_s": 0.0022728749997895648,
       "blade_paths": [
         [
           {
@@ -7466,7 +7466,7 @@
       "cycle_time_s": 11.268320378508633,
       "productivity_m3_per_hr": 5.9441894940974,
       "score": 1.315556036477078,
-      "runtime_s": 0.002301541999941037,
+      "runtime_s": 0.002467875000093045,
       "blade_paths": [
         [
           {
@@ -7839,7 +7839,7 @@
       "cycle_time_s": 11.359658952612278,
       "productivity_m3_per_hr": 6.653925848792859,
       "score": 1.3852663469615054,
-      "runtime_s": 0.002312541000037527,
+      "runtime_s": 0.002271250000148939,
       "blade_paths": [
         [
           {
@@ -8212,7 +8212,7 @@
       "cycle_time_s": 11.405905636640949,
       "productivity_m3_per_hr": 6.09064256994078,
       "score": 1.3312958095308534,
-      "runtime_s": 0.0023009589999674063,
+      "runtime_s": 0.0025857499999801803,
       "blade_paths": [
         [
           {
@@ -8585,7 +8585,7 @@
       "cycle_time_s": 10.787901376998153,
       "productivity_m3_per_hr": 6.406635345746547,
       "score": 1.348309992825449,
-      "runtime_s": 0.0023051670000313607,
+      "runtime_s": 0.002338291999876674,
       "blade_paths": [
         [
           {
@@ -8958,7 +8958,7 @@
       "cycle_time_s": 11.193022436479719,
       "productivity_m3_per_hr": 6.564254816271232,
       "score": 1.3852217769252282,
-      "runtime_s": 0.0023367500000404107,
+      "runtime_s": 0.002487292000068919,
       "blade_paths": [
         [
           {
@@ -9331,7 +9331,7 @@
       "cycle_time_s": 10.7113030606061,
       "productivity_m3_per_hr": 7.233530762697425,
       "score": 1.4711032408839069,
-      "runtime_s": 0.00229179099983412,
+      "runtime_s": 0.0022008749999713473,
       "blade_paths": [
         [
           {
@@ -9704,7 +9704,7 @@
       "cycle_time_s": 10.693469734536464,
       "productivity_m3_per_hr": 7.23920161470459,
       "score": 1.477546564560371,
-      "runtime_s": 0.0022947079999084963,
+      "runtime_s": 0.0022447500000453147,
       "blade_paths": [
         [
           {
@@ -10077,7 +10077,7 @@
       "cycle_time_s": 11.156646648544283,
       "productivity_m3_per_hr": 6.220819567630716,
       "score": 1.3213926019857125,
-      "runtime_s": 0.0022869580000133283,
+      "runtime_s": 0.0022990840000147728,
       "blade_paths": [
         [
           {
@@ -10448,7 +10448,7 @@
       "cycle_time_s": 11.463019660778453,
       "productivity_m3_per_hr": 7.977823519536211,
       "score": 1.5895510671842765,
-      "runtime_s": 0.002286749999939275,
+      "runtime_s": 0.0024287090000143507,
       "blade_paths": [
         [
           {
@@ -10819,7 +10819,7 @@
       "cycle_time_s": 11.131926151951816,
       "productivity_m3_per_hr": 7.6701281621591635,
       "score": 1.5489828399688828,
-      "runtime_s": 0.0023067919998993602,
+      "runtime_s": 0.002320249999911539,
       "blade_paths": [
         [
           {
@@ -11190,7 +11190,7 @@
       "cycle_time_s": 10.199997083427018,
       "productivity_m3_per_hr": 8.128271862450559,
       "score": 1.5852204851852782,
-      "runtime_s": 0.0023188750001281733,
+      "runtime_s": 0.0023205830000279093,
       "blade_paths": [
         [
           {
@@ -11563,7 +11563,7 @@
       "cycle_time_s": 12.057232244171226,
       "productivity_m3_per_hr": 6.867097067596468,
       "score": 1.429249899082356,
-      "runtime_s": 0.0023017500000150903,
+      "runtime_s": 0.0023979159998361865,
       "blade_paths": [
         [
           {
@@ -11936,7 +11936,7 @@
       "cycle_time_s": 11.293747870267019,
       "productivity_m3_per_hr": 6.496392936926392,
       "score": 1.350733348329401,
-      "runtime_s": 0.0022919589998764422,
+      "runtime_s": 0.002331000000140193,
       "blade_paths": [
         [
           {
@@ -12307,7 +12307,7 @@
       "cycle_time_s": 10.847423299129687,
       "productivity_m3_per_hr": 8.270205457364263,
       "score": 1.6133963652279102,
-      "runtime_s": 0.0022917080000297574,
+      "runtime_s": 0.002332708000039929,
       "blade_paths": [
         [
           {
@@ -12678,7 +12678,7 @@
       "cycle_time_s": 10.722466396303084,
       "productivity_m3_per_hr": 7.621335699816746,
       "score": 1.5372714195944588,
-      "runtime_s": 0.002295292000098925,
+      "runtime_s": 0.0024316250000993023,
       "blade_paths": [
         [
           {
@@ -13049,7 +13049,7 @@
       "cycle_time_s": 11.110559198103658,
       "productivity_m3_per_hr": 7.937897401038595,
       "score": 1.568651855303124,
-      "runtime_s": 0.0022842089999812742,
+      "runtime_s": 0.0022262080001382856,
       "blade_paths": [
         [
           {
@@ -13406,5 +13406,8 @@
       }
     }
   ],
-  "recommendation": "Keep `single_pass_wide_cut` in tuning: pass rate is 50%, with `productivity` as the most common failed check."
+  "recommendation": "Keep `single_pass_wide_cut` in tuning: pass rate is 50%, with `productivity` as the most common failed check.",
+  "plots": {
+    "productivity_distribution": "/Users/lamayassine/mujoco/outputs/task_plan_robustness/productivity_distribution.png"
+  }
 }

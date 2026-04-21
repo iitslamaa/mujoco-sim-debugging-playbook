@@ -13,6 +13,10 @@ Candidate: `single_pass_wide_cut`
 - Mean target capture: `0.349`
 - Worst failed check: `productivity`
 
+## Productivity Distribution
+
+![Productivity distribution](productivity_distribution.png)
+
 ## Worst Episodes
 
 | episode | decision | productivity_m3_hr | target_capture | terrain_rmse | failed_checks |

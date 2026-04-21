@@ -23,3 +23,4 @@ def test_task_plan_robustness_sweeps_uncertainty(tmp_path: Path) -> None:
     assert payload["summary"]["mean_productivity_m3_per_hr"] > 0
     assert payload["recommendation"]
     assert (tmp_path / "robustness" / "task_plan_robustness.md").exists()
+    assert (tmp_path / "robustness" / "productivity_distribution.png").exists()
