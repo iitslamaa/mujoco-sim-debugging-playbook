@@ -1,0 +1,278 @@
+{
+  "run_type": "earthmoving_benchmark",
+  "created_at": "2026-04-21T17:47:40.611720+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "146ccf543c7f8f29b432fce975984d77696f6a54",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M Makefile",
+        "?? outputs/earthmoving_benchmark/",
+        "?? scripts/run_earthmoving_benchmark.py",
+        "?? src/mujoco_sim_debugging_playbook/earthmoving_benchmark.py",
+        "?? tests/test_earthmoving_benchmark.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@146ccf543c7f8f29b432fce975984d77696f6a54#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {
+    "name": "earthmoving_benchmark",
+    "output_dir": "outputs/earthmoving_benchmark",
+    "scenarios": [
+      {
+        "name": "baseline_push",
+        "terrain": {
+          "x_range": [
+            -0.55,
+            0.75
+          ],
+          "y_range": [
+            -0.35,
+            0.35
+          ],
+          "resolution": [
+            72,
+            40
+          ],
+          "base_height": 0.0,
+          "pile_center": [
+            -0.18,
+            0.0
+          ],
+          "pile_radius": 0.22,
+          "pile_height": 0.12
+        },
+        "soil": {
+          "cohesion": 0.12,
+          "friction_angle_deg": 30.0,
+          "compaction_rate": 0.06,
+          "blade_coupling": 0.8,
+          "spillover_rate": 0.22
+        },
+        "blade": {
+          "start_x": -0.42,
+          "end_x": 0.44,
+          "y": 0.0,
+          "yaw": 0.0,
+          "width": 0.2,
+          "depth": 0.014,
+          "steps": 48
+        },
+        "target": {
+          "center_x": 0.34,
+          "width": 0.11,
+          "height": 0.08
+        }
+      },
+      {
+        "name": "cohesive_soil",
+        "terrain": {
+          "x_range": [
+            -0.55,
+            0.75
+          ],
+          "y_range": [
+            -0.35,
+            0.35
+          ],
+          "resolution": [
+            72,
+            40
+          ],
+          "base_height": 0.0,
+          "pile_center": [
+            -0.16,
+            0.02
+          ],
+          "pile_radius": 0.24,
+          "pile_height": 0.13
+        },
+        "soil": {
+          "cohesion": 0.42,
+          "friction_angle_deg": 36.0,
+          "compaction_rate": 0.1,
+          "blade_coupling": 0.72,
+          "spillover_rate": 0.14
+        },
+        "blade": {
+          "start_x": -0.42,
+          "end_x": 0.44,
+          "y": 0.02,
+          "yaw": 0.0,
+          "width": 0.2,
+          "depth": 0.018,
+          "steps": 48
+        },
+        "target": {
+          "center_x": 0.32,
+          "width": 0.12,
+          "height": 0.08
+        }
+      },
+      {
+        "name": "shallow_blade_slip",
+        "terrain": {
+          "x_range": [
+            -0.55,
+            0.75
+          ],
+          "y_range": [
+            -0.35,
+            0.35
+          ],
+          "resolution": [
+            72,
+            40
+          ],
+          "base_height": 0.0,
+          "pile_center": [
+            -0.2,
+            -0.02
+          ],
+          "pile_radius": 0.2,
+          "pile_height": 0.11
+        },
+        "soil": {
+          "cohesion": 0.08,
+          "friction_angle_deg": 24.0,
+          "compaction_rate": 0.03,
+          "blade_coupling": 0.46,
+          "spillover_rate": 0.35
+        },
+        "blade": {
+          "start_x": -0.42,
+          "end_x": 0.44,
+          "y": -0.02,
+          "yaw": 0.0,
+          "width": 0.18,
+          "depth": 0.008,
+          "steps": 48
+        },
+        "target": {
+          "center_x": 0.34,
+          "width": 0.11,
+          "height": 0.07
+        }
+      }
+    ]
+  },
+  "inputs": [
+    {
+      "path": "configs/earthmoving_benchmark.json",
+      "exists": true,
+      "sha256": "4c7ef842ce0718791ee0e8702f739eb1ba8ae5ec85f1a4b4a37130fdacf3c746",
+      "size_bytes": 2378
+    }
+  ],
+  "outputs": [
+    {
+      "path": "outputs/earthmoving_benchmark/earthmoving_summary.json",
+      "exists": true,
+      "sha256": "44e3fa8675e5118d3f33e63bca02bb5e7b5408b685e4a19e75e819a48ed62885",
+      "size_bytes": 695193
+    },
+    {
+      "path": "outputs/earthmoving_benchmark/report.md",
+      "exists": true,
+      "sha256": "5e5c875d1048509f5083a33e44665524b34813f58b4a3a9b12773ac99b36526a",
+      "size_bytes": 574
+    },
+    {
+      "path": "outputs/earthmoving_benchmark/shallow_blade_slip_terrain.png",
+      "exists": true,
+      "sha256": "63cdadba1b3e24ec039452bd32aa941ce03266655b5f8da07fa41fdf1152c277",
+      "size_bytes": 42845
+    },
+    {
+      "path": "outputs/earthmoving_benchmark/runtime_s.png",
+      "exists": true,
+      "sha256": "0f59af4349629dc4ff93667d20fadbdb2bc33c570e6976bdf8539958708db0ee",
+      "size_bytes": 47073
+    },
+    {
+      "path": "outputs/earthmoving_benchmark/volume_conservation_error.png",
+      "exists": true,
+      "sha256": "81c76f7167d2789590ced81df7d39613e49ba56c51fb9d4e3d0272116175b5a8",
+      "size_bytes": 49171
+    },
+    {
+      "path": "outputs/earthmoving_benchmark/baseline_push_terrain.png",
+      "exists": true,
+      "sha256": "a3583b4d35520ac9146e918402cc9c872c79ae29d2199e1e929fc90694614563",
+      "size_bytes": 43498
+    },
+    {
+      "path": "outputs/earthmoving_benchmark/terrain_profile_rmse.png",
+      "exists": true,
+      "sha256": "591360c39ac42c61beb9cd950ad884e7409490dcdae42f6df6abbbda408f244d",
+      "size_bytes": 55392
+    },
+    {
+      "path": "outputs/earthmoving_benchmark/moved_volume.png",
+      "exists": true,
+      "sha256": "cbaaf5491e06c7942dd3aba4182873236cfee3fc72664eba1e1c3921989bf7f7",
+      "size_bytes": 57666
+    },
+    {
+      "path": "outputs/earthmoving_benchmark/cohesive_soil_terrain.png",
+      "exists": true,
+      "sha256": "a0abed6c248ebe7a6df73ca673924f6abbc8d262f69e9a58d745865990ed220e",
+      "size_bytes": 45067
+    }
+  ],
+  "metadata": {
+    "scenario_count": 3
+  }
+}
