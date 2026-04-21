@@ -1,0 +1,105 @@
+{
+  "name": "earthmoving_benchmark",
+  "output_dir": "outputs/earthmoving_benchmark",
+  "scenarios": [
+    {
+      "name": "baseline_push",
+      "terrain": {
+        "x_range": [-0.55, 0.75],
+        "y_range": [-0.35, 0.35],
+        "resolution": [72, 40],
+        "base_height": 0.0,
+        "pile_center": [-0.18, 0.0],
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "soil": {
+        "cohesion": 0.12,
+        "friction_angle_deg": 30.0,
+        "compaction_rate": 0.06,
+        "blade_coupling": 0.8,
+        "spillover_rate": 0.22
+      },
+      "blade": {
+        "start_x": -0.42,
+        "end_x": 0.44,
+        "y": 0.0,
+        "yaw": 0.0,
+        "width": 0.2,
+        "depth": 0.014,
+        "steps": 48
+      },
+      "target": {
+        "center_x": 0.34,
+        "width": 0.11,
+        "height": 0.08
+      }
+    },
+    {
+      "name": "cohesive_soil",
+      "terrain": {
+        "x_range": [-0.55, 0.75],
+        "y_range": [-0.35, 0.35],
+        "resolution": [72, 40],
+        "base_height": 0.0,
+        "pile_center": [-0.16, 0.02],
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "soil": {
+        "cohesion": 0.42,
+        "friction_angle_deg": 36.0,
+        "compaction_rate": 0.1,
+        "blade_coupling": 0.72,
+        "spillover_rate": 0.14
+      },
+      "blade": {
+        "start_x": -0.42,
+        "end_x": 0.44,
+        "y": 0.02,
+        "yaw": 0.0,
+        "width": 0.2,
+        "depth": 0.018,
+        "steps": 48
+      },
+      "target": {
+        "center_x": 0.32,
+        "width": 0.12,
+        "height": 0.08
+      }
+    },
+    {
+      "name": "shallow_blade_slip",
+      "terrain": {
+        "x_range": [-0.55, 0.75],
+        "y_range": [-0.35, 0.35],
+        "resolution": [72, 40],
+        "base_height": 0.0,
+        "pile_center": [-0.2, -0.02],
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "soil": {
+        "cohesion": 0.08,
+        "friction_angle_deg": 24.0,
+        "compaction_rate": 0.03,
+        "blade_coupling": 0.46,
+        "spillover_rate": 0.35
+      },
+      "blade": {
+        "start_x": -0.42,
+        "end_x": 0.44,
+        "y": -0.02,
+        "yaw": 0.0,
+        "width": 0.18,
+        "depth": 0.008,
+        "steps": 48
+      },
+      "target": {
+        "center_x": 0.34,
+        "width": 0.11,
+        "height": 0.07
+      }
+    }
+  ]
+}

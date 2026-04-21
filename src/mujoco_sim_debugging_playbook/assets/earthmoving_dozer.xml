@@ -1,0 +1,37 @@
+<mujoco model="earthmoving_dozer">
+  <compiler angle="radian" coordinate="local"/>
+  <option timestep="0.005" gravity="0 0 -9.81" integrator="RK4"/>
+
+  <default>
+    <geom friction="0.9 0.04 0.01" rgba="0.32 0.36 0.38 1"/>
+    <joint damping="2.0" armature="0.01"/>
+  </default>
+
+  <worldbody>
+    <light directional="true" diffuse="0.8 0.8 0.8" pos="0 0 2"/>
+    <geom name="floor" type="plane" size="1.4 0.8 0.05" rgba="0.55 0.48 0.38 1"/>
+
+    <body name="machine" pos="-0.42 0 0.055">
+      <joint name="blade_x" type="slide" axis="1 0 0" range="-0.55 0.65" limited="true"/>
+      <joint name="blade_y" type="slide" axis="0 1 0" range="-0.25 0.25" limited="true"/>
+      <joint name="blade_yaw" type="hinge" axis="0 0 1" range="-0.5 0.5" limited="true"/>
+
+      <geom name="chassis" type="box" pos="-0.08 0 0.06" size="0.12 0.08 0.04" rgba="0.12 0.15 0.17 1"/>
+      <geom name="left_track" type="box" pos="-0.08 -0.075 0.02" size="0.13 0.025 0.025" rgba="0.05 0.05 0.05 1"/>
+      <geom name="right_track" type="box" pos="-0.08 0.075 0.02" size="0.13 0.025 0.025" rgba="0.05 0.05 0.05 1"/>
+      <geom name="blade" type="box" pos="0.1 0 0.005" size="0.018 0.13 0.045" rgba="0.95 0.68 0.18 1"/>
+      <site name="blade_tip" pos="0.12 0 0.0" size="0.012" rgba="0.95 0.2 0.1 1"/>
+    </body>
+
+    <body name="target_berm" pos="0.38 0 0.02">
+      <geom name="target_marker" type="box" size="0.06 0.16 0.01" rgba="0.1 0.75 0.28 0.35" contype="0" conaffinity="0"/>
+    </body>
+  </worldbody>
+
+  <sensor>
+    <jointpos name="blade_x_pos" joint="blade_x"/>
+    <jointpos name="blade_y_pos" joint="blade_y"/>
+    <jointpos name="blade_yaw_pos" joint="blade_yaw"/>
+    <framepos name="blade_tip_pos" objtype="site" objname="blade_tip"/>
+  </sensor>
+</mujoco>
