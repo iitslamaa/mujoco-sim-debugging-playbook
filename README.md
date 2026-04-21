@@ -181,6 +181,9 @@ make earthmoving-gap
 make earthmoving-review-packet
 make earthmoving-replay
 make earthmoving-dashboard
+make earthmoving-dataset
+make earthmoving-failure-modes
+make earthmoving-role-brief
 make terrain-kernel-smoke
 make randomization
 make anomalies
@@ -1326,6 +1329,9 @@ The repo includes a construction-style simulation track that is closer to heavy-
 - `scripts/generate_earthmoving_review_packet.py` rolls the earthmoving artifacts into one review packet
 - `scripts/generate_earthmoving_replay.py` captures a scenario-level replay/debug bundle
 - `scripts/generate_earthmoving_dashboard.py` writes a static dashboard for the construction simulation track
+- `scripts/generate_earthmoving_dataset.py` writes ML-ready feature/label arrays from randomized earthmoving runs
+- `scripts/generate_earthmoving_failure_modes.py` ranks failure modes and debugging next actions
+- `scripts/generate_earthmoving_role_brief.py` produces a concise application-facing technical brief
 - `cpp/terrain_kernel.cpp` mirrors the terrain update in standalone C++ with a smoke build
 
 The earthmoving metrics emphasize physical-world evaluation: material moved, target-zone volume, profile error against a target berm, conservation error, runtime, and episodes per second.

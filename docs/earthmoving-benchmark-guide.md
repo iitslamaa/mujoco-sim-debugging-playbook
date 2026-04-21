@@ -14,6 +14,9 @@ make earthmoving-gap
 make earthmoving-review-packet
 make earthmoving-replay
 make earthmoving-dashboard
+make earthmoving-dataset
+make earthmoving-failure-modes
+make earthmoving-role-brief
 make terrain-kernel-smoke
 ```
 
@@ -44,6 +47,9 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - review packets that summarize readiness, scale, calibration, and scenario results
 - replay bundles that capture one scenario's metrics, terrain stats, blade path, and debug hypotheses
 - a static dashboard for quick portfolio review
+- ML-ready datasets for surrogate modeling or learned evaluator experiments
+- failure-mode reports that turn metrics into ranked debug actions
+- a role brief that summarizes the work for autonomy simulation hiring loops
 
 ## Artifact Map
 
@@ -60,3 +66,6 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - Review packet: `outputs/earthmoving_review_packet/review_packet.md`
 - Replay bundle: `outputs/earthmoving_replay/cohesive_soil_replay.md`
 - Dashboard: `outputs/earthmoving_dashboard/index.html`
+- Dataset report: `outputs/earthmoving_dataset/report.md`
+- Failure modes: `outputs/earthmoving_failure_modes/report.md`
+- Role brief: `outputs/earthmoving_role_brief/role_brief.md`
