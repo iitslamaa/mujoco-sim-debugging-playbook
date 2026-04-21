@@ -1,0 +1,1249 @@
+{
+  "summary": {
+    "row_count": 54,
+    "feature_names": [
+      "cohesion",
+      "friction_angle_deg",
+      "compaction_rate",
+      "blade_coupling",
+      "spillover_rate",
+      "blade_width",
+      "blade_depth",
+      "blade_distance",
+      "pile_radius",
+      "pile_height"
+    ],
+    "label_names": [
+      "moved_volume",
+      "terrain_profile_rmse",
+      "volume_conservation_error",
+      "runtime_s"
+    ],
+    "feature_mean": [
+      0.21235102062343184,
+      29.555348075932667,
+      0.06158957583229531,
+      0.6235515168366287,
+      0.2367522628310731,
+      0.19333333333333333,
+      0.013333333333333343,
+      0.8599999999999995,
+      0.21999999999999986,
+      0.12000000000000009
+    ],
+    "feature_std": [
+      0.16215569500320012,
+      7.103014108524777,
+      0.029310980097836274,
+      0.14850269196959195,
+      0.09311836010286771,
+      0.009428090415820642,
+      0.00410960933531265,
+      1e-09,
+      0.016329931618554516,
+      0.008164965809277265
+    ],
+    "label_mean": [
+      0.0010490734210769131,
+      0.014173394734613017,
+      3.487579731342984e-19,
+      0.0021401141849411135
+    ],
+    "label_std": [
+      0.00036757950715354283,
+      0.0020034624468541254,
+      1e-09,
+      8.958051432400703e-05
+    ]
+  },
+  "rows": [
+    {
+      "scenario": "baseline_push_randomized_000",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.13230864305495718,
+        "friction_angle_deg": 26.538603154296148,
+        "compaction_rate": 0.056685113241088256,
+        "blade_coupling": 0.8523132640258558,
+        "spillover_rate": 0.18066623553764702,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.001823619217004525,
+        "terrain_profile_rmse": 0.013529626570575652,
+        "volume_conservation_error": 2.168404344971009e-19,
+        "runtime_s": 0.0022794160031480715
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_001",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.1488766463470931,
+        "friction_angle_deg": 26.53846366954402,
+        "compaction_rate": 0.05496189081677776,
+        "blade_coupling": 0.8843168476940466,
+        "spillover_rate": 0.17506041520207213,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0019037220232792802,
+        "terrain_profile_rmse": 0.01348765497040458,
+        "volume_conservation_error": 7.318364664277155e-19,
+        "runtime_s": 0.0021204590011620894
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_002",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.15069992350274267,
+        "friction_angle_deg": 37.15764099638653,
+        "compaction_rate": 0.043867545344253675,
+        "blade_coupling": 0.6426774249367466,
+        "spillover_rate": 0.16718806588165444,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0011163027382803566,
+        "terrain_profile_rmse": 0.014311712390719551,
+        "volume_conservation_error": 2.371692252312041e-19,
+        "runtime_s": 0.0021555829953285865
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_003",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.1170948001742157,
+        "friction_angle_deg": 32.40575061918024,
+        "compaction_rate": 0.07594807390428047,
+        "blade_coupling": 0.9788303342264026,
+        "spillover_rate": 0.20750188871500386,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.002154430830260824,
+        "terrain_profile_rmse": 0.013142308886928925,
+        "volume_conservation_error": 5.149960319306146e-19,
+        "runtime_s": 0.002137833995220717
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_004",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.12067014240405088,
+        "friction_angle_deg": 26.014500210915312,
+        "compaction_rate": 0.06227044593559872,
+        "blade_coupling": 0.7096350209940709,
+        "spillover_rate": 0.26525465337048215,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0013495983543344982,
+        "terrain_profile_rmse": 0.013780684748669938,
+        "volume_conservation_error": 4.0657581468206416e-20,
+        "runtime_s": 0.0021267499978421256
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_005",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.14360612088445557,
+        "friction_angle_deg": 34.76853422163567,
+        "compaction_rate": 0.046134026053980266,
+        "blade_coupling": 0.7167225029589317,
+        "spillover_rate": 0.2640159466078645,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0012716584867952907,
+        "terrain_profile_rmse": 0.013916678246094319,
+        "volume_conservation_error": 4.404571325722362e-19,
+        "runtime_s": 0.002102291997289285
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_006",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.12225104835597755,
+        "friction_angle_deg": 36.6450040014746,
+        "compaction_rate": 0.04317032124181805,
+        "blade_coupling": 0.7136290074748868,
+        "spillover_rate": 0.2337307063026908,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.001293912868065839,
+        "terrain_profile_rmse": 0.01395987028313252,
+        "volume_conservation_error": 6.776263578034403e-20,
+        "runtime_s": 0.0020988340038456954
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_007",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.14447482532937628,
+        "friction_angle_deg": 21.350983049243307,
+        "compaction_rate": 0.054177205703591885,
+        "blade_coupling": 0.6096177970101055,
+        "spillover_rate": 0.27083232949216735,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0011011402909916108,
+        "terrain_profile_rmse": 0.014099330703771479,
+        "volume_conservation_error": 1.3552527156068805e-19,
+        "runtime_s": 0.0020989170006942004
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_008",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.08812725828946899,
+        "friction_angle_deg": 31.665790807823274,
+        "compaction_rate": 0.05076931143412889,
+        "blade_coupling": 0.754137304388772,
+        "spillover_rate": 0.15720728686094151,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0015678122002335743,
+        "terrain_profile_rmse": 0.013839829813111834,
+        "volume_conservation_error": 2.574980159653073e-19,
+        "runtime_s": 0.0021550410019699484
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_009",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.09353259822625809,
+        "friction_angle_deg": 30.80763584923019,
+        "compaction_rate": 0.06212274030586321,
+        "blade_coupling": 0.6081394651491118,
+        "spillover_rate": 0.2224441973333428,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0011135234232198703,
+        "terrain_profile_rmse": 0.014154527288506753,
+        "volume_conservation_error": 2.303929616531697e-19,
+        "runtime_s": 0.0027050419957959093
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_010",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.12530393026732992,
+        "friction_angle_deg": 29.25765764677861,
+        "compaction_rate": 0.07461666581701497,
+        "blade_coupling": 0.7486923422994489,
+        "spillover_rate": 0.16040897555401878,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0014875247595185661,
+        "terrain_profile_rmse": 0.01383237797005686,
+        "volume_conservation_error": 1.3552527156068805e-19,
+        "runtime_s": 0.0021902499938732944
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_011",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.12127560543765727,
+        "friction_angle_deg": 23.78776654480968,
+        "compaction_rate": 0.06132843057278307,
+        "blade_coupling": 0.7929456420046415,
+        "spillover_rate": 0.18026200657080996,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0016794971358558735,
+        "terrain_profile_rmse": 0.013638548830508851,
+        "volume_conservation_error": 4.0657581468206416e-19,
+        "runtime_s": 0.0021528750003199093
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_012",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.1529696429178339,
+        "friction_angle_deg": 21.555956712259448,
+        "compaction_rate": 0.048547749416719306,
+        "blade_coupling": 0.727209166986346,
+        "spillover_rate": 0.2607140871317653,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0013930607663995168,
+        "terrain_profile_rmse": 0.013777458444534561,
+        "volume_conservation_error": 3.1170812458958252e-19,
+        "runtime_s": 0.0021882920045754872
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_013",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.1492402735383731,
+        "friction_angle_deg": 34.472265121050675,
+        "compaction_rate": 0.04983528902289761,
+        "blade_coupling": 0.5858875514562707,
+        "spillover_rate": 0.2810016985570139,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.000964018959887818,
+        "terrain_profile_rmse": 0.014279761790227009,
+        "volume_conservation_error": 3.6591823321385775e-19,
+        "runtime_s": 0.0021563749978668056
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_014",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.14389949808351804,
+        "friction_angle_deg": 29.97332620232302,
+        "compaction_rate": 0.07089153465687706,
+        "blade_coupling": 0.6563336368366194,
+        "spillover_rate": 0.22162457578904654,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0011720336421447491,
+        "terrain_profile_rmse": 0.014060980688554854,
+        "volume_conservation_error": 8.267041565201971e-19,
+        "runtime_s": 0.002130583001417108
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_015",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.13425261241644262,
+        "friction_angle_deg": 33.031202234673245,
+        "compaction_rate": 0.0662657978424247,
+        "blade_coupling": 0.6646721721639239,
+        "spillover_rate": 0.1867884198450567,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0012013619009043261,
+        "terrain_profile_rmse": 0.01411009698037258,
+        "volume_conservation_error": 5.963111948670274e-19,
+        "runtime_s": 0.0021855829982087016
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_016",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.0961550064594679,
+        "friction_angle_deg": 24.120989989833895,
+        "compaction_rate": 0.06144738979937488,
+        "blade_coupling": 0.7368872454352742,
+        "spillover_rate": 0.27412204736765683,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0014749505752422718,
+        "terrain_profile_rmse": 0.013624555991449296,
+        "volume_conservation_error": 1.3552527156068805e-19,
+        "runtime_s": 0.002287915995111689
+      }
+    },
+    {
+      "scenario": "baseline_push_randomized_017",
+      "base_scenario": "baseline_push",
+      "features": {
+        "cohesion": 0.08660104753415865,
+        "friction_angle_deg": 29.818473112754468,
+        "compaction_rate": 0.06611731879121634,
+        "blade_coupling": 0.6968993334713152,
+        "spillover_rate": 0.26713377024788876,
+        "blade_width": 0.2,
+        "blade_depth": 0.014,
+        "blade_distance": 0.86,
+        "pile_radius": 0.22,
+        "pile_height": 0.12
+      },
+      "labels": {
+        "moved_volume": 0.0013321049140846313,
+        "terrain_profile_rmse": 0.013787437999785327,
+        "volume_conservation_error": 5.421010862427522e-20,
+        "runtime_s": 0.0022523750012624077
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_000",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.46688440814562765,
+        "friction_angle_deg": 32.68294115494985,
+        "compaction_rate": 0.08002886821796176,
+        "blade_coupling": 0.7500263207432881,
+        "spillover_rate": 0.16743126715377166,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0011427076048685487,
+        "terrain_profile_rmse": 0.0165822089053825,
+        "volume_conservation_error": 4.2012834183813297e-19,
+        "runtime_s": 0.0021715830007451586
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_001",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.4665441154242339,
+        "friction_angle_deg": 36.896435249473484,
+        "compaction_rate": 0.09152657541647914,
+        "blade_coupling": 0.6455302874829641,
+        "spillover_rate": 0.11571890896105945,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0009377176448314711,
+        "terrain_profile_rmse": 0.016924144775611147,
+        "volume_conservation_error": 7.047314121155779e-19,
+        "runtime_s": 0.0021276249972288497
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_002",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.4700695096883093,
+        "friction_angle_deg": 38.944553588543876,
+        "compaction_rate": 0.11209174712986812,
+        "blade_coupling": 0.519595225682494,
+        "spillover_rate": 0.16569191066706898,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0006967467599598848,
+        "terrain_profile_rmse": 0.017129937968366125,
+        "volume_conservation_error": 2.574980159653073e-19,
+        "runtime_s": 0.002133292000507936
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_003",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.4437804257208193,
+        "friction_angle_deg": 40.18376246841507,
+        "compaction_rate": 0.11170026823749502,
+        "blade_coupling": 0.8345290703277517,
+        "spillover_rate": 0.1040506770781996,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0013099521156491026,
+        "terrain_profile_rmse": 0.016451661073420186,
+        "volume_conservation_error": 2.710505431213761e-20,
+        "runtime_s": 0.0021509159996639937
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_004",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.44210395182602896,
+        "friction_angle_deg": 31.429294113241596,
+        "compaction_rate": 0.08956599892192314,
+        "blade_coupling": 0.70997731334501,
+        "spillover_rate": 0.18135438814197513,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.001083564094245316,
+        "terrain_profile_rmse": 0.016602208552665372,
+        "volume_conservation_error": 1.3552527156068805e-20,
+        "runtime_s": 0.00212154199834913
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_005",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.3124439279093586,
+        "friction_angle_deg": 42.722703709550395,
+        "compaction_rate": 0.11342965954450016,
+        "blade_coupling": 0.6627066010244126,
+        "spillover_rate": 0.14998007463016017,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.001038798841320986,
+        "terrain_profile_rmse": 0.01666833795756871,
+        "volume_conservation_error": 0.0,
+        "runtime_s": 0.002085541003907565
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_006",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.3108812747358732,
+        "friction_angle_deg": 27.50978432660111,
+        "compaction_rate": 0.07971466559591278,
+        "blade_coupling": 0.6453932194054534,
+        "spillover_rate": 0.1678566169781454,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0011007991765351263,
+        "terrain_profile_rmse": 0.016633751997775274,
+        "volume_conservation_error": 5.692061405548898e-19,
+        "runtime_s": 0.002077207995171193
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_007",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.34258148071417116,
+        "friction_angle_deg": 34.6483450266965,
+        "compaction_rate": 0.07464119099391765,
+        "blade_coupling": 0.6686789454680806,
+        "spillover_rate": 0.15653890023648767,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.001086311687542985,
+        "terrain_profile_rmse": 0.016689535953411008,
+        "volume_conservation_error": 5.014435047745458e-19,
+        "runtime_s": 0.0020747079979628325
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_008",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.49586664232689054,
+        "friction_angle_deg": 42.49873128399931,
+        "compaction_rate": 0.10938536197828015,
+        "blade_coupling": 0.5130036559943664,
+        "spillover_rate": 0.11160296288278805,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.000670680275556657,
+        "terrain_profile_rmse": 0.01725719464553484,
+        "volume_conservation_error": 6.776263578034403e-20,
+        "runtime_s": 0.002104082996083889
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_009",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.4289507839621757,
+        "friction_angle_deg": 41.501198521109636,
+        "compaction_rate": 0.11906427117417324,
+        "blade_coupling": 0.7171863907253246,
+        "spillover_rate": 0.1543675119841477,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0010514082789479223,
+        "terrain_profile_rmse": 0.01662865032124084,
+        "volume_conservation_error": 2.168404344971009e-19,
+        "runtime_s": 0.002126084000337869
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_010",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.46155293146905474,
+        "friction_angle_deg": 34.18677228491522,
+        "compaction_rate": 0.10517775541465844,
+        "blade_coupling": 0.5584648544520999,
+        "spillover_rate": 0.15265609356404744,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0007858179843993454,
+        "terrain_profile_rmse": 0.01703074215268484,
+        "volume_conservation_error": 2.0328790734103208e-19,
+        "runtime_s": 0.002107291998981964
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_011",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.3637339157551968,
+        "friction_angle_deg": 30.0782808326661,
+        "compaction_rate": 0.10505338727311749,
+        "blade_coupling": 0.6995211776252763,
+        "spillover_rate": 0.15190663868306456,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0011491852575849077,
+        "terrain_profile_rmse": 0.016543343383722292,
+        "volume_conservation_error": 7.047314121155779e-19,
+        "runtime_s": 0.0021645000015269034
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_012",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.35420318780285664,
+        "friction_angle_deg": 44.26620679117154,
+        "compaction_rate": 0.10613906360948676,
+        "blade_coupling": 0.5267259521360118,
+        "spillover_rate": 0.16363509301261037,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.000748651086094365,
+        "terrain_profile_rmse": 0.017065154015109055,
+        "volume_conservation_error": 3.5236570605778894e-19,
+        "runtime_s": 0.0021380000034696423
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_013",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.3681984719518957,
+        "friction_angle_deg": 45.75769929322678,
+        "compaction_rate": 0.08973944195357692,
+        "blade_coupling": 0.6050655444696122,
+        "spillover_rate": 0.10448784200459703,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0008880374418416011,
+        "terrain_profile_rmse": 0.017015129839170726,
+        "volume_conservation_error": 9.351243737687476e-19,
+        "runtime_s": 0.002115333998517599
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_014",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.5230531547294636,
+        "friction_angle_deg": 29.000001440259574,
+        "compaction_rate": 0.08726064561227544,
+        "blade_coupling": 0.9102442407571597,
+        "spillover_rate": 0.17295625332442943,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0014324753642139675,
+        "terrain_profile_rmse": 0.01621298525028933,
+        "volume_conservation_error": 9.486769009248164e-19,
+        "runtime_s": 0.0021524999974644743
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_015",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.5267977939989301,
+        "friction_angle_deg": 33.00874300019848,
+        "compaction_rate": 0.08520448418979261,
+        "blade_coupling": 0.8268080692495614,
+        "spillover_rate": 0.1691909670966951,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0012336244523394983,
+        "terrain_profile_rmse": 0.016454640082624136,
+        "volume_conservation_error": 4.472333961502706e-19,
+        "runtime_s": 0.002133249996404629
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_016",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.45915708081119,
+        "friction_angle_deg": 32.21748897941246,
+        "compaction_rate": 0.1053404845216164,
+        "blade_coupling": 0.599249779437213,
+        "spillover_rate": 0.1572737237796954,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0008644691817410893,
+        "terrain_profile_rmse": 0.01691019565231922,
+        "volume_conservation_error": 1.0706496453294356e-18,
+        "runtime_s": 0.002110875000653323
+      }
+    },
+    {
+      "scenario": "cohesive_soil_randomized_017",
+      "base_scenario": "cohesive_soil",
+      "features": {
+        "cohesion": 0.5327663935398,
+        "friction_angle_deg": 30.384133047826786,
+        "compaction_rate": 0.07566483626705169,
+        "blade_coupling": 0.7682953511723215,
+        "spillover_rate": 0.1141779860935871,
+        "blade_width": 0.2,
+        "blade_depth": 0.018,
+        "blade_distance": 0.86,
+        "pile_radius": 0.24,
+        "pile_height": 0.13
+      },
+      "labels": {
+        "moved_volume": 0.0011591181049642463,
+        "terrain_profile_rmse": 0.016702326734764635,
+        "volume_conservation_error": 4.2012834183813297e-19,
+        "runtime_s": 0.002126583000062965
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_000",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.09829459715375993,
+        "friction_angle_deg": 21.481679005909537,
+        "compaction_rate": 0.02737304827812268,
+        "blade_coupling": 0.5835971642207385,
+        "spillover_rate": 0.4496955007901421,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0008948777338953718,
+        "terrain_profile_rmse": 0.011494691119535284,
+        "volume_conservation_error": 1.3213713977167085e-19,
+        "runtime_s": 0.0020975419975002296
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_001",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.07551791431130618,
+        "friction_angle_deg": 25.973378833336458,
+        "compaction_rate": 0.02944952408370733,
+        "blade_coupling": 0.5461818389561097,
+        "spillover_rate": 0.26943858061889997,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0008619098568526342,
+        "terrain_profile_rmse": 0.011772379188722154,
+        "volume_conservation_error": 4.912791094074942e-19,
+        "runtime_s": 0.0021020830026827753
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_002",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.07324471845082338,
+        "friction_angle_deg": 26.134439801082248,
+        "compaction_rate": 0.021600738456512336,
+        "blade_coupling": 0.5804703588193716,
+        "spillover_rate": 0.2962048873448193,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0009274749971355798,
+        "terrain_profile_rmse": 0.011656590828486546,
+        "volume_conservation_error": 5.21772295508649e-19,
+        "runtime_s": 0.002104665996739641
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_003",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.06873738680708423,
+        "friction_angle_deg": 18.411601480190868,
+        "compaction_rate": 0.026609259277203565,
+        "blade_coupling": 0.5739195391089774,
+        "spillover_rate": 0.2737800400390254,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0009652562006451007,
+        "terrain_profile_rmse": 0.011633908764614702,
+        "volume_conservation_error": 2.473336205982557e-19,
+        "runtime_s": 0.0020916249995934777
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_004",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.09878317153768723,
+        "friction_angle_deg": 20.243038755608833,
+        "compaction_rate": 0.028224805270913818,
+        "blade_coupling": 0.3916331704081973,
+        "spillover_rate": 0.37494553188303215,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0005654571343508462,
+        "terrain_profile_rmse": 0.01211801376280646,
+        "volume_conservation_error": 2.574980159653073e-19,
+        "runtime_s": 0.0020911250030621886
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_005",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.09733518928325528,
+        "friction_angle_deg": 20.41112725236858,
+        "compaction_rate": 0.02972512129404258,
+        "blade_coupling": 0.46421537318112377,
+        "spillover_rate": 0.3440205580466975,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0006958043000289802,
+        "terrain_profile_rmse": 0.011921928941759736,
+        "volume_conservation_error": 2.168404344971009e-19,
+        "runtime_s": 0.002097708005749155
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_006",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.0605890527022714,
+        "friction_angle_deg": 20.815283206019245,
+        "compaction_rate": 0.023702065704315028,
+        "blade_coupling": 0.5019825302941562,
+        "spillover_rate": 0.34880543771019346,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0007939676137898714,
+        "terrain_profile_rmse": 0.011769645785068108,
+        "volume_conservation_error": 2.744386749103933e-19,
+        "runtime_s": 0.0021091670059831813
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_007",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.07813604730337077,
+        "friction_angle_deg": 29.272749133533218,
+        "compaction_rate": 0.03783622402604256,
+        "blade_coupling": 0.45838144779209494,
+        "spillover_rate": 0.4271420960507969,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0006554163758815621,
+        "terrain_profile_rmse": 0.011897369686257504,
+        "volume_conservation_error": 2.778268066994105e-19,
+        "runtime_s": 0.0021091250018798746
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_008",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.0881653209724648,
+        "friction_angle_deg": 30.808110014795076,
+        "compaction_rate": 0.03357308018044899,
+        "blade_coupling": 0.43783392746594635,
+        "spillover_rate": 0.2724671720551453,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0006284331058858166,
+        "terrain_profile_rmse": 0.012111485589289126,
+        "volume_conservation_error": 1.0842021724855044e-19,
+        "runtime_s": 0.002118999997037463
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_009",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.06424057351058242,
+        "friction_angle_deg": 17.417060142195833,
+        "compaction_rate": 0.03407367619366834,
+        "blade_coupling": 0.33607635871495306,
+        "spillover_rate": 0.3946923182403233,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0004953639276186626,
+        "terrain_profile_rmse": 0.012227297145306655,
+        "volume_conservation_error": 4.0657581468206416e-20,
+        "runtime_s": 0.0021127919972059317
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_010",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.0674166238230845,
+        "friction_angle_deg": 18.56769720231852,
+        "compaction_rate": 0.03241788999845158,
+        "blade_coupling": 0.5891722360415562,
+        "spillover_rate": 0.3358469831317994,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0009774364480296862,
+        "terrain_profile_rmse": 0.01151022505759235,
+        "volume_conservation_error": 4.87890977618477e-19,
+        "runtime_s": 0.0021149590029381216
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_011",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.10315711953037324,
+        "friction_angle_deg": 21.457851853179807,
+        "compaction_rate": 0.02220545124317014,
+        "blade_coupling": 0.3886866671936327,
+        "spillover_rate": 0.35617566732994377,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0005571149866757165,
+        "terrain_profile_rmse": 0.012156918120718188,
+        "volume_conservation_error": 5.692061405548898e-19,
+        "runtime_s": 0.0020920419992762618
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_012",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.057437318854167196,
+        "friction_angle_deg": 28.015199698925223,
+        "compaction_rate": 0.03713463850979747,
+        "blade_coupling": 0.5109128342675846,
+        "spillover_rate": 0.2649589095055289,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0007972532221802951,
+        "terrain_profile_rmse": 0.011857134784270364,
+        "volume_conservation_error": 3.8285889215894375e-19,
+        "runtime_s": 0.0021165409998502582
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_013",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.08183959506445986,
+        "friction_angle_deg": 23.183313019108766,
+        "compaction_rate": 0.02943909063537428,
+        "blade_coupling": 0.48023256986267987,
+        "spillover_rate": 0.24592856561006907,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0007446617846770854,
+        "terrain_profile_rmse": 0.01197479896640159,
+        "volume_conservation_error": 5.04831636563563e-19,
+        "runtime_s": 0.0021021249995101243
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_014",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.062181340300326265,
+        "friction_angle_deg": 21.142953684688525,
+        "compaction_rate": 0.0347042949646793,
+        "blade_coupling": 0.357900725414708,
+        "spillover_rate": 0.4304005692776875,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0005212811290664021,
+        "terrain_profile_rmse": 0.012149625127313194,
+        "volume_conservation_error": 2.0328790734103208e-19,
+        "runtime_s": 0.002093666000291705
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_015",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.09440522167059053,
+        "friction_angle_deg": 29.679605959121517,
+        "compaction_rate": 0.037734688414496835,
+        "blade_coupling": 0.46447166957122055,
+        "spillover_rate": 0.2677337323247846,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0006753377162834498,
+        "terrain_profile_rmse": 0.012036750610651532,
+        "volume_conservation_error": 1.4230153513872246e-19,
+        "runtime_s": 0.0020871670058113523
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_016",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.06208575352900352,
+        "friction_angle_deg": 21.200715712331945,
+        "compaction_rate": 0.027123677578776453,
+        "blade_coupling": 0.4276014200426468,
+        "spillover_rate": 0.4429408836536927,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0006400757450770458,
+        "terrain_profile_rmse": 0.011924280482852238,
+        "volume_conservation_error": 1.5924219408380846e-19,
+        "runtime_s": 0.0020877499991911463
+      }
+    },
+    {
+      "scenario": "shallow_blade_slip_randomized_017",
+      "base_scenario": "shallow_blade_slip",
+      "features": {
+        "cohesion": 0.09447909512544973,
+        "friction_angle_deg": 23.945372089179877,
+        "compaction_rate": 0.02302426488144791,
+        "blade_coupling": 0.3379640188110888,
+        "spillover_rate": 0.35260963662570916,
+        "blade_width": 0.18,
+        "blade_depth": 0.008,
+        "blade_distance": 0.86,
+        "pile_radius": 0.2,
+        "pile_height": 0.11
+      },
+      "labels": {
+        "moved_volume": 0.0004725040209387476,
+        "terrain_profile_rmse": 0.012314679848391954,
+        "volume_conservation_error": 2.490276864927643e-19,
+        "runtime_s": 0.0020917500005452894
+      }
+    }
+  ]
+}
