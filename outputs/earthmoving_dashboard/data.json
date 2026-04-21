@@ -40,23 +40,26 @@
     {
       "scenario": "shallow_blade_slip",
       "moved_volume": 0.0006866346994569747,
+      "deposit_forward_progress": 0.06222847512688795,
       "terrain_profile_rmse": 0.011929978686421422,
       "volume_conservation_error": 7.250602028496811e-19,
-      "runtime_s": 0.002574750000349013
+      "runtime_s": 0.0026275000000168802
     },
     {
       "scenario": "baseline_push",
       "moved_volume": 0.0015986601510945156,
+      "deposit_forward_progress": 0.06904645105214945,
       "terrain_profile_rmse": 0.013619649147136165,
       "volume_conservation_error": 1.0842021724855044e-19,
-      "runtime_s": 0.005271124999126187
+      "runtime_s": 0.002442834000021321
     },
     {
       "scenario": "cohesive_soil",
       "moved_volume": 0.001110825732628245,
+      "deposit_forward_progress": 0.06727303900935908,
       "terrain_profile_rmse": 0.01663163530732733,
       "volume_conservation_error": 4.87890977618477e-19,
-      "runtime_s": 0.0024729590004426427
+      "runtime_s": 0.0025295829999549824
     }
   ],
   "calibration_table": [

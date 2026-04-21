@@ -36,3 +36,4 @@ def test_run_earthmoving_benchmark_writes_outputs(tmp_path: Path) -> None:
     assert (output / "report.md").exists()
     assert (output / "baseline_push_terrain.png").exists()
     assert result["rows"][0]["moved_volume"] > 0.0
+    assert result["rows"][0]["deposit_forward_progress"] > 0.0

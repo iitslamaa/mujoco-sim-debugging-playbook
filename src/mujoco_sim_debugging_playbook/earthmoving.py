@@ -50,6 +50,11 @@ class EarthmovingMetrics:
     volume_conservation_error: float
     terrain_profile_rmse: float
     target_zone_volume: float
+    cut_centroid_x: float
+    cut_centroid_y: float
+    deposit_centroid_x: float
+    deposit_centroid_y: float
+    deposit_forward_progress: float
     material_moved_per_second: float
     pass_count: int
     runtime_s: float
@@ -128,6 +133,7 @@ class EarthmovingSimulation:
         soil_summary = apply_blade_pass(terrain, path, self.scenario.soil)
         runtime_s = max(time.perf_counter() - start_time, 1e-9)
         target_zone_volume = _target_zone_volume(terrain, self.scenario.target_center_x, self.scenario.target_width)
+        displacement = _material_displacement_metrics(initial, terrain)
         metrics = EarthmovingMetrics(
             moved_volume=soil_summary["moved_volume"],
             compacted_volume=soil_summary["compacted_volume"],
@@ -135,6 +141,11 @@ class EarthmovingSimulation:
             volume_conservation_error=abs(soil_summary["volume_error"]),
             terrain_profile_rmse=terrain.profile_error(target),
             target_zone_volume=target_zone_volume,
+            cut_centroid_x=displacement["cut_centroid_x"],
+            cut_centroid_y=displacement["cut_centroid_y"],
+            deposit_centroid_x=displacement["deposit_centroid_x"],
+            deposit_centroid_y=displacement["deposit_centroid_y"],
+            deposit_forward_progress=displacement["deposit_forward_progress"],
             material_moved_per_second=soil_summary["moved_volume"] / runtime_s,
             pass_count=1,
             runtime_s=runtime_s,
@@ -161,6 +172,30 @@ def _target_zone_volume(terrain: TerrainGrid, center_x: float, width: float) -> 
     mask = np.abs(terrain.xs[:, None] - center_x) <= width
     excess = np.clip(terrain.heights - terrain.config.base_height, 0.0, None)
     return float(np.sum(np.where(mask, excess, 0.0)) * terrain.cell_area)
+
+
+def _material_displacement_metrics(initial: TerrainGrid, final: TerrainGrid) -> dict[str, float]:
+    if initial.config != final.config:
+        raise ValueError("initial and final terrain grids must share a config")
+    cut_weights = np.clip(initial.heights - final.heights, 0.0, None)
+    deposit_weights = np.clip(final.heights - initial.heights, 0.0, None)
+    cut_x, cut_y = _weighted_centroid(initial, cut_weights)
+    deposit_x, deposit_y = _weighted_centroid(final, deposit_weights)
+    return {
+        "cut_centroid_x": cut_x,
+        "cut_centroid_y": cut_y,
+        "deposit_centroid_x": deposit_x,
+        "deposit_centroid_y": deposit_y,
+        "deposit_forward_progress": deposit_x - cut_x,
+    }
+
+
+def _weighted_centroid(terrain: TerrainGrid, weights: np.ndarray) -> tuple[float, float]:
+    total = float(np.sum(weights))
+    if total <= 1e-12:
+        return 0.0, 0.0
+    xx, yy = np.meshgrid(terrain.xs, terrain.ys, indexing="ij")
+    return float(np.sum(xx * weights) / total), float(np.sum(yy * weights) / total)
 
 
 def result_to_dict(result: EarthmovingResult) -> dict[str, Any]:

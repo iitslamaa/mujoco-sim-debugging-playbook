@@ -6,6 +6,7 @@
 - Throughput: `323.79` episodes/s
 - Best scenario: `shallow_blade_slip`
 - Hardest scenario: `cohesive_soil`
+- Mean deposit progress: `0.066` m
 - Mean calibration error: `0.4378`
 
 ## Readiness Signals
@@ -15,15 +16,16 @@
 | Quality gate | pass | Earthmoving realism and throughput thresholds |
 | Scale throughput | 323.79 episodes/s | Randomized batch evaluation speed |
 | Best terrain match | shallow_blade_slip | RMSE 0.01193 |
+| Mean deposit progress | 0.066 m | Centroid displacement from cut region to deposit region |
 | Largest sim-to-field gap | baseline_push | Improve delivered-material measurement around the target berm region. |
 
 ## Scenario Results
 
-| scenario | moved_volume | terrain_rmse | volume_error | runtime_s |
-| --- | ---: | ---: | ---: | ---: |
-| shallow_blade_slip | 0.000687 | 0.011930 | 0.000000 | 0.00257 |
-| baseline_push | 0.001599 | 0.013620 | 0.000000 | 0.00527 |
-| cohesive_soil | 0.001111 | 0.016632 | 0.000000 | 0.00247 |
+| scenario | moved_volume | deposit_progress_m | terrain_rmse | volume_error | runtime_s |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| shallow_blade_slip | 0.000687 | 0.0622 | 0.011930 | 0.000000 | 0.00263 |
+| baseline_push | 0.001599 | 0.0690 | 0.013620 | 0.000000 | 0.00244 |
+| cohesive_soil | 0.001111 | 0.0673 | 0.016632 | 0.000000 | 0.00253 |
 
 ## Top Sensitivities
 

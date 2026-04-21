@@ -36,6 +36,7 @@ def build_earthmoving_review_packet(
             "episodes_per_second": scale["summary"]["episodes_per_second"],
             "best_scenario": best_scenario["scenario"],
             "hardest_scenario": hardest_scenario["scenario"],
+            "mean_deposit_forward_progress": _mean(row.get("deposit_forward_progress", 0.0) for row in benchmark["rows"]),
             "mean_calibration_error": gap["summary"]["mean_calibration_error"],
             "top_sensitivity": top_sensitivity,
         },
@@ -43,12 +44,14 @@ def build_earthmoving_review_packet(
             _signal("Quality gate", gate["status"], "Earthmoving realism and throughput thresholds"),
             _signal("Scale throughput", f"{scale['summary']['episodes_per_second']:.2f} episodes/s", "Randomized batch evaluation speed"),
             _signal("Best terrain match", best_scenario["scenario"], f"RMSE {best_scenario['terrain_profile_rmse']:.5f}"),
+            _signal("Mean deposit progress", f"{_mean(row.get('deposit_forward_progress', 0.0) for row in benchmark['rows']):.3f} m", "Centroid displacement from cut region to deposit region"),
             _signal("Largest sim-to-field gap", top_gap["scenario"] if top_gap else "none", top_gap["recommended_action"] if top_gap else "No gap items"),
         ],
         "scenario_table": [
             {
                 "scenario": row["scenario"],
                 "moved_volume": row["moved_volume"],
+                "deposit_forward_progress": row.get("deposit_forward_progress", 0.0),
                 "terrain_profile_rmse": row["terrain_profile_rmse"],
                 "volume_conservation_error": row["volume_conservation_error"],
                 "runtime_s": row["runtime_s"],
@@ -111,6 +114,7 @@ def render_review_packet_markdown(payload: dict[str, Any]) -> str:
         f"- Throughput: `{summary['episodes_per_second']:.2f}` episodes/s",
         f"- Best scenario: `{summary['best_scenario']}`",
         f"- Hardest scenario: `{summary['hardest_scenario']}`",
+        f"- Mean deposit progress: `{summary['mean_deposit_forward_progress']:.3f}` m",
         f"- Mean calibration error: `{summary['mean_calibration_error']:.4f}`",
         "",
         "## Readiness Signals",
@@ -121,10 +125,10 @@ def render_review_packet_markdown(payload: dict[str, Any]) -> str:
     for signal in payload["readiness_signals"]:
         lines.append(f"| {signal['name']} | {signal['value']} | {signal['detail']} |")
 
-    lines.extend(["", "## Scenario Results", "", "| scenario | moved_volume | terrain_rmse | volume_error | runtime_s |", "| --- | ---: | ---: | ---: | ---: |"])
+    lines.extend(["", "## Scenario Results", "", "| scenario | moved_volume | deposit_progress_m | terrain_rmse | volume_error | runtime_s |", "| --- | ---: | ---: | ---: | ---: | ---: |"])
     for row in payload["scenario_table"]:
         lines.append(
-            f"| {row['scenario']} | {row['moved_volume']:.6f} | {row['terrain_profile_rmse']:.6f} | "
+            f"| {row['scenario']} | {row['moved_volume']:.6f} | {row['deposit_forward_progress']:.4f} | {row['terrain_profile_rmse']:.6f} | "
             f"{row['volume_conservation_error']:.6f} | {row['runtime_s']:.5f} |"
         )
 
@@ -144,3 +148,8 @@ def _read_json(path: str | Path) -> dict[str, Any]:
 
 def _signal(name: str, value: str, detail: str) -> dict[str, str]:
     return {"name": name, "value": value, "detail": detail}
+
+
+def _mean(values: Any) -> float:
+    items = [float(value) for value in values]
+    return sum(items) / len(items) if items else 0.0

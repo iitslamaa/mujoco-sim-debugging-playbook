@@ -27,6 +27,7 @@ def _render_html(packet: dict[str, Any]) -> str:
         "<tr>"
         f"<td>{html.escape(row['scenario'])}</td>"
         f"<td>{row['moved_volume']:.6f}</td>"
+        f"<td>{row.get('deposit_forward_progress', 0.0):.4f}</td>"
         f"<td>{row['terrain_profile_rmse']:.6f}</td>"
         f"<td>{row['volume_conservation_error']:.6f}</td>"
         f"<td>{row['runtime_s']:.5f}</td>"
@@ -161,6 +162,7 @@ def _render_html(packet: dict[str, Any]) -> str:
         <section><h3>Gate Status</h3><p>{html.escape(summary['gate_status'])}</p></section>
         <section><h3>Throughput</h3><p>{summary['episodes_per_second']:.2f}/s</p></section>
         <section><h3>Best Scenario</h3><p>{html.escape(summary['best_scenario'])}</p></section>
+        <section><h3>Deposit Progress</h3><p>{summary.get('mean_deposit_forward_progress', 0.0):.3f} m</p></section>
         <section><h3>Calibration Error</h3><p>{summary['mean_calibration_error']:.4f}</p></section>
       </div>
     </header>
@@ -168,7 +170,7 @@ def _render_html(packet: dict[str, Any]) -> str:
     <div class="signals">{signals}</div>
     <h2>Scenario Results</h2>
     <table>
-      <thead><tr><th>Scenario</th><th>Moved Volume</th><th>Terrain RMSE</th><th>Volume Error</th><th>Runtime</th></tr></thead>
+      <thead><tr><th>Scenario</th><th>Moved Volume</th><th>Deposit Progress</th><th>Terrain RMSE</th><th>Volume Error</th><th>Runtime</th></tr></thead>
       <tbody>{scenario_rows}</tbody>
     </table>
     <h2>Top Sensitivities</h2>

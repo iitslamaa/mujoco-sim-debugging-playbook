@@ -26,5 +26,7 @@ def test_earthmoving_simulation_runs_blade_push() -> None:
 
     assert result.metrics.moved_volume > 0.0
     assert result.metrics.target_zone_volume > 0.0
+    assert result.metrics.deposit_forward_progress > 0.0
+    assert result.metrics.deposit_centroid_x > result.metrics.cut_centroid_x
     assert result.metrics.terrain_profile_rmse >= 0.0
     assert len(result.blade_path) == scenario.blade.steps

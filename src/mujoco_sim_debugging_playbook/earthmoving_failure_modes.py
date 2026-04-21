@@ -82,6 +82,8 @@ def _scenario_failure_items(row: dict[str, Any]) -> list[dict[str, Any]]:
         items.append(_item(row, "under_excavation", "high", 80.0, "Moved volume is below the practical debugging threshold.", "Increase blade depth/coupling or calibrate soil resistance."))
     if row["terrain_profile_rmse"] > 0.04:
         items.append(_item(row, "target_profile_miss", "high", 72.0, "Final terrain profile is far from the target berm.", "Tune deposit spread, target geometry, and path planning."))
+    if row.get("deposit_forward_progress", 0.0) < 0.15:
+        items.append(_item(row, "poor_material_progress", "medium", 62.0, "Deposit centroid did not advance far beyond the cut centroid.", "Inspect blade path, deposit spread, and transport losses."))
     if row["volume_conservation_error"] > 0.00025:
         items.append(_item(row, "volume_residual", "medium", 58.0, "Compaction-adjusted volume residual is elevated.", "Inspect compaction rate and transport/deposit accounting."))
     if row["runtime_s"] > 0.05:

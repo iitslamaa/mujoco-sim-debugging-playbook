@@ -26,6 +26,7 @@ make terrain-kernel-smoke
 
 - `moved_volume`: soil volume removed by the blade footprint
 - `target_zone_volume`: material delivered into the desired berm region
+- `deposit_forward_progress`: centroid displacement from cut material to deposited material
 - `terrain_profile_rmse`: final terrain error against the target terrain
 - `volume_conservation_error`: conservation residual after compaction
 - `runtime_s`: wall-clock runtime per scenario

@@ -94,6 +94,11 @@ def _row_from_result(result: EarthmovingResult) -> dict[str, Any]:
         "volume_conservation_error": metrics.volume_conservation_error,
         "terrain_profile_rmse": metrics.terrain_profile_rmse,
         "target_zone_volume": metrics.target_zone_volume,
+        "cut_centroid_x": metrics.cut_centroid_x,
+        "cut_centroid_y": metrics.cut_centroid_y,
+        "deposit_centroid_x": metrics.deposit_centroid_x,
+        "deposit_centroid_y": metrics.deposit_centroid_y,
+        "deposit_forward_progress": metrics.deposit_forward_progress,
         "material_moved_per_second": metrics.material_moved_per_second,
         "runtime_s": metrics.runtime_s,
     }
@@ -124,6 +129,7 @@ def _plot_terrain_triptych(result: EarthmovingResult, path: Path) -> None:
 def _plot_metric_bars(rows: list[dict[str, Any]], output_dir: Path) -> None:
     metrics = [
         ("moved_volume", "Moved volume"),
+        ("deposit_forward_progress", "Deposit forward progress"),
         ("terrain_profile_rmse", "Terrain RMSE"),
         ("volume_conservation_error", "Volume conservation error"),
         ("runtime_s", "Runtime"),
@@ -145,14 +151,15 @@ def _write_report(rows: list[dict[str, Any]], output_path: Path) -> None:
     lines = [
         "# Earthmoving Benchmark",
         "",
-        "Construction-machine blade scenarios evaluated against terrain deformation, target berm, conservation, and runtime metrics.",
+        "Construction-machine blade scenarios evaluated against terrain deformation, target berm, material displacement, conservation, and runtime metrics.",
         "",
-        "| scenario | moved_volume | target_zone_volume | terrain_rmse | volume_error | runtime_s |",
-        "| --- | ---: | ---: | ---: | ---: | ---: |",
+        "| scenario | moved_volume | target_zone_volume | deposit_progress_m | terrain_rmse | volume_error | runtime_s |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for row in sorted(rows, key=lambda item: item["terrain_profile_rmse"]):
         lines.append(
             f"| {row['scenario']} | {row['moved_volume']:.6f} | {row['target_zone_volume']:.6f} | "
+            f"{row['deposit_forward_progress']:.4f} | "
             f"{row['terrain_profile_rmse']:.6f} | {row['volume_conservation_error']:.6f} | {row['runtime_s']:.4f} |"
         )
     best = min(rows, key=lambda item: item["terrain_profile_rmse"])
