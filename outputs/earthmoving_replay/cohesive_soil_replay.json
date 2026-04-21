@@ -1,15 +1,20 @@
 {
   "scenario": "cohesive_soil",
   "metrics": {
-    "moved_volume": 0.001110825732628245,
-    "compacted_volume": 0.0001110825732628245,
-    "volume_error": -4.87890977618477e-19,
-    "volume_conservation_error": 4.87890977618477e-19,
-    "terrain_profile_rmse": 0.01663163530732733,
-    "target_zone_volume": 4.977351640315386e-20,
-    "material_moved_per_second": 0.47383444801017904,
+    "moved_volume": 0.0008709123853106295,
+    "compacted_volume": 8.709123853106295e-05,
+    "volume_error": -5.149960319306146e-19,
+    "volume_conservation_error": 5.149960319306146e-19,
+    "terrain_profile_rmse": 0.014993291725440493,
+    "target_zone_volume": 0.0003108678744818911,
+    "cut_centroid_x": -0.1632597273612883,
+    "cut_centroid_y": 0.022557493010452963,
+    "deposit_centroid_x": 0.34870070424937893,
+    "deposit_centroid_y": 0.019444142949000754,
+    "deposit_forward_progress": 0.5119604316106672,
+    "material_moved_per_second": 0.34386608535771307,
     "pass_count": 1,
-    "runtime_s": 0.00234433299920056
+    "runtime_s": 0.002532707999989725
   },
   "soil": {
     "cohesion": 0.42,
@@ -378,10 +383,10 @@
       "volume": 0.003920441120865119
     },
     "final": {
-      "min_height": 0.0,
-      "max_height": 0.0835371050905602,
-      "mean_height": 0.004024768703567901,
-      "volume": 0.0038093585476022943
+      "min_height": 1.54002747466942e-44,
+      "max_height": 0.07574584666092055,
+      "mean_height": 0.004050116691156526,
+      "volume": 0.003833349882334056
     },
     "target": {
       "min_height": 0.0,

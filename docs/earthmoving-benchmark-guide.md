@@ -40,6 +40,7 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 
 - contact-heavy task content
 - deformable terrain approximation
+- carried-load blade transport, where excavated material spills gradually and dumps near the pass endpoint
 - soil parameter uncertainty
 - sim-to-field calibration
 - deterministic replay

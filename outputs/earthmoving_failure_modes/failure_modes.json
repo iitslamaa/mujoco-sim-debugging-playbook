@@ -1,6 +1,6 @@
 {
   "summary": {
-    "item_count": 5,
+    "item_count": 2,
     "high_count": 1,
     "top_mode": "under_excavation"
   },
@@ -13,33 +13,6 @@
       "score": 80.0,
       "evidence": "Moved volume is below the practical debugging threshold.",
       "next_action": "Increase blade depth/coupling or calibrate soil resistance."
-    },
-    {
-      "source": "benchmark",
-      "scenario": "baseline_push",
-      "mode": "poor_material_progress",
-      "severity": "medium",
-      "score": 62.0,
-      "evidence": "Deposit centroid did not advance far beyond the cut centroid.",
-      "next_action": "Inspect blade path, deposit spread, and transport losses."
-    },
-    {
-      "source": "benchmark",
-      "scenario": "cohesive_soil",
-      "mode": "poor_material_progress",
-      "severity": "medium",
-      "score": 62.0,
-      "evidence": "Deposit centroid did not advance far beyond the cut centroid.",
-      "next_action": "Inspect blade path, deposit spread, and transport losses."
-    },
-    {
-      "source": "benchmark",
-      "scenario": "shallow_blade_slip",
-      "mode": "poor_material_progress",
-      "severity": "medium",
-      "score": 62.0,
-      "evidence": "Deposit centroid did not advance far beyond the cut centroid.",
-      "next_action": "Inspect blade path, deposit spread, and transport losses."
     },
     {
       "source": "replay",

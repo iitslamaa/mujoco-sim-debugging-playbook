@@ -4,8 +4,8 @@ Construction-machine blade scenarios evaluated against terrain deformation, targ
 
 | scenario | moved_volume | target_zone_volume | deposit_progress_m | terrain_rmse | volume_error | runtime_s |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| shallow_blade_slip | 0.000687 | 0.000000 | 0.0622 | 0.011930 | 0.000000 | 0.0026 |
-| baseline_push | 0.001599 | 0.000000 | 0.0690 | 0.013620 | 0.000000 | 0.0024 |
-| cohesive_soil | 0.001111 | 0.000000 | 0.0673 | 0.016632 | 0.000000 | 0.0025 |
+| shallow_blade_slip | 0.000587 | 0.000189 | 0.5029 | 0.010896 | 0.000000 | 0.0024 |
+| baseline_push | 0.001113 | 0.000382 | 0.5147 | 0.011767 | 0.000000 | 0.0025 |
+| cohesive_soil | 0.000871 | 0.000311 | 0.5120 | 0.014993 | 0.000000 | 0.0026 |
 
-Best terrain-profile match: `shallow_blade_slip` with `0.011930` RMSE.
+Best terrain-profile match: `shallow_blade_slip` with `0.010896` RMSE.

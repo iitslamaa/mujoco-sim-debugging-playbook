@@ -2,17 +2,17 @@
 
 ## Metrics
 
-- Moved volume: `0.001111`
-- Terrain profile RMSE: `0.016632`
+- Moved volume: `0.000871`
+- Terrain profile RMSE: `0.014993`
 - Volume conservation error: `0.000000`
-- Runtime: `0.00234`
+- Runtime: `0.00253`
 
 ## Terrain Stats
 
 | surface | min | max | mean | volume |
 | --- | ---: | ---: | ---: | ---: |
 | initial | 0.000000 | 0.120602 | 0.004142 | 0.003920 |
-| final | 0.000000 | 0.083537 | 0.004025 | 0.003809 |
+| final | 0.000000 | 0.075746 | 0.004050 | 0.003833 |
 | target | 0.000000 | 0.072558 | 0.003391 | 0.003210 |
 
 ## Debug Hypotheses

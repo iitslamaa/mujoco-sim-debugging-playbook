@@ -4,22 +4,27 @@
     {
       "scenario": "baseline_push",
       "soil": {
-        "cohesion": 0.156,
+        "cohesion": 0.08399999999999999,
         "friction_angle_deg": 30.0,
-        "compaction_rate": 0.075,
+        "compaction_rate": 0.045,
         "blade_coupling": 1.0,
         "spillover_rate": 0.22
       },
       "simulated": {
-        "moved_volume": 0.0021440614089277537,
-        "compacted_volume": 0.00016080460566958156,
-        "volume_error": 5.963111948670274e-19,
-        "volume_conservation_error": 5.963111948670274e-19,
-        "terrain_profile_rmse": 0.013123010488859456,
-        "target_zone_volume": 9.189347708018032e-25,
-        "material_moved_per_second": 0.9703466248211114,
+        "moved_volume": 0.0014477886490119793,
+        "compacted_volume": 6.515048920553906e-05,
+        "volume_error": 2.0328790734103208e-19,
+        "volume_conservation_error": 2.0328790734103208e-19,
+        "terrain_profile_rmse": 0.010873462220413133,
+        "target_zone_volume": 0.0005067166932276114,
+        "cut_centroid_x": -0.18245165280290473,
+        "cut_centroid_y": -7.020286971694327e-18,
+        "deposit_centroid_x": 0.33311892865639786,
+        "deposit_centroid_y": -1.6286063229465742e-18,
+        "deposit_forward_progress": 0.5155705814593026,
+        "material_moved_per_second": 0.6178549659798451,
         "pass_count": 1,
-        "runtime_s": 0.002209583002695581
+        "runtime_s": 0.0023432499999671563
       },
       "observed": {
         "moved_volume": 0.00215,
@@ -27,31 +32,36 @@
         "terrain_profile_rmse": 0.024
       },
       "component_errors": {
-        "moved_volume": 0.0027621353824401423,
-        "target_zone_volume": 1.0,
-        "terrain_profile_rmse": 0.45320789629752267
+        "moved_volume": 0.32660993069210265,
+        "target_zone_volume": 0.5032189282082241,
+        "terrain_profile_rmse": 0.5469390741494529
       },
-      "calibration_error": 0.4418845401816026
+      "calibration_error": 0.4324889085142152
     },
     {
       "scenario": "cohesive_soil",
       "soil": {
-        "cohesion": 0.546,
+        "cohesion": 0.294,
         "friction_angle_deg": 36.0,
-        "compaction_rate": 0.1,
+        "compaction_rate": 0.07500000000000001,
         "blade_coupling": 0.8999999999999999,
         "spillover_rate": 0.14
       },
       "simulated": {
-        "moved_volume": 0.0013516036189274217,
-        "compacted_volume": 0.00013516036189274215,
-        "volume_error": -6.776263578034403e-19,
-        "volume_conservation_error": 6.776263578034403e-19,
-        "terrain_profile_rmse": 0.016346790798053634,
-        "target_zone_volume": 2.8488578912815003e-19,
-        "material_moved_per_second": 0.6025987199990163,
+        "moved_volume": 0.0011914426571335056,
+        "compacted_volume": 8.935819928501296e-05,
+        "volume_error": 5.421010862427522e-19,
+        "volume_conservation_error": 5.421010862427522e-19,
+        "terrain_profile_rmse": 0.014017732158320148,
+        "target_zone_volume": 0.0004257221480036888,
+        "cut_centroid_x": -0.16310997866567295,
+        "cut_centroid_y": 0.02256465923610175,
+        "deposit_centroid_x": 0.3392359097952909,
+        "deposit_centroid_y": 0.019435142185450775,
+        "deposit_forward_progress": 0.5023458884609638,
+        "material_moved_per_second": 0.5041186795004232,
         "pass_count": 1,
-        "runtime_s": 0.002242957998532802
+        "runtime_s": 0.0023634169999695587
       },
       "observed": {
         "moved_volume": 0.00135,
@@ -59,11 +69,11 @@
         "terrain_profile_rmse": 0.028
       },
       "component_errors": {
-        "moved_volume": 0.0011878658721641935,
-        "target_zone_volume": 0.9999999999999994,
-        "terrain_profile_rmse": 0.41618604292665595
+        "moved_volume": 0.1174498836048107,
+        "target_zone_volume": 0.31335137418759873,
+        "terrain_profile_rmse": 0.4993667086314233
       },
-      "calibration_error": 0.4337717482278049
+      "calibration_error": 0.262398770314109
     }
   ],
   "field_logs": [

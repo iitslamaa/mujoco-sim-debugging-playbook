@@ -2,553 +2,553 @@
   "summary": {
     "episode_count": 60,
     "workers": 1,
-    "wall_time_s": 0.18530587499844842,
-    "episodes_per_second": 323.78897863061485,
-    "mean_runtime_s": 0.0020915930162421622,
-    "max_runtime_s": 0.0023706249994575046,
-    "mean_terrain_profile_rmse": 0.01407829354716106,
-    "max_terrain_profile_rmse": 0.01695203795962082
+    "wall_time_s": 0.20839900000009948,
+    "episodes_per_second": 287.9092510039461,
+    "mean_runtime_s": 0.0023763264000119006,
+    "max_runtime_s": 0.002556249999997817,
+    "mean_terrain_profile_rmse": 0.01258799827012628,
+    "max_terrain_profile_rmse": 0.015563533756595754
   },
   "rows": [
     {
       "scenario": "baseline_push_randomized_000",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0014745051705346752,
-      "target_zone_volume": 1.0981578061735375e-27,
-      "terrain_profile_rmse": 0.013785308096542185,
-      "volume_conservation_error": 3.2526065174565133e-19,
-      "runtime_s": 0.0023706249994575046
+      "moved_volume": 0.0010434840549521898,
+      "target_zone_volume": 0.0003624893398361439,
+      "terrain_profile_rmse": 0.01196615911513234,
+      "volume_conservation_error": 2.168404344971009e-19,
+      "runtime_s": 0.0024915419999160804
     },
     {
       "scenario": "baseline_push_randomized_001",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0017054248698420305,
-      "target_zone_volume": 4.2965885826291425e-26,
-      "terrain_profile_rmse": 0.013607558244326306,
-      "volume_conservation_error": 3.2526065174565133e-19,
-      "runtime_s": 0.002178541999455774
+      "moved_volume": 0.0011481271785537756,
+      "target_zone_volume": 0.00040441948446081765,
+      "terrain_profile_rmse": 0.011642605652790385,
+      "volume_conservation_error": 3.5236570605778894e-19,
+      "runtime_s": 0.0023418329999458365
     },
     {
       "scenario": "baseline_push_randomized_002",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.001762415962991849,
-      "target_zone_volume": 1.827191233743496e-25,
-      "terrain_profile_rmse": 0.013450925878678407,
+      "moved_volume": 0.0011930698114672148,
+      "target_zone_volume": 0.0004080200888629,
+      "terrain_profile_rmse": 0.011534580781117687,
       "volume_conservation_error": 1.2197274440461925e-19,
-      "runtime_s": 0.0021622499989462085
+      "runtime_s": 0.002442916000063633
     },
     {
       "scenario": "baseline_push_randomized_003",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.001349711055138813,
-      "target_zone_volume": 3.2489597582360044e-28,
-      "terrain_profile_rmse": 0.01396328129150424,
-      "volume_conservation_error": 1.2197274440461925e-19,
-      "runtime_s": 0.0020992919999116566
+      "moved_volume": 0.0009722552843196764,
+      "target_zone_volume": 0.000342058229754919,
+      "terrain_profile_rmse": 0.012181209310665445,
+      "volume_conservation_error": 2.236166980751353e-19,
+      "runtime_s": 0.0023098750000372092
     },
     {
       "scenario": "baseline_push_randomized_004",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0010883759834572184,
-      "target_zone_volume": 1.0079411495936739e-27,
-      "terrain_profile_rmse": 0.014196533022869289,
-      "volume_conservation_error": 4.336808689942018e-19,
-      "runtime_s": 0.0020971659978386015
+      "moved_volume": 0.0008372688542704425,
+      "target_zone_volume": 0.00028675708712945074,
+      "terrain_profile_rmse": 0.012654229147106486,
+      "volume_conservation_error": 2.0328790734103208e-20,
+      "runtime_s": 0.002304999999978463
     },
     {
       "scenario": "baseline_push_randomized_005",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0016022318043571464,
-      "target_zone_volume": 9.92836515523993e-27,
-      "terrain_profile_rmse": 0.013660300781168394,
-      "volume_conservation_error": 4.87890977618477e-19,
-      "runtime_s": 0.002114041999448091
+      "moved_volume": 0.0011046826514275441,
+      "target_zone_volume": 0.00038379858875588495,
+      "terrain_profile_rmse": 0.011773170504431368,
+      "volume_conservation_error": 2.710505431213761e-20,
+      "runtime_s": 0.0025185839999721793
     },
     {
       "scenario": "baseline_push_randomized_006",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.00170186073453931,
-      "target_zone_volume": 3.8459059368518095e-26,
-      "terrain_profile_rmse": 0.01353414800388095,
-      "volume_conservation_error": 1.2197274440461925e-19,
-      "runtime_s": 0.0021307910028554033
+      "moved_volume": 0.0011566009936460938,
+      "target_zone_volume": 0.00039808434693809164,
+      "terrain_profile_rmse": 0.011623582792093422,
+      "volume_conservation_error": 4.607859233063394e-19,
+      "runtime_s": 0.0024294580000514543
     },
     {
       "scenario": "baseline_push_randomized_007",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.002069370097425819,
-      "target_zone_volume": 2.716853982056903e-25,
-      "terrain_profile_rmse": 0.013288825627639157,
-      "volume_conservation_error": 2.168404344971009e-19,
-      "runtime_s": 0.002123792000929825
+      "moved_volume": 0.0013088299199266755,
+      "target_zone_volume": 0.00045706581988351084,
+      "terrain_profile_rmse": 0.011197731888246293,
+      "volume_conservation_error": 5.55653613398821e-19,
+      "runtime_s": 0.0024154590000762255
     },
     {
       "scenario": "baseline_push_randomized_008",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0019039033310952417,
-      "target_zone_volume": 8.626228709067464e-26,
-      "terrain_profile_rmse": 0.013454976806600655,
-      "volume_conservation_error": 2.0328790734103208e-19,
-      "runtime_s": 0.0021281249973981176
+      "moved_volume": 0.001231404576387628,
+      "target_zone_volume": 0.0004349456502829605,
+      "terrain_profile_rmse": 0.011397593002565872,
+      "volume_conservation_error": 2.168404344971009e-19,
+      "runtime_s": 0.002556249999997817
     },
     {
       "scenario": "baseline_push_randomized_009",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.001876359073261708,
-      "target_zone_volume": 5.009943797449056e-25,
-      "terrain_profile_rmse": 0.0133947620923316,
-      "volume_conservation_error": 1.0842021724855044e-19,
-      "runtime_s": 0.0021235419990262017
+      "moved_volume": 0.0012408146402372133,
+      "target_zone_volume": 0.00042961931500534457,
+      "terrain_profile_rmse": 0.011403723724219477,
+      "volume_conservation_error": 1.8973538018496328e-19,
+      "runtime_s": 0.0024076249999325228
     },
     {
       "scenario": "baseline_push_randomized_010",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0016043098811911083,
-      "target_zone_volume": 2.5376715869690784e-26,
-      "terrain_profile_rmse": 0.013629694802833214,
-      "volume_conservation_error": 9.486769009248164e-20,
-      "runtime_s": 0.002107249998516636
+      "moved_volume": 0.001113204147879378,
+      "target_zone_volume": 0.0003843642573437036,
+      "terrain_profile_rmse": 0.011763401488847691,
+      "volume_conservation_error": 2.439454888092385e-19,
+      "runtime_s": 0.002439750000121421
     },
     {
       "scenario": "baseline_push_randomized_011",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0010420671562259365,
-      "target_zone_volume": 1.1060902016175921e-26,
-      "terrain_profile_rmse": 0.014203438038049293,
-      "volume_conservation_error": 3.3203691532368573e-19,
-      "runtime_s": 0.0020772499992744997
+      "moved_volume": 0.0008178859626243538,
+      "target_zone_volume": 0.000275509737773691,
+      "terrain_profile_rmse": 0.01274757584957767,
+      "volume_conservation_error": 1.0842021724855044e-19,
+      "runtime_s": 0.00239029199997276
     },
     {
       "scenario": "baseline_push_randomized_012",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0011577398368547995,
-      "target_zone_volume": 3.034379851751267e-26,
-      "terrain_profile_rmse": 0.014023352817324333,
-      "volume_conservation_error": 1.3552527156068805e-20,
-      "runtime_s": 0.0020877499991911463
+      "moved_volume": 0.0008918038242727969,
+      "target_zone_volume": 0.0002974553945986,
+      "terrain_profile_rmse": 0.012505494104327887,
+      "volume_conservation_error": 2.507217523872729e-19,
+      "runtime_s": 0.0023972920000687736
     },
     {
       "scenario": "baseline_push_randomized_013",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0019345821872978242,
-      "target_zone_volume": 1.6396789742986213e-25,
-      "terrain_profile_rmse": 0.013395743468114315,
-      "volume_conservation_error": 1.0842021724855044e-19,
-      "runtime_s": 0.002103082999383332
+      "moved_volume": 0.0012518394902861743,
+      "target_zone_volume": 0.0004382102742486362,
+      "terrain_profile_rmse": 0.011349992249448713,
+      "volume_conservation_error": 2.574980159653073e-19,
+      "runtime_s": 0.0023929169999519218
     },
     {
       "scenario": "baseline_push_randomized_014",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0021381131926804173,
-      "target_zone_volume": 8.799260276994485e-24,
-      "terrain_profile_rmse": 0.013057946392524923,
-      "volume_conservation_error": 1.8973538018496328e-19,
-      "runtime_s": 0.0021032910008216277
+      "moved_volume": 0.0013861661455628733,
+      "target_zone_volume": 0.00046052622257259203,
+      "terrain_profile_rmse": 0.011058580805801464,
+      "volume_conservation_error": 4.336808689942018e-19,
+      "runtime_s": 0.0023445000001629523
     },
     {
       "scenario": "baseline_push_randomized_015",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0011223181374107759,
-      "target_zone_volume": 3.401162150674594e-28,
-      "terrain_profile_rmse": 0.014166298747254181,
-      "volume_conservation_error": 4.607859233063394e-19,
-      "runtime_s": 0.0020772499992744997
+      "moved_volume": 0.000854187020980835,
+      "target_zone_volume": 0.00029298785748826825,
+      "terrain_profile_rmse": 0.012585027045055866,
+      "volume_conservation_error": 2.981555974335137e-19,
+      "runtime_s": 0.0023499590001847537
     },
     {
       "scenario": "baseline_push_randomized_016",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0011850384627141314,
-      "target_zone_volume": 4.1195572667131184e-29,
-      "terrain_profile_rmse": 0.014192942920580313,
-      "volume_conservation_error": 4.87890977618477e-19,
-      "runtime_s": 0.0020647080018534325
+      "moved_volume": 0.0008763713683825119,
+      "target_zone_volume": 0.00031133545628015834,
+      "terrain_profile_rmse": 0.01248331833244856,
+      "volume_conservation_error": 2.371692252312041e-19,
+      "runtime_s": 0.002382624999881955
     },
     {
       "scenario": "baseline_push_randomized_017",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0016238881947599787,
-      "target_zone_volume": 9.599259096343886e-26,
-      "terrain_profile_rmse": 0.013489438941769107,
-      "volume_conservation_error": 4.743384504624082e-19,
-      "runtime_s": 0.0021078749996377155
+      "moved_volume": 0.001147165295368358,
+      "target_zone_volume": 0.00038251329051299616,
+      "terrain_profile_rmse": 0.011703477577009395,
+      "volume_conservation_error": 2.981555974335137e-19,
+      "runtime_s": 0.0023405000001730514
     },
     {
       "scenario": "baseline_push_randomized_018",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0019305228265350004,
-      "target_zone_volume": 8.654665234446834e-25,
-      "terrain_profile_rmse": 0.01324695840225089,
-      "volume_conservation_error": 3.2526065174565133e-19,
-      "runtime_s": 0.002088375000312226
+      "moved_volume": 0.0012809709296188465,
+      "target_zone_volume": 0.0004302818334127791,
+      "terrain_profile_rmse": 0.011303943893308079,
+      "volume_conservation_error": 5.421010862427522e-19,
+      "runtime_s": 0.0023324579999552952
     },
     {
       "scenario": "baseline_push_randomized_019",
       "base_scenario": "baseline_push",
-      "moved_volume": 0.0012706080837534372,
-      "target_zone_volume": 4.39093462999809e-27,
-      "terrain_profile_rmse": 0.013916377496284679,
-      "volume_conservation_error": 4.0657581468206416e-20,
-      "runtime_s": 0.002050458002486266
+      "moved_volume": 0.000949461603713268,
+      "target_zone_volume": 0.00031934005530255506,
+      "terrain_profile_rmse": 0.012290419727425781,
+      "volume_conservation_error": 2.846030702774449e-19,
+      "runtime_s": 0.002391999999872496
     },
     {
       "scenario": "cohesive_soil_randomized_000",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0011432422583332483,
-      "target_zone_volume": 1.316810163910198e-19,
-      "terrain_profile_rmse": 0.01650997276557426,
-      "volume_conservation_error": 8.131516293641283e-20,
-      "runtime_s": 0.0021257080006762408
+      "moved_volume": 0.0009004619456729901,
+      "target_zone_volume": 0.0003133487160316886,
+      "terrain_profile_rmse": 0.014911170733808257,
+      "volume_conservation_error": 1.7618285302889447e-19,
+      "runtime_s": 0.002315707999969163
     },
     {
       "scenario": "cohesive_soil_randomized_001",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0008612300862752098,
-      "target_zone_volume": 1.7172438765904388e-20,
-      "terrain_profile_rmse": 0.016867424516038485,
-      "volume_conservation_error": 3.5236570605778894e-19,
-      "runtime_s": 0.002072125000267988
+      "moved_volume": 0.0007173241245401041,
+      "target_zone_volume": 0.00024603034010110364,
+      "terrain_profile_rmse": 0.015534841287175138,
+      "volume_conservation_error": 1.8973538018496328e-19,
+      "runtime_s": 0.002318166000122801
     },
     {
       "scenario": "cohesive_soil_randomized_002",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0009092812527807361,
-      "target_zone_volume": 4.078889186483839e-21,
-      "terrain_profile_rmse": 0.016911569127197525,
-      "volume_conservation_error": 2.168404344971009e-19,
-      "runtime_s": 0.0020635000000766013
+      "moved_volume": 0.0007398270448597087,
+      "target_zone_volume": 0.0002657034669867838,
+      "terrain_profile_rmse": 0.015436944257099084,
+      "volume_conservation_error": 4.2012834183813297e-19,
+      "runtime_s": 0.0023730000000341533
     },
     {
       "scenario": "cohesive_soil_randomized_003",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0013949213061686143,
-      "target_zone_volume": 7.887900577792453e-19,
-      "terrain_profile_rmse": 0.01629707323226022,
-      "volume_conservation_error": 9.0801931945661e-19,
-      "runtime_s": 0.0020930829996359535
+      "moved_volume": 0.0010407291587496083,
+      "target_zone_volume": 0.00037399886692881975,
+      "terrain_profile_rmse": 0.014463754461037403,
+      "volume_conservation_error": 3.6591823321385775e-19,
+      "runtime_s": 0.002303624999967724
     },
     {
       "scenario": "cohesive_soil_randomized_004",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0010629419027367887,
-      "target_zone_volume": 4.0057737164546847e-20,
-      "terrain_profile_rmse": 0.01661239972869293,
-      "volume_conservation_error": 1.2197274440461925e-19,
-      "runtime_s": 0.0020961670015822165
+      "moved_volume": 0.0008501997599529971,
+      "target_zone_volume": 0.0002957102228248583,
+      "terrain_profile_rmse": 0.015079042824958184,
+      "volume_conservation_error": 1.0299920638612292e-18,
+      "runtime_s": 0.00229608399990866
     },
     {
       "scenario": "cohesive_soil_randomized_005",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0008531937766611499,
-      "target_zone_volume": 4.781826190528895e-21,
-      "terrain_profile_rmse": 0.01695203795962082,
-      "volume_conservation_error": 1.0977546996415732e-18,
-      "runtime_s": 0.002058166999631794
+      "moved_volume": 0.0007049427303687546,
+      "target_zone_volume": 0.0002490276754028341,
+      "terrain_profile_rmse": 0.015563533756595754,
+      "volume_conservation_error": 5.55653613398821e-19,
+      "runtime_s": 0.002367374999948879
     },
     {
       "scenario": "cohesive_soil_randomized_006",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0012876642937941754,
-      "target_zone_volume": 1.8989867330345104e-19,
-      "terrain_profile_rmse": 0.016374208654982937,
-      "volume_conservation_error": 3.2526065174565133e-19,
-      "runtime_s": 0.0020868329993390944
+      "moved_volume": 0.0009804008290511933,
+      "target_zone_volume": 0.0003443340200110854,
+      "terrain_profile_rmse": 0.01463699878571587,
+      "volume_conservation_error": 1.6263032587282567e-19,
+      "runtime_s": 0.0022972909998770774
     },
     {
       "scenario": "cohesive_soil_randomized_007",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0013516139417487994,
-      "target_zone_volume": 2.995498479693374e-19,
-      "terrain_profile_rmse": 0.016405743455716368,
-      "volume_conservation_error": 5.421010862427522e-19,
-      "runtime_s": 0.0020778750003955793
+      "moved_volume": 0.0010070225154908765,
+      "target_zone_volume": 0.0003670200351568498,
+      "terrain_profile_rmse": 0.014552529731371708,
+      "volume_conservation_error": 1.2197274440461925e-19,
+      "runtime_s": 0.0022818340000867465
     },
     {
       "scenario": "cohesive_soil_randomized_008",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0013607226263872211,
-      "target_zone_volume": 4.91856192707441e-19,
-      "terrain_profile_rmse": 0.01624994978033883,
-      "volume_conservation_error": 3.2526065174565133e-19,
-      "runtime_s": 0.002111374997184612
+      "moved_volume": 0.0010286026669588113,
+      "target_zone_volume": 0.0003580770076661138,
+      "terrain_profile_rmse": 0.014496302653259671,
+      "volume_conservation_error": 2.846030702774449e-19,
+      "runtime_s": 0.0023591670001223974
     },
     {
       "scenario": "cohesive_soil_randomized_009",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0012938374161228327,
-      "target_zone_volume": 1.373875906644252e-19,
-      "terrain_profile_rmse": 0.01638946962396422,
-      "volume_conservation_error": 2.710505431213761e-20,
-      "runtime_s": 0.002086500000586966
+      "moved_volume": 0.000980345066991511,
+      "target_zone_volume": 0.00034601661631299444,
+      "terrain_profile_rmse": 0.01463013145032579,
+      "volume_conservation_error": 1.0842021724855044e-19,
+      "runtime_s": 0.0022921670001778693
     },
     {
       "scenario": "cohesive_soil_randomized_010",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0009732472434273338,
-      "target_zone_volume": 6.672010764399158e-21,
-      "terrain_profile_rmse": 0.016847129371494466,
-      "volume_conservation_error": 3.1170812458958252e-19,
-      "runtime_s": 0.0020592920009221416
+      "moved_volume": 0.0007809806316286462,
+      "target_zone_volume": 0.00028395681822426235,
+      "terrain_profile_rmse": 0.01529785859831962,
+      "volume_conservation_error": 6.505213034913027e-19,
+      "runtime_s": 0.0022856250000131695
     },
     {
       "scenario": "cohesive_soil_randomized_011",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0010951264390418119,
-      "target_zone_volume": 3.9035771016095594e-20,
-      "terrain_profile_rmse": 0.016602337656099142,
-      "volume_conservation_error": 5.692061405548898e-19,
-      "runtime_s": 0.0020909169979859143
+      "moved_volume": 0.0008656495323065232,
+      "target_zone_volume": 0.00030300724334330633,
+      "terrain_profile_rmse": 0.015013732124947578,
+      "volume_conservation_error": 2.981555974335137e-19,
+      "runtime_s": 0.0023550420000901795
     },
     {
       "scenario": "cohesive_soil_randomized_012",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0014396423765541172,
-      "target_zone_volume": 1.544121771529679e-19,
-      "terrain_profile_rmse": 0.016234644445695227,
-      "volume_conservation_error": 1.0842021724855044e-19,
-      "runtime_s": 0.0021996249997755513
+      "moved_volume": 0.001058365071506729,
+      "target_zone_volume": 0.0003733937617570588,
+      "terrain_profile_rmse": 0.014375515889619243,
+      "volume_conservation_error": 3.7947076036992655e-19,
+      "runtime_s": 0.002389459000141869
     },
     {
       "scenario": "cohesive_soil_randomized_013",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0010141060579957506,
-      "target_zone_volume": 2.4806954287236823e-20,
-      "terrain_profile_rmse": 0.01665207550587857,
-      "volume_conservation_error": 1.4907779871675686e-19,
-      "runtime_s": 0.002111709000018891
+      "moved_volume": 0.0008206343715823404,
+      "target_zone_volume": 0.00028196715189079307,
+      "terrain_profile_rmse": 0.015179131812091852,
+      "volume_conservation_error": 9.486769009248164e-20,
+      "runtime_s": 0.0023879589998614392
     },
     {
       "scenario": "cohesive_soil_randomized_014",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0010578900730290437,
-      "target_zone_volume": 1.658294530201898e-20,
-      "terrain_profile_rmse": 0.01677720488900743,
-      "volume_conservation_error": 5.014435047745458e-19,
-      "runtime_s": 0.002081582999380771
+      "moved_volume": 0.0008295378295273812,
+      "target_zone_volume": 0.00030387899884741027,
+      "terrain_profile_rmse": 0.015118928310233617,
+      "volume_conservation_error": 1.3552527156068805e-19,
+      "runtime_s": 0.002407249999805572
     },
     {
       "scenario": "cohesive_soil_randomized_015",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0010934165288228731,
-      "target_zone_volume": 3.0201717906994765e-20,
-      "terrain_profile_rmse": 0.01666622769807245,
-      "volume_conservation_error": 5.827586677109586e-19,
-      "runtime_s": 0.0020909579980070703
+      "moved_volume": 0.0008581024676316488,
+      "target_zone_volume": 0.0003069239108018792,
+      "terrain_profile_rmse": 0.015030424267244106,
+      "volume_conservation_error": 9.0801931945661e-19,
+      "runtime_s": 0.002355541000042649
     },
     {
       "scenario": "cohesive_soil_randomized_016",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0009060626988621536,
-      "target_zone_volume": 3.2995712573513855e-21,
-      "terrain_profile_rmse": 0.0168716002951018,
-      "volume_conservation_error": 3.7947076036992655e-19,
-      "runtime_s": 0.0020522080012597144
+      "moved_volume": 0.0007405092668041045,
+      "target_zone_volume": 0.00025957605908164433,
+      "terrain_profile_rmse": 0.015433334817899528,
+      "volume_conservation_error": 5.55653613398821e-19,
+      "runtime_s": 0.0023417919999246806
     },
     {
       "scenario": "cohesive_soil_randomized_017",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0014161193957626034,
-      "target_zone_volume": 4.1064775222916954e-19,
-      "terrain_profile_rmse": 0.016325213291557308,
-      "volume_conservation_error": 4.472333961502706e-19,
-      "runtime_s": 0.002081165999697987
+      "moved_volume": 0.0010439332544429907,
+      "target_zone_volume": 0.00037928304126154643,
+      "terrain_profile_rmse": 0.014438989749425438,
+      "volume_conservation_error": 1.0842021724855044e-19,
+      "runtime_s": 0.002354333999846858
     },
     {
       "scenario": "cohesive_soil_randomized_018",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0010732725984360062,
-      "target_zone_volume": 1.4979230905138064e-20,
-      "terrain_profile_rmse": 0.016716398869035424,
-      "volume_conservation_error": 1.4907779871675686e-19,
-      "runtime_s": 0.002070834001642652
+      "moved_volume": 0.000842110244303388,
+      "target_zone_volume": 0.00030280761802406583,
+      "terrain_profile_rmse": 0.015075640215832714,
+      "volume_conservation_error": 3.7947076036992655e-19,
+      "runtime_s": 0.0023488750000524306
     },
     {
       "scenario": "cohesive_soil_randomized_019",
       "base_scenario": "cohesive_soil",
-      "moved_volume": 0.0015298890176486245,
-      "target_zone_volume": 3.2066655133873206e-19,
-      "terrain_profile_rmse": 0.016191814189961382,
-      "volume_conservation_error": 1.3552527156068805e-19,
-      "runtime_s": 0.002111791000061203
+      "moved_volume": 0.001102617348866264,
+      "target_zone_volume": 0.00039672653568584716,
+      "terrain_profile_rmse": 0.014247074355675479,
+      "volume_conservation_error": 2.303929616531697e-19,
+      "runtime_s": 0.0023414580000462593
     },
     {
       "scenario": "shallow_blade_slip_randomized_000",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0005395138486496863,
-      "target_zone_volume": 3.147830327255034e-26,
-      "terrain_profile_rmse": 0.012142710614415256,
-      "volume_conservation_error": 2.0328790734103208e-19,
-      "runtime_s": 0.002066874996671686
+      "moved_volume": 0.00047970694756179687,
+      "target_zone_volume": 0.0001493121760153975,
+      "terrain_profile_rmse": 0.01131864694704618,
+      "volume_conservation_error": 9.317362419797304e-20,
+      "runtime_s": 0.0023352499999873544
     },
     {
       "scenario": "shallow_blade_slip_randomized_001",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0009107308689507749,
-      "target_zone_volume": 5.874090754883853e-27,
-      "terrain_profile_rmse": 0.011603190175392278,
-      "volume_conservation_error": 2.337810934421869e-19,
-      "runtime_s": 0.0020688330005214084
+      "moved_volume": 0.0007420224576115585,
+      "target_zone_volume": 0.00024209768088462774,
+      "terrain_profile_rmse": 0.010352330887348885,
+      "volume_conservation_error": 2.913793338554793e-19,
+      "runtime_s": 0.0023124580000057904
     },
     {
       "scenario": "shallow_blade_slip_randomized_002",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.00054150986411902,
-      "target_zone_volume": 1.0898817878749677e-27,
-      "terrain_profile_rmse": 0.01219003554891112,
-      "volume_conservation_error": 1.1858461261560205e-19,
-      "runtime_s": 0.002083040999423247
+      "moved_volume": 0.0004766076165222238,
+      "target_zone_volume": 0.00015426392391358021,
+      "terrain_profile_rmse": 0.011305496416446173,
+      "volume_conservation_error": 2.947674656444965e-19,
+      "runtime_s": 0.0023075829999470443
     },
     {
       "scenario": "shallow_blade_slip_randomized_003",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0007991495897835397,
-      "target_zone_volume": 5.094821357565787e-25,
-      "terrain_profile_rmse": 0.011653740411325237,
-      "volume_conservation_error": 6.437450399132683e-20,
-      "runtime_s": 0.0020449999974516686
+      "moved_volume": 0.0006801838699704798,
+      "target_zone_volume": 0.00020736626190827673,
+      "terrain_profile_rmse": 0.010611391876878911,
+      "volume_conservation_error": 3.7608262858090935e-19,
+      "runtime_s": 0.002326250000123764
     },
     {
       "scenario": "shallow_blade_slip_randomized_004",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0006025296452324804,
-      "target_zone_volume": 7.494376974707162e-28,
-      "terrain_profile_rmse": 0.012089780262931138,
-      "volume_conservation_error": 3.6253010142484055e-19,
-      "runtime_s": 0.0020850000000791624
+      "moved_volume": 0.0005224425214816123,
+      "target_zone_volume": 0.00016999788122375656,
+      "terrain_profile_rmse": 0.011125869397891409,
+      "volume_conservation_error": 1.2874900798265365e-19,
+      "runtime_s": 0.0023147500000959553
     },
     {
       "scenario": "shallow_blade_slip_randomized_005",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.000825168818890223,
-      "target_zone_volume": 1.9964006520912728e-29,
-      "terrain_profile_rmse": 0.011831676034789133,
-      "volume_conservation_error": 7.047314121155779e-19,
-      "runtime_s": 0.002055999997537583
+      "moved_volume": 0.0006695735520518109,
+      "target_zone_volume": 0.00022899199143220562,
+      "terrain_profile_rmse": 0.010551362089579007,
+      "volume_conservation_error": 1.9312351197398048e-19,
+      "runtime_s": 0.00244470799998453
     },
     {
       "scenario": "shallow_blade_slip_randomized_006",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0005396201018221027,
-      "target_zone_volume": 9.684104547982342e-26,
-      "terrain_profile_rmse": 0.012123578238394056,
-      "volume_conservation_error": 6.776263578034403e-21,
-      "runtime_s": 0.0020760000006703194
+      "moved_volume": 0.00048146325117039395,
+      "target_zone_volume": 0.00014742788333085822,
+      "terrain_profile_rmse": 0.011320902083393699,
+      "volume_conservation_error": 3.7269449679189215e-20,
+      "runtime_s": 0.002398708000100669
     },
     {
       "scenario": "shallow_blade_slip_randomized_007",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0007709258737844156,
-      "target_zone_volume": 4.359059037787411e-25,
-      "terrain_profile_rmse": 0.011698192457203145,
-      "volume_conservation_error": 1.6263032587282567e-19,
-      "runtime_s": 0.0020688330005214084
+      "moved_volume": 0.0006596324652579665,
+      "target_zone_volume": 0.00020076431281396668,
+      "terrain_profile_rmse": 0.01068123231299822,
+      "volume_conservation_error": 1.3552527156068805e-20,
+      "runtime_s": 0.0024084169999696314
     },
     {
       "scenario": "shallow_blade_slip_randomized_008",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.000807458574528942,
-      "target_zone_volume": 2.4287413177595798e-29,
-      "terrain_profile_rmse": 0.011844413811104881,
-      "volume_conservation_error": 3.5575383784680614e-19,
-      "runtime_s": 0.0020562499994412065
+      "moved_volume": 0.0006590271252586318,
+      "target_zone_volume": 0.00022388280096006288,
+      "terrain_profile_rmse": 0.010591053055154842,
+      "volume_conservation_error": 8.131516293641283e-20,
+      "runtime_s": 0.0025129169998763246
     },
     {
       "scenario": "shallow_blade_slip_randomized_009",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0006904455385919585,
-      "target_zone_volume": 1.3024717762739122e-28,
-      "terrain_profile_rmse": 0.01199298784498368,
-      "volume_conservation_error": 2.1345230270808369e-19,
-      "runtime_s": 0.0020622079973691143
+      "moved_volume": 0.0005822654116302042,
+      "target_zone_volume": 0.00019547740815965443,
+      "terrain_profile_rmse": 0.010885684306974413,
+      "volume_conservation_error": 2.761327408049019e-19,
+      "runtime_s": 0.0024216669999077567
     },
     {
       "scenario": "shallow_blade_slip_randomized_010",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0006557893978052724,
-      "target_zone_volume": 9.668120947709152e-26,
-      "terrain_profile_rmse": 0.011928072406738068,
-      "volume_conservation_error": 1.7618285302889447e-19,
-      "runtime_s": 0.0020670419980888255
+      "moved_volume": 0.0005704237738812789,
+      "target_zone_volume": 0.00017761326844562673,
+      "terrain_profile_rmse": 0.010986442116047886,
+      "volume_conservation_error": 1.3383120566617945e-19,
+      "runtime_s": 0.002369083000075989
     },
     {
       "scenario": "shallow_blade_slip_randomized_011",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0006712945121723991,
-      "target_zone_volume": 3.405997831673843e-26,
-      "terrain_profile_rmse": 0.011904809337210033,
-      "volume_conservation_error": 1.7618285302889447e-19,
-      "runtime_s": 0.0020665419979195576
+      "moved_volume": 0.000580922551774832,
+      "target_zone_volume": 0.00018105038406614584,
+      "terrain_profile_rmse": 0.010938535629592383,
+      "volume_conservation_error": 4.3029273720518457e-19,
+      "runtime_s": 0.0023949160001848213
     },
     {
       "scenario": "shallow_blade_slip_randomized_012",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0007096366297644676,
-      "target_zone_volume": 2.2907576839521174e-25,
-      "terrain_profile_rmse": 0.01180470193451894,
-      "volume_conservation_error": 8.131516293641283e-20,
-      "runtime_s": 0.0020737499980896246
+      "moved_volume": 0.000613527420111015,
+      "target_zone_volume": 0.00018687246081624468,
+      "terrain_profile_rmse": 0.010838172990900946,
+      "volume_conservation_error": 5.082197683525802e-20,
+      "runtime_s": 0.0023954579999099224
     },
     {
       "scenario": "shallow_blade_slip_randomized_013",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0006443694546622719,
-      "target_zone_volume": 1.074276943505624e-26,
-      "terrain_profile_rmse": 0.011969744799627811,
-      "volume_conservation_error": 4.1335207826009857e-19,
-      "runtime_s": 0.002080749996821396
+      "moved_volume": 0.0005586573754108072,
+      "target_zone_volume": 0.00017617513516523454,
+      "terrain_profile_rmse": 0.011010786000784017,
+      "volume_conservation_error": 2.846030702774449e-19,
+      "runtime_s": 0.002399958999831142
     },
     {
       "scenario": "shallow_blade_slip_randomized_014",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0007084748715883804,
-      "target_zone_volume": 6.869505970556472e-29,
-      "terrain_profile_rmse": 0.011965973102825028,
-      "volume_conservation_error": 3.1170812458958252e-19,
-      "runtime_s": 0.002059583999653114
+      "moved_volume": 0.0005943567666097979,
+      "target_zone_volume": 0.00019924999997218544,
+      "terrain_profile_rmse": 0.010836072852809735,
+      "volume_conservation_error": 2.947674656444965e-19,
+      "runtime_s": 0.002416208000113329
     },
     {
       "scenario": "shallow_blade_slip_randomized_015",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0005563642453671888,
-      "target_zone_volume": 2.3368992941812427e-29,
-      "terrain_profile_rmse": 0.01222577674976672,
-      "volume_conservation_error": 3.9641141931501256e-19,
-      "runtime_s": 0.0020517500015557744
+      "moved_volume": 0.0004824097796911443,
+      "target_zone_volume": 0.0001626701421940045,
+      "terrain_profile_rmse": 0.011256384846812644,
+      "volume_conservation_error": 5.234663614031576e-19,
+      "runtime_s": 0.0023813330001303257
     },
     {
       "scenario": "shallow_blade_slip_randomized_016",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0005429263759532098,
-      "target_zone_volume": 2.3453376047828242e-27,
-      "terrain_profile_rmse": 0.01218110018379554,
-      "volume_conservation_error": 2.371692252312041e-20,
-      "runtime_s": 0.0020630420003726613
+      "moved_volume": 0.00047847662414479393,
+      "target_zone_volume": 0.0001543425834702673,
+      "terrain_profile_rmse": 0.011303517035991856,
+      "volume_conservation_error": 2.541098841762901e-19,
+      "runtime_s": 0.002387417000136338
     },
     {
       "scenario": "shallow_blade_slip_randomized_017",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0006005215449328909,
-      "target_zone_volume": 3.837749035648956e-27,
-      "terrain_profile_rmse": 0.012065964141675468,
-      "volume_conservation_error": 3.6930636500287495e-19,
-      "runtime_s": 0.002051041999948211
+      "moved_volume": 0.0005236483465367878,
+      "target_zone_volume": 0.00016733379723667154,
+      "terrain_profile_rmse": 0.01113396389628725,
+      "volume_conservation_error": 3.7269449679189215e-20,
+      "runtime_s": 0.0024677909998445102
     },
     {
       "scenario": "shallow_blade_slip_randomized_018",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0005488578929837231,
-      "target_zone_volume": 1.6607635819368348e-29,
-      "terrain_profile_rmse": 0.012235865754343857,
-      "volume_conservation_error": 2.168404344971009e-19,
-      "runtime_s": 0.002043000000412576
+      "moved_volume": 0.0004767342002835918,
+      "target_zone_volume": 0.0001601571554737047,
+      "terrain_profile_rmse": 0.011277012856766766,
+      "volume_conservation_error": 1.6940658945086007e-20,
+      "runtime_s": 0.002427458000056504
     },
     {
       "scenario": "shallow_blade_slip_randomized_019",
       "base_scenario": "shallow_blade_slip",
-      "moved_volume": 0.0005534712241182591,
-      "target_zone_volume": 9.68629107353298e-27,
-      "terrain_profile_rmse": 0.012131992090895997,
-      "volume_conservation_error": 2.202285662861181e-19,
-      "runtime_s": 0.002054165997833479
+      "moved_volume": 0.00048912918961841,
+      "target_zone_volume": 0.00015404076845077625,
+      "terrain_profile_rmse": 0.011273341533615656,
+      "volume_conservation_error": 1.2536087619363645e-19,
+      "runtime_s": 0.00240466600007494
     }
   ]
 }

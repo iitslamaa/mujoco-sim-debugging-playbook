@@ -6,6 +6,7 @@
     "episodes_per_second": 323.78897863061485,
     "best_scenario": "shallow_blade_slip",
     "hardest_scenario": "cohesive_soil",
+    "mean_deposit_forward_progress": 0.06618265506279881,
     "mean_calibration_error": 0.43782814420470373,
     "top_sensitivity": {
       "soil_parameter": "blade_coupling",
@@ -29,6 +30,11 @@
       "name": "Best terrain match",
       "value": "shallow_blade_slip",
       "detail": "RMSE 0.01193"
+    },
+    {
+      "name": "Mean deposit progress",
+      "value": "0.066 m",
+      "detail": "Centroid displacement from cut region to deposit region"
     },
     {
       "name": "Largest sim-to-field gap",

@@ -4,5 +4,5 @@ Grid-search calibration of soil/deformation parameters against observed field-lo
 
 | scenario | calibration_error | cohesion | coupling | compaction | moved_err | target_err | profile_err |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| baseline_push | 0.4419 | 0.156 | 1.000 | 0.075 | 0.003 | 1.000 | 0.453 |
-| cohesive_soil | 0.4338 | 0.546 | 0.900 | 0.100 | 0.001 | 1.000 | 0.416 |
+| baseline_push | 0.4325 | 0.084 | 1.000 | 0.045 | 0.327 | 0.503 | 0.547 |
+| cohesive_soil | 0.2624 | 0.294 | 0.900 | 0.075 | 0.117 | 0.313 | 0.499 |

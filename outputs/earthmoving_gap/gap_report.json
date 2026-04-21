@@ -1,39 +1,39 @@
 {
   "summary": {
     "scenario_count": 2,
-    "mean_calibration_error": 0.43782814420470373,
+    "mean_calibration_error": 0.3474438394141621,
     "top_global_sensitivity": {
       "soil_parameter": "blade_coupling",
       "metric": "moved_volume",
-      "pearson_correlation": 0.9453243182378931,
-      "abs_correlation": 0.9453243182378931
+      "pearson_correlation": 0.9666800282125874,
+      "abs_correlation": 0.9666800282125874
     }
   },
   "items": [
     {
       "scenario": "baseline_push",
-      "calibration_error": 0.4418845401816026,
-      "dominant_gap_metric": "target_zone_volume",
-      "dominant_gap_error": 1.0,
-      "recommended_action": "Improve delivered-material measurement around the target berm region.",
+      "calibration_error": 0.4324889085142152,
+      "dominant_gap_metric": "terrain_profile_rmse",
+      "dominant_gap_error": 0.5469390741494529,
+      "recommended_action": "Prioritize field measurement and calibration of `cohesion` because it strongly drives `terrain_profile_rmse`.",
       "calibrated_soil": {
-        "cohesion": 0.156,
+        "cohesion": 0.08399999999999999,
         "friction_angle_deg": 30.0,
-        "compaction_rate": 0.075,
+        "compaction_rate": 0.045,
         "blade_coupling": 1.0,
         "spillover_rate": 0.22
       }
     },
     {
       "scenario": "cohesive_soil",
-      "calibration_error": 0.4337717482278049,
-      "dominant_gap_metric": "target_zone_volume",
-      "dominant_gap_error": 0.9999999999999994,
-      "recommended_action": "Improve delivered-material measurement around the target berm region.",
+      "calibration_error": 0.262398770314109,
+      "dominant_gap_metric": "terrain_profile_rmse",
+      "dominant_gap_error": 0.4993667086314233,
+      "recommended_action": "Prioritize field measurement and calibration of `cohesion` because it strongly drives `terrain_profile_rmse`.",
       "calibrated_soil": {
-        "cohesion": 0.546,
+        "cohesion": 0.294,
         "friction_angle_deg": 36.0,
-        "compaction_rate": 0.1,
+        "compaction_rate": 0.07500000000000001,
         "blade_coupling": 0.8999999999999999,
         "spillover_rate": 0.14
       }
@@ -43,32 +43,32 @@
     {
       "soil_parameter": "blade_coupling",
       "metric": "moved_volume",
-      "pearson_correlation": 0.9453243182378931,
-      "abs_correlation": 0.9453243182378931
+      "pearson_correlation": 0.9666800282125874,
+      "abs_correlation": 0.9666800282125874
     },
     {
       "soil_parameter": "cohesion",
       "metric": "terrain_profile_rmse",
-      "pearson_correlation": 0.9286667779383926,
-      "abs_correlation": 0.9286667779383926
+      "pearson_correlation": 0.9407683798567009,
+      "abs_correlation": 0.9407683798567009
     },
     {
       "soil_parameter": "compaction_rate",
       "metric": "terrain_profile_rmse",
-      "pearson_correlation": 0.9002115558686367,
-      "abs_correlation": 0.9002115558686367
+      "pearson_correlation": 0.8594351712626551,
+      "abs_correlation": 0.8594351712626551
     },
     {
       "soil_parameter": "spillover_rate",
       "metric": "terrain_profile_rmse",
-      "pearson_correlation": -0.8477740583076168,
-      "abs_correlation": 0.8477740583076168
+      "pearson_correlation": -0.7477645546736815,
+      "abs_correlation": 0.7477645546736815
     },
     {
       "soil_parameter": "friction_angle_deg",
       "metric": "terrain_profile_rmse",
-      "pearson_correlation": 0.735273870643656,
-      "abs_correlation": 0.735273870643656
+      "pearson_correlation": 0.7109327538430351,
+      "abs_correlation": 0.7109327538430351
     }
   ]
 }

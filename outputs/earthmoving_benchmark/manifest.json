@@ -1,6 +1,6 @@
 {
   "run_type": "earthmoving_benchmark",
-  "created_at": "2026-04-21T19:07:10.927309+00:00",
+  "created_at": "2026-04-21T19:12:25.801093+00:00",
   "environment": {
     "platform": {
       "system": "Darwin",
@@ -14,23 +14,24 @@
       "mujoco_version": "3.6.0"
     },
     "tooling": {
-      "git_head": "b53bcf60fee83c54afa545e4ac6c5b8eef0ae9d6",
+      "git_head": "053037e83df812871d1302586b6e9d1d899b905d",
       "git_branch": "main",
       "git_is_dirty": true,
       "git_status": [
-        "M outputs/earthmoving_benchmark/earthmoving_summary.json",
+        "M outputs/earthmoving_benchmark/baseline_push_terrain.png",
+        " M outputs/earthmoving_benchmark/cohesive_soil_terrain.png",
+        " M outputs/earthmoving_benchmark/deposit_forward_progress.png",
+        " M outputs/earthmoving_benchmark/earthmoving_summary.json",
+        " M outputs/earthmoving_benchmark/moved_volume.png",
         " M outputs/earthmoving_benchmark/report.md",
         " M outputs/earthmoving_benchmark/runtime_s.png",
-        " M outputs/earthmoving_failure_modes/failure_modes.json",
-        " M outputs/earthmoving_failure_modes/manifest.json",
-        " M outputs/earthmoving_failure_modes/report.md",
-        " M src/mujoco_sim_debugging_playbook/earthmoving.py",
-        " M src/mujoco_sim_debugging_playbook/earthmoving_benchmark.py",
-        " M src/mujoco_sim_debugging_playbook/earthmoving_failure_modes.py",
-        " M src/mujoco_sim_debugging_playbook/earthmoving_review_packet.py",
-        " M tests/test_earthmoving.py",
-        " M tests/test_earthmoving_benchmark.py",
-        "?? outputs/earthmoving_benchmark/deposit_forward_progress.png"
+        " M outputs/earthmoving_benchmark/shallow_blade_slip_terrain.png",
+        " M outputs/earthmoving_benchmark/terrain_profile_rmse.png",
+        " M outputs/earthmoving_benchmark/volume_conservation_error.png",
+        " M outputs/earthmoving_calibration/calibration_summary.json",
+        " M outputs/earthmoving_calibration/manifest.json",
+        " M outputs/earthmoving_calibration/report.md",
+        " M src/mujoco_sim_debugging_playbook/terrain.py"
       ],
       "docker_version": null,
       "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
@@ -55,7 +56,7 @@
         "matplotlib==3.10.8",
         "mpmath==1.3.0",
         "mujoco==3.6.0",
-        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@b53bcf60fee83c54afa545e4ac6c5b8eef0ae9d6#egg=mujoco_sim_debugging_playbook",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@053037e83df812871d1302586b6e9d1d899b905d#egg=mujoco_sim_debugging_playbook",
         "networkx==3.4.2",
         "numpy==2.2.6",
         "packaging==26.0",
@@ -228,62 +229,62 @@
     {
       "path": "outputs/earthmoving_benchmark/earthmoving_summary.json",
       "exists": true,
-      "sha256": "2b0b36fff6ceed8a3c108d50f7622573a3617558441a39bff5960eb5c8f03032",
-      "size_bytes": 697042
+      "sha256": "fc0c2c019e7ce978ae4c2903d9f788c517e25c30b1635626149d13415519b5d6",
+      "size_bytes": 721428
     },
     {
       "path": "outputs/earthmoving_benchmark/report.md",
       "exists": true,
-      "sha256": "ea828cd52f2887f1fc7e6aa95283c43d74286660bba68fbb9cc41da2a653c2fb",
+      "sha256": "e5caea80d5641aced36f8e02ca98d209a32343546993cdffc7404857c2a01294",
       "size_bytes": 652
     },
     {
       "path": "outputs/earthmoving_benchmark/shallow_blade_slip_terrain.png",
       "exists": true,
-      "sha256": "63cdadba1b3e24ec039452bd32aa941ce03266655b5f8da07fa41fdf1152c277",
-      "size_bytes": 42845
+      "sha256": "d2b67bdd7116800b88d3e33df64af368125caa47469d4db22297cccbd0d893f7",
+      "size_bytes": 43096
     },
     {
       "path": "outputs/earthmoving_benchmark/deposit_forward_progress.png",
       "exists": true,
-      "sha256": "f286f82ac232003d18b6a3b8af1de93ff2424da16bbdc78e6cbb60188393d33d",
-      "size_bytes": 57320
+      "sha256": "36bb6a5cc30041f38ee37c98b90291c06e8c3e2718bd6f1241baf77d6f67229e",
+      "size_bytes": 52139
     },
     {
       "path": "outputs/earthmoving_benchmark/runtime_s.png",
       "exists": true,
-      "sha256": "e1dca23ad8945e1ee10b996d86dec36c66b154331ceb538ffb4b7aee1da3c026",
-      "size_bytes": 48710
+      "sha256": "52b42db5f9f5543e9b091d3863d7dbcc0cc529ee3d877f700373cee5f28020a4",
+      "size_bytes": 48687
     },
     {
       "path": "outputs/earthmoving_benchmark/volume_conservation_error.png",
       "exists": true,
-      "sha256": "81c76f7167d2789590ced81df7d39613e49ba56c51fb9d4e3d0272116175b5a8",
-      "size_bytes": 49171
+      "sha256": "9cf60c4ca20a07bfa009515d1802970bcf4874c4dd6018013c21244cfa323992",
+      "size_bytes": 47865
     },
     {
       "path": "outputs/earthmoving_benchmark/baseline_push_terrain.png",
       "exists": true,
-      "sha256": "a3583b4d35520ac9146e918402cc9c872c79ae29d2199e1e929fc90694614563",
-      "size_bytes": 43498
+      "sha256": "763b28fe851d4b886a5e55cbd731ec78b7c8670ba9623453b463b58409707740",
+      "size_bytes": 43958
     },
     {
       "path": "outputs/earthmoving_benchmark/terrain_profile_rmse.png",
       "exists": true,
-      "sha256": "591360c39ac42c61beb9cd950ad884e7409490dcdae42f6df6abbbda408f244d",
-      "size_bytes": 55392
+      "sha256": "a55186de2afe92ee73d7f3694c1ea6efa69476bafdf5bf718085a9c7f3877d33",
+      "size_bytes": 53624
     },
     {
       "path": "outputs/earthmoving_benchmark/moved_volume.png",
       "exists": true,
-      "sha256": "cbaaf5491e06c7942dd3aba4182873236cfee3fc72664eba1e1c3921989bf7f7",
-      "size_bytes": 57666
+      "sha256": "70accb7bfec749d2c8b04af131b05a6a3f7b0e5e74b5310c1d109f0586ef0344",
+      "size_bytes": 52012
     },
     {
       "path": "outputs/earthmoving_benchmark/cohesive_soil_terrain.png",
       "exists": true,
-      "sha256": "a0abed6c248ebe7a6df73ca673924f6abbc8d262f69e9a58d745865990ed220e",
-      "size_bytes": 45067
+      "sha256": "1d361c4657ac901d947a10cbbd786dad2084974e6aac03038e6c18c2e369be4f",
+      "size_bytes": 45346
     }
   ],
   "metadata": {

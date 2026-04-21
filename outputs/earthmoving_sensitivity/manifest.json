@@ -1,6 +1,6 @@
 {
   "run_type": "earthmoving_sensitivity",
-  "created_at": "2026-04-21T17:57:54.430544+00:00",
+  "created_at": "2026-04-21T19:12:53.854265+00:00",
   "environment": {
     "platform": {
       "system": "Darwin",
@@ -14,15 +14,29 @@
       "mujoco_version": "3.6.0"
     },
     "tooling": {
-      "git_head": "fde83e032a50c4b5adb54e5d696905455fccdfec",
+      "git_head": "053037e83df812871d1302586b6e9d1d899b905d",
       "git_branch": "main",
       "git_is_dirty": true,
       "git_status": [
-        "M Makefile",
-        "?? outputs/earthmoving_sensitivity/",
-        "?? scripts/run_earthmoving_sensitivity.py",
-        "?? src/mujoco_sim_debugging_playbook/earthmoving_sensitivity.py",
-        "?? tests/test_earthmoving_sensitivity.py"
+        "M outputs/earthmoving_benchmark/baseline_push_terrain.png",
+        " M outputs/earthmoving_benchmark/cohesive_soil_terrain.png",
+        " M outputs/earthmoving_benchmark/deposit_forward_progress.png",
+        " M outputs/earthmoving_benchmark/earthmoving_summary.json",
+        " M outputs/earthmoving_benchmark/manifest.json",
+        " M outputs/earthmoving_benchmark/moved_volume.png",
+        " M outputs/earthmoving_benchmark/report.md",
+        " M outputs/earthmoving_benchmark/runtime_s.png",
+        " M outputs/earthmoving_benchmark/shallow_blade_slip_terrain.png",
+        " M outputs/earthmoving_benchmark/terrain_profile_rmse.png",
+        " M outputs/earthmoving_benchmark/volume_conservation_error.png",
+        " M outputs/earthmoving_calibration/calibration_summary.json",
+        " M outputs/earthmoving_calibration/manifest.json",
+        " M outputs/earthmoving_calibration/report.md",
+        " M outputs/earthmoving_scale/report.md",
+        " M outputs/earthmoving_scale/scale_summary.json",
+        " M outputs/earthmoving_sensitivity/report.md",
+        " M outputs/earthmoving_sensitivity/sensitivity_summary.json",
+        " M src/mujoco_sim_debugging_playbook/terrain.py"
       ],
       "docker_version": null,
       "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
@@ -47,7 +61,7 @@
         "matplotlib==3.10.8",
         "mpmath==1.3.0",
         "mujoco==3.6.0",
-        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@fde83e032a50c4b5adb54e5d696905455fccdfec#egg=mujoco_sim_debugging_playbook",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@053037e83df812871d1302586b6e9d1d899b905d#egg=mujoco_sim_debugging_playbook",
         "networkx==3.4.2",
         "numpy==2.2.6",
         "packaging==26.0",
@@ -85,25 +99,25 @@
     {
       "path": "outputs/earthmoving_sensitivity/sensitivity_summary.json",
       "exists": true,
-      "sha256": "a1c62ef8f0e85e7abf63e78507d4337a268f1c66edeb2538096e24046fc82ca6",
-      "size_bytes": 41543
+      "sha256": "b15120a61707ba8ea3a522bbcf6167b6cd149e8aba12b14983f3f37c7268aa0b",
+      "size_bytes": 41544
     },
     {
       "path": "outputs/earthmoving_sensitivity/report.md",
       "exists": true,
-      "sha256": "08d21ff1c96e4145f62235b90479fd7df6ae7ddd5ad6e4872e7f47d4d16c9e05",
-      "size_bytes": 638
+      "sha256": "e41b42dfd37adf7dabff3b310d748a8d295f1506debef24fcd68e6db30f2af3a",
+      "size_bytes": 622
     }
   ],
   "metadata": {
     "episode_count": 72,
-    "mean_moved_volume": 0.001122624240636504,
-    "mean_terrain_profile_rmse": 0.01411127573893913,
+    "mean_moved_volume": 0.0008384635693508694,
+    "mean_terrain_profile_rmse": 0.012629307521614832,
     "top_sensitivity": {
       "soil_parameter": "blade_coupling",
       "metric": "moved_volume",
-      "pearson_correlation": 0.9453243182378931,
-      "abs_correlation": 0.9453243182378931
+      "pearson_correlation": 0.9666800282125874,
+      "abs_correlation": 0.9666800282125874
     }
   }
 }
