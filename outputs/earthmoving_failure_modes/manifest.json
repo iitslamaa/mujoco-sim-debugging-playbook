@@ -1,0 +1,114 @@
+{
+  "run_type": "earthmoving_failure_modes",
+  "created_at": "2026-04-21T18:07:26.789584+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "9e4d729fba89f30b01378945e474acee21b2e35e",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M Makefile",
+        "?? outputs/earthmoving_failure_modes/",
+        "?? scripts/generate_earthmoving_failure_modes.py",
+        "?? src/mujoco_sim_debugging_playbook/earthmoving_failure_modes.py",
+        "?? tests/test_earthmoving_failure_modes.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@9e4d729fba89f30b01378945e474acee21b2e35e#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {
+    "benchmark_summary": "/Users/lamayassine/mujoco/outputs/earthmoving_benchmark/earthmoving_summary.json",
+    "scale_summary": "/Users/lamayassine/mujoco/outputs/earthmoving_scale/scale_summary.json",
+    "replay_dir": "/Users/lamayassine/mujoco/outputs/earthmoving_replay"
+  },
+  "inputs": [
+    {
+      "path": "outputs/earthmoving_benchmark/earthmoving_summary.json",
+      "exists": true,
+      "sha256": "44e3fa8675e5118d3f33e63bca02bb5e7b5408b685e4a19e75e819a48ed62885",
+      "size_bytes": 695193
+    },
+    {
+      "path": "outputs/earthmoving_scale/scale_summary.json",
+      "exists": true,
+      "sha256": "4dcba9bd8af63ec42f413ec54a6530c4bbc25ef0772bfc068984a4649cf7ca03",
+      "size_bytes": 21563
+    },
+    {
+      "path": "outputs/earthmoving_replay/cohesive_soil_replay.json",
+      "exists": true,
+      "sha256": "21b267460b35ccd3c442e7a8f58a46375ed40c516af0a7dd33cac50532d98f06",
+      "size_bytes": 7295
+    }
+  ],
+  "outputs": [
+    {
+      "path": "outputs/earthmoving_failure_modes/failure_modes.json",
+      "exists": true,
+      "sha256": "4a807a7658480bb2856dd311037eabe7ab0bd0b5bbe45dd65bd075a745af1827",
+      "size_bytes": 819
+    },
+    {
+      "path": "outputs/earthmoving_failure_modes/report.md",
+      "exists": true,
+      "sha256": "018a134fc10e8cc5f26ba767430b98a0aea786f776dfaa2e16af0d9758ac3abb",
+      "size_bytes": 430
+    }
+  ],
+  "metadata": {
+    "item_count": 2,
+    "high_count": 1,
+    "top_mode": "under_excavation"
+  }
+}

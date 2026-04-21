@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "item_count": 2,
+    "high_count": 1,
+    "top_mode": "under_excavation"
+  },
+  "items": [
+    {
+      "source": "benchmark",
+      "scenario": "shallow_blade_slip",
+      "mode": "under_excavation",
+      "severity": "high",
+      "score": 80.0,
+      "evidence": "Moved volume is below the practical debugging threshold.",
+      "next_action": "Increase blade depth/coupling or calibrate soil resistance."
+    },
+    {
+      "source": "replay",
+      "scenario": "cohesive_soil",
+      "mode": "debug_hypothesis",
+      "severity": "medium",
+      "score": 45.0,
+      "evidence": "Cohesive soil scenario: expect reduced cutting efficiency and stronger calibration dependence.",
+      "next_action": "Open the replay bundle and compare blade path, terrain stats, and soil parameters."
+    }
+  ]
+}
