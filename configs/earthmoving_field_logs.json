@@ -1,0 +1,17 @@
+{
+  "name": "earthmoving_field_logs",
+  "logs": [
+    {
+      "scenario": "baseline_push",
+      "observed_moved_volume": 0.00215,
+      "observed_target_zone_volume": 0.00102,
+      "observed_terrain_profile_rmse": 0.024
+    },
+    {
+      "scenario": "cohesive_soil",
+      "observed_moved_volume": 0.00135,
+      "observed_target_zone_volume": 0.00062,
+      "observed_terrain_profile_rmse": 0.028
+    }
+  ]
+}

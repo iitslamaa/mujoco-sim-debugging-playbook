@@ -1,0 +1,83 @@
+{
+  "name": "earthmoving_calibration",
+  "rows": [
+    {
+      "scenario": "baseline_push",
+      "soil": {
+        "cohesion": 0.156,
+        "friction_angle_deg": 30.0,
+        "compaction_rate": 0.075,
+        "blade_coupling": 1.0,
+        "spillover_rate": 0.22
+      },
+      "simulated": {
+        "moved_volume": 0.0021440614089277537,
+        "compacted_volume": 0.00016080460566958156,
+        "volume_error": 5.963111948670274e-19,
+        "volume_conservation_error": 5.963111948670274e-19,
+        "terrain_profile_rmse": 0.013123010488859456,
+        "target_zone_volume": 9.189347708018032e-25,
+        "material_moved_per_second": 0.9703466248211114,
+        "pass_count": 1,
+        "runtime_s": 0.002209583002695581
+      },
+      "observed": {
+        "moved_volume": 0.00215,
+        "target_zone_volume": 0.00102,
+        "terrain_profile_rmse": 0.024
+      },
+      "component_errors": {
+        "moved_volume": 0.0027621353824401423,
+        "target_zone_volume": 1.0,
+        "terrain_profile_rmse": 0.45320789629752267
+      },
+      "calibration_error": 0.4418845401816026
+    },
+    {
+      "scenario": "cohesive_soil",
+      "soil": {
+        "cohesion": 0.546,
+        "friction_angle_deg": 36.0,
+        "compaction_rate": 0.1,
+        "blade_coupling": 0.8999999999999999,
+        "spillover_rate": 0.14
+      },
+      "simulated": {
+        "moved_volume": 0.0013516036189274217,
+        "compacted_volume": 0.00013516036189274215,
+        "volume_error": -6.776263578034403e-19,
+        "volume_conservation_error": 6.776263578034403e-19,
+        "terrain_profile_rmse": 0.016346790798053634,
+        "target_zone_volume": 2.8488578912815003e-19,
+        "material_moved_per_second": 0.6025987199990163,
+        "pass_count": 1,
+        "runtime_s": 0.002242957998532802
+      },
+      "observed": {
+        "moved_volume": 0.00135,
+        "target_zone_volume": 0.00062,
+        "terrain_profile_rmse": 0.028
+      },
+      "component_errors": {
+        "moved_volume": 0.0011878658721641935,
+        "target_zone_volume": 0.9999999999999994,
+        "terrain_profile_rmse": 0.41618604292665595
+      },
+      "calibration_error": 0.4337717482278049
+    }
+  ],
+  "field_logs": [
+    {
+      "scenario": "baseline_push",
+      "observed_moved_volume": 0.00215,
+      "observed_target_zone_volume": 0.00102,
+      "observed_terrain_profile_rmse": 0.024
+    },
+    {
+      "scenario": "cohesive_soil",
+      "observed_moved_volume": 0.00135,
+      "observed_target_zone_volume": 0.00062,
+      "observed_terrain_profile_rmse": 0.028
+    }
+  ]
+}
