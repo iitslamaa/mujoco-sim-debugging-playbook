@@ -157,7 +157,7 @@ def _talk_track(
         f"The surrogate evaluator predicts `{surrogate['label_names'][0]}` and related metrics from soil/blade features, with mean MAE `{surrogate['summary']['mean_mae']:.6f}`.",
         f"The planner selected `{best_plan['candidate']}` as the best blade candidate under the current score function.",
         f"The C++ terrain kernel matches the Python terrain output and runs `{kernel_benchmark['summary']['cxx_speedup']:.2f}x` faster in the current benchmark.",
-        "The optional Rust terrain kernel scaffold shows how this workload could move toward memory-safe systems code for simulation infrastructure and replay tooling.",
+        "The optional Rust FFI terrain kernel shows how this workload could move toward memory-safe native kernels called from Python simulation tooling.",
         f"The failure queue surfaces `{failure_modes['summary']['top_mode']}` as the top debug theme, with next actions attached.",
     ]
 

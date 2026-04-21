@@ -46,7 +46,7 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - The surrogate evaluator predicts `moved_volume` and related metrics from soil/blade features, with mean MAE `0.000040`.
 - The planner selected `baseline_push_d0.008_w0.24_y+0.00` as the best blade candidate under the current score function.
 - The C++ terrain kernel matches the Python terrain output and runs `7.65x` faster in the current benchmark.
-- The optional Rust terrain kernel scaffold shows how this workload could move toward memory-safe systems code for simulation infrastructure and replay tooling.
+- The optional Rust FFI terrain kernel shows how this workload could move toward memory-safe native kernels called from Python simulation tooling.
 - The failure queue surfaces `under_excavation` as the top debug theme, with next actions attached.
 
 ## Limitations I Would State Clearly

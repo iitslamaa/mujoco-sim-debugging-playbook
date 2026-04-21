@@ -12,7 +12,7 @@ If you are reviewing this for autonomous construction or robotics simulation wor
 - [Earthmoving benchmark guide](docs/earthmoving-benchmark-guide.md): command map and artifact map for the construction simulation track
 - [C++ terrain kernel](cpp/terrain_kernel.cpp): standalone terrain-update kernel with smoke build via `make terrain-kernel-smoke`
 - [C++ terrain benchmark](outputs/terrain_kernel_benchmark/report.md): Python vs C++ terrain-update benchmark via `make terrain-kernel-benchmark`
-- [Rust simulation kernel note](docs/rust-simulation-kernel-note.md): why Rust can matter for simulation infrastructure and an optional Rust terrain-kernel scaffold
+- [Rust simulation kernel note](docs/rust-simulation-kernel-note.md): why Rust can matter for simulation infrastructure, with an optional Rust FFI terrain-kernel scaffold
 
 The earthmoving track demonstrates a MuJoCo dozer/blade scene, heightmap terrain deformation, soil parameter calibration, randomized scale evaluation, quality gates, deterministic replay bundles, ML-ready datasets, a surrogate evaluator, simulator-in-the-loop blade plan search, C++ and optional Rust terrain-kernel scaffolds, and generated review artifacts.
 

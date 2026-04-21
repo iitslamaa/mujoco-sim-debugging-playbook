@@ -16,9 +16,17 @@ make rust-terrain-kernel-smoke
 
 That builds the standalone Rust terrain kernel with `rustc -C opt-level=3` and runs a small repeat-count smoke test.
 
+There is also a Python-facing FFI path:
+
+```bash
+make rust-terrain-kernel-benchmark
+```
+
+That compiles `rust/terrain_kernel_ffi.rs` as a `cdylib`, loads it with Python `ctypes`, and compares the Rust terrain update against the Python terrain update on the same workload. This is the most directly useful Rust pattern for this project: keep Python for experiment orchestration while moving hot, deterministic kernels into memory-safe native code.
+
 The next serious Rust step would be one of:
 
 - add a Cargo crate with unit tests and criterion benchmarks
-- bind the Rust terrain kernel into Python via PyO3 or a C ABI
-- compare Python, C++, and Rust kernels on the same terrain-update workload
+- replace the `ctypes` bridge with a PyO3 package if the Rust path becomes part of the standard developer workflow
+- compare Python, C++, and Rust kernels on the same terrain-update workload in CI where Rust is installed
 - move replay/log ingestion into Rust for safe, parallel batch processing
