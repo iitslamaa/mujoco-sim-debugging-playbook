@@ -7,7 +7,7 @@ from typing import Any
 from mujoco_sim_debugging_playbook.provenance import write_manifest
 
 
-def build_bedrock_packet(
+def build_simulation_packet(
     *,
     repo_root: str | Path,
     output_dir: str | Path,
@@ -66,17 +66,17 @@ def build_bedrock_packet(
 
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
-    packet_json = output / "bedrock_packet.json"
-    packet_md = output / "bedrock_packet.md"
+    packet_json = output / "simulation_packet.json"
+    packet_md = output / "simulation_packet.md"
     packet_json.write_text(json.dumps(payload, indent=2))
-    markdown = render_bedrock_packet(payload)
+    markdown = render_simulation_packet(payload)
     packet_md.write_text(markdown)
-    root_packet = Path(root_packet_path) if root_packet_path else root / "BEDROCK_SIMULATION_PACKET.md"
+    root_packet = Path(root_packet_path) if root_packet_path else root / "EARTHMOVING_SIMULATION_PACKET.md"
     root_packet.write_text(markdown)
     write_manifest(
         repo_root=root,
         output_dir=output,
-        run_type="bedrock_packet",
+        run_type="simulation_packet",
         config={"root_packet_path": str(root_packet)},
         inputs=[
             root / "outputs" / "earthmoving_role_brief" / "role_brief.json",
@@ -92,10 +92,10 @@ def build_bedrock_packet(
     return payload
 
 
-def render_bedrock_packet(payload: dict[str, Any]) -> str:
+def render_simulation_packet(payload: dict[str, Any]) -> str:
     metrics = payload["metrics"]
     lines = [
-        "# Bedrock Simulation Packet",
+        "# Earthmoving Simulation Packet",
         "",
         payload["headline"],
         "",

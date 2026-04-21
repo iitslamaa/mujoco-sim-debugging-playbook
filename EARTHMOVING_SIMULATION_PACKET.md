@@ -1,4 +1,4 @@
-# Bedrock Simulation Packet
+# Earthmoving Simulation Packet
 
 Construction-machine simulation track with deformable terrain, calibration, scale, and debug artifacts.
 

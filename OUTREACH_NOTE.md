@@ -1,4 +1,4 @@
-# Bedrock Outreach Note
+# Outreach Note
 
 ## Repo Strategy
 
@@ -6,7 +6,7 @@ Keep this repository as the full engineering record. It shows iteration, tests, 
 
 For outreach, do not send someone into the whole repo cold. Link the focused packet first:
 
-- `BEDROCK_SIMULATION_PACKET.md`
+- `EARTHMOVING_SIMULATION_PACKET.md`
 - `outputs/earthmoving_dashboard/index.html`
 - `outputs/earthmoving_role_brief/role_brief.md`
 
@@ -15,16 +15,16 @@ If a reviewer wants depth, the rest of the repo is there as evidence.
 ## Short Recruiter Message
 
 ```text
-Hi Dave,
+Hi [Name],
 
 I know you suggested reconnecting later, but I wanted to send one focused update because I took your feedback seriously.
 
 Since we last spoke, I built a MuJoCo-based autonomous construction simulation track around the areas your Simulation role emphasizes: terrain deformation, earthmoving scenarios, soil parameter calibration, randomized scale evaluation, sim-to-field gap reporting, failure replay bundles, ML-ready datasets, a surrogate evaluator, simple blade-plan search, and a small C++ terrain kernel with a Python-vs-C++ benchmark.
 
-It is not a production soil solver, and I call that out clearly in the project. The goal was to demonstrate the kind of simulation/evaluation infrastructure I understand Bedrock needs: realistic-enough physics, deterministic replay, performance metrics, calibration workflow, and tooling that supports ML autonomy validation.
+It is not a production soil solver, and I call that out clearly in the project. The goal was to demonstrate the kind of simulation/evaluation infrastructure I understand autonomy teams need: realistic-enough physics, deterministic replay, performance metrics, calibration workflow, and tooling that supports ML autonomy validation.
 
 The best entry point is here:
-[repo link]/BEDROCK_SIMULATION_PACKET.md
+[repo link]/EARTHMOVING_SIMULATION_PACKET.md
 
 I would be grateful for a chance to be reconsidered or pointed toward the strongest next step.
 
@@ -42,4 +42,4 @@ Lama
 
 ## Timing
 
-Dave said on March 4 to snooze the message for six months. If reaching out before September 4, frame it as a brief progress update rather than a formal re-application push.
+If reaching out before a suggested follow-up window has passed, frame it as a brief progress update rather than a formal re-application push.
