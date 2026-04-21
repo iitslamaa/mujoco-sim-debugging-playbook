@@ -6,6 +6,10 @@ Episodes: `36`
 Pass rate: `50%`
 Top productivity driver: `soil.blade_coupling` with correlation `0.870`.
 
+## Productivity Drivers
+
+![Productivity driver correlations](productivity_driver_correlations.png)
+
 ## Ranked Inputs
 
 | input | productivity_correlation | pass_margin_correlation |

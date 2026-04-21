@@ -61,5 +61,8 @@
     "Prioritize measurement and control of `soil.blade_coupling`; productivity tends to increase as it rises.",
     "Rerun the robustness sweep after tuning the top driver to verify pass-rate improvement.",
     "Use the ranked inputs to decide which telemetry fields are worth collecting first on a real machine."
-  ]
+  ],
+  "plots": {
+    "productivity_driver_correlations": "/Users/lamayassine/mujoco/outputs/robustness_sensitivity/productivity_driver_correlations.png"
+  }
 }

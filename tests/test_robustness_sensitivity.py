@@ -20,3 +20,4 @@ def test_robustness_sensitivity_ranks_productivity_drivers(tmp_path: Path) -> No
     assert payload["sensitivities"]
     assert payload["recommendations"]
     assert (tmp_path / "sensitivity" / "robustness_sensitivity.md").exists()
+    assert (tmp_path / "sensitivity" / "productivity_driver_correlations.png").exists()

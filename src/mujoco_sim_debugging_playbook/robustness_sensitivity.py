@@ -4,6 +4,9 @@ import json
 from pathlib import Path
 from typing import Any
 
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 import numpy as np
 
 from mujoco_sim_debugging_playbook.provenance import write_manifest
@@ -33,6 +36,9 @@ def build_robustness_sensitivity(
     output.mkdir(parents=True, exist_ok=True)
     json_path = output / "robustness_sensitivity.json"
     md_path = output / "robustness_sensitivity.md"
+    plot_path = output / "productivity_driver_correlations.png"
+    _plot_sensitivities(sensitivities, plot_path)
+    payload["plots"] = {"productivity_driver_correlations": str(plot_path)}
     json_path.write_text(json.dumps(payload, indent=2))
     md_path.write_text(render_robustness_sensitivity(payload))
     write_manifest(
@@ -41,7 +47,7 @@ def build_robustness_sensitivity(
         run_type="robustness_sensitivity",
         config={},
         inputs=[robustness_path],
-        outputs=[json_path, md_path],
+        outputs=[json_path, md_path, plot_path],
         metadata=payload["summary"],
     )
     return payload
@@ -63,6 +69,10 @@ def render_robustness_sensitivity(payload: dict[str, Any]) -> str:
         )
     lines.extend(
         [
+            "",
+            "## Productivity Drivers",
+            "",
+            f"![Productivity driver correlations]({Path(payload['plots']['productivity_driver_correlations']).name})",
             "",
             "## Ranked Inputs",
             "",
@@ -118,6 +128,26 @@ def _recommendations(sensitivities: list[dict[str, Any]]) -> list[str]:
         "Rerun the robustness sweep after tuning the top driver to verify pass-rate improvement.",
         "Use the ranked inputs to decide which telemetry fields are worth collecting first on a real machine.",
     ]
+
+
+def _plot_sensitivities(sensitivities: list[dict[str, Any]], path: Path) -> None:
+    rows = sensitivities[:8]
+    labels = [row["input"].replace("machine.", "mach.").replace("soil.", "soil.") for row in rows]
+    values = [row["productivity_correlation"] for row in rows]
+    colors = ["#1f7a5f" if value >= 0 else "#b45309" for value in values]
+    fig, axis = plt.subplots(figsize=(9, 4.8))
+    y_positions = np.arange(len(rows))
+    axis.barh(y_positions, values, color=colors)
+    axis.axvline(0.0, color="#111827", linewidth=1.1)
+    axis.set_yticks(y_positions)
+    axis.set_yticklabels(labels)
+    axis.invert_yaxis()
+    axis.set_xlabel("correlation with productivity")
+    axis.set_title("Robustness productivity sensitivity")
+    axis.grid(True, axis="x", alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
 
 
 def _corr(left: np.ndarray, right: np.ndarray) -> float:
