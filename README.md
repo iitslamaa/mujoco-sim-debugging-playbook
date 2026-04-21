@@ -2,6 +2,17 @@
 
 > A support-first MuJoCo project for reproducing simulation failures, running parameter sweeps, training a PyTorch policy, and packaging diagnostics, docs, and artifacts around robot control behavior.
 
+## Simulation Role Entry Point
+
+If you are reviewing this for autonomous construction or robotics simulation work, start here:
+
+- [Bedrock simulation packet](BEDROCK_SIMULATION_PACKET.md): concise role-focused summary, metrics, limitations, and review links
+- [Earthmoving dashboard](outputs/earthmoving_dashboard/index.html): static dashboard for terrain deformation, calibration, scale, and planning artifacts
+- [Earthmoving benchmark guide](docs/earthmoving-benchmark-guide.md): command map and artifact map for the construction simulation track
+- [C++ terrain kernel](cpp/terrain_kernel.cpp): standalone terrain-update kernel with smoke build via `make terrain-kernel-smoke`
+
+The earthmoving track demonstrates a MuJoCo dozer/blade scene, heightmap terrain deformation, soil parameter calibration, randomized scale evaluation, quality gates, deterministic replay bundles, ML-ready datasets, a surrogate evaluator, simulator-in-the-loop blade plan search, and generated review artifacts.
+
 ## Why this exists
 
 This repo is designed to be more than "a robot moving in simulation."

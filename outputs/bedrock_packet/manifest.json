@@ -1,0 +1,138 @@
+{
+  "run_type": "bedrock_packet",
+  "created_at": "2026-04-21T18:15:29.405630+00:00",
+  "environment": {
+    "platform": {
+      "system": "Darwin",
+      "release": "25.2.0",
+      "machine": "arm64",
+      "python_version": "3.10.2"
+    },
+    "runtime": {
+      "python_executable": "/Users/lamayassine/mujoco/.venv/bin/python",
+      "numpy_version": "2.2.6",
+      "mujoco_version": "3.6.0"
+    },
+    "tooling": {
+      "git_head": "1d564a99c137ec6a90ca925b68a2768ccf8dd1f5",
+      "git_branch": "main",
+      "git_is_dirty": true,
+      "git_status": [
+        "M Makefile",
+        "?? BEDROCK_SIMULATION_PACKET.md",
+        "?? outputs/bedrock_packet/",
+        "?? scripts/generate_bedrock_packet.py",
+        "?? src/mujoco_sim_debugging_playbook/bedrock_packet.py",
+        "?? tests/test_bedrock_packet.py"
+      ],
+      "docker_version": null,
+      "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
+    },
+    "workspace": {
+      "repo_root": "/Users/lamayassine/mujoco",
+      "pip_freeze": [
+        "absl-py==2.4.0",
+        "contourpy==1.3.2",
+        "cycler==0.12.1",
+        "etils==1.13.0",
+        "exceptiongroup==1.3.1",
+        "filelock==3.25.2",
+        "fonttools==4.62.1",
+        "fsspec==2026.3.0",
+        "glfw==2.10.0",
+        "importlib_resources==6.5.2",
+        "iniconfig==2.3.0",
+        "Jinja2==3.1.6",
+        "kiwisolver==1.5.0",
+        "MarkupSafe==3.0.3",
+        "matplotlib==3.10.8",
+        "mpmath==1.3.0",
+        "mujoco==3.6.0",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@1d564a99c137ec6a90ca925b68a2768ccf8dd1f5#egg=mujoco_sim_debugging_playbook",
+        "networkx==3.4.2",
+        "numpy==2.2.6",
+        "packaging==26.0",
+        "pillow==12.2.0",
+        "pluggy==1.6.0",
+        "Pygments==2.20.0",
+        "PyOpenGL==3.1.10",
+        "pyparsing==3.3.2",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "six==1.17.0",
+        "sympy==1.14.0",
+        "tomli==2.4.1",
+        "torch==2.11.0",
+        "typing_extensions==4.15.0",
+        "zipp==3.23.0"
+      ]
+    }
+  },
+  "config": {
+    "root_packet_path": "/Users/lamayassine/mujoco/BEDROCK_SIMULATION_PACKET.md"
+  },
+  "inputs": [
+    {
+      "path": "outputs/earthmoving_role_brief/role_brief.json",
+      "exists": true,
+      "sha256": "2bafb1323399110d4df6b6062315e7b27ef24bf58245e942e293da76ba79efb1",
+      "size_bytes": 1427
+    },
+    {
+      "path": "outputs/earthmoving_review_packet/review_packet.json",
+      "exists": true,
+      "sha256": "126e7117ee78d43b3f7c672ff66b214a54d1b77147ead3934dd7796203217e22",
+      "size_bytes": 5036
+    },
+    {
+      "path": "outputs/earthmoving_surrogate/surrogate_model.json",
+      "exists": true,
+      "sha256": "27a97339589fc2ac02453a39ffa7c1773a04de0240a2720999cf7816a4fa4852",
+      "size_bytes": 3848
+    },
+    {
+      "path": "outputs/earthmoving_plan_search/plan_search.json",
+      "exists": true,
+      "sha256": "40b15fdd854f04bf5c25599c098dc65476501797ebf53dc4183154808d6b89a8",
+      "size_bytes": 17028
+    },
+    {
+      "path": "outputs/earthmoving_failure_modes/failure_modes.json",
+      "exists": true,
+      "sha256": "4a807a7658480bb2856dd311037eabe7ab0bd0b5bbe45dd65bd075a745af1827",
+      "size_bytes": 819
+    }
+  ],
+  "outputs": [
+    {
+      "path": "outputs/bedrock_packet/bedrock_packet.json",
+      "exists": true,
+      "sha256": "22208c3b89d849c682f2a5530d385f0ba902ca383838f8f7b27beb29cdf11f59",
+      "size_bytes": 3613
+    },
+    {
+      "path": "outputs/bedrock_packet/bedrock_packet.md",
+      "exists": true,
+      "sha256": "be8827457354f5668b7e718563e0394f8343748541d9f19ef4c9101bfb9a5197",
+      "size_bytes": 3694
+    },
+    {
+      "path": "BEDROCK_SIMULATION_PACKET.md",
+      "exists": true,
+      "sha256": "be8827457354f5668b7e718563e0394f8343748541d9f19ef4c9101bfb9a5197",
+      "size_bytes": 3694
+    }
+  ],
+  "metadata": {
+    "gate_status": "pass",
+    "scenario_count": 3,
+    "scale_episode_count": 60,
+    "episodes_per_second": 323.78897863061485,
+    "dataset_rows": 54,
+    "failure_mode_items": 2,
+    "mean_calibration_error": 0.43782814420470373,
+    "surrogate_mean_mae": 3.999972048056011e-05,
+    "best_plan_score": 0.012396205113004093,
+    "top_failure_mode": "under_excavation"
+  }
+}
