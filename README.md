@@ -7,6 +7,7 @@
 If you are reviewing this for autonomous construction or robotics simulation work, start here:
 
 - [Bedrock simulation packet](BEDROCK_SIMULATION_PACKET.md): concise role-focused summary, metrics, limitations, and review links
+- [Bedrock outreach note](BEDROCK_OUTREACH_NOTE.md): repo strategy and a short recruiter update draft
 - [Earthmoving dashboard](outputs/earthmoving_dashboard/index.html): static dashboard for terrain deformation, calibration, scale, and planning artifacts
 - [Earthmoving benchmark guide](docs/earthmoving-benchmark-guide.md): command map and artifact map for the construction simulation track
 - [C++ terrain kernel](cpp/terrain_kernel.cpp): standalone terrain-update kernel with smoke build via `make terrain-kernel-smoke`
