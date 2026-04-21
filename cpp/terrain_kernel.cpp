@@ -1,5 +1,7 @@
 #include <algorithm>
+#include <chrono>
 #include <cmath>
+#include <cstdlib>
 #include <iomanip>
 #include <iostream>
 #include <numeric>
@@ -145,7 +147,13 @@ double apply_blade_segment(TerrainGrid& terrain, const BladeState& start, const 
   return removed_volume;
 }
 
-int main() {
+struct KernelResult {
+  double start_volume;
+  double end_volume;
+  double moved_volume;
+};
+
+KernelResult run_kernel_once() {
   TerrainGrid terrain(-0.55, 0.75, -0.35, 0.35, 72, 40);
   terrain.add_pile(-0.18, 0.0, 0.22, 0.12);
   const double start_volume = terrain.volume();
@@ -155,9 +163,24 @@ int main() {
   for (size_t i = 1; i < path.size(); ++i) {
     moved_volume += apply_blade_segment(terrain, path[i - 1], path[i], soil);
   }
+  return KernelResult{start_volume, terrain.volume(), moved_volume};
+}
+
+int main(int argc, char** argv) {
+  const int repeats = argc > 1 ? std::max(1, std::atoi(argv[1])) : 1;
+  KernelResult result{};
+  const auto start = std::chrono::steady_clock::now();
+  for (int index = 0; index < repeats; ++index) {
+    result = run_kernel_once();
+  }
+  const auto end = std::chrono::steady_clock::now();
+  const double elapsed_ms = std::chrono::duration<double, std::milli>(end - start).count();
   std::cout << std::fixed << std::setprecision(8)
-            << "start_volume=" << start_volume << "\n"
-            << "end_volume=" << terrain.volume() << "\n"
-            << "moved_volume=" << moved_volume << "\n";
-  return moved_volume > 0.0 ? 0 : 2;
+            << "repeats=" << repeats << "\n"
+            << "elapsed_ms=" << elapsed_ms << "\n"
+            << "mean_ms=" << elapsed_ms / static_cast<double>(repeats) << "\n"
+            << "start_volume=" << result.start_volume << "\n"
+            << "end_volume=" << result.end_volume << "\n"
+            << "moved_volume=" << result.moved_volume << "\n";
+  return result.moved_volume > 0.0 ? 0 : 2;
 }

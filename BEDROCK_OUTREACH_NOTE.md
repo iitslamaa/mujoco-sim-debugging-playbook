@@ -19,7 +19,7 @@ Hi Dave,
 
 I know you suggested reconnecting later, but I wanted to send one focused update because I took your feedback seriously.
 
-Since we last spoke, I built a MuJoCo-based autonomous construction simulation track around the areas your Simulation role emphasizes: terrain deformation, earthmoving scenarios, soil parameter calibration, randomized scale evaluation, sim-to-field gap reporting, failure replay bundles, ML-ready datasets, a surrogate evaluator, simple blade-plan search, and a small C++ terrain kernel.
+Since we last spoke, I built a MuJoCo-based autonomous construction simulation track around the areas your Simulation role emphasizes: terrain deformation, earthmoving scenarios, soil parameter calibration, randomized scale evaluation, sim-to-field gap reporting, failure replay bundles, ML-ready datasets, a surrogate evaluator, simple blade-plan search, and a small C++ terrain kernel with a Python-vs-C++ benchmark.
 
 It is not a production soil solver, and I call that out clearly in the project. The goal was to demonstrate the kind of simulation/evaluation infrastructure I understand Bedrock needs: realistic-enough physics, deterministic replay, performance metrics, calibration workflow, and tooling that supports ML autonomy validation.
 

@@ -19,6 +19,7 @@ def build_bedrock_packet(
     surrogate = _read_json(root / "outputs" / "earthmoving_surrogate" / "surrogate_model.json")
     plan_search = _read_json(root / "outputs" / "earthmoving_plan_search" / "plan_search.json")
     failure_modes = _read_json(root / "outputs" / "earthmoving_failure_modes" / "failure_modes.json")
+    kernel_benchmark = _read_json(root / "outputs" / "terrain_kernel_benchmark" / "terrain_kernel_benchmark.json")
 
     payload = {
         "headline": role_brief["headline"],
@@ -36,6 +37,7 @@ def build_bedrock_packet(
             "surrogate_mean_mae": surrogate["summary"]["mean_mae"],
             "best_plan_score": plan_search["summary"]["best_candidate"]["score"],
             "top_failure_mode": failure_modes["summary"]["top_mode"],
+            "cxx_kernel_speedup": kernel_benchmark["summary"]["cxx_speedup"],
         },
         "entry_points": {
             "dashboard": "outputs/earthmoving_dashboard/index.html",
@@ -45,9 +47,10 @@ def build_bedrock_packet(
             "gap_report": "outputs/earthmoving_gap/report.md",
             "surrogate_report": "outputs/earthmoving_surrogate/report.md",
             "plan_search_report": "outputs/earthmoving_plan_search/report.md",
+            "kernel_benchmark": "outputs/terrain_kernel_benchmark/report.md",
             "cxx_kernel": "cpp/terrain_kernel.cpp",
         },
-        "talk_track": _talk_track(role_brief, review, surrogate, plan_search, failure_modes),
+        "talk_track": _talk_track(role_brief, review, surrogate, plan_search, failure_modes, kernel_benchmark),
         "limitations": [
             "The terrain model is an intentionally lightweight heightmap approximation, not a production soil mechanics solver.",
             "Field logs are synthetic placeholders for demonstrating calibration workflow and should be replaced with real machine/site data.",
@@ -81,6 +84,7 @@ def build_bedrock_packet(
             root / "outputs" / "earthmoving_surrogate" / "surrogate_model.json",
             root / "outputs" / "earthmoving_plan_search" / "plan_search.json",
             root / "outputs" / "earthmoving_failure_modes" / "failure_modes.json",
+            root / "outputs" / "terrain_kernel_benchmark" / "terrain_kernel_benchmark.json",
         ],
         outputs=[packet_json, packet_md, root_packet],
         metadata=payload["metrics"],
@@ -115,6 +119,7 @@ def render_bedrock_packet(payload: dict[str, Any]) -> str:
             f"- Surrogate mean MAE: `{metrics['surrogate_mean_mae']:.6f}`",
             f"- Best blade-plan score: `{metrics['best_plan_score']:.6f}`",
             f"- Top failure mode: `{metrics['top_failure_mode']}`",
+            f"- C++ terrain-kernel speedup: `{metrics['cxx_kernel_speedup']:.2f}x`",
             "",
             "## Best Review Links",
             "",
@@ -140,6 +145,7 @@ def _talk_track(
     surrogate: dict[str, Any],
     plan_search: dict[str, Any],
     failure_modes: dict[str, Any],
+    kernel_benchmark: dict[str, Any],
 ) -> list[str]:
     top_sensitivity = review["summary"]["top_sensitivity"]
     best_plan = plan_search["summary"]["best_candidate"]
@@ -149,6 +155,7 @@ def _talk_track(
         f"The batch evaluator currently runs `{role_brief['metrics']['scale_episode_count']}` randomized earthmoving episodes at `{role_brief['metrics']['episodes_per_second']:.2f}` episodes/s.",
         f"The surrogate evaluator predicts `{surrogate['label_names'][0]}` and related metrics from soil/blade features, with mean MAE `{surrogate['summary']['mean_mae']:.6f}`.",
         f"The planner selected `{best_plan['candidate']}` as the best blade candidate under the current score function.",
+        f"The C++ terrain kernel matches the Python terrain output and runs `{kernel_benchmark['summary']['cxx_speedup']:.2f}x` faster in the current benchmark.",
         f"The failure queue surfaces `{failure_modes['summary']['top_mode']}` as the top debug theme, with next actions attached.",
     ]
 

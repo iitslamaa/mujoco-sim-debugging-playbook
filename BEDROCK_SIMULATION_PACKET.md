@@ -23,6 +23,7 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - Surrogate mean MAE: `0.000040`
 - Best blade-plan score: `0.012396`
 - Top failure mode: `under_excavation`
+- C++ terrain-kernel speedup: `7.65x`
 
 ## Best Review Links
 
@@ -33,6 +34,7 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - `gap_report`: [outputs/earthmoving_gap/report.md](outputs/earthmoving_gap/report.md)
 - `surrogate_report`: [outputs/earthmoving_surrogate/report.md](outputs/earthmoving_surrogate/report.md)
 - `plan_search_report`: [outputs/earthmoving_plan_search/report.md](outputs/earthmoving_plan_search/report.md)
+- `kernel_benchmark`: [outputs/terrain_kernel_benchmark/report.md](outputs/terrain_kernel_benchmark/report.md)
 - `cxx_kernel`: [cpp/terrain_kernel.cpp](cpp/terrain_kernel.cpp)
 
 ## Interview Talk Track
@@ -42,6 +44,7 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - The batch evaluator currently runs `60` randomized earthmoving episodes at `323.79` episodes/s.
 - The surrogate evaluator predicts `moved_volume` and related metrics from soil/blade features, with mean MAE `0.000040`.
 - The planner selected `baseline_push_d0.008_w0.24_y+0.00` as the best blade candidate under the current score function.
+- The C++ terrain kernel matches the Python terrain output and runs `7.65x` faster in the current benchmark.
 - The failure queue surfaces `under_excavation` as the top debug theme, with next actions attached.
 
 ## Limitations I Would State Clearly

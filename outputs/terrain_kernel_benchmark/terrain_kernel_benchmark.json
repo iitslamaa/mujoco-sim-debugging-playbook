@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "repeats": 200,
+    "python_mean_ms": 0.20356687498860992,
+    "cxx_mean_ms": 0.02660479,
+    "cxx_speedup": 7.651512189669978,
+    "moved_volume_delta": 1.3867517596483775e-09,
+    "end_volume_delta": 4.903313317872193e-09
+  },
+  "python": {
+    "repeats": 200.0,
+    "elapsed_ms": 40.713374997721985,
+    "mean_ms": 0.20356687498860992,
+    "start_volume": 0.003040840220108212,
+    "end_volume": 0.002969614903313318,
+    "moved_volume": 0.0011870886132482404
+  },
+  "cxx": {
+    "repeats": 200.0,
+    "elapsed_ms": 5.320958,
+    "mean_ms": 0.02660479,
+    "start_volume": 0.00304084,
+    "end_volume": 0.00296961,
+    "moved_volume": 0.00118709
+  }
+}

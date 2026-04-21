@@ -11,8 +11,9 @@ If you are reviewing this for autonomous construction or robotics simulation wor
 - [Earthmoving dashboard](outputs/earthmoving_dashboard/index.html): static dashboard for terrain deformation, calibration, scale, and planning artifacts
 - [Earthmoving benchmark guide](docs/earthmoving-benchmark-guide.md): command map and artifact map for the construction simulation track
 - [C++ terrain kernel](cpp/terrain_kernel.cpp): standalone terrain-update kernel with smoke build via `make terrain-kernel-smoke`
+- [C++ terrain benchmark](outputs/terrain_kernel_benchmark/report.md): Python vs C++ terrain-update benchmark via `make terrain-kernel-benchmark`
 
-The earthmoving track demonstrates a MuJoCo dozer/blade scene, heightmap terrain deformation, soil parameter calibration, randomized scale evaluation, quality gates, deterministic replay bundles, ML-ready datasets, a surrogate evaluator, simulator-in-the-loop blade plan search, and generated review artifacts.
+The earthmoving track demonstrates a MuJoCo dozer/blade scene, heightmap terrain deformation, soil parameter calibration, randomized scale evaluation, quality gates, deterministic replay bundles, ML-ready datasets, a surrogate evaluator, simulator-in-the-loop blade plan search, a C++ terrain-update benchmark, and generated review artifacts.
 
 ## Why this exists
 
