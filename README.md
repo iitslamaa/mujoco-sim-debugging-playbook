@@ -22,9 +22,11 @@ It demonstrates:
 - clear technical writing for user enablement
 - support-triage thinking for user-reported failures
 - PyTorch fluency through a learned imitation baseline, training curves, checkpoints, and evaluation rollouts
+- construction-style earthmoving simulation with terrain deformation, soil calibration, and scale studies
+- C++ implementation experience through a standalone terrain-update kernel and smoke build
 - Linux-style tooling with bash, Docker, CI, and GitHub workflows
 
-The core task is a planar 2-DoF robotic arm reaching for sampled workspace targets. A baseline inverse-kinematics-plus-PD controller is evaluated while varying important simulation and control parameters such as damping, actuator gain, noise, delay, and control frequency.
+The original core task is a planar 2-DoF robotic arm reaching for sampled workspace targets. A baseline inverse-kinematics-plus-PD controller is evaluated while varying important simulation and control parameters such as damping, actuator gain, noise, delay, and control frequency. The repo also includes an earthmoving benchmark built around a small MuJoCo dozer/blade asset, a heightmap terrain deformation model, soil parameter calibration, and batch throughput reporting.
 
 ## Project highlights
 
@@ -41,6 +43,11 @@ The core task is a planar 2-DoF robotic arm reaching for sampled workspace targe
 - Static dashboard for browsing artifacts, environment details, and support cases
 - Multi-controller benchmark comparing expert, learned, and guarded hybrid control
 - Domain-randomization evaluation that measures policy robustness under changing physics
+- Earthmoving benchmark with a MuJoCo dozer/blade asset, terrain before/after plots, and target-berm metrics
+- Heightmap terrain deformation with soil cohesion, friction, compaction, coupling, spillover, and volume accounting
+- Sim-to-field calibration tooling that fits soil/deformation parameters against observed construction-style logs
+- Batch scale study for randomized earthmoving scenarios with runtime and episodes-per-second reporting
+- Standalone C++ terrain kernel with a smoke build for low-level geometry/physics implementation practice
 - Automated case-study generation that turns experiment outputs into polished narratives
 - Regression snapshot and diff tooling for tracking behavior drift over time
 - Threshold-based regression gates for catching unacceptable drift in CI
@@ -165,6 +172,10 @@ make eval-policy
 make train-rl
 make eval-rl
 make benchmark
+make earthmoving-benchmark
+make earthmoving-calibration
+make earthmoving-scale
+make terrain-kernel-smoke
 make randomization
 make anomalies
 make recommendations
@@ -1293,6 +1304,19 @@ The repo also evaluates how controllers generalize when simulator parameters shi
 - control delay is randomized
 
 This gives the project a stronger robustness and sim-to-real flavored evaluation story.
+
+## Earthmoving simulation
+
+The repo includes a construction-style simulation track that is closer to heavy-machinery autonomy than the reacher task:
+
+- `src/mujoco_sim_debugging_playbook/assets/earthmoving_dozer.xml` defines a compact MuJoCo dozer/blade scene
+- `src/mujoco_sim_debugging_playbook/terrain.py` implements heightmap terrain deformation with soil parameters and volume accounting
+- `scripts/run_earthmoving_benchmark.py` runs blade-pushing scenarios and writes terrain plots plus metrics
+- `scripts/calibrate_earthmoving_soil.py` fits simulator soil parameters to observed field-log metrics
+- `scripts/run_earthmoving_scale.py` runs randomized scenario batches and reports throughput
+- `cpp/terrain_kernel.cpp` mirrors the terrain update in standalone C++ with a smoke build
+
+The earthmoving metrics emphasize physical-world evaluation: material moved, target-zone volume, profile error against a target berm, conservation error, runtime, and episodes per second.
 
 ## Generated case studies
 
