@@ -22,6 +22,7 @@ make earthmoving-role-brief
 make jobsite-autonomy-eval
 make multipass-plan-eval
 make task-plan-robustness
+make robustness-sensitivity
 make field-trial-visuals
 make field-trial-case-study
 make hiring-manager-packet
@@ -93,4 +94,5 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - Field trial case study: `outputs/field_trial_case_study/field_trial_case_study.md`
 - Multi-pass plan evaluation: `outputs/multipass_plan_eval/multipass_plan_eval.md`
 - Task plan robustness sweep: `outputs/task_plan_robustness/task_plan_robustness.md`
+- Robustness sensitivity: `outputs/robustness_sensitivity/robustness_sensitivity.md`
 - Hiring manager packet: `outputs/hiring_manager_packet/hiring_manager_packet.md`

@@ -1,0 +1,65 @@
+{
+  "candidate": "single_pass_wide_cut",
+  "scenario": "cohesive_soil",
+  "summary": {
+    "episode_count": 36,
+    "top_driver": {
+      "input": "soil.blade_coupling",
+      "productivity_correlation": 0.8703009453858981,
+      "pass_margin_correlation": 0.8296586666642788
+    },
+    "pass_rate": 0.5
+  },
+  "sensitivities": [
+    {
+      "input": "soil.blade_coupling",
+      "productivity_correlation": 0.8703009453858981,
+      "pass_margin_correlation": 0.8296586666642788
+    },
+    {
+      "input": "soil.cohesion",
+      "productivity_correlation": -0.5776227046318512,
+      "pass_margin_correlation": -0.32799915387642137
+    },
+    {
+      "input": "machine.dump_settle_s",
+      "productivity_correlation": -0.37928388190048007,
+      "pass_margin_correlation": -0.3703226583329898
+    },
+    {
+      "input": "soil.friction_angle_deg",
+      "productivity_correlation": -0.3116468356760852,
+      "pass_margin_correlation": -0.11641575108602305
+    },
+    {
+      "input": "machine.return_speed_mps",
+      "productivity_correlation": 0.2470609451883611,
+      "pass_margin_correlation": 0.20419580877822865
+    },
+    {
+      "input": "machine.blade_speed_mps",
+      "productivity_correlation": -0.12303963379072475,
+      "pass_margin_correlation": -0.14766895990706713
+    },
+    {
+      "input": "machine.turnaround_s",
+      "productivity_correlation": -0.040603733230918086,
+      "pass_margin_correlation": 0.08956485450034556
+    },
+    {
+      "input": "soil.spillover_rate",
+      "productivity_correlation": 0.02739937627964427,
+      "pass_margin_correlation": 0.09333046202929741
+    },
+    {
+      "input": "soil.compaction_rate",
+      "productivity_correlation": 0.020593180366662404,
+      "pass_margin_correlation": -0.010949925726528474
+    }
+  ],
+  "recommendations": [
+    "Prioritize measurement and control of `soil.blade_coupling`; productivity tends to increase as it rises.",
+    "Rerun the robustness sweep after tuning the top driver to verify pass-rate improvement.",
+    "Use the ranked inputs to decide which telemetry fields are worth collecting first on a real machine."
+  ]
+}

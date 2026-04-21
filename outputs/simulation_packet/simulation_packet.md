@@ -31,6 +31,7 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - Best task-plan decision: `release_candidate`
 - Task-plan robustness pass rate: `50%`
 - Task-plan robustness P10 productivity: `6.45` m3/hr
+- Top robustness driver: `soil.blade_coupling`
 - Top failure mode: `under_excavation`
 - C++ terrain-kernel speedup: `7.65x`
 - Fastest native terrain kernel: `rust_ffi`
@@ -49,6 +50,7 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - `field_trial_case_study`: [outputs/field_trial_case_study/field_trial_case_study.md](outputs/field_trial_case_study/field_trial_case_study.md)
 - `multipass_plan_eval`: [outputs/multipass_plan_eval/multipass_plan_eval.md](outputs/multipass_plan_eval/multipass_plan_eval.md)
 - `task_plan_robustness`: [outputs/task_plan_robustness/task_plan_robustness.md](outputs/task_plan_robustness/task_plan_robustness.md)
+- `robustness_sensitivity`: [outputs/robustness_sensitivity/robustness_sensitivity.md](outputs/robustness_sensitivity/robustness_sensitivity.md)
 - `surrogate_report`: [outputs/earthmoving_surrogate/report.md](outputs/earthmoving_surrogate/report.md)
 - `plan_search_report`: [outputs/earthmoving_plan_search/report.md](outputs/earthmoving_plan_search/report.md)
 - `kernel_benchmark`: [outputs/terrain_kernel_benchmark/report.md](outputs/terrain_kernel_benchmark/report.md)

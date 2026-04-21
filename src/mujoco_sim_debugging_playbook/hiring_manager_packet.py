@@ -20,6 +20,7 @@ def build_hiring_manager_packet(*, repo_root: str | Path, output_dir: str | Path
     visuals = _read_json(root / "outputs" / "field_trial_visuals" / "field_trial_visuals.json")
     multipass = _read_json(root / "outputs" / "multipass_plan_eval" / "multipass_plan_eval.json")
     robustness = _read_json(root / "outputs" / "task_plan_robustness" / "task_plan_robustness.json")
+    sensitivity = _read_json(root / "outputs" / "robustness_sensitivity" / "robustness_sensitivity.json")
 
     payload = {
         "headline": "Autonomous earthmoving simulation validation packet",
@@ -27,9 +28,13 @@ def build_hiring_manager_packet(*, repo_root: str | Path, output_dir: str | Path
             "A MuJoCo-based construction autonomy simulation track that connects deformable-terrain "
             "experiments to calibration, release gating, jobsite productivity, and native-kernel performance."
         ),
-        "manager_summary": _manager_summary(review, jobsite, gap, plan, surrogate, kernel, case_study, multipass, robustness),
+        "manager_summary": _manager_summary(
+            review, jobsite, gap, plan, surrogate, kernel, case_study, multipass, robustness, sensitivity
+        ),
         "architecture": _architecture(),
-        "evidence": _evidence(review, role_brief, jobsite, gap, plan, surrogate, kernel, case_study, visuals, multipass, robustness),
+        "evidence": _evidence(
+            review, role_brief, jobsite, gap, plan, surrogate, kernel, case_study, visuals, multipass, robustness, sensitivity
+        ),
         "review_path": _review_path(),
         "technical_judgment": _technical_judgment(review, jobsite, gap),
         "limitations": _limitations(),
@@ -60,6 +65,7 @@ def build_hiring_manager_packet(*, repo_root: str | Path, output_dir: str | Path
             root / "outputs" / "field_trial_visuals" / "field_trial_visuals.json",
             root / "outputs" / "multipass_plan_eval" / "multipass_plan_eval.json",
             root / "outputs" / "task_plan_robustness" / "task_plan_robustness.json",
+            root / "outputs" / "robustness_sensitivity" / "robustness_sensitivity.json",
         ],
         outputs=[json_path, md_path],
         metadata={
@@ -123,6 +129,7 @@ def _manager_summary(
     case_study: dict[str, Any],
     multipass: dict[str, Any],
     robustness: dict[str, Any],
+    sensitivity: dict[str, Any],
 ) -> list[str]:
     best = plan["summary"]["best_candidate"]
     best_multipass = multipass["summary"]["best_candidate"]
@@ -134,6 +141,7 @@ def _manager_summary(
         f"The blade-plan search evaluates `{plan['summary']['candidate_count']}` candidates and selects `{best['candidate']}` under the current score.",
         f"The multi-pass evaluator compares `{multipass['summary']['candidate_count']}` task sequences; best is `{best_multipass['candidate']}` at `{best_multipass['productivity_m3_per_hr']:.2f}` m3/hr.",
         f"The robustness sweep runs `{robustness['summary']['episode_count']}` uncertainty episodes for `{robustness['candidate']}` with pass rate `{robustness['summary']['pass_rate']:.0%}`.",
+        f"The robustness sensitivity report ranks `{sensitivity['summary']['top_driver']['input']}` as the strongest productivity driver.",
         f"The field-trial case study traces `{case_study['scenario']}` from replay metrics to root-cause hypotheses and the next experiment.",
         f"The surrogate model reports mean MAE `{surrogate['summary']['mean_mae']:.6f}`, showing how the generated dataset can support learned evaluators.",
         f"The C++ terrain kernel benchmark shows `{kernel['summary']['cxx_speedup']:.2f}x` speedup over Python for the terrain update workload.",
@@ -163,8 +171,9 @@ def _evidence(
     visuals: dict[str, Any],
     multipass: dict[str, Any],
     robustness: dict[str, Any],
+    sensitivity: dict[str, Any],
 ) -> list[dict[str, str]]:
-    _ = (review, role_brief, jobsite, gap, plan, surrogate, kernel, case_study, visuals, multipass, robustness)
+    _ = (review, role_brief, jobsite, gap, plan, surrogate, kernel, case_study, visuals, multipass, robustness, sensitivity)
     return [
         {
             "area": "Hiring overview",
@@ -221,6 +230,12 @@ def _evidence(
             "why": "Stress-tests the selected task plan under soil and cycle-time uncertainty.",
         },
         {
+            "area": "Sensitivity",
+            "artifact": "Robustness sensitivity",
+            "path": "../robustness_sensitivity/robustness_sensitivity.md",
+            "why": "Ranks which uncertain inputs most explain productivity misses.",
+        },
+        {
             "area": "ML evaluation",
             "artifact": "Surrogate evaluator",
             "path": "../earthmoving_surrogate/report.md",
@@ -244,6 +259,7 @@ def _review_path() -> list[str]:
         "Open the field-trial visuals to quickly inspect terrain delta, blade path, and productivity bottleneck.",
         "Open the multi-pass plan evaluation to see whether changing task structure improves the bottleneck.",
         "Open the task-plan robustness sweep to see uncertainty sensitivity around the selected candidate.",
+        "Open the robustness sensitivity report to see which telemetry or model inputs matter most next.",
         "Open the gap report to see calibration priorities and limitations.",
         "Skim the terrain kernel and benchmark if evaluating low-level implementation ability.",
     ]

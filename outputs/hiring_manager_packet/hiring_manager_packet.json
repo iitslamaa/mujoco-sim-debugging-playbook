@@ -9,6 +9,7 @@
     "The blade-plan search evaluates `45` candidates and selects `baseline_push_d0.008_w0.24_y+0.00` under the current score.",
     "The multi-pass evaluator compares `4` task sequences; best is `single_pass_wide_cut` at `7.65` m3/hr.",
     "The robustness sweep runs `36` uncertainty episodes for `single_pass_wide_cut` with pass rate `50%`.",
+    "The robustness sensitivity report ranks `soil.blade_coupling` as the strongest productivity driver.",
     "The field-trial case study traces `cohesive_soil` from replay metrics to root-cause hypotheses and the next experiment.",
     "The surrogate model reports mean MAE `0.000040`, showing how the generated dataset can support learned evaluators.",
     "The C++ terrain kernel benchmark shows `7.65x` speedup over Python for the terrain update workload."
@@ -77,6 +78,12 @@
       "why": "Stress-tests the selected task plan under soil and cycle-time uncertainty."
     },
     {
+      "area": "Sensitivity",
+      "artifact": "Robustness sensitivity",
+      "path": "../robustness_sensitivity/robustness_sensitivity.md",
+      "why": "Ranks which uncertain inputs most explain productivity misses."
+    },
+    {
       "area": "ML evaluation",
       "artifact": "Surrogate evaluator",
       "path": "../earthmoving_surrogate/report.md",
@@ -97,6 +104,7 @@
     "Open the field-trial visuals to quickly inspect terrain delta, blade path, and productivity bottleneck.",
     "Open the multi-pass plan evaluation to see whether changing task structure improves the bottleneck.",
     "Open the task-plan robustness sweep to see uncertainty sensitivity around the selected candidate.",
+    "Open the robustness sensitivity report to see which telemetry or model inputs matter most next.",
     "Open the gap report to see calibration priorities and limitations.",
     "Skim the terrain kernel and benchmark if evaluating low-level implementation ability."
   ],

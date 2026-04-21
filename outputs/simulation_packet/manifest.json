@@ -1,6 +1,6 @@
 {
   "run_type": "simulation_packet",
-  "created_at": "2026-04-21T23:46:38.273264+00:00",
+  "created_at": "2026-04-21T23:51:15.163751+00:00",
   "environment": {
     "platform": {
       "system": "Darwin",
@@ -14,60 +14,24 @@
       "mujoco_version": "3.6.0"
     },
     "tooling": {
-      "git_head": "245eee715fe8169d7c990c9e51c62394b2d79cb0",
+      "git_head": "d1f2b5e579c7bacf1a2c2a59c13cdbce207bfccc",
       "git_branch": "main",
       "git_is_dirty": true,
       "git_status": [
         "M EARTHMOVING_SIMULATION_PACKET.md",
         " M Makefile",
-        " M OUTREACH_NOTE.md",
         " M README.md",
         " M docs/earthmoving-benchmark-guide.md",
-        " M outputs/earthmoving_dashboard/data.json",
-        " M outputs/earthmoving_dashboard/index.html",
-        " M outputs/earthmoving_replay/cohesive_soil_replay.json",
-        " M outputs/earthmoving_replay/cohesive_soil_replay.md",
-        " M outputs/earthmoving_replay/manifest.json",
-        " M outputs/earthmoving_review_packet/manifest.json",
-        " M outputs/earthmoving_review_packet/review_packet.json",
-        " M outputs/earthmoving_review_packet/review_packet.md",
-        " M outputs/earthmoving_role_brief/manifest.json",
-        " M outputs/earthmoving_role_brief/role_brief.json",
-        " M outputs/earthmoving_role_brief/role_brief.md",
+        " M outputs/hiring_manager_packet/hiring_manager_packet.json",
+        " M outputs/hiring_manager_packet/hiring_manager_packet.md",
         " M outputs/simulation_packet/simulation_packet.json",
         " M outputs/simulation_packet/simulation_packet.md",
-        " M pyproject.toml",
-        " M scripts/generate_earthmoving_review_packet.py",
-        " M src/mujoco_sim_debugging_playbook/earthmoving_dashboard.py",
-        " M src/mujoco_sim_debugging_playbook/earthmoving_review_packet.py",
-        " M src/mujoco_sim_debugging_playbook/earthmoving_role_brief.py",
+        " M src/mujoco_sim_debugging_playbook/hiring_manager_packet.py",
         " M src/mujoco_sim_debugging_playbook/simulation_packet.py",
-        "?? configs/jobsite_autonomy_eval.json",
-        "?? outputs/field_trial_case_study/",
-        "?? outputs/field_trial_visuals/",
-        "?? outputs/hiring_manager_packet/",
-        "?? outputs/jobsite_autonomy_eval/",
-        "?? outputs/multipass_plan_eval/",
-        "?? outputs/simulation_packet/manifest.json",
-        "?? outputs/task_plan_robustness/",
-        "?? scripts/generate_field_trial_case_study.py",
-        "?? scripts/generate_field_trial_visuals.py",
-        "?? scripts/generate_hiring_manager_packet.py",
-        "?? scripts/generate_jobsite_autonomy_eval.py",
-        "?? scripts/generate_multipass_plan_eval.py",
-        "?? scripts/generate_task_plan_robustness.py",
-        "?? src/mujoco_sim_debugging_playbook/field_trial_case_study.py",
-        "?? src/mujoco_sim_debugging_playbook/field_trial_visuals.py",
-        "?? src/mujoco_sim_debugging_playbook/hiring_manager_packet.py",
-        "?? src/mujoco_sim_debugging_playbook/jobsite_autonomy_eval.py",
-        "?? src/mujoco_sim_debugging_playbook/multipass_plan_eval.py",
-        "?? src/mujoco_sim_debugging_playbook/task_plan_robustness.py",
-        "?? tests/test_field_trial_case_study.py",
-        "?? tests/test_field_trial_visuals.py",
-        "?? tests/test_hiring_manager_packet.py",
-        "?? tests/test_jobsite_autonomy_eval.py",
-        "?? tests/test_multipass_plan_eval.py",
-        "?? tests/test_task_plan_robustness.py"
+        "?? outputs/robustness_sensitivity/",
+        "?? scripts/generate_robustness_sensitivity.py",
+        "?? src/mujoco_sim_debugging_playbook/robustness_sensitivity.py",
+        "?? tests/test_robustness_sensitivity.py"
       ],
       "docker_version": null,
       "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
@@ -92,7 +56,7 @@
         "matplotlib==3.10.8",
         "mpmath==1.3.0",
         "mujoco==3.6.0",
-        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@245eee715fe8169d7c990c9e51c62394b2d79cb0#egg=mujoco_sim_debugging_playbook",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@d1f2b5e579c7bacf1a2c2a59c13cdbce207bfccc#egg=mujoco_sim_debugging_playbook",
         "networkx==3.4.2",
         "numpy==2.2.6",
         "packaging==26.0",
@@ -169,20 +133,20 @@
     {
       "path": "outputs/simulation_packet/simulation_packet.json",
       "exists": true,
-      "sha256": "5d070442e1bd1b0bf80700cb2d83dacc107a18fe72ce9cbf414c3af1a52c4ebf",
-      "size_bytes": 5818
+      "sha256": "758aa8b53859a30c7205a7064a3656fb0c5d8550f2a221b0209295192b6ab1ae",
+      "size_bytes": 5960
     },
     {
       "path": "outputs/simulation_packet/simulation_packet.md",
       "exists": true,
-      "sha256": "902a259591afb0f6c89b56a6a788a8de8265b9cd0e72ac217ae2aca6c4c0ca0f",
-      "size_bytes": 6227
+      "sha256": "df00b5bca92a6c5872e3c69e299c4cc55015028c8b6074469b4a81ff890e0abd",
+      "size_bytes": 6419
     },
     {
       "path": "EARTHMOVING_SIMULATION_PACKET.md",
       "exists": true,
-      "sha256": "902a259591afb0f6c89b56a6a788a8de8265b9cd0e72ac217ae2aca6c4c0ca0f",
-      "size_bytes": 6227
+      "sha256": "df00b5bca92a6c5872e3c69e299c4cc55015028c8b6074469b4a81ff890e0abd",
+      "size_bytes": 6419
     }
   ],
   "metadata": {
@@ -206,6 +170,7 @@
     "best_task_plan_productivity": 7.654351500435249,
     "best_task_plan_decision": "release_candidate",
     "task_plan_robustness_pass_rate": 0.5,
-    "task_plan_robustness_p10_productivity": 6.451514141336469
+    "task_plan_robustness_p10_productivity": 6.451514141336469,
+    "top_robustness_driver": "soil.blade_coupling"
   }
 }

@@ -13,6 +13,7 @@ A MuJoCo-based construction autonomy simulation track that connects deformable-t
 - The blade-plan search evaluates `45` candidates and selects `baseline_push_d0.008_w0.24_y+0.00` under the current score.
 - The multi-pass evaluator compares `4` task sequences; best is `single_pass_wide_cut` at `7.65` m3/hr.
 - The robustness sweep runs `36` uncertainty episodes for `single_pass_wide_cut` with pass rate `50%`.
+- The robustness sensitivity report ranks `soil.blade_coupling` as the strongest productivity driver.
 - The field-trial case study traces `cohesive_soil` from replay metrics to root-cause hypotheses and the next experiment.
 - The surrogate model reports mean MAE `0.000040`, showing how the generated dataset can support learned evaluators.
 - The C++ terrain kernel benchmark shows `7.65x` speedup over Python for the terrain update workload.
@@ -39,6 +40,7 @@ A MuJoCo-based construction autonomy simulation track that connects deformable-t
 | Autonomy loop | [Blade plan search](../earthmoving_plan_search/report.md) | Uses the simulator to evaluate candidate task parameters. |
 | Task planning | [Multi-pass plan evaluation](../multipass_plan_eval/multipass_plan_eval.md) | Compares single-pass and multi-pass task sequences against productivity and placement gates. |
 | Robustness | [Task plan robustness sweep](../task_plan_robustness/task_plan_robustness.md) | Stress-tests the selected task plan under soil and cycle-time uncertainty. |
+| Sensitivity | [Robustness sensitivity](../robustness_sensitivity/robustness_sensitivity.md) | Ranks which uncertain inputs most explain productivity misses. |
 | ML evaluation | [Surrogate evaluator](../earthmoving_surrogate/report.md) | Shows generated labels and learned evaluator scaffolding. |
 | Performance | [Terrain kernel benchmark](../terrain_kernel_benchmark/report.md) | Shows native implementation and benchmark instinct for simulation hot paths. |
 
@@ -51,8 +53,9 @@ A MuJoCo-based construction autonomy simulation track that connects deformable-t
 5. Open the field-trial visuals to quickly inspect terrain delta, blade path, and productivity bottleneck.
 6. Open the multi-pass plan evaluation to see whether changing task structure improves the bottleneck.
 7. Open the task-plan robustness sweep to see uncertainty sensitivity around the selected candidate.
-8. Open the gap report to see calibration priorities and limitations.
-9. Skim the terrain kernel and benchmark if evaluating low-level implementation ability.
+8. Open the robustness sensitivity report to see which telemetry or model inputs matter most next.
+9. Open the gap report to see calibration priorities and limitations.
+10. Skim the terrain kernel and benchmark if evaluating low-level implementation ability.
 
 ## Technical Judgment Signals
 

@@ -24,6 +24,7 @@ def build_simulation_packet(
     jobsite = _read_json(root / "outputs" / "jobsite_autonomy_eval" / "jobsite_autonomy_eval.json")
     multipass = _read_json(root / "outputs" / "multipass_plan_eval" / "multipass_plan_eval.json")
     robustness = _read_json(root / "outputs" / "task_plan_robustness" / "task_plan_robustness.json")
+    sensitivity = _read_json(root / "outputs" / "robustness_sensitivity" / "robustness_sensitivity.json")
 
     payload = {
         "headline": role_brief["headline"],
@@ -53,6 +54,7 @@ def build_simulation_packet(
             "best_task_plan_decision": multipass["summary"]["best_candidate"]["decision"],
             "task_plan_robustness_pass_rate": robustness["summary"]["pass_rate"],
             "task_plan_robustness_p10_productivity": robustness["summary"]["p10_productivity_m3_per_hr"],
+            "top_robustness_driver": sensitivity["summary"]["top_driver"]["input"],
         },
         "entry_points": {
             "hiring_manager_packet": "outputs/hiring_manager_packet/hiring_manager_packet.md",
@@ -66,6 +68,7 @@ def build_simulation_packet(
             "field_trial_case_study": "outputs/field_trial_case_study/field_trial_case_study.md",
             "multipass_plan_eval": "outputs/multipass_plan_eval/multipass_plan_eval.md",
             "task_plan_robustness": "outputs/task_plan_robustness/task_plan_robustness.md",
+            "robustness_sensitivity": "outputs/robustness_sensitivity/robustness_sensitivity.md",
             "surrogate_report": "outputs/earthmoving_surrogate/report.md",
             "plan_search_report": "outputs/earthmoving_plan_search/report.md",
             "kernel_benchmark": "outputs/terrain_kernel_benchmark/report.md",
@@ -153,6 +156,7 @@ def render_simulation_packet(payload: dict[str, Any]) -> str:
             f"- Best task-plan decision: `{metrics['best_task_plan_decision']}`",
             f"- Task-plan robustness pass rate: `{metrics['task_plan_robustness_pass_rate']:.0%}`",
             f"- Task-plan robustness P10 productivity: `{metrics['task_plan_robustness_p10_productivity']:.2f}` m3/hr",
+            f"- Top robustness driver: `{metrics['top_robustness_driver']}`",
             f"- Top failure mode: `{metrics['top_failure_mode']}`",
             f"- C++ terrain-kernel speedup: `{metrics['cxx_kernel_speedup']:.2f}x`",
             f"- Fastest native terrain kernel: `{metrics['fastest_native_kernel']}`",

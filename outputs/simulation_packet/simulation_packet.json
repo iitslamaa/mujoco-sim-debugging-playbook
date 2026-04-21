@@ -31,7 +31,8 @@
     "best_task_plan_productivity": 7.654351500435249,
     "best_task_plan_decision": "release_candidate",
     "task_plan_robustness_pass_rate": 0.5,
-    "task_plan_robustness_p10_productivity": 6.451514141336469
+    "task_plan_robustness_p10_productivity": 6.451514141336469,
+    "top_robustness_driver": "soil.blade_coupling"
   },
   "entry_points": {
     "hiring_manager_packet": "outputs/hiring_manager_packet/hiring_manager_packet.md",
@@ -45,6 +46,7 @@
     "field_trial_case_study": "outputs/field_trial_case_study/field_trial_case_study.md",
     "multipass_plan_eval": "outputs/multipass_plan_eval/multipass_plan_eval.md",
     "task_plan_robustness": "outputs/task_plan_robustness/task_plan_robustness.md",
+    "robustness_sensitivity": "outputs/robustness_sensitivity/robustness_sensitivity.md",
     "surrogate_report": "outputs/earthmoving_surrogate/report.md",
     "plan_search_report": "outputs/earthmoving_plan_search/report.md",
     "kernel_benchmark": "outputs/terrain_kernel_benchmark/report.md",

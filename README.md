@@ -12,6 +12,7 @@ If you are reviewing this for autonomous construction or robotics simulation wor
 - [Field trial case study](outputs/field_trial_case_study/field_trial_case_study.md): scenario-level replay, observations, root-cause hypotheses, and next experiment
 - [Multi-pass plan evaluation](outputs/multipass_plan_eval/multipass_plan_eval.md): single-pass vs multi-pass task sequence comparison
 - [Task plan robustness sweep](outputs/task_plan_robustness/task_plan_robustness.md): selected task plan under soil and cycle-time uncertainty
+- [Robustness sensitivity](outputs/robustness_sensitivity/robustness_sensitivity.md): ranked uncertainty drivers for productivity misses
 - [One-month robotics simulation plan](ONE_MONTH_ROBOTICS_SIMULATION_PLAN.md): full-time project curriculum for becoming useful in autonomy simulation roles
 - [Outreach note](OUTREACH_NOTE.md): repo strategy and a short recruiter update draft
 - [Earthmoving dashboard](outputs/earthmoving_dashboard/index.html): static dashboard for terrain deformation, calibration, scale, and planning artifacts
@@ -214,6 +215,7 @@ make earthmoving-role-brief
 make jobsite-autonomy-eval
 make multipass-plan-eval
 make task-plan-robustness
+make robustness-sensitivity
 make field-trial-visuals
 make field-trial-case-study
 make hiring-manager-packet
