@@ -49,6 +49,7 @@ def build_simulation_packet(
             "plan_search_report": "outputs/earthmoving_plan_search/report.md",
             "kernel_benchmark": "outputs/terrain_kernel_benchmark/report.md",
             "cxx_kernel": "cpp/terrain_kernel.cpp",
+            "rust_kernel_note": "docs/rust-simulation-kernel-note.md",
         },
         "talk_track": _talk_track(role_brief, review, surrogate, plan_search, failure_modes, kernel_benchmark),
         "limitations": [
@@ -156,6 +157,7 @@ def _talk_track(
         f"The surrogate evaluator predicts `{surrogate['label_names'][0]}` and related metrics from soil/blade features, with mean MAE `{surrogate['summary']['mean_mae']:.6f}`.",
         f"The planner selected `{best_plan['candidate']}` as the best blade candidate under the current score function.",
         f"The C++ terrain kernel matches the Python terrain output and runs `{kernel_benchmark['summary']['cxx_speedup']:.2f}x` faster in the current benchmark.",
+        "The optional Rust terrain kernel scaffold shows how this workload could move toward memory-safe systems code for simulation infrastructure and replay tooling.",
         f"The failure queue surfaces `{failure_modes['summary']['top_mode']}` as the top debug theme, with next actions attached.",
     ]
 

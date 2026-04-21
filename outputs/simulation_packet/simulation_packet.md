@@ -36,6 +36,7 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - `plan_search_report`: [outputs/earthmoving_plan_search/report.md](outputs/earthmoving_plan_search/report.md)
 - `kernel_benchmark`: [outputs/terrain_kernel_benchmark/report.md](outputs/terrain_kernel_benchmark/report.md)
 - `cxx_kernel`: [cpp/terrain_kernel.cpp](cpp/terrain_kernel.cpp)
+- `rust_kernel_note`: [docs/rust-simulation-kernel-note.md](docs/rust-simulation-kernel-note.md)
 
 ## Interview Talk Track
 
@@ -45,6 +46,7 @@ Repo strategy: Keep this repo as the full engineering record, and link this pack
 - The surrogate evaluator predicts `moved_volume` and related metrics from soil/blade features, with mean MAE `0.000040`.
 - The planner selected `baseline_push_d0.008_w0.24_y+0.00` as the best blade candidate under the current score function.
 - The C++ terrain kernel matches the Python terrain output and runs `7.65x` faster in the current benchmark.
+- The optional Rust terrain kernel scaffold shows how this workload could move toward memory-safe systems code for simulation infrastructure and replay tooling.
 - The failure queue surfaces `under_excavation` as the top debug theme, with next actions attached.
 
 ## Limitations I Would State Clearly
