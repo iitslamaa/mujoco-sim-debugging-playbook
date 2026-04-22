@@ -1,0 +1,50 @@
+{
+  "name": "application_readiness",
+  "summary": {
+    "status": "pass",
+    "check_count": 8,
+    "failed_count": 0
+  },
+  "checks": [
+    {
+      "path": "outputs/application_packet/application_packet.md",
+      "status": "pass",
+      "detail": "2535 bytes"
+    },
+    {
+      "path": "outputs/hiring_manager_packet/hiring_manager_packet.md",
+      "status": "pass",
+      "detail": "7839 bytes"
+    },
+    {
+      "path": "outputs/field_trial_case_study/field_trial_case_study.md",
+      "status": "pass",
+      "detail": "3181 bytes"
+    },
+    {
+      "path": "outputs/field_trial_visuals/field_trial_visuals.md",
+      "status": "pass",
+      "detail": "367 bytes"
+    },
+    {
+      "path": "outputs/task_plan_robustness/task_plan_robustness.md",
+      "status": "pass",
+      "detail": "1229 bytes"
+    },
+    {
+      "path": "outputs/robustness_sensitivity/robustness_sensitivity.md",
+      "status": "pass",
+      "detail": "1096 bytes"
+    },
+    {
+      "path": "outputs/interview_assets/interview_assets.md",
+      "status": "pass",
+      "detail": "2465 bytes"
+    },
+    {
+      "path": "cpp/terrain_kernel.cpp",
+      "status": "pass",
+      "detail": "6452 bytes"
+    }
+  ]
+}

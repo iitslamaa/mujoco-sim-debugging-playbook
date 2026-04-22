@@ -28,6 +28,7 @@ make field-trial-case-study
 make hiring-manager-packet
 make application-packet
 make application-bundle
+make application-readiness
 make interview-assets
 make terrain-kernel-smoke
 ```
@@ -101,4 +102,5 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - Hiring manager packet: `outputs/hiring_manager_packet/hiring_manager_packet.md`
 - Application packet: `outputs/application_packet/application_packet.md`
 - Application bundle: `outputs/application_bundle/application_bundle.md`
+- Application readiness: `outputs/application_readiness/application_readiness.md`
 - Interview assets: `outputs/interview_assets/interview_assets.md`
