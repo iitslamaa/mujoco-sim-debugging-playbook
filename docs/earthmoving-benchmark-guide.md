@@ -29,6 +29,7 @@ make hiring-manager-packet
 make application-packet
 make application-bundle
 make application-readiness
+make application-stack
 make interview-assets
 make terrain-kernel-smoke
 ```

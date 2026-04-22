@@ -1,6 +1,6 @@
 {
   "run_type": "earthmoving_role_brief",
-  "created_at": "2026-04-21T23:32:56.995088+00:00",
+  "created_at": "2026-04-22T00:06:14.083858+00:00",
   "environment": {
     "platform": {
       "system": "Darwin",
@@ -14,38 +14,17 @@
       "mujoco_version": "3.6.0"
     },
     "tooling": {
-      "git_head": "245eee715fe8169d7c990c9e51c62394b2d79cb0",
+      "git_head": "136c93014aa1f04c3d113d432dcc49f9de99435c",
       "git_branch": "main",
       "git_is_dirty": true,
       "git_status": [
-        "M EARTHMOVING_SIMULATION_PACKET.md",
-        " M Makefile",
-        " M OUTREACH_NOTE.md",
+        "M Makefile",
         " M README.md",
         " M docs/earthmoving-benchmark-guide.md",
-        " M outputs/earthmoving_dashboard/data.json",
-        " M outputs/earthmoving_dashboard/index.html",
         " M outputs/earthmoving_review_packet/manifest.json",
-        " M outputs/earthmoving_review_packet/review_packet.json",
-        " M outputs/earthmoving_review_packet/review_packet.md",
-        " M outputs/earthmoving_role_brief/manifest.json",
-        " M outputs/earthmoving_role_brief/role_brief.json",
-        " M outputs/earthmoving_role_brief/role_brief.md",
-        " M pyproject.toml",
-        " M scripts/generate_earthmoving_review_packet.py",
-        " M src/mujoco_sim_debugging_playbook/earthmoving_dashboard.py",
-        " M src/mujoco_sim_debugging_playbook/earthmoving_review_packet.py",
-        " M src/mujoco_sim_debugging_playbook/earthmoving_role_brief.py",
-        " M src/mujoco_sim_debugging_playbook/simulation_packet.py",
-        "?? configs/jobsite_autonomy_eval.json",
-        "?? outputs/hiring_manager_packet/",
-        "?? outputs/jobsite_autonomy_eval/",
-        "?? scripts/generate_hiring_manager_packet.py",
-        "?? scripts/generate_jobsite_autonomy_eval.py",
-        "?? src/mujoco_sim_debugging_playbook/hiring_manager_packet.py",
-        "?? src/mujoco_sim_debugging_playbook/jobsite_autonomy_eval.py",
-        "?? tests/test_hiring_manager_packet.py",
-        "?? tests/test_jobsite_autonomy_eval.py"
+        " M outputs/jobsite_autonomy_eval/manifest.json",
+        "?? scripts/generate_application_stack.py",
+        "?? tests/test_application_stack.py"
       ],
       "docker_version": null,
       "gh_version": "gh version 2.83.0 (2025-11-04)\nhttps://github.com/cli/cli/releases/tag/v2.83.0"
@@ -70,7 +49,7 @@
         "matplotlib==3.10.8",
         "mpmath==1.3.0",
         "mujoco==3.6.0",
-        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@245eee715fe8169d7c990c9e51c62394b2d79cb0#egg=mujoco_sim_debugging_playbook",
+        "-e git+https://github.com/iitslamaa/mujoco-sim-debugging-playbook.git@136c93014aa1f04c3d113d432dcc49f9de99435c#egg=mujoco_sim_debugging_playbook",
         "networkx==3.4.2",
         "numpy==2.2.6",
         "packaging==26.0",
@@ -99,8 +78,8 @@
     {
       "path": "outputs/earthmoving_review_packet/review_packet.json",
       "exists": true,
-      "sha256": "e209e20c58ba55648abc25b9d8da7a927126a578d6b5f2e63c741af367e9b7a2",
-      "size_bytes": 9324
+      "sha256": "11e9bfaa32be82bdc9d544289ea736487389a68621748dadb9967a1cd4cbff8f",
+      "size_bytes": 9478
     },
     {
       "path": "outputs/earthmoving_dataset/dataset_summary.json",
