@@ -1,0 +1,87 @@
+{
+  "name": "application_bundle",
+  "summary": {
+    "item_count": 8,
+    "missing_count": 0,
+    "first_send": "outputs/application_packet/application_packet.md"
+  },
+  "items": [
+    {
+      "role": "first_send",
+      "label": "Application packet",
+      "path": "outputs/application_packet/application_packet.md",
+      "audience": "Recruiter or hiring manager",
+      "exists": true,
+      "sha256": "13dcc69f67be78f536c7313e63bed33970fdb2df4ce94052855be68bd77a7fda",
+      "size_bytes": 2535
+    },
+    {
+      "role": "technical_review",
+      "label": "Hiring manager packet",
+      "path": "outputs/hiring_manager_packet/hiring_manager_packet.md",
+      "audience": "Engineering manager",
+      "exists": true,
+      "sha256": "0afe8310e8ed71cd82cdc924ccddd29abcab542af6a0e9553e87f4f5844f225b",
+      "size_bytes": 7839
+    },
+    {
+      "role": "case_study",
+      "label": "Field trial case study",
+      "path": "outputs/field_trial_case_study/field_trial_case_study.md",
+      "audience": "Simulation engineer",
+      "exists": true,
+      "sha256": "127dbc784eee3d6cdfaed64dda3d13a3f13805ff90e7b7f4cd6098b1978d8e04",
+      "size_bytes": 3181
+    },
+    {
+      "role": "visual_review",
+      "label": "Field trial visuals",
+      "path": "outputs/field_trial_visuals/field_trial_visuals.md",
+      "audience": "Fast visual skim",
+      "exists": true,
+      "sha256": "8e52f9d353744f68bf84689087ab5fe0a84f0a352bbd2abc510ff9c4a604fed8",
+      "size_bytes": 367
+    },
+    {
+      "role": "robustness",
+      "label": "Task plan robustness",
+      "path": "outputs/task_plan_robustness/task_plan_robustness.md",
+      "audience": "Autonomy validation",
+      "exists": true,
+      "sha256": "3fcaec692c10160591ff24ba63ac96bacb329ade12d9d0f87b9beac82e9e543d",
+      "size_bytes": 1229
+    },
+    {
+      "role": "sensitivity",
+      "label": "Robustness sensitivity",
+      "path": "outputs/robustness_sensitivity/robustness_sensitivity.md",
+      "audience": "Calibration discussion",
+      "exists": true,
+      "sha256": "04a1b870a81bafb427331af7ca34c51b2d67520e7f7f36d4910ca383f4fca518",
+      "size_bytes": 1096
+    },
+    {
+      "role": "interview",
+      "label": "Interview assets",
+      "path": "outputs/interview_assets/interview_assets.md",
+      "audience": "Personal preparation",
+      "exists": true,
+      "sha256": "4bee7ff49b600533dd941cef876c6b20fb4517c2a74d7c7ec7e71862d2ecbfd7",
+      "size_bytes": 2465
+    },
+    {
+      "role": "kernel",
+      "label": "C++ terrain kernel",
+      "path": "cpp/terrain_kernel.cpp",
+      "audience": "Low-level implementation review",
+      "exists": true,
+      "sha256": "881ca890b4f3bbdf1f252fd5924d338b288957e57d0cde01ad41924971b4991f",
+      "size_bytes": 6452
+    }
+  ],
+  "send_order": [
+    "outputs/application_packet/application_packet.md",
+    "outputs/hiring_manager_packet/hiring_manager_packet.md",
+    "outputs/field_trial_case_study/field_trial_case_study.md"
+  ]
+}
