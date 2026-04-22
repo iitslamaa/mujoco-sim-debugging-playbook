@@ -7,6 +7,7 @@
 If you are reviewing this for autonomous construction or robotics simulation work, start here:
 
 - [Application packet](outputs/application_packet/application_packet.md): shortest forwardable summary with proof points and outreach message
+- [Interview assets](outputs/interview_assets/interview_assets.md): resume bullets, phone-screen story, and questions to invite
 - [Earthmoving simulation packet](EARTHMOVING_SIMULATION_PACKET.md): concise role-focused summary, metrics, limitations, and review links
 - [Hiring manager packet](outputs/hiring_manager_packet/hiring_manager_packet.md): manager-oriented review path, technical judgment signals, limitations, and next 30-day plan
 - [Field trial visuals](outputs/field_trial_visuals/field_trial_visuals.md): terrain delta, blade path, and productivity bottleneck plots
@@ -221,6 +222,7 @@ make field-trial-visuals
 make field-trial-case-study
 make hiring-manager-packet
 make application-packet
+make interview-assets
 make terrain-kernel-smoke
 make randomization
 make anomalies

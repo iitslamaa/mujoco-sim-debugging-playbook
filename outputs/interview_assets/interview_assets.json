@@ -1,0 +1,30 @@
+{
+  "headline": "Interview and resume assets",
+  "resume_bullets": [
+    "Built a MuJoCo autonomous earthmoving simulation track with heightmap terrain deformation, soil calibration, deterministic replay bundles, and release-style review artifacts.",
+    "Implemented jobsite productivity scoring and task-plan evaluation; selected `single_pass_wide_cut` as a nominal `release_candidate` at `7.65` m3/hr.",
+    "Ran robustness analysis over soil and cycle-time uncertainty, surfacing `soil.blade_coupling` as the top productivity driver with `50%` pass rate.",
+    "Benchmarked native terrain-update kernels, including a C++ path with `7.65x` speedup over the Python baseline."
+  ],
+  "phone_screen_story": [
+    "I built the project to show simulation validation judgment, not just a visual demo.",
+    "The core loop is: run terrain scenarios, score jobsite productivity, compare task plans, stress the chosen plan, then report calibration priorities.",
+    "The nominal best plan reaches `7.65` m3/hr, but robustness drops to `50%` pass rate.",
+    "The sensitivity report points to `soil.blade_coupling` as the strongest productivity driver, so I would prioritize that telemetry or calibration path next.",
+    "I call out that the terrain model is a lightweight heightmap approximation, because production simulation work requires being honest about model validity."
+  ],
+  "questions_to_invite": [
+    "How would you replace the synthetic field logs with real machine/site observations?",
+    "How would you decide whether this belongs in sim content, planner evaluation, or field operations tooling?",
+    "What would you move from Python into native code first, and how would you prove it matters end to end?",
+    "How would you set pass/fail gates before letting a candidate behavior reach a supervised field trial?"
+  ],
+  "links_to_send": {
+    "hiring_manager_packet": "outputs/hiring_manager_packet/hiring_manager_packet.md",
+    "simulation_packet": "EARTHMOVING_SIMULATION_PACKET.md",
+    "field_trial_case_study": "outputs/field_trial_case_study/field_trial_case_study.md",
+    "task_plan_robustness": "outputs/task_plan_robustness/task_plan_robustness.md",
+    "robustness_sensitivity": "outputs/robustness_sensitivity/robustness_sensitivity.md",
+    "terrain_kernel": "cpp/terrain_kernel.cpp"
+  }
+}

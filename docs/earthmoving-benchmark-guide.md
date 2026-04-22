@@ -27,6 +27,7 @@ make field-trial-visuals
 make field-trial-case-study
 make hiring-manager-packet
 make application-packet
+make interview-assets
 make terrain-kernel-smoke
 ```
 
@@ -98,3 +99,4 @@ The reacher benchmark shows controller debugging and ML evaluation. The earthmov
 - Robustness sensitivity: `outputs/robustness_sensitivity/robustness_sensitivity.md`
 - Hiring manager packet: `outputs/hiring_manager_packet/hiring_manager_packet.md`
 - Application packet: `outputs/application_packet/application_packet.md`
+- Interview assets: `outputs/interview_assets/interview_assets.md`
